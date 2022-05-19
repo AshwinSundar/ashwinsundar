@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-blog-index-tsx",
     "path": "/blog/",
-    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"May 1, 2022","title":"Yet another post"},"id":"6202c6b8-71ff-5ea5-85d4-2f7c13add5de","slug":"yet-another-post/"},{"frontmatter":{"date":"April 30, 2022","title":"Another Post"},"id":"01ee2408-e64e-5c2c-ba2f-3718736204f3","slug":"another-post/"},{"frontmatter":{"date":"April 29, 2022","title":"My First Post"},"id":"74bfc768-41b8-50ae-9061-6cc48c5755db","slug":"my-first-post/"}]}},"pageContext":{}},
-    "staticQueryHashes": ["2928772754"]}
+    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"May 18, 2022","title":"Music-in-Shows"},"id":"6f1de938-fe05-50ee-a783-9f02c62606eb","slug":"music-in-shows/"},{"frontmatter":{"date":"April 1, 2022","title":"Mind Poison"},"id":"73e91dad-203b-5002-88ce-943463ad18a1","slug":"mind-poison/"},{"frontmatter":{"date":"February 6, 2019","title":"Office Politics"},"id":"02f92e90-443c-54fa-af68-c4728126bf46","slug":"office-politics/"},{"frontmatter":{"date":"April 9, 2017","title":"Visualizing NBA Pace"},"id":"1b32e50e-5c50-5e33-aae8-20a335aba098","slug":"visualizing-nba-pace/"}]}},"pageContext":{}},
+    "staticQueryHashes": ["2928772754","621688551"]}
