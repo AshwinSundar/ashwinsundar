@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-blog-index-tsx",
     "path": "/blog/",
-    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"April 2017","title":"Film Strips"},"id":"cb40ecc3-21bc-522b-a7a3-3ebe647e96c3","slug":"film-strips/film-strips"},{"frontmatter":{"date":"April 2017","title":"Visualizing NBA Pace"},"id":"1b32e50e-5c50-5e33-aae8-20a335aba098","slug":"visualizing-nba-pace/"}]}},"pageContext":{}},
+    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"April 2022","title":"Parallel Processing in Rust"},"id":"fba625a4-13d9-55c8-93f0-7285250354a7","slug":"parallel-processing-rust/parallel-processing-rust"},{"frontmatter":{"date":"April 2017","title":"Film Strips"},"id":"cb40ecc3-21bc-522b-a7a3-3ebe647e96c3","slug":"film-strips/film-strips"},{"frontmatter":{"date":"April 2017","title":"Visualizing NBA Pace"},"id":"1b32e50e-5c50-5e33-aae8-20a335aba098","slug":"visualizing-nba-pace/"}]}},"pageContext":{}},
     "staticQueryHashes": ["2928772754"]}
