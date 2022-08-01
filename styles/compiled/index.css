@@ -1,0 +1,7 @@
+div.content {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*# sourceMappingURL=index.css.map */

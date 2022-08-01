@@ -1,0 +1,11 @@
+div.content {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr 1fr;
+
+  .writing,
+  .music,
+  .photography,
+  .projects {
+  }
+}
