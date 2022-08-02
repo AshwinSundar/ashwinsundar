@@ -1,0 +1,100 @@
+<h1 id="car-temperatures-in-phoenix">Car Temperatures in Phoenix</h1>
+<p>March 2017</p>
+<p>Using a wireless microcontroller, I monitored the temperature on my
+car’s dashboard and in the passenger footwell for a whole day during a
+particular hot spell in June in Phoenix. Even though I’m a Phoenix
+native, I was surprised by just how hot the inside of my car gets. The
+hardware components used were:</p>
+<ul>
+<li><a href="https://docs.particle.io/photon/">Particle Photon</a></li>
+<li>2 <a
+href="https://www.digikey.com/en/products/detail/amphenol-advanced-sensors/MA100BF103A/272974">Amphenol
+MA100BF103A</a> NTC thermistors</li>
+<li>3 C batteries (the heat really saps the batteries)</li>
+</ul>
+<p>The programs I used for recording and processing data were:</p>
+<ul>
+<li>Particle command line interface</li>
+<li>MATLAB</li>
+<li>Excel</li>
+</ul>
+<p><img src="/blog/assets/car-temps-phx/full-image.jpeg" width="100%" style="max-width: 1280px;"/></p>
+<p><img src="/blog/assets/car-temps-phx/sunrise.jpeg" width="50%;" style="max-width: 640px;"/></p>
+<p>The sun rose at 5:18AM, when the outside temperature was 80.6F.</p>
+<p><img src="/blog/assets/car-temps-phx/midday.jpeg" width="37%;" style="max-width: 480px;"/></p>
+<p>My car was parked in full shade of the neighbor’s house to the east
+until 9:14AM. At that time, the dashboard temperature rapidly spikes,
+climbing at a rate of about 1F per minute. At 12:47PM, the dashboard
+reaches its peak of 212F - the boiling point of water! Meanwhile, the
+ambient (footwell) temperature is a tolerable 126.1F, and the outside
+temperature is 107.6F [joke about dry heat].</p>
+<p><img src="/blog/assets/car-temps-phx/evening.jpeg" width="37%;" style="max-width: 480px;"/></p>
+<p>Around 1:45PM, the car moves into some tree shade, and the dashboard
+quickly cools off again. Meanwhile, the ambient temperature in the car
+continues to climb, peaking at 2:43PM at 134.8F. The outside temperature
+is 111.2F. From here, temperatures cool somewhat for the rest of the
+day.</p>
+<p>The C++ code used to control the Particle Photon is as follows:</p>
+<hr />
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;Particle.h&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> thermistor1Analog<span class="op">;</span> <span class="co">// contains raw analog data from thermistor 1 circuit VOut</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> thermistor2Analog<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> thermistor1Resistance<span class="op">;</span> <span class="co">// converts analog reading to resistance</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> thermistor2Resistance<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> temperature1<span class="op">;</span> <span class="co">// converts thermistor resistance to temperature, according to Amphenol datasheet</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> temperature2<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>String temperatures <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span> <span class="co">// store temperatures in a buffer, send the whole thing once buffer fills to conserve power</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Timer tempTimer<span class="op">(</span><span class="dv">60000</span><span class="op">,</span> checkTemp<span class="op">);</span> <span class="co">// Checks temperature once every minute</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    tempTimer<span class="op">.</span>start<span class="op">();</span> <span class="co">// starts the timer</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> checkTemp<span class="op">()</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    thermistor1Analog <span class="op">=</span> analogRead<span class="op">(</span>A5<span class="op">);</span> <span class="co">// short thermistor</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    thermistor2Analog <span class="op">=</span> analogRead<span class="op">(</span>A4<span class="op">);</span> <span class="co">// long thermistor</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">// convert resistance to ohms using voltage divider equation, where R1 = 10k ohms</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">// shielded equation from dividing by zero by putting it in an if statement</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>thermistor1Analog <span class="op">&lt;</span> <span class="dv">4095</span><span class="op">)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        thermistor1Resistance <span class="op">=</span> <span class="op">(</span><span class="dv">9820</span><span class="op">*</span>thermistor1Analog<span class="op">/</span><span class="dv">4095</span><span class="op">)/(</span><span class="dv">1</span><span class="op">-</span>thermistor1Analog<span class="op">/</span><span class="dv">4095</span><span class="op">);</span> <span class="co">// 9820 is multimeter measurement of resistor</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>thermistor1Analog <span class="op">&gt;=</span> <span class="dv">4095</span><span class="op">)</span> <span class="co">// if the analog reads 4095, then there is a short or the thermistor has failed.</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        thermistor1Resistance <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>thermistor2Analog <span class="op">&lt;</span> <span class="dv">4095</span><span class="op">)</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        thermistor2Resistance <span class="op">=</span> <span class="op">(</span><span class="dv">9910</span><span class="op">*</span>thermistor2Analog<span class="op">/</span><span class="dv">4095</span><span class="op">)/(</span><span class="dv">1</span><span class="op">-</span>thermistor2Analog<span class="op">/</span><span class="dv">4095</span><span class="op">);</span> <span class="co">// 9910 is multimeter measurement of resistor</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>thermistor2Analog <span class="op">&gt;=</span> <span class="dv">4095</span><span class="op">)</span> <span class="co">// if the analog reads 4095, then there is a short or the thermistor has failed.</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        thermistor2Resistance <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co">// calculated temperature by plotting a line of best fit using linear algebra and MATLAB. Error was found to be 3.7998*10^-4 Kelvins using Igor Pro. Compressed some of the math operations to reduce floating point error.</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    temperature1 <span class="op">=</span> pow<span class="op">((</span><span class="fl">.0011106</span> <span class="op">+</span> <span class="fl">0.00023724</span><span class="op">*</span>log<span class="op">(</span>thermistor1Resistance<span class="op">)</span> <span class="op">+</span> <span class="fl">0.000000074738</span><span class="op">*</span>pow<span class="op">(</span>log<span class="op">(</span>thermistor1Resistance<span class="op">),</span> <span class="dv">3</span><span class="op">)),</span> <span class="op">-</span><span class="dv">1</span><span class="op">)</span> <span class="op">-</span> <span class="fl">273.15</span><span class="op">;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    temperature2 <span class="op">=</span> pow<span class="op">((</span><span class="fl">.0011106</span> <span class="op">+</span> <span class="fl">0.00023724</span><span class="op">*</span>log<span class="op">(</span>thermistor2Resistance<span class="op">)</span> <span class="op">+</span> <span class="fl">0.000000074738</span><span class="op">*</span>pow<span class="op">(</span>log<span class="op">(</span>thermistor2Resistance<span class="op">),</span> <span class="dv">3</span><span class="op">)),</span> <span class="op">-</span><span class="dv">1</span><span class="op">)</span> <span class="op">-</span> <span class="fl">273.15</span><span class="op">;</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="co">// rounds the temperature to 2 decimals, truncates last 6 elements (trailing zeroes))</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Particle.publish only accepts chars or strings</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    temperatures <span class="op">+=</span> <span class="st">&quot;s, &quot;</span><span class="op">;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    temperatures <span class="op">+=</span> String<span class="op">(</span>temperature1<span class="op">);</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    temperatures <span class="op">+=</span> <span class="st">&quot;, l, &quot;</span><span class="op">;</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    temperatures <span class="op">+=</span> String<span class="op">(</span>temperature2<span class="op">);</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    temperatures <span class="op">+=</span> <span class="st">&quot;, &quot;</span><span class="op">;</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
