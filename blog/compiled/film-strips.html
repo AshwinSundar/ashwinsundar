@@ -1,3 +1,4 @@
+<!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
 <h1 id="the-color-of-film">The Color of Film</h1>
 <p>Date: April 11th, 2017</p>
 <p>They say a picture is worth a thousand words, so I took that
@@ -27,20 +28,19 @@ combination with -ss to start extracting from a certain point in
 time.</p>
 <h2 id="steps">Steps</h2>
 <ol type="1">
-<li>Download and install ffmpeg, a command line tool - <a
+<li><p>Download and install ffmpeg, a command line tool - <a
 href="http://ffmpeg.org/download.html"
-class="uri">http://ffmpeg.org/download.html</a></li>
-<li>Extract images from the video</li>
-</ol>
-<ul>
-<li><p>Navigate to C:-git-0a9e781-win64-static (or wherever you unzipped
-ffmpeg to)</p></li>
-<li><p>Open <code>ff-prompt</code></p></li>
-<li><p>Within FF Prompt, navigate to the video directory using
-<code>cd {directory name}</code></p></li>
-<li><p>In FF Prompt, type the following
-<code>ffmpeg -i foo.avi -r 1 -s WxH -f image2 s{season number e.g. 01}e{episode number e.g. 01}-%03d.jpeg</code></p></li>
-<li><p>Replace <code>foo.avi</code> with whatever video file you want to
+class="uri">http://ffmpeg.org/download.html</a></p></li>
+<li><p>Extract images from the video</p>
+<ol type="a">
+<li>Navigate to C:-git-0a9e781-win64-static (or wherever you unzipped
+ffmpeg to)</li>
+<li>Open <code>ff-prompt</code></li>
+<li>Within FF Prompt, navigate to the video directory using
+<code>cd {directory name}</code></li>
+<li>In FF Prompt, type the following
+<code>ffmpeg -i foo.avi -r 1 -s WxH -f image2 s{season number e.g. 01}e{episode number e.g. 01}-%03d.jpeg</code></li>
+<li>Replace <code>foo.avi</code> with whatever video file you want to
 process. Doesn’t have to be <code>.avi</code>. Might want to rename
 video file so you can more easily type the file name in command prompt.
 Also replace WxH with the desired image resolution. Smaller images
@@ -50,37 +50,35 @@ from the video and will output them in files named
 <code>{desired image title}-002.jpeg</code>, etc. Images will be
 rescaled to fit the new WxH values. This command could take 5+ minutes
 to run per hour of video, but once again keeping images small will allow
-the program to run much faster.</p></li>
-</ul>
-<ol start="3" type="1">
+the program to run much faster.</li>
+</ol></li>
 <li><p>Move all the generated images into their own folder. Copy
 averageColorGrab.m into the same folder as the images.</p></li>
 <li><p>open the MATLAB script <code>averageColorGrab.m</code> that you
-just copied over.</p></li>
-</ol>
-<ul>
-<li><p>Modify the season and episode number - you may need to modify the
+just copied over.</p>
+<ol type="a">
+<li>Modify the season and episode number - you may need to modify the
 image title to match the format you described above in
 <code>{desired image title}-xxx.jpg</code>. Change the videoLength to
 the duration of the video in seconds. Easiest way to do this is to see
-how many jpegs you generated in step 1c. Save the file with
-ctrl+S</p></li>
-<li><p>Run the script by typing in the console
-<code>averageColorGrab</code></p>
-<p>Script takes about 60 seconds to analyze 1 hour worth of 1080p
-video.</p></li>
-<li><p>Next, we’ll print and save the film strips. In the console, type
-the following (replace videoLength with the actual video length in
-seconds):</p></li>
-</ul>
+how many jpegs you generated in step 1c. Save the file with ctrl+S</li>
+<li>Run the script by typing in the console
+<code>averageColorGrab</code>. Script takes about 60 seconds to analyze
+1 hour worth of 1080p video.</li>
+<li>Next, we’ll print and save the film strips. In the console, type the
+following (replace videoLength with the actual video length in
+seconds):</li>
+</ol>
 <div style="display: flex; justify-content:center">
 <pre><code>imshow(mat2gray(averageEpisodeColor));
 set(gcf,&#39;PaperUnits&#39;,&#39;inches&#39;,&#39;PaperPosition&#39;,[0,0,videoLength,715])
 set(gca,&#39;position&#39;,[0 0 1 1],&#39;units&#39;,&#39;normalized&#39;)
 print -djpeg averagesXXeXXRGB -r1</code></pre>
 </div>
-<ul>
+<ol start="4" type="a">
 <li>Enter <code>csvwrite('averagesXXeYYRGB', averageEpisodeColor)</code>
 to save the final RGB matrix, in case you’d like to do a reprint of the
 RAW data at another time.</li>
-</ul>
+</ol></li>
+</ol>
+</body> </html>

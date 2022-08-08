@@ -8,7 +8,7 @@ As I read this book, I'm summarizing my thoughts on some of the papers as well. 
 
 ## _The True Method_ - Gottfried Wilhelm Leibniz, 1677
 
-I believe that the purpose of this writing by Leibniz is to extract that value of logical reasoning from mathematics and generalize the concept to everyday arguments. He seeks this extrapolation so that the merits of an argument can be evaluated independently of who speaks the words or how they utter them. This final sentence was originally an ambition of Aristotle's, which I vaguely deciphered from _Prior Analytics_.
+I believe that the purpose of this writing by Leibniz is to extract the value of logical reasoning from mathematics and generalize the concept to everyday arguments. He seeks this extrapolation so that the merits of an argument can be evaluated independently of who speaks the words or how they utter them. This final sentence was originally an ambition of Aristotle's, which I vaguely deciphered from _Prior Analytics_.
 
 This article was naively inspiring, a phrase I just made up that I hope has a positive connotation. Lebniz is optimistic that humanity can communicate infallibly through a language that is impossible to hide falsehood in.
 
