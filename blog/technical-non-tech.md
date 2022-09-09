@@ -36,3 +36,7 @@ Here are some tips for how to successfully approach these interactions.
 ================================================================
 
 In conclusion, there is an art to effective non-technical communications, and it's certainly a soft skill that should be in every technical contributors arsenal. Of course, every audience is different, so try out each of these tactics, gauge the response of your audience, and tailor your communications appropriately so that you don't have to repeat yourself and you leave your audience happy with the information you provided.
+
+I'll leave you all with this humorous sketch:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BKorP55Aqvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
