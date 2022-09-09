@@ -1,0 +1,14 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".scss",
+        "cmd": "bash scripts.sh compileSass"
+      },
+      {
+        "match": ".md",
+        "cmd": "bash scripts.sh compileMarkdown"
+      }
+    ]
+  }
+}
