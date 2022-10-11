@@ -397,3 +397,5 @@ If you write code for a living, chances are that someone else will have to refer
 The benchmarking process is highly sensitive to the testing environment, so great care should be taken to ensure that tests are conducted in as similar environment to each other as possible, for example on the same machine with similar background loads between tests.
 
 I have found Rust to be incredibly well-documented, among the best I've encountered in my career. The Criterion library is no exception, and as a result a lot of the material for this article was derived from the [original documentation](https://bheisler.github.io/criterion.rs/book/getting_started.html) for _Criterion_.
+
+_This article was originally written for the [engineering blog](https://engineering.deptagency.com/parallel-processing-in-rust) at DEPT®, a technology consultancy_
