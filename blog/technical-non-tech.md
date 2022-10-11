@@ -1,6 +1,6 @@
 # Technical communications for a non-technical audience
 
-August 2022
+Date: August 1st, 2022
 
 In every technical employee's career, whether they like it or not, they will be required to communicate technical work to a non-technical audience. For most engineers, this task will manifest itself in the form of e-mail, instant message, and one-on-one verbal communication. As they rise through the ranks, they will eventually present their work to larger groups and higher ranks, but the basic lay communication task remains the same.
 
