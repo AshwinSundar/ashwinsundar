@@ -1,0 +1,110 @@
+<svg height="600" width="600" xmlns="http://www.w3.org/2000/svg">
+<title>Your Diagram Title</title>
+<!-- Generated with SankeyMATIC: 10/11/2022, 10:48:43 AM -->
+<rect height="600" width="600" fill="#ffffff"></rect>
+<g transform="translate(12,18)">
+<g id="sankey_flows">
+<path id="flow2" d="M9 384.51261C146.25 384.51261 146.25 412.37903 283.5 412.37903" fill="none" stroke-width="132" stroke="#17becf" opacity="0.45"><title>Bicycle → Frame: 150</title></path>
+<path id="flow0" d="M9 208.51261C146.25 208.51261 146.25 175.04569 283.5 175.04569" fill="none" stroke-width="88" stroke="#17becf" opacity="0.45"><title>Bicycle → Drivetrain: 100</title></path>
+<path id="flow1" d="M9 285.51261C146.25 285.51261 146.25 282.71236 283.5 282.71236" fill="none" stroke-width="66" stroke="#17becf" opacity="0.45"><title>Bicycle → Brakes: 75</title></path>
+<path id="flow10" d="M292.5 368.37903C429.75 368.37903 429.75 390.66667 567 390.66667" fill="none" stroke-width="44" stroke="#bcbd22" opacity="0.45"><title>Frame → Head Tube: 50</title></path>
+<path id="flow11" d="M292.5 412.37903C429.75 412.37903 429.75 465.33333 567 465.33333" fill="none" stroke-width="44" stroke="#17becf" opacity="0.45"><title>Frame → Down Tube: 50</title></path>
+<path id="flow12" d="M292.5 456.37903C429.75 456.37903 429.75 540 567 540" fill="none" stroke-width="44" stroke="#1f77b4" opacity="0.45"><title>Frame → Bottom Bracket Shell: 50</title></path>
+<path id="flow3" d="M292.5 142.04569C429.75 142.04569 429.75 11 567 11" fill="none" stroke-width="22" stroke="#d62728" opacity="0.45"><title>Drivetrain → Pedals: 25</title></path>
+<path id="flow4" d="M292.5 164.04569C429.75 164.04569 429.75 63.66667 567 63.66667" fill="none" stroke-width="22" stroke="#9467bd" opacity="0.45"><title>Drivetrain → Chain: 25</title></path>
+<path id="flow5" d="M292.5 186.04569C429.75 186.04569 429.75 116.33333 567 116.33333" fill="none" stroke-width="22" stroke="#8c564b" opacity="0.45"><title>Drivetrain → Crankset: 25</title></path>
+<path id="flow6" d="M292.5 208.04569C429.75 208.04569 429.75 169 567 169" fill="none" stroke-width="22" stroke="#e377c2" opacity="0.45"><title>Drivetrain → Rear Sprocket: 25</title></path>
+<path id="flow7" d="M292.5 260.71236C429.75 260.71236 429.75 221.66667 567 221.66667" fill="none" stroke-width="22" stroke="#7f7f7f" opacity="0.45"><title>Brakes → Brake Cable: 25</title></path>
+<path id="flow8" d="M292.5 282.71236C429.75 282.71236 429.75 274.33333 567 274.33333" fill="none" stroke-width="22" stroke="#7f7f7f" opacity="0.45"><title>Brakes → Brake Calipers: 25</title></path>
+<path id="flow9" d="M292.5 304.71236C429.75 304.71236 429.75 327 567 327" fill="none" stroke-width="22" stroke="#7f7f7f" opacity="0.45"><title>Brakes → Brake Disc: 25</title></path>
+</g>
+<g id="sankey_nodes">
+<g class="node">
+<rect id="r0" class="for_r0" x="0" y="164.51261" height="286" width="9" fill="#17becf" fill-opacity="1"><title>Bicycle:
+325</title></rect>
+</g>
+<g class="node">
+<rect id="r1" class="for_r1" x="283.5" y="131.04569" height="88" width="9" fill="#1f77b4" fill-opacity="1"><title>Drivetrain:
+100</title></rect>
+</g>
+<g class="node">
+<rect id="r2" class="for_r2" x="283.5" y="249.71236" height="66" width="9" fill="#ff7f0e" fill-opacity="1"><title>Brakes:
+75</title></rect>
+</g>
+<g class="node">
+<rect id="r3" class="for_r3" x="283.5" y="346.37903" height="132" width="9" fill="#2ca02c" fill-opacity="1"><title>Frame:
+150</title></rect>
+</g>
+<g class="node">
+<rect id="r4" class="for_r4" x="567" y="0" height="22" width="9" fill="#d62728" fill-opacity="1"><title>Pedals:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r5" class="for_r5" x="567" y="52.66667" height="22" width="9" fill="#9467bd" fill-opacity="1"><title>Chain:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r6" class="for_r6" x="567" y="105.33333" height="22" width="9" fill="#8c564b" fill-opacity="1"><title>Crankset:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r7" class="for_r7" x="567" y="158" height="22" width="9" fill="#e377c2" fill-opacity="1"><title>Rear Sprocket:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r8" class="for_r8" x="567" y="210.66667" height="22" width="9" fill="#7f7f7f" fill-opacity="1"><title>Brake Cable:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r9" class="for_r9" x="567" y="263.33333" height="22" width="9" fill="#7f7f7f" fill-opacity="1"><title>Brake Calipers:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r10" class="for_r10" x="567" y="316" height="22" width="9" fill="#7f7f7f" fill-opacity="1"><title>Brake Disc:
+25</title></rect>
+</g>
+<g class="node">
+<rect id="r11" class="for_r11" x="567" y="368.66667" height="44" width="9" fill="#bcbd22" fill-opacity="1"><title>Head Tube:
+50</title></rect>
+</g>
+<g class="node">
+<rect id="r12" class="for_r12" x="567" y="443.33333" height="44" width="9" fill="#17becf" fill-opacity="1"><title>Down Tube:
+50</title></rect>
+</g>
+<g class="node">
+<rect id="r13" class="for_r13" x="567" y="518" height="44" width="9" fill="#1f77b4" fill-opacity="1"><title>Bottom Bracket Shell:
+50</title></rect>
+</g>
+</g>
+<g id="sankey_labels" font-family="sans-serif" font-size="15px" font-weight="400" fill="#000000">
+<text text-anchor="middle" x="288" y="577" font-size="11px" font-weight="400" fill="rgb(127, 127, 127)">Made with SankeyMATIC</text>
+<rect id="label0_bg" class="for_r0" x="10.53125" y="296.0426" width="90" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label0" class="for_r0" text-anchor="start" x="14.90625" y="307.51261" dy="4.93">Bicycle: 325</text>
+<rect id="label1_bg" class="for_r1" x="175.29688" y="163.57568" width="106.67188" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label1" class="for_r1" text-anchor="end" x="277.59375" y="175.04569" dy="4.93">Drivetrain: 100</text>
+<rect id="label2_bg" class="for_r2" x="201.125" y="271.24236" width="80.84375" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label2" class="for_r2" text-anchor="end" x="277.59375" y="282.71236" dy="4.93">Brakes: 75</text>
+<rect id="label3_bg" class="for_r3" x="196.14063" y="400.90902" width="85.82813" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label3" class="for_r3" text-anchor="end" x="277.59375" y="412.37903" dy="4.93">Frame: 150</text>
+<rect id="label4_bg" class="for_r4" x="485.45313" y="-0.47" width="80.01563" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label4" class="for_r4" text-anchor="end" x="561.09375" y="11" dy="4.93">Pedals: 25</text>
+<rect id="label5_bg" class="for_r5" x="492.125" y="52.19667" width="73.34375" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label5" class="for_r5" text-anchor="end" x="561.09375" y="63.66667" dy="4.93">Chain: 25</text>
+<rect id="label6_bg" class="for_r6" x="471.29688" y="104.86333" width="94.17188" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label6" class="for_r6" text-anchor="end" x="561.09375" y="116.33333" dy="4.93">Crankset: 25</text>
+<rect id="label7_bg" class="for_r7" x="435.4375" y="157.52999" width="130.03125" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label7" class="for_r7" text-anchor="end" x="561.09375" y="169" dy="4.93">Rear Sprocket: 25</text>
+<rect id="label8_bg" class="for_r8" x="448.76563" y="210.19666" width="116.70313" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label8" class="for_r8" text-anchor="end" x="561.09375" y="221.66667" dy="4.93">Brake Cable: 25</text>
+<rect id="label9_bg" class="for_r9" x="432.9375" y="262.86334" width="132.53125" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label9" class="for_r9" text-anchor="end" x="561.09375" y="274.33333" dy="4.93">Brake Calipers: 25</text>
+<rect id="label10_bg" class="for_r10" x="458.79688" y="315.52999" width="106.67188" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label10" class="for_r10" text-anchor="end" x="561.09375" y="327" dy="4.93">Brake Disc: 25</text>
+<rect id="label11_bg" class="for_r11" x="457.92188" y="379.19665" width="107.54688" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label11" class="for_r11" text-anchor="end" x="561.09375" y="390.66667" dy="4.93">Head Tube: 50</text>
+<rect id="label12_bg" class="for_r12" x="455.4375" y="453.86334" width="110.03125" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label12" class="for_r12" text-anchor="end" x="561.09375" y="465.33333" dy="4.93">Down Tube: 50</text>
+<rect id="label13_bg" class="for_r13" x="391.25" y="528.52999" width="174.21875" height="21.8" rx="3.75" fill="#fff" fill-opacity="0.55" stroke="none" stroke-width="0" stroke-opacity="0"></rect>
+<text id="label13" class="for_r13" text-anchor="end" x="561.09375" y="540" dy="4.93">Bottom Bracket Shell: 50</text>
+</g>
+</g></svg>
