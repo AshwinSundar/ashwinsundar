@@ -3,5 +3,8 @@ div.content {
   gap: 25px;
   grid-template-columns: 1fr 1fr;
 }
+div.content .about {
+  text-align: justify;
+}
 
 /*# sourceMappingURL=index.css.map */
