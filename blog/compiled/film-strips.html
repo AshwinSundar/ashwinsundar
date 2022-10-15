@@ -1,29 +1,73 @@
 <!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
 <h1 id="the-color-of-film">The Color of Film</h1>
 <p>Date: April 11th, 2017</p>
-<p>They say a picture is worth a thousand words, so I took that literally and built average color pictures for each episode in the first season of Game of Thrones. Each vertical line represents one second of the show. Here’s what I got : <a href="https://imgur.com/a/naPeJ" class="uri">https://imgur.com/a/naPeJ</a>.</p>
-<p>Here’s some examples using a couple of popular movies: <a href="https://imgur.com/a/4g2lJ" class="uri">https://imgur.com/a/4g2lJ</a>. Which movies do you think they are?</p>
-<h2 id="source-code-for-converting-videos-to-film-strips">Source code for converting videos to film strips</h2>
-<p>FFMPEG is a convenient command line tool that can be used to extract frames from a video file.</p>
-<p>This command <code>ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg</code> will extract one video frame per second from the video and will output them in files named <code>foo-001.jpeg</code>, <code>foo-002.jpeg</code>, etc. Images will be rescaled to fit the new WxH (width by height) values. You can safely keep these values pretty small e.g. 320x240 without losing much resolution in the final image. By keeping the pictures small, you vastly improve the performance of the program.</p>
-<p>If you want to extract just a limited number of frames, you can use the above command in combination with the -vframes or -t option, or in combination with -ss to start extracting from a certain point in time.</p>
+<p>They say a picture is worth a thousand words, so I took that
+literally and built average color pictures for each episode in the first
+season of Game of Thrones. Each vertical line represents one second of
+the show. Here’s what I got : <a href="https://imgur.com/a/naPeJ"
+class="uri">https://imgur.com/a/naPeJ</a>.</p>
+<p>Here’s some examples using a couple of popular movies: <a
+href="https://imgur.com/a/4g2lJ"
+class="uri">https://imgur.com/a/4g2lJ</a>. Which movies do you think
+they are?</p>
+<h2 id="source-code-for-converting-videos-to-film-strips">Source code
+for converting videos to film strips</h2>
+<p>FFMPEG is a convenient command line tool that can be used to extract
+frames from a video file.</p>
+<p>This command
+<code>ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg</code> will
+extract one video frame per second from the video and will output them
+in files named <code>foo-001.jpeg</code>, <code>foo-002.jpeg</code>,
+etc. Images will be rescaled to fit the new WxH (width by height)
+values. You can safely keep these values pretty small e.g. 320x240
+without losing much resolution in the final image. By keeping the
+pictures small, you vastly improve the performance of the program.</p>
+<p>If you want to extract just a limited number of frames, you can use
+the above command in combination with the -vframes or -t option, or in
+combination with -ss to start extracting from a certain point in
+time.</p>
 <h2 id="steps">Steps</h2>
 <ol type="1">
-<li><p>Download and install ffmpeg, a command line tool - <a href="http://ffmpeg.org/download.html" class="uri">http://ffmpeg.org/download.html</a></p></li>
+<li><p>Download and install ffmpeg, a command line tool - <a
+href="http://ffmpeg.org/download.html"
+class="uri">http://ffmpeg.org/download.html</a></p></li>
 <li><p>Extract images from the video</p>
 <ol type="a">
-<li>Navigate to C:-git-0a9e781-win64-static (or wherever you unzipped ffmpeg to)</li>
+<li>Navigate to C:-git-0a9e781-win64-static (or wherever you unzipped
+ffmpeg to)</li>
 <li>Open <code>ff-prompt</code></li>
-<li>Within FF Prompt, navigate to the video directory using <code>cd {directory name}</code></li>
-<li>In FF Prompt, type the following <code>ffmpeg -i foo.avi -r 1 -s WxH -f image2 s{season number e.g. 01}e{episode number e.g. 01}-%03d.jpeg</code></li>
-<li>Replace <code>foo.avi</code> with whatever video file you want to process. Doesn’t have to be <code>.avi</code>. Might want to rename video file so you can more easily type the file name in command prompt. Also replace WxH with the desired image resolution. Smaller images vastly improve performance. This will extract one video frame per second from the video and will output them in files named <code>{desired image title}-001.jpeg</code>, <code>{desired image title}-002.jpeg</code>, etc. Images will be rescaled to fit the new WxH values. This command could take 5+ minutes to run per hour of video, but once again keeping images small will allow the program to run much faster.</li>
+<li>Within FF Prompt, navigate to the video directory using
+<code>cd {directory name}</code></li>
+<li>In FF Prompt, type the following
+<code>ffmpeg -i foo.avi -r 1 -s WxH -f image2 s{season number e.g. 01}e{episode number e.g. 01}-%03d.jpeg</code></li>
+<li>Replace <code>foo.avi</code> with whatever video file you want to
+process. Doesn’t have to be <code>.avi</code>. Might want to rename
+video file so you can more easily type the file name in command prompt.
+Also replace WxH with the desired image resolution. Smaller images
+vastly improve performance. This will extract one video frame per second
+from the video and will output them in files named
+<code>{desired image title}-001.jpeg</code>,
+<code>{desired image title}-002.jpeg</code>, etc. Images will be
+rescaled to fit the new WxH values. This command could take 5+ minutes
+to run per hour of video, but once again keeping images small will allow
+the program to run much faster.</li>
 </ol></li>
-<li><p>Move all the generated images into their own folder. Copy averageColorGrab.m into the same folder as the images.</p></li>
-<li><p>open the MATLAB script <code>averageColorGrab.m</code> that you just copied over.</p>
+<li><p>Move all the generated images into their own folder. Copy
+averageColorGrab.m into the same folder as the images.</p></li>
+<li><p>open the MATLAB script <code>averageColorGrab.m</code> that you
+just copied over.</p>
 <ol type="a">
-<li>Modify the season and episode number - you may need to modify the image title to match the format you described above in <code>{desired image title}-xxx.jpg</code>. Change the videoLength to the duration of the video in seconds. Easiest way to do this is to see how many jpegs you generated in step 1c. Save the file with ctrl+S</li>
-<li>Run the script by typing in the console <code>averageColorGrab</code>. Script takes about 60 seconds to analyze 1 hour worth of 1080p video.</li>
-<li>Next, we’ll print and save the film strips. In the console, type the following (replace videoLength with the actual video length in seconds):</li>
+<li>Modify the season and episode number - you may need to modify the
+image title to match the format you described above in
+<code>{desired image title}-xxx.jpg</code>. Change the videoLength to
+the duration of the video in seconds. Easiest way to do this is to see
+how many jpegs you generated in step 1c. Save the file with ctrl+S</li>
+<li>Run the script by typing in the console
+<code>averageColorGrab</code>. Script takes about 60 seconds to analyze
+1 hour worth of 1080p video.</li>
+<li>Next, we’ll print and save the film strips. In the console, type the
+following (replace videoLength with the actual video length in
+seconds):</li>
 </ol>
 <div style="display: flex; justify-content:center">
 <pre><code>imshow(mat2gray(averageEpisodeColor));
@@ -32,7 +76,9 @@ set(gca,&#39;position&#39;,[0 0 1 1],&#39;units&#39;,&#39;normalized&#39;)
 print -djpeg averagesXXeXXRGB -r1</code></pre>
 </div>
 <ol start="4" type="a">
-<li>Enter <code>csvwrite('averagesXXeYYRGB', averageEpisodeColor)</code> to save the final RGB matrix, in case you’d like to do a reprint of the RAW data at another time.</li>
+<li>Enter <code>csvwrite('averagesXXeYYRGB', averageEpisodeColor)</code>
+to save the final RGB matrix, in case you’d like to do a reprint of the
+RAW data at another time.</li>
 </ol></li>
 </ol>
 </body> </html>

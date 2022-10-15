@@ -1,30 +1,68 @@
 <!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
-<h1 id="benchmarking-rust-code-using-criterion.rs">Benchmarking Rust code using Criterion.rs</h1>
+<h1 id="benchmarking-rust-code-using-criterion.rs">Benchmarking Rust
+code using Criterion.rs</h1>
 <p>Date: June 14th, 2022</p>
 <h2 id="introduction">Introduction</h2>
-<p>Benchmarking is a method of systematically assessing a program for performance. This process is a valuable component of regression testing because it helps you compare changes and improvements to your code. The systems programming language Rust offers many statistically rigorous analysis techniques, such as the <a href="https://docs.rs/criterion/latest/criterion/"><em>Criterion</em></a> crate, which is a popular tool used for benchmarking in Rust. In this article, we’ll go into more detail on how to use <em>Criterion</em> to compare various Rust functions to solve a problem from <a href="https://projecteuler.net/">Project Euler</a>.</p>
+<p>Benchmarking is a method of systematically assessing a program for
+performance. This process is a valuable component of regression testing
+because it helps you compare changes and improvements to your code. The
+systems programming language Rust offers many statistically rigorous
+analysis techniques, such as the <a
+href="https://docs.rs/criterion/latest/criterion/"><em>Criterion</em></a>
+crate, which is a popular tool used for benchmarking in Rust. In this
+article, we’ll go into more detail on how to use <em>Criterion</em> to
+compare various Rust functions to solve a problem from <a
+href="https://projecteuler.net/">Project Euler</a>.</p>
 <h2 id="about-criterion">About Criterion</h2>
-<p><em>Criterion</em> is a benchmarking crate that specializes in statistically rigorous analysis techniques, as well as generating useful and attractive charts using <code>gnuplot</code>. The <a href="https://github.com/bheisler/criterion.rs#goals">primary goals</a> of <em>Criterion</em> are to measure the performance of code, prevent performance regressions, and accurately measure optimizations.</p>
+<p><em>Criterion</em> is a benchmarking crate that specializes in
+statistically rigorous analysis techniques, as well as generating useful
+and attractive charts using <code>gnuplot</code>. The <a
+href="https://github.com/bheisler/criterion.rs#goals">primary goals</a>
+of <em>Criterion</em> are to measure the performance of code, prevent
+performance regressions, and accurately measure optimizations.</p>
 <h1 id="example">Example</h1>
-<p>To understand how to use <em>Criterion</em> for benchmarking, let’s re-use an example from a previous article where we learned how to implement <a href="https://engineering.deptagency.com/parallel-processing-in-rust">parallel processing in Rust</a>. In that article we explored how to parallelize a commutative loop. This time, let’s compare the parallelized function to a function that solves the problem with an arithmetic series. The problem:</p>
-<p><em>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000000.</em></p>
+<p>To understand how to use <em>Criterion</em> for benchmarking, let’s
+re-use an example from a previous article where we learned how to
+implement <a
+href="https://engineering.deptagency.com/parallel-processing-in-rust">parallel
+processing in Rust</a>. In that article we explored how to parallelize a
+commutative loop. This time, let’s compare the parallelized function to
+a function that solves the problem with an arithmetic series. The
+problem:</p>
+<p><em>If we list all the natural numbers below 10 that are multiples of
+3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the
+sum of all the multiples of 3 or 5 below 1000000.</em></p>
 <h2 id="setup-steps">Setup steps</h2>
-<p>The code used in this article can be found at https://github.com/AshwinSundar/Criterion-Benchmarking. Let’s start by creating a new Rust project in an empty folder called <code>Criterion_Benchmarking</code>. <code>cd</code> into the folder and type <code>cargo init</code>.</p>
+<p>The code used in this article can be found at
+https://github.com/AshwinSundar/Criterion-Benchmarking. Let’s start by
+creating a new Rust project in an empty folder called
+<code>Criterion_Benchmarking</code>. <code>cd</code> into the folder and
+type <code>cargo init</code>.</p>
 <p><strong>Terminal</strong></p>
 <pre><code>❯ cargo init
      Created binary (application) package</code></pre>
-<h2 id="add-criterion-to-dev-dependencies">1. Add Criterion to <code>dev-dependencies</code></h2>
+<h2 id="add-criterion-to-dev-dependencies">1. Add Criterion to
+<code>dev-dependencies</code></h2>
 <p><strong>$PROJECT/Cargo.toml</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">dev-dependencies</span><span class="ot">]</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">dev-dependencies</span><span class="ot">]</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="er">criterion</span> <span class="er">=</span> <span class="fu">{</span><span class="er">version</span> <span class="er">=</span> <span class="dt">&quot;0.3&quot;</span><span class="fu">,</span> <span class="er">features</span> <span class="er">=</span> <span class="er">[</span><span class="dt">&quot;html_reports&quot;</span><span class="er">]</span><span class="fu">}</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ot">[[</span><span class="er">bench</span><span class="ot">]]</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="er">name</span> <span class="er">=</span> <span class="er">&quot;euler1_benchmark&quot;</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="er">harness</span> <span class="er">=</span> <span class="er">false</span></span></code></pre></div>
-<p>First, navigate to the Rust manifest file <code>Cargo.toml</code> and create a <code>dev-dependencies</code> section. Adding <em>Criterion</em> to this section ensures that the benchmarking crate is only included during testing, and not in production builds. Let’s also disable the default benchmarking harness <a href="https://github.com/rust-lang/libtest"><code>libtest</code></a> by setting <code>harness=false</code>, that way the compiler invokes the <em>Criterion</em> benchmarking harness instead.</p>
+<p>First, navigate to the Rust manifest file <code>Cargo.toml</code> and
+create a <code>dev-dependencies</code> section. Adding
+<em>Criterion</em> to this section ensures that the benchmarking crate
+is only included during testing, and not in production builds. Let’s
+also disable the default benchmarking harness <a
+href="https://github.com/rust-lang/libtest"><code>libtest</code></a> by
+setting <code>harness=false</code>, that way the compiler invokes the
+<em>Criterion</em> benchmarking harness instead.</p>
 <h2 id="create-benchmark-file">2. Create benchmark file</h2>
 <p><strong>$PROJECT/benches/euler1_benchmark.rs</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> Criterion<span class="op">};</span></span>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> Criterion<span class="op">};</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// use lib::euler1; // function to profile</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> criterion_benchmark(c<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Criterion) <span class="op">{</span></span>
@@ -33,10 +71,15 @@
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_group!</span>(benches<span class="op">,</span> criterion_benchmark)<span class="op">;</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_main!</span>(benches)<span class="op">;</span></span></code></pre></div>
-<p>Next, create a benchmark file at <code>$PROJECT/benches/euler1_benchmark.rs</code>. This file will import our function, run a benchmark, and then output the results to the console using a macro. We’ll leave a couple placeholders for now and revisit this file once we’ve built the functions to benchmark.</p>
+<p>Next, create a benchmark file at
+<code>$PROJECT/benches/euler1_benchmark.rs</code>. This file will import
+our function, run a benchmark, and then output the results to the
+console using a macro. We’ll leave a couple placeholders for now and
+revisit this file once we’ve built the functions to benchmark.</p>
 <h2 id="create-library-file">3. Create library file</h2>
 <p><strong>$PROJECT/src/lib.rs</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> euler1_simple() <span class="op">{</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// For-loop solution</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
@@ -50,29 +93,49 @@
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> euler1_series() <span class="op">{</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Arithmetic series solution</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Finally, due to <a href="https://bheisler.github.io/criterion.rs/book/user_guide/known_limitations.html">implementation constraints</a> within <em>Criterion</em>, we need to create a library file to host our functions at <code>src/lib.rs</code> and declare our functions as <code>public</code>, so that we can import the functions into <code>euler1_benchmark.rs</code>. The <a href="https://nnethercote.github.io/perf-book/inlining.html">#[inline]</a> attribute above the function helps reduce execution time slightly and improves the accuracy of the benchmarking process.</p>
-<p>Now that we’ve written some boilerplate code for the benchmark, let’s return to the actual problem and compare a few possible solutions.</p>
+<p>Finally, due to <a
+href="https://bheisler.github.io/criterion.rs/book/user_guide/known_limitations.html">implementation
+constraints</a> within <em>Criterion</em>, we need to create a library
+file to host our functions at <code>src/lib.rs</code> and declare our
+functions as <code>public</code>, so that we can import the functions
+into <code>euler1_benchmark.rs</code>. The <a
+href="https://nnethercote.github.io/perf-book/inlining.html">#[inline]</a>
+attribute above the function helps reduce execution time slightly and
+improves the accuracy of the benchmarking process.</p>
+<p>Now that we’ve written some boilerplate code for the benchmark, let’s
+return to the actual problem and compare a few possible solutions.</p>
 <h1 id="solutions">Solutions</h1>
-<p>If you’re interested in the details of each solution, read this section. Otherwise, you can skip to the <a href="#creating-benchmarks">Creating Benchmarks</a> section. Just know that the three solutions are, in order of least to most efficient, a simple for-loop, a parallelized for-loop, and an arithmetic series.</p>
+<p>If you’re interested in the details of each solution, read this
+section. Otherwise, you can skip to the <a
+href="#creating-benchmarks">Creating Benchmarks</a> section. Just know
+that the three solutions are, in order of least to most efficient, a
+simple for-loop, a parallelized for-loop, and an arithmetic series.</p>
 <p>To reiterate the problem:</p>
-<p><em>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000000.</em></p>
+<p><em>If we list all the natural numbers below 10 that are multiples of
+3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the
+sum of all the multiples of 3 or 5 below 1000000.</em></p>
 <h2 id="solution-1-for-loop">Solution 1: For-loop</h2>
 <p><strong>$PROJECT/src/lib.rs</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> euler1_simple(input<span class="op">:</span> <span class="dt">i64</span>) <span class="op">-&gt;</span> <span class="dt">i64</span> <span class="op">{</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> sum<span class="op">:</span> <span class="dt">i64</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> i <span class="kw">in</span> <span class="dv">1</span><span class="op">..</span>input <span class="op">{</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="dv">1</span><span class="op">..</span>input <span class="op">{</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>            sum <span class="op">+=</span> i <span class="kw">as</span> <span class="dt">i64</span><span class="op">;</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    sum</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>A simple brute-force solution is to iterate on every number in the range and determine if it’s divisible by either 3 or 5. This solution will give us a good baseline to compare the other solutions to.</p>
-<h2 id="solution-2-parallelized-for-loop">Solution 2: Parallelized for-loop</h2>
+<p>A simple brute-force solution is to iterate on every number in the
+range and determine if it’s divisible by either 3 or 5. This solution
+will give us a good baseline to compare the other solutions to.</p>
+<h2 id="solution-2-parallelized-for-loop">Solution 2: Parallelized
+for-loop</h2>
 <p><strong>$PROJECT/src/lib.rs</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> euler1_par(input<span class="op">:</span> <span class="dt">i64</span>) <span class="op">-&gt;</span> <span class="dt">i64</span> <span class="op">{</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">use</span> <span class="pp">std::</span>thread<span class="op">;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -80,15 +143,15 @@
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> input <span class="op">=</span> input <span class="kw">as</span> <span class="dt">f64</span><span class="op">;</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> handles<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>JoinHandle<span class="op">&lt;</span><span class="dt">i64</span><span class="op">&gt;&gt;</span> <span class="op">=</span> <span class="pp">vec!</span>[]<span class="op">;</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> t <span class="kw">in</span> <span class="dv">1</span><span class="op">..=</span>(threads <span class="kw">as</span> <span class="dt">i32</span>) <span class="op">{</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> t <span class="kw">in</span> <span class="dv">1</span><span class="op">..=</span>(threads <span class="kw">as</span> <span class="dt">i32</span>) <span class="op">{</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> t <span class="op">=</span> t <span class="kw">as</span> <span class="dt">f64</span><span class="op">;</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> upper_bound <span class="op">=</span> (input <span class="op">*</span> (t <span class="op">/</span> threads)) <span class="kw">as</span> <span class="dt">i32</span><span class="op">;</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> lower_bound <span class="op">=</span> (input <span class="op">*</span> (t <span class="op">-</span> <span class="dv">1f64</span>) <span class="op">/</span> threads) <span class="kw">as</span> <span class="dt">i32</span><span class="op">;</span></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        handles<span class="op">.</span>push(<span class="pp">thread::</span>spawn(<span class="kw">move</span> <span class="op">||</span> <span class="op">{</span></span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> <span class="kw">mut</span> sum<span class="op">:</span> <span class="dt">i64</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="kw">for</span> i <span class="kw">in</span> lower_bound<span class="op">..</span>upper_bound <span class="op">{</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                <span class="kw">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> i <span class="kw">in</span> lower_bound<span class="op">..</span>upper_bound <span class="op">{</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                    sum <span class="op">+=</span> i <span class="kw">as</span> <span class="dt">i64</span><span class="op">;</span></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
@@ -98,57 +161,104 @@
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> sum <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> h <span class="kw">in</span> handles <span class="op">{</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> h <span class="kw">in</span> handles <span class="op">{</span></span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>        sum <span class="op">+=</span> h<span class="op">.</span>join()<span class="op">.</span>unwrap()<span class="op">;</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    sum</span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>In a <a href="https://engineering.deptagency.com/parallel-processing-in-rust">previous article</a>, we started to explore parallelization using <code>std::thread</code>, a library for distributing program processing to OS threads. We stopped at two threads in that article, so in this example I’ve expanded the function to accomodate all available system threads.</p>
+<p>In a <a
+href="https://engineering.deptagency.com/parallel-processing-in-rust">previous
+article</a>, we started to explore parallelization using
+<code>std::thread</code>, a library for distributing program processing
+to OS threads. We stopped at two threads in that article, so in this
+example I’ve expanded the function to accomodate all available system
+threads.</p>
 <p>Let’s step through this code piece by piece.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">use</span> <span class="pp">std::</span>thread<span class="op">;</span></span>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">use</span> <span class="pp">std::</span>thread<span class="op">;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> threads <span class="op">=</span> <span class="pp">thread::</span>available_parallelism()<span class="op">.</span>unwrap()<span class="op">.</span>get() <span class="kw">as</span> <span class="dt">f64</span><span class="op">;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> input <span class="op">=</span> input <span class="kw">as</span> <span class="dt">f64</span><span class="op">;</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> handles<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>JoinHandle<span class="op">&lt;</span><span class="dt">i64</span><span class="op">&gt;&gt;</span> <span class="op">=</span> <span class="pp">vec!</span>[]<span class="op">;</span></span></code></pre></div>
-<p>First, we need to import the native parallelism module <a href="https://doc.rust-lang.org/std/thread/"><code>std::thread</code></a> and determine how many OS threads are available on the system using <a href="https://doc.rust-lang.org/std/thread/fn.available_parallelism.html"><code>std::thread::available_parallelism()</code></a>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> t <span class="kw">in</span> <span class="dv">1</span><span class="op">..=</span>(threads <span class="kw">as</span> <span class="dt">i32</span>) <span class="op">{</span></span>
+<p>First, we need to import the native parallelism module <a
+href="https://doc.rust-lang.org/std/thread/"><code>std::thread</code></a>
+and determine how many OS threads are available on the system using <a
+href="https://doc.rust-lang.org/std/thread/fn.available_parallelism.html"><code>std::thread::available_parallelism()</code></a>.</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> t <span class="kw">in</span> <span class="dv">1</span><span class="op">..=</span>(threads <span class="kw">as</span> <span class="dt">i32</span>) <span class="op">{</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> t <span class="op">=</span> t <span class="kw">as</span> <span class="dt">f64</span><span class="op">;</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> upper_bound <span class="op">=</span> (input <span class="op">*</span> (t <span class="op">/</span> threads)) <span class="kw">as</span> <span class="dt">i32</span><span class="op">;</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> lower_bound <span class="op">=</span> (input <span class="op">*</span> (t <span class="op">-</span> <span class="dv">1f64</span>) <span class="op">/</span> threads) <span class="kw">as</span> <span class="dt">i32</span><span class="op">;</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        handles<span class="op">.</span>push(<span class="pp">thread::</span>spawn(<span class="kw">move</span> <span class="op">||</span> <span class="op">{</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> <span class="kw">mut</span> sum<span class="op">:</span> <span class="dt">i64</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>            <span class="kw">for</span> i <span class="kw">in</span> lower_bound<span class="op">..</span>upper_bound <span class="op">{</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                <span class="kw">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> i <span class="kw">in</span> lower_bound<span class="op">..</span>upper_bound <span class="op">{</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">{</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                    sum <span class="op">+=</span> i <span class="kw">as</span> <span class="dt">i64</span><span class="op">;</span></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>            sum</span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span>))<span class="op">;</span></span>
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
-<p>Next, we set up all our threads using <code>thread::spawn</code>, and pass in a <a href="https://doc.rust-lang.org/rust-by-example/fn/closures.html">closure</a> containing the same calculation as <code>euler1_simple</code>. The trick to this code is that the range of elements being iterated upon must be split up and processed. The range for each handle to process is computed in <code>upper_bound</code> and <code>lower_bound</code>. As each handle completes, its output is pushed into a vector of <code>handles</code>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> sum <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<p>Next, we set up all our threads using <code>thread::spawn</code>, and
+pass in a <a
+href="https://doc.rust-lang.org/rust-by-example/fn/closures.html">closure</a>
+containing the same calculation as <code>euler1_simple</code>. The trick
+to this code is that the range of elements being iterated upon must be
+split up and processed. The range for each handle to process is computed
+in <code>upper_bound</code> and <code>lower_bound</code>. As each handle
+completes, its output is pushed into a vector of
+<code>handles</code>.</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> sum <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> h <span class="kw">in</span> handles <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> h <span class="kw">in</span> handles <span class="op">{</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        sum <span class="op">+=</span> h<span class="op">.</span>join()<span class="op">.</span>unwrap()<span class="op">;</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    sum</span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Since the calculations in each subset of the range are independent of each other, the final outputs are commutative and can be summed up with <code>sum += h.join().unwrap();</code></p>
+<p>Since the calculations in each subset of the range are independent of
+each other, the final outputs are commutative and can be summed up with
+<code>sum += h.join().unwrap();</code></p>
 <h2 id="solution-3-arithmetic-series">Solution 3: Arithmetic Series</h2>
-<p>The sum of the multiples of 3 or 5 is a composite arithmetic series. An <a href="https://mathworld.wolfram.com/ArithmeticSeries.html"><em>arithmetic series</em></a> is the sum of a sequence of numbers where each subsequent term can be calculated by adding a constant <span class="math inline"><em>d</em></span> to the last term. For example, for the sequence <span class="math inline">2, 5, 8, ...<em>a</em><sub><em>n</em></sub></span>, <span class="math inline"><em>a</em><sub>1</sub> = 2</span>, <span class="math inline"><em>d</em> = 3</span>, and can be represented as:</p>
-<p><span class="math inline"><em>a</em><sub>1</sub>, <em>a</em><sub>2</sub> = <em>a</em><sub>1</sub> + <em>d</em>, <em>a</em><sub>3</sub> = <em>a</em><sub>1</sub> + 2<em>d</em>, ...<em>a</em><sub><em>n</em> − 1</sub> = <em>a</em><sub>1</sub> + (<em>n</em>−2)<em>d</em>, <em>a</em><sub><em>n</em></sub> = <em>a</em><sub>1</sub> + (<em>n</em>−1)<em>d</em></span></p>
+<p>The sum of the multiples of 3 or 5 is a composite arithmetic series.
+An <a
+href="https://mathworld.wolfram.com/ArithmeticSeries.html"><em>arithmetic
+series</em></a> is the sum of a sequence of numbers where each
+subsequent term can be calculated by adding a constant <span
+class="math inline"><em>d</em></span> to the last term. For example, for
+the sequence <span
+class="math inline">2, 5, 8, ...<em>a</em><sub><em>n</em></sub></span>,
+<span class="math inline"><em>a</em><sub>1</sub> = 2</span>, <span
+class="math inline"><em>d</em> = 3</span>, and can be represented
+as:</p>
+<p><span
+class="math inline"><em>a</em><sub>1</sub>, <em>a</em><sub>2</sub> = <em>a</em><sub>1</sub> + <em>d</em>, <em>a</em><sub>3</sub> = <em>a</em><sub>1</sub> + 2<em>d</em>, ...<em>a</em><sub><em>n</em> − 1</sub> = <em>a</em><sub>1</sub> + (<em>n</em>−2)<em>d</em>, <em>a</em><sub><em>n</em></sub> = <em>a</em><sub>1</sub> + (<em>n</em>−1)<em>d</em></span></p>
 <p>Naturally, it follows that the sum of this sequence is:</p>
-<p><span class="math inline"><em>S</em><sub><em>n</em></sub> = <em>a</em><sub>1</sub> + (<em>a</em><sub>1</sub>+<em>d</em>) + (<em>a</em><sub>1</sub>+2<em>d</em>) + ... + (<em>a</em><sub>1</sub>+(<em>n</em>−2)<em>d</em>) + (<em>a</em><sub>1</sub>+(<em>n</em>−1)<em>d</em>)</span></p>
-<p>Cleverly, the series formula is derived by rewriting this sum in another way, with respect to the last value in the sequence <span class="math inline"><em>a</em><sub><em>n</em></sub></span>:</p>
-<p><span class="math inline"><em>S</em><sub><em>n</em></sub> = (<em>a</em><sub><em>n</em></sub>−(<em>n</em>−1)<em>d</em>) + (<em>a</em><sub><em>n</em></sub>−(<em>n</em>−2)<em>d</em>) + ... + (<em>a</em><sub><em>n</em></sub>−2<em>d</em>) + (<em>a</em><sub><em>n</em></sub>−<em>d</em>) + <em>a</em><sub><em>n</em></sub></span></p>
-<p>Adding these two formulas together causes all terms involving <span class="math inline"><em>d</em></span> to cancel out, and we’re left with <span class="math inline">2<em>S</em><sub><em>n</em></sub> = <em>n</em>(<em>a</em><sub>1</sub>+<em>a</em><sub><em>n</em></sub>)</span>, which simplifies to <span class="math inline">$S_n = \frac{n}{2}(a_1 + a_n)$</span>.</p>
-<p>In the special case where each number in the sequence is a multiple of the first (e.g. 3, 6, 9, 12), then <span class="math inline"><em>a</em><sub><em>n</em></sub> = <em>n</em> * <em>a</em><sub>1</sub></span>, and the formula can be written as <span class="math inline">$S_n = \frac{n}{2}(a_1 + n * a_1)$</span>, which simplifies to:</p>
+<p><span
+class="math inline"><em>S</em><sub><em>n</em></sub> = <em>a</em><sub>1</sub> + (<em>a</em><sub>1</sub>+<em>d</em>) + (<em>a</em><sub>1</sub>+2<em>d</em>) + ... + (<em>a</em><sub>1</sub>+(<em>n</em>−2)<em>d</em>) + (<em>a</em><sub>1</sub>+(<em>n</em>−1)<em>d</em>)</span></p>
+<p>Cleverly, the series formula is derived by rewriting this sum in
+another way, with respect to the last value in the sequence <span
+class="math inline"><em>a</em><sub><em>n</em></sub></span>:</p>
+<p><span
+class="math inline"><em>S</em><sub><em>n</em></sub> = (<em>a</em><sub><em>n</em></sub>−(<em>n</em>−1)<em>d</em>) + (<em>a</em><sub><em>n</em></sub>−(<em>n</em>−2)<em>d</em>) + ... + (<em>a</em><sub><em>n</em></sub>−2<em>d</em>) + (<em>a</em><sub><em>n</em></sub>−<em>d</em>) + <em>a</em><sub><em>n</em></sub></span></p>
+<p>Adding these two formulas together causes all terms involving <span
+class="math inline"><em>d</em></span> to cancel out, and we’re left with
+<span
+class="math inline">2<em>S</em><sub><em>n</em></sub> = <em>n</em>(<em>a</em><sub>1</sub>+<em>a</em><sub><em>n</em></sub>)</span>,
+which simplifies to <span class="math inline">$S_n = \frac{n}{2}(a_1 +
+a_n)$</span>.</p>
+<p>In the special case where each number in the sequence is a multiple
+of the first (e.g. 3, 6, 9, 12), then <span
+class="math inline"><em>a</em><sub><em>n</em></sub> = <em>n</em> * <em>a</em><sub>1</sub></span>,
+and the formula can be written as <span class="math inline">$S_n =
+\frac{n}{2}(a_1 + n * a_1)$</span>, which simplifies to:</p>
 <p><span class="math inline">$S_n = \frac{n * a_1}{2}(1 + n)$</span></p>
 <p>This is the formula we’ll implement in the code below.</p>
 <p><strong>$PROJECT/src/lib.rs</strong></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>inline<span class="at">]</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> euler1_series(input<span class="op">:</span> <span class="dt">i64</span>) <span class="op">-&gt;</span> <span class="dt">i64</span> <span class="op">{</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> val <span class="op">=</span> input <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> n_3 <span class="op">=</span> val <span class="op">/</span> <span class="dv">3</span><span class="op">;</span></span>
@@ -161,11 +271,24 @@
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    sum_three <span class="op">+</span> sum_five <span class="op">-</span> sum_fifteen</span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Recall that the original problem asks to calculate the sum of the multiples <em>below</em> <code>input</code>, which is why we first declare <code>let val = input - 1;</code>. This was implicitly handled in the <code>for</code> loops in the previous two solutions, because the upper bound of the range iterator is <a href="https://doc.rust-lang.org/std/ops/struct.Range.html#fields">exclusive</a>. Next, we find the number of terms <code>n</code> by using the fact that the integer type in Rust implements division in such a way that the result is floored, so that the answers remains an integer. Finally, we implement the series formula for multiples of 3 and multiples of 5, add the results, and subtract the sum of the multiples of 15, because it is the least common multiple of 3 and 5.</p>
+<p>Recall that the original problem asks to calculate the sum of the
+multiples <em>below</em> <code>input</code>, which is why we first
+declare <code>let val = input - 1;</code>. This was implicitly handled
+in the <code>for</code> loops in the previous two solutions, because the
+upper bound of the range iterator is <a
+href="https://doc.rust-lang.org/std/ops/struct.Range.html#fields">exclusive</a>.
+Next, we find the number of terms <code>n</code> by using the fact that
+the integer type in Rust implements division in such a way that the
+result is floored, so that the answers remains an integer. Finally, we
+implement the series formula for multiples of 3 and multiples of 5, add
+the results, and subtract the sum of the multiples of 15, because it is
+the least common multiple of 3 and 5.</p>
 <h1 id="creating-benchmarks">Creating Benchmarks</h1>
-<p>Replace the code in <code>benches/euler1_benchmark.rs</code> with:</p>
+<p>Replace the code in <code>benches/euler1_benchmark.rs</code>
+with:</p>
 <p><strong>$PROJECT/benches/euler1_benchmark.rs</strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> Criterion<span class="op">};</span></span>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> Criterion<span class="op">};</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion_benchmarking::</span><span class="op">{</span>euler1_par<span class="op">,</span> euler1_series<span class="op">,</span> euler1_simple<span class="op">};</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> criterion_benchmark(c<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Criterion) <span class="op">{</span></span>
@@ -177,8 +300,28 @@
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_group!</span>(benches<span class="op">,</span> criterion_benchmark)<span class="op">;</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_main!</span>(benches)<span class="op">;</span></span></code></pre></div>
-<p>In the above code, <code>.bench_function</code> defines a benchmark with a <em>name</em> and a <em>closure</em>. The name must be unique among the benchmarks in the project. The closure accepts one argument, <a href="http://bheisler.github.io/criterion.rs/criterion/struct.Bencher.html"><code>Bencher</code></a>, which is a <code>Timer</code> struct used to iterate a benchmarked function and measure the runtime. <a href="https://docs.rs/criterion/0.2.6/criterion/fn.black_box.html"><code>black_box</code></a> is a function that prevents the Rust compiler from pre-optimizing the function prior to runtime, which can result in a quicker benchmark time than real-world use cases. <a href="https://docs.rs/criterion/latest/criterion/macro.criterion_group.html"><code>criterion_group!(...)</code></a> and <a href="https://docs.rs/criterion/latest/criterion/macro.criterion_main.html"><code>criterion_main!(...)</code></a> are <a href="https://doc.rust-lang.org/book/ch19-06-macros.html">macros</a>, which together generate a benchmark group and a <code>main</code> function that executes the benchmarks. This is also why the benchmark is conducted in a separate file from <code>main.rs</code>, which already defines its own <code>main()</code> function.</p>
-<p>To run the benchmark, type <code>cargo bench</code> in the terminal. After several seconds, you should see an output like this:</p>
+<p>In the above code, <code>.bench_function</code> defines a benchmark
+with a <em>name</em> and a <em>closure</em>. The name must be unique
+among the benchmarks in the project. The closure accepts one argument,
+<a
+href="http://bheisler.github.io/criterion.rs/criterion/struct.Bencher.html"><code>Bencher</code></a>,
+which is a <code>Timer</code> struct used to iterate a benchmarked
+function and measure the runtime. <a
+href="https://docs.rs/criterion/0.2.6/criterion/fn.black_box.html"><code>black_box</code></a>
+is a function that prevents the Rust compiler from pre-optimizing the
+function prior to runtime, which can result in a quicker benchmark time
+than real-world use cases. <a
+href="https://docs.rs/criterion/latest/criterion/macro.criterion_group.html"><code>criterion_group!(...)</code></a>
+and <a
+href="https://docs.rs/criterion/latest/criterion/macro.criterion_main.html"><code>criterion_main!(...)</code></a>
+are <a
+href="https://doc.rust-lang.org/book/ch19-06-macros.html">macros</a>,
+which together generate a benchmark group and a <code>main</code>
+function that executes the benchmarks. This is also why the benchmark is
+conducted in a separate file from <code>main.rs</code>, which already
+defines its own <code>main()</code> function.</p>
+<p>To run the benchmark, type <code>cargo bench</code> in the terminal.
+After several seconds, you should see an output like this:</p>
 <pre><code>Benchmarking simple: Warming up for 3.0000 s
 simple                  time:   [1.1540 ms 1.1564 ms 1.1589 ms]
 Found 2 outliers among 100 measurements (2.00%)
@@ -193,14 +336,30 @@ Benchmarking series: Warming up for 3.0000 s
 series                  time:   [2.4586 ns 2.4645 ns 2.4708 ns]
 Found 1 outliers among 100 measurements (1.00%)
   1 (1.00%) high mild</code></pre>
-<p>The <code>time</code> array represents a 95% confidence interval, where the mean execution time is the second value in the array. Outliers are determined using a modified version of <a href="https://bheisler.github.io/criterion.rs/book/analysis.html#outlier-classification">Tukey’s method</a>.</p>
-<p>A more consumable version of this information is automatically generated and is available in <code>$PROJECT/target/criterion/{benchmark-name}/report/index.html</code>.</p>
+<p>The <code>time</code> array represents a 95% confidence interval,
+where the mean execution time is the second value in the array. Outliers
+are determined using a modified version of <a
+href="https://bheisler.github.io/criterion.rs/book/analysis.html#outlier-classification">Tukey’s
+method</a>.</p>
+<p>A more consumable version of this information is automatically
+generated and is available in
+<code>$PROJECT/target/criterion/{benchmark-name}/report/index.html</code>.</p>
 <h1 id="under-the-hood">Under the Hood</h1>
-<p>Before we compare the charts for each function, let’s briefly explore what <em>Criterion</em> is doing behind the scenes. The first step of the process is warm-up, which involves running the function repeatedly for a short period of time in order to allow the CPU and OS caches to adapt to the new load.</p>
-<p>Second, after the warm-up process is complete, measurements are taken by repeatedly running the function under examination.</p>
-<p>Third, the samples are analyzed and the results are compiled into useful statistics for the user. This involves custom outlier analysis and linear regression analysis.</p>
-<p>Finally, the current run is compared to the previous run to determine if any statistically significant change has occurred, which is reported to the user.</p>
-<p>More details about the analysis process can be found at https://bheisler.github.io/criterion.rs/book/analysis.html.</p>
+<p>Before we compare the charts for each function, let’s briefly explore
+what <em>Criterion</em> is doing behind the scenes. The first step of
+the process is warm-up, which involves running the function repeatedly
+for a short period of time in order to allow the CPU and OS caches to
+adapt to the new load.</p>
+<p>Second, after the warm-up process is complete, measurements are taken
+by repeatedly running the function under examination.</p>
+<p>Third, the samples are analyzed and the results are compiled into
+useful statistics for the user. This involves custom outlier analysis
+and linear regression analysis.</p>
+<p>Finally, the current run is compared to the previous run to determine
+if any statistically significant change has occurred, which is reported
+to the user.</p>
+<p>More details about the analysis process can be found at
+https://bheisler.github.io/criterion.rs/book/analysis.html.</p>
 <h2 id="comparing-functions">Comparing Functions</h2>
 <p>Let’s look at the reports for each function.</p>
 <p><em>euler1_simple</em></p>
@@ -209,15 +368,51 @@ Found 1 outliers among 100 measurements (1.00%)
 <p><img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot4.png" style="width:100%; max-width: 1080px;" /></p>
 <p><em>euler1_series</em></p>
 <p><img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot5.png" style="width:100%; max-width: 1080px;" /></p>
-<p>The top left plot in each report is a <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a>, which depicts the average time per iteration of the function. The blue bar represents the overall mean. The shaded region represents the probability that execution of this function will take a particular amount of time, while integrating the area between two times will provide the probability that the function will execute within that range of time. The top right plot is the linear regression for the function. Each iteration is plotted in order and the y-axis represents cumulative time to execute all iterations up to that point. The slope of this line is given under <strong>Additional Statistics</strong>.</p>
-<p><em>R</em><sup><em>2</em></sup> and <em>standard deviation</em> are also useful statistics to look at. In the context of the benchmarking process, a low <em>R</em><sup><em>2</em></sup> means in statistical terms that a significant amount of the variability between each iteration isn’t attributable to differences in the function itself. However, we know that every time the function executes, the exact same code is executed, so what does that sentence actually mean? In this context, it means that the benchmarking process we’ve written is not behaving the same way in each iteration.</p>
-<p>For <em>euler1_par</em>, this is in fact the case. I think the reason that this function in particular has a lot of variability is because it is implementing a parallelization routine, which relies on the processor to queue up tasks. How each <code>handle</code> is queued may vary based on the instantaneous load when each iteration is executed.</p>
-<p>The <em>standard deviation</em> tells you (for a roughly normally distributed curve) that 95% of the samples landed between <span class="math inline"><em>µ</em> ± 2<em>σ</em></span> (mean time ± 2 standard deviations).</p>
+<p>The top left plot in each report is a <a
+href="https://en.wikipedia.org/wiki/Probability_density_function">probability
+density function</a>, which depicts the average time per iteration of
+the function. The blue bar represents the overall mean. The shaded
+region represents the probability that execution of this function will
+take a particular amount of time, while integrating the area between two
+times will provide the probability that the function will execute within
+that range of time. The top right plot is the linear regression for the
+function. Each iteration is plotted in order and the y-axis represents
+cumulative time to execute all iterations up to that point. The slope of
+this line is given under <strong>Additional Statistics</strong>.</p>
+<p><em>R</em><sup><em>2</em></sup> and <em>standard deviation</em> are
+also useful statistics to look at. In the context of the benchmarking
+process, a low <em>R</em><sup><em>2</em></sup> means in statistical
+terms that a significant amount of the variability between each
+iteration isn’t attributable to differences in the function itself.
+However, we know that every time the function executes, the exact same
+code is executed, so what does that sentence actually mean? In this
+context, it means that the benchmarking process we’ve written is not
+behaving the same way in each iteration.</p>
+<p>For <em>euler1_par</em>, this is in fact the case. I think the reason
+that this function in particular has a lot of variability is because it
+is implementing a parallelization routine, which relies on the processor
+to queue up tasks. How each <code>handle</code> is queued may vary based
+on the instantaneous load when each iteration is executed.</p>
+<p>The <em>standard deviation</em> tells you (for a roughly normally
+distributed curve) that 95% of the samples landed between <span
+class="math inline"><em>µ</em> ± 2<em>σ</em></span> (mean time ± 2
+standard deviations).</p>
 <h2 id="advanced-features">Advanced Features</h2>
-<p><em>Criterion</em> has a lot of advanced features for the statistically inclined, two of which we’ll explore in more detail: <code>benchmark_group</code> and <code>bench_with_input</code>.</p>
-<h3 id="criterioncriterionbenchmark_group">criterion::Criterion::benchmark_group</h3>
-<p>It’s apparent that the parallelized function(<span class="math inline"><em>µ</em> = 227.90</span> us) is nearly 1 order of magnitude faster than the simple(<span class="math inline"><em>µ</em> = 1.1564</span> ms) function, while the series function(<span class="math inline"><em>µ</em> = 2.4645</span> ns) is nearly 3 orders of magnitude faster. We can generate a combined report that summarizes the performance of all three functions by associating them with each other using <code>benchmark_group</code>.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> Criterion<span class="op">};</span></span>
+<p><em>Criterion</em> has a lot of advanced features for the
+statistically inclined, two of which we’ll explore in more detail:
+<code>benchmark_group</code> and <code>bench_with_input</code>.</p>
+<h3
+id="criterioncriterionbenchmark_group">criterion::Criterion::benchmark_group</h3>
+<p>It’s apparent that the parallelized function(<span
+class="math inline"><em>µ</em> = 227.90</span> us) is nearly 1 order of
+magnitude faster than the simple(<span
+class="math inline"><em>µ</em> = 1.1564</span> ms) function, while the
+series function(<span class="math inline"><em>µ</em> = 2.4645</span> ns)
+is nearly 3 orders of magnitude faster. We can generate a combined
+report that summarizes the performance of all three functions by
+associating them with each other using <code>benchmark_group</code>.</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> Criterion<span class="op">};</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion_benchmarking::</span><span class="op">{</span>euler1_par<span class="op">,</span> euler1_series<span class="op">,</span> euler1_simple<span class="op">};</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> criterion_benchmark(c<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Criterion) <span class="op">{</span></span>
@@ -231,17 +426,28 @@ Found 1 outliers among 100 measurements (1.00%)
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_group!</span>(benches<span class="op">,</span> criterion_benchmark)<span class="op">;</span></span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_main!</span>(benches)<span class="op">;</span></span></code></pre></div>
-<p>In the above code, we follow nearly the same process as individual benchmarking, except we first create and name a <code>BenchmarkGroup</code> using <code>c.benchmark_group(name)</code>, which is merely an entity used to group related benchmarks for analysis and reporting. The compiled output is available at <code>$PROJECT/target/criterion/Euler 1/report/index.html</code>, while individual reports for each function are available at <code>$PROJECT/target/criterion/Euler1/{benchmark-name}/report/index.html</code>.</p>
+<p>In the above code, we follow nearly the same process as individual
+benchmarking, except we first create and name a
+<code>BenchmarkGroup</code> using <code>c.benchmark_group(name)</code>,
+which is merely an entity used to group related benchmarks for analysis
+and reporting. The compiled output is available at
+<code>$PROJECT/target/criterion/Euler 1/report/index.html</code>, while
+individual reports for each function are available at
+<code>$PROJECT/target/criterion/Euler1/{benchmark-name}/report/index.html</code>.</p>
 <p><img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot6.png" style="width:100%; max-width: 1080px;" /></p>
-<h3 id="criterioncriterionbench_with_input">criterion::Criterion::bench_with_input</h3>
-<p>To thoroughly benchmark a function, it’s important to test it across a range of acceptable values. <code>bench_with_input</code> helps test a wide range of cases more effectively.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> BenchmarkId<span class="op">,</span> Criterion<span class="op">};</span></span>
+<h3
+id="criterioncriterionbench_with_input">criterion::Criterion::bench_with_input</h3>
+<p>To thoroughly benchmark a function, it’s important to test it across
+a range of acceptable values. <code>bench_with_input</code> helps test a
+wide range of cases more effectively.</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion::</span><span class="op">{</span>black_box<span class="op">,</span> criterion_group<span class="op">,</span> criterion_main<span class="op">,</span> BenchmarkId<span class="op">,</span> Criterion<span class="op">};</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">criterion_benchmarking::</span><span class="op">{</span>euler1_par<span class="op">,</span> euler1_series<span class="op">,</span> euler1_simple<span class="op">};</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> criterion_benchmark(c<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Criterion) <span class="op">{</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> inputs <span class="op">=</span> [<span class="dv">100</span><span class="op">,</span> <span class="dv">1000</span><span class="op">,</span> <span class="dv">10000</span><span class="op">,</span> <span class="dv">100000</span><span class="op">,</span> <span class="dv">1000000</span>]<span class="op">;</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> group <span class="op">=</span> c<span class="op">.</span>benchmark_group(<span class="st">&quot;Multiple inputs&quot;</span>)<span class="op">;</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> i <span class="kw">in</span> inputs <span class="op">{</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> inputs <span class="op">{</span></span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        group<span class="op">.</span>bench_with_input(<span class="pp">BenchmarkId::</span>new(<span class="st">&quot;euler1_simple&quot;</span><span class="op">,</span> i)<span class="op">,</span> <span class="op">&amp;</span>i<span class="op">,</span> <span class="op">|</span>b<span class="op">,</span> <span class="op">&amp;</span>i<span class="op">|</span> <span class="op">{</span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>            b<span class="op">.</span>iter(<span class="op">||</span> euler1_simple(black_box(i)))</span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span>)<span class="op">;</span></span>
@@ -258,13 +464,53 @@ Found 1 outliers among 100 measurements (1.00%)
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_group!</span>(benches<span class="op">,</span> criterion_benchmark)<span class="op">;</span></span>
 <span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="pp">criterion_main!</span>(benches)<span class="op">;</span></span></code></pre></div>
-<p>Note that we added <code>BenchmarkId</code> to the <code>use</code> declaration for <em>Criterion</em>. Next, we create an array of input values to assess, as well as a new <code>BenchmarkGroup</code>. We then iterate across the array of inputs, and call <code>bench_with_input</code> with a unique <code>BenchmarkId</code> and a closure that passes input <code>i</code> to the function being tested.</p>
+<p>Note that we added <code>BenchmarkId</code> to the <code>use</code>
+declaration for <em>Criterion</em>. Next, we create an array of input
+values to assess, as well as a new <code>BenchmarkGroup</code>. We then
+iterate across the array of inputs, and call
+<code>bench_with_input</code> with a unique <code>BenchmarkId</code> and
+a closure that passes input <code>i</code> to the function being
+tested.</p>
 <p><img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot2.png" style="width:100%; max-width: 1080px;" /></p>
-<p>A summary of all of our reports so far is available at <code>$PROJECT/criterion/report/index.html</code>. The tabular format for the <em>Multiple inputs</em> tests is a great way to compare multiple functions across a range of inputs, as well as slice the data by two explanatory variables - the function and the input. This level of detail allows us to explore relationships between multiple explanatory variables using a concept called <a href="https://en.wikipedia.org/wiki/Response_surface_methodology">Response Surface Methodology</a>. Unfortunately, Criterion is currently lacking in the abilty to generate 3-dimensional graphs needed to explore this concept in more detail.</p>
-<p>Benchmarking across a wide range of inputs helps you find use cases that suffer from sub-optimal performance. For example, I found that <code>euler1_simple</code> and <code>euler1_par</code> take a significant amount of time to process the maximum value available in <code>i64</code>, ~<span class="math inline">9.22 * 10<sup>18</sup></span>, indicating that these functions should be modified to accept an integer type with a smaller number space as an input parameter.</p>
+<p>A summary of all of our reports so far is available at
+<code>$PROJECT/criterion/report/index.html</code>. The tabular format
+for the <em>Multiple inputs</em> tests is a great way to compare
+multiple functions across a range of inputs, as well as slice the data
+by two explanatory variables - the function and the input. This level of
+detail allows us to explore relationships between multiple explanatory
+variables using a concept called <a
+href="https://en.wikipedia.org/wiki/Response_surface_methodology">Response
+Surface Methodology</a>. Unfortunately, Criterion is currently lacking
+in the abilty to generate 3-dimensional graphs needed to explore this
+concept in more detail.</p>
+<p>Benchmarking across a wide range of inputs helps you find use cases
+that suffer from sub-optimal performance. For example, I found that
+<code>euler1_simple</code> and <code>euler1_par</code> take a
+significant amount of time to process the maximum value available in
+<code>i64</code>, ~<span
+class="math inline">9.22 * 10<sup>18</sup></span>, indicating that these
+functions should be modified to accept an integer type with a smaller
+number space as an input parameter.</p>
 <h1 id="final-thoughts">Final Thoughts</h1>
-<p>If you write code for a living, chances are that someone else will have to reference, re-use, or adapt your code for another purpose in the future. Therefore, it’s important to be a good custodian of the code you write by considering performance and ensuring it can function as expected through the range of its intended use conditions and beyond. Benchmarking is a key tool for understanding how your code functions under the hood and making improvements in a scientific manner.</p>
-<p>The benchmarking process is highly sensitive to the testing environment, so great care should be taken to ensure that tests are conducted in as similar environment to each other as possible, for example on the same machine with similar background loads between tests.</p>
-<p>I have found Rust to be incredibly well-documented, among the best I’ve encountered in my career. The Criterion library is no exception, and as a result a lot of the material for this article was derived from the <a href="https://bheisler.github.io/criterion.rs/book/getting_started.html">original documentation</a> for <em>Criterion</em>.</p>
-<p><em>This article was originally written for the <a href="https://engineering.deptagency.com/benchmarking-rust-code-using-criterion-rs">engineering blog</a> at DEPT®, a technology consultancy</em></p>
+<p>If you write code for a living, chances are that someone else will
+have to reference, re-use, or adapt your code for another purpose in the
+future. Therefore, it’s important to be a good custodian of the code you
+write by considering performance and ensuring it can function as
+expected through the range of its intended use conditions and beyond.
+Benchmarking is a key tool for understanding how your code functions
+under the hood and making improvements in a scientific manner.</p>
+<p>The benchmarking process is highly sensitive to the testing
+environment, so great care should be taken to ensure that tests are
+conducted in as similar environment to each other as possible, for
+example on the same machine with similar background loads between
+tests.</p>
+<p>I have found Rust to be incredibly well-documented, among the best
+I’ve encountered in my career. The Criterion library is no exception,
+and as a result a lot of the material for this article was derived from
+the <a
+href="https://bheisler.github.io/criterion.rs/book/getting_started.html">original
+documentation</a> for <em>Criterion</em>.</p>
+<p><em>This article was originally written for the <a
+href="https://engineering.deptagency.com/benchmarking-rust-code-using-criterion-rs">engineering
+blog</a> at DEPT®, a technology consultancy</em></p>
 </body> </html>

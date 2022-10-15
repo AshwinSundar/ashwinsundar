@@ -1,10 +1,16 @@
 <!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
 <h1 id="car-temperatures-in-phoenix">Car Temperatures in Phoenix</h1>
 <p>March 2017</p>
-<p>Using a wireless microcontroller, I monitored the temperature on my car’s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I’m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:</p>
+<p>Using a wireless microcontroller, I monitored the temperature on my
+car’s dashboard and in the passenger footwell for a whole day during a
+particular hot spell in June in Phoenix. Even though I’m a Phoenix
+native, I was surprised by just how hot the inside of my car gets. The
+hardware components used were:</p>
 <ul>
 <li><a href="https://docs.particle.io/photon/">Particle Photon</a></li>
-<li>2 <a href="https://www.digikey.com/en/products/detail/amphenol-advanced-sensors/MA100BF103A/272974">Amphenol MA100BF103A</a> NTC thermistors</li>
+<li>2 <a
+href="https://www.digikey.com/en/products/detail/amphenol-advanced-sensors/MA100BF103A/272974">Amphenol
+MA100BF103A</a> NTC thermistors</li>
 <li>3 C batteries (the heat really saps the batteries)</li>
 </ul>
 <p>The programs I used for recording and processing data were:</p>
@@ -17,12 +23,22 @@
 <p><img src="/blog/assets/car-temps-phx/sunrise.jpeg" width="50%;" style="max-width: 640px;"/></p>
 <p>The sun rose at 5:18AM, when the outside temperature was 80.6F.</p>
 <p><img src="/blog/assets/car-temps-phx/midday.jpeg" width="37%;" style="max-width: 480px;"/></p>
-<p>My car was parked in full shade of the neighbor’s house to the east until 9:14AM. At that time, the dashboard temperature rapidly spikes, climbing at a rate of about 1F per minute. At 12:47PM, the dashboard reaches its peak of 212F - the boiling point of water! Meanwhile, the ambient (footwell) temperature is a tolerable 126.1F, and the outside temperature is 107.6F [joke about dry heat].</p>
+<p>My car was parked in full shade of the neighbor’s house to the east
+until 9:14AM. At that time, the dashboard temperature rapidly spikes,
+climbing at a rate of about 1F per minute. At 12:47PM, the dashboard
+reaches its peak of 212F - the boiling point of water! Meanwhile, the
+ambient (footwell) temperature is a tolerable 126.1F, and the outside
+temperature is 107.6F [joke about dry heat].</p>
 <p><img src="/blog/assets/car-temps-phx/evening.jpeg" width="37%;" style="max-width: 480px;"/></p>
-<p>Around 1:45PM, the car moves into some tree shade, and the dashboard quickly cools off again. Meanwhile, the ambient temperature in the car continues to climb, peaking at 2:43PM at 134.8F. The outside temperature is 111.2F. From here, temperatures cool somewhat for the rest of the day.</p>
+<p>Around 1:45PM, the car moves into some tree shade, and the dashboard
+quickly cools off again. Meanwhile, the ambient temperature in the car
+continues to climb, peaking at 2:43PM at 134.8F. The outside temperature
+is 111.2F. From here, temperatures cool somewhat for the rest of the
+day.</p>
 <p>The C++ code used to control the Particle Photon is as follows:</p>
 <hr />
-<div class="sourceCode" id="cb1"><pre class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode c++"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;Particle.h&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> thermistor1Analog<span class="op">;</span> <span class="co">// contains raw analog data from thermistor 1 circuit VOut</span></span>
