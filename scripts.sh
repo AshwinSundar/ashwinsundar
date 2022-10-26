@@ -17,7 +17,7 @@ createBlogPost() {
         fi
     done
 
-    # cp templates/htmlTemplate.txt blog/$inp.md
+    # cp templates/blogTemplate.txt drafts/$inp.md
     touch drafts/$inp.md
     echo "New blog post created at /drafts/$inp.md"
 }
