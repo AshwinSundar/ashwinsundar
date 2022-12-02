@@ -1,15 +1,25 @@
-div.content {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: 1fr 1fr;
+.headline
+{
+		color: #bbbbbb
+}
 
-  .writing,
-  .music,
-  .photography,
-  .projects {
-  }
+div.content 
+{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
 
-  .about {
-    text-align: justify;
-  }
+    .writing,
+    .music,
+    .photography,
+    .projects,
+	.about
+    {
+        color: #444444 
+    }
+
+    .about 
+    {
+        text-align: justify;
+    }
 }

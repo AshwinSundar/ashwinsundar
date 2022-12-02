@@ -4,7 +4,8 @@ Date: August 1st, 2022
 
 In every technical contributor's career, they will be required to communicate technical work to a non-technical audience. This task typically manifests itself in the form of e-mail, instant message, and one-on-one verbal communication. As they rise through the ranks, they will eventually present their work to larger groups and higher ranks, but the basic lay-person communication task remains the same.
 
-Here are some tips for how to successfully approach these interactions.
+Throughout their career, every technical contributor (TC) will be required to summarized complicated details for a non-technical audience. 
+Here `are some tips for how to successfully approach these interactions.
 
 1. **Don't overexplain.**
 
