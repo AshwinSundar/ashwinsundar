@@ -1,0 +1,76 @@
+<!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
+<h1 id="creating-a-fibonacci-function-in-standard-ml">Creating a
+Fibonacci Function in Standard ML</h1>
+<h2 id="challenge">Challenge</h2>
+<p>Write a recursive function in SML that accepts one
+<code>i: int</code> argument and returns a list of Fibonacci numbers of
+length <code>i</code>.</p>
+<h2 id="approach">Approach</h2>
+<p>Let’s approach this problem in 3 stages. First, we’ll write a
+function that generates Fibonacci numbers, without worrying about
+recursion or number of arguments. From there, we will progressively
+improve the function until it meets the requirements of the
+challenge.</p>
+<h2 id="attempt-1">Attempt 1</h2>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sml"><code class="sourceCode sml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">(* c: current, n: next, lst: list of numbers, i: count to generate *)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> fibonacci_1 (c: <span class="dt">int</span>, n: <span class="dt">int</span>, lst: <span class="dt">int</span> <span class="dt">list</span>, i: <span class="dt">int</span>) =</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">case</span> i <span class="kw">of</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dv">1</span> =&gt; lst</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      | _ =&gt; fibonacci_1 (n, c+n, n::lst, i<span class="dv">-1</span>)</span></code></pre></div>
+<p>This function accepts four arguments - the current number, the next
+number, a list of numbers, and the quantity of numbers to generated. For
+example, <code>fibonacci_1 (1, 1, [1], 8)</code> generates the first 8
+numbers and returns a list <code>[21, 13, 8, 5, 3, 2, 1, 1]</code>.</p>
+<p>This function is a bit unwieldy to use for a few reasons. First, a
+list containing the first Fibonacci number <code>1</code> must be passed
+in, which is not very intuitive. Second, the list that is returned is in
+reverse order.</p>
+<h2 id="attempt-2">Attempt 2</h2>
+<p>Next, let’s change the function so that it only needs to accept one
+argument. We will accomplish this by recognizing that the only argument
+that needs to be passed in by the caller is <code>i</code>, and the
+remaining arguments can be handled by a local function using pattern
+matching.</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode sml"><code class="sourceCode sml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> fibonacci_2 (i: <span class="dt">int</span>) =</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">fun</span> f (c: <span class="dt">int</span>, n: <span class="dt">int</span>, lst: <span class="dt">int</span> <span class="dt">list</span>, i: <span class="dt">int</span>) =</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            <span class="kw">case</span> i <span class="kw">of</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                <span class="dv">1</span> =&gt; lst</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            | _ =&gt; f (n, c+n, n::lst, i<span class="dv">-1</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        f (<span class="dv">1</span>, <span class="dv">1</span>, [<span class="dv">1</span>], i)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span></code></pre></div>
+<p>The result of <code>fibonacci_2(8)</code> is once again
+<code>[21, 13, 8, 5, 3, 2, 1, 1]</code>. This function is much easier to
+use than <code>fibonacci_1</code>, since it only requires one argument -
+the number of values to generate.</p>
+<h2 id="attempt-3">Attempt 3</h2>
+<p>Finally, let’s return the list in the correct order by reversing it
+with another local function that uses pattern matching.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode sml"><code class="sourceCode sml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> fibonacci_3 (i: <span class="dt">int</span>) =</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">fun</span> f (c: <span class="dt">int</span>, n: <span class="dt">int</span>, lst: <span class="dt">int</span> <span class="dt">list</span>, i: <span class="dt">int</span>) =</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="kw">case</span> i <span class="kw">of</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                <span class="dv">1</span> =&gt; rev lst</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            | _ =&gt; f (n, c+n, n::lst, i<span class="dv">-1</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">fun</span> rev (l : <span class="dt">int</span> <span class="dt">list</span>) =</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="kw">case</span> l <span class="kw">of</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                [] =&gt; []</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>              | x::xs =&gt; rev xs @ [x]</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">in</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        f (<span class="dv">1</span>, <span class="dv">1</span>, [<span class="dv">1</span>], i)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span></code></pre></div>
+<p>The result of calling <code>fibonacci_3(8)</code> is
+<code>[1, 1, 2, 3, 5, 8, 13, 21]</code>. The function recursively
+calculates Fibonacci numbers and only needs one argument passed in,
+which is the quantity of Fibonacci numbers to generate. Therefore, we
+have successfully completed the challenge.</p>
+<h2 id="summary">Summary</h2>
+<p>Through three phases, we iteratively modified the Fibonacci function
+and ended up with a recursive solution written in a functional
+programming style.</p>
+</body> </html>
