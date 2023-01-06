@@ -1,0 +1,616 @@
+<h1
+id="how-to-use-openais-chat-gpt3-effectively-as-a-software-engineer">How
+to use OpenAI’s Chat GPT3 effectively as a software engineer</h1>
+<p>Other Title:</p>
+<p>How to use chat gpt3 to supercharge your software career “” “”
+Enhance your career as a knowledge worker</p>
+<p>Getting feedback on this article: - My goal with this article is to
+explore a deep dive of using Chat GPT3 for some genuinely unique and
+difficult programming questions. The audience is other software
+engineers, and I want to satisfy that need to dig deeper and learn more
+in these articles. They often felt written at too high of a level and
+try to cater to too broad of an audience. The audience for this article
+might be small, but I think they will appreciate and respect us more as
+a company for writing long-form technical articles like this. - Ask
+people, “I wanted to write an article about this new AI engine that I
+think is really revolutionary, but I also editorialized quite a bit than
+I normally do when I’m writing stuff up, so I was wondering if you can
+read this and tell me if there’s something good about it, or I just
+sound kind of full of myself because I don’t work in the AI field and it
+clearly shows. - Do I just have to post this to DEPT’s blog? What if
+other sites want to carry this article too? Ask Kelsey what happens,
+don’t want to sound arrogant but just curious what the rules are if I
+wanted to cross-post this article to another site, or if another site
+approached to me.</p>
+<p>Make some predicitons</p>
+<p>Interfacing successfully with an AI will become a skill just like it
+is to use Google.</p>
+<ul>
+<li><p>Develop a good bs sensor</p></li>
+<li><p>Ask probing questions like you would of a human you don’t
+trust</p></li>
+<li><p>Periodically ask sanity-check questions that you know the answer
+to</p></li>
+<li><p>Treat it like a senior colleague who you are trying to ask a
+carefully crafted question. It should be an open-ended question,
+good-natured in demeanor, and not be leading.</p></li>
+<li><p>Use it for as many things as you can. See what kinds of questions
+it can and can’t answer properly, and tune your future questions to what
+it seems to answer best. (don’t like that sentence a whole lot)</p></li>
+</ul>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Programmers frequently work on complex projects and handle a vast
+amount of information - whether that be:<br />
+- multiple IDE’s worth of key bindings<br />
+- context shifting between high-level code, back-end scripting, and
+assembly code<br />
+- arcane discrete math operations</p>
+<p>…and other obscure intellectual gymnastics. As a programmer advances
+in their career, it is important for them to develop strategies to
+manage this cognitive load. OpenAI’s Generative Pretrained Transformer,
+or <a
+href="https://openai.com/blog/chatgpt/interact.sh/%2f../">ChatGPT-3</a>,
+is an implementation of a trained language model which interacts with
+participants in a conversational manner. GPT-3 can help manage
+information overload and make daily work more efficient. In this
+article, we will explore the performance of GPT-3 in handling common
+hurdles a programmer encounters in their daily work.</p>
+<h2 id="use-case-1---generating-new-code">Use Case #1 - Generating new
+code</h2>
+<p>ChatGPT-3 can generate new code. This feature is widely covered in
+the media and on OpenAI’s website itself, so let’s not dwell too
+long:</p>
+<p>Prompt:
+<code>Write some boilerplate code for a React.js project</code><br />
+Response:<br />
+<em>Here is some boilerplate code for a React.js project:</em></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> React <span class="im">from</span> <span class="st">&#39;react&#39;</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ReactDOM <span class="im">from</span> <span class="st">&#39;react-dom&#39;</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App <span class="kw">extends</span> React<span class="op">.</span><span class="at">Component</span> {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(props) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">super</span>(props)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">state</span> <span class="op">=</span> {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Initialize state here</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">render</span>() {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Add JSX here</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> rootElement <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;root&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ReactDOM<span class="op">.</span><span class="fu">render</span>(<span class="op">&lt;</span>App <span class="op">/&gt;,</span> rootElement)<span class="op">;</span></span></code></pre></div>
+<p><em>This code creates a App class that extends React.Component and
+has a render method that returns JSX to be rendered to the page. The App
+component is then rendered to the element with the root ID. You can add
+your own state and JSX to customize the component.</em></p>
+<p>That looks decent. ChatGPT-3 even explained the code in plain
+English. It is easy to corroborate the output by simply running the code
+and checking that it behaves as described.</p>
+<p>Here is something more challenging. Problem 2 from <a
+href="https://projecteuler.net/problem=2">Project Euler</a> is as
+follows:</p>
+<p>Problem 2: Even Fibonacci Numbers</p>
+<p>Each new term in the Fibonacci sequence is generated by adding the
+previous two terms. By starting with 1 and 2, the first 10 terms will
+be:</p>
+<p>1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …</p>
+<p>By considering the terms in the Fibonacci sequence whose values do
+not exceed four million, find the sum of the even-valued terms.</p>
+<p>Let’s ask ChatGPT-3 to solve this problem for us:</p>
+<p>Prompt: Solve Problem 2 from Project Euler.<br />
+Response: Here is a recursive solution to Problem 2 in Project Euler
+using Python:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define a recursive function to compute the sum of the even-valued terms in the Fibonacci sequence</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># whose values do not exceed a given maximum value</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> even_fibonacci_sum(n, a<span class="op">=</span><span class="dv">1</span>, b<span class="op">=</span><span class="dv">2</span>, <span class="bu">sum</span><span class="op">=</span><span class="dv">0</span>):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if the second term exceeds the maximum value, return the sum</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> b <span class="op">&gt;</span> n:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># if the second term is even, add it to the sum</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> b <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">sum</span> <span class="op">+=</span> b</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># call the function recursively with the next terms in the sequence</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> even_fibonacci_sum(n, b, a <span class="op">+</span> b, <span class="bu">sum</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># test the function</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(even_fibonacci_sum(<span class="dv">4000000</span>))</span></code></pre></div>
+<p><em>This function takes in three arguments: the maximum value (n),
+the first term (a), and the second term (b) of the Fibonacci sequence.
+It also has an optional argument sum that keeps track of the sum of the
+even-valued terms in the sequence</em>.</p>
+<p>The solution offered by ChatGPT-3 comes with comments and a brief
+explanation of how the code works. The recursive function accepts 1
+mandatory argument (the maximum value <code>n</code>), and three
+optional arguments: - The first term of the sequence <code>a</code> -
+The second term of the sequence <code>b</code> - The running sum of the
+even-valued terms <code>sum</code></p>
+<p>If <code>b</code> exceeds the maximum value specified, then the
+entire sum is returned and the function completes. Otherwise, the
+function checks if the second term is even and adds it to the running
+sum, and the function is called again.</p>
+<p>ChatGPT-3 did not correctly pick up on the fact that the last 3
+arguments are optional however, so the solution description is not
+accurate in this instance.</p>
+<p>Finally, let’s come up with some fun, novel, and slightly indulgent
+code based on a vague prompt, in a functional programming language
+called Standard ML:</p>
+<p>Prompt:
+<code>Write an interesting Standard ML program based on Bartleby's Parable</code><br />
+Response:<br />
+<em>Here is a possible Standard ML program that is based on Bartleby’s
+Parable:</em></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode sml"><code class="sourceCode sml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">(* The main function that represents Bartleby&#39;s actions *)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> bartleby() =</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">val</span> message = <span class="st">&quot;I would prefer not to&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">val</span> tasks = [<span class="st">&quot;copy documents&quot;</span>, <span class="st">&quot;file papers&quot;</span>, <span class="st">&quot;answer letters&quot;</span>]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">val</span> responses = map (<span class="kw">fn</span> task =&gt; print(task ^ <span class="st">&quot;? &quot;</span> ^ message ^ <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)) tasks</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">in</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (forall (<span class="kw">fn</span> response =&gt; response = message) responses) <span class="kw">then</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      print(<span class="st">&quot;Bartleby is uncooperative and does not complete any tasks.</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">else</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      print(<span class="st">&quot;Bartleby completes some tasks, but not all.</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">(* Call the main function *)</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>bartleby()</span></code></pre></div>
+<p><em>This program defines a function bartleby that represents the
+actions of the character Bartleby from the parable. The function has a
+list of tasks that Bartleby is asked to do, and for each task Bartleby
+responds with the message “I would prefer not to”. If Bartleby responds
+with this message for all tasks, then the function prints that Bartleby
+is uncooperative and does not complete any tasks. Otherwise, the
+function prints that Bartleby completes some tasks, but not
+all.</em></p>
+<p>Impressively, ChatGPT-3 is able to generate a functional program
+based on a couple of totally unrelated topics: recursive programming in
+SML, and the parable of “Bartleby, the Scrivener”. This is a short story
+written by Herman Melville in 1853 about a Wall Street clerk who refuses
+to do his boss’s bidding, simply replying “I would prefer not to,”, a
+feeling shared by many of us when the holidays approach. The output is a
+short SML program that seems to produce a variation of this response
+based on what is asked of him. However, there are a few problems - both
+on the programming side as well as the story side.</p>
+<p>First of all, this code does not compile because the
+<code>forall</code> function is not defined in this context. The fix is
+to rewrite the <code>if(forall (...))</code> expression in a recursive
+style.</p>
+<p>Second, in the original parable, Bartleby refuses to complete any
+task asked of him, yet this code indicates that he may complete some
+tasks, but not all. It doesn’t make sense to add this branch to the case
+statement based on the original story. This intersection of unrelated
+topics seems to prove difficult for the language model to process
+properly.</p>
+<p>The code provided requires some intermediate familiarity with
+Standard ML to debug and fix successfully. Therefore in this example,
+the programmer is not fully relieved from the task of writing idiomatic
+and correct code. With some further refinement to the prompt, it is
+possible that ChatGPT-3 could answer this question more effectively.</p>
+<h2 id="use-case-2---explaining-unfamiliar-constructs">Use Case #2 -
+Explaining unfamiliar constructs</h2>
+<p>How does ChatGPT-3 handle unfamiliar syntax and programming
+constructs? In the following example, a Complex number class is created
+using a construct called an <a
+href="https://en.cppreference.com/w/cpp/language/operators">overloaded
+operator</a>. This construct is not commonly used - let’s see if GPT-3
+can make sense of this code.</p>
+<p>Prompt: <code>What does this C++ code mean?</code></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Complex <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">double</span> re<span class="op">,</span> im<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span><span class="op">:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  Complex<span class="op">(</span><span class="dt">double</span> re<span class="op">,</span> <span class="dt">double</span> im<span class="op">)</span> <span class="op">:</span> re<span class="op">(</span>re<span class="op">),</span> im<span class="op">(</span>im<span class="op">)</span> <span class="op">{}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  Complex <span class="kw">operator</span><span class="op">+(</span><span class="at">const</span> Complex<span class="op">&amp;</span> other<span class="op">)</span> <span class="at">const</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Complex<span class="op">(</span>re <span class="op">+</span> other<span class="op">.</span>re<span class="op">,</span> im <span class="op">+</span> other<span class="op">.</span>im<span class="op">);</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="op">};</span></span></code></pre></div>
+<p>Response: <em>This C++ code defines a Complex class that represents
+complex numbers. The Complex class has two member variables, re and im,
+that represent the real and imaginary parts of the complex number,
+respectively. It also has a constructor that takes the real and
+imaginary parts as arguments and initializes the re and im member
+variables.</em></p>
+<p><em>The Complex class also has a operator+ member function that
+overloads the + operator for the Complex class. This function takes
+another Complex object as an argument and returns a new Complex object
+that is the sum of the two operands. The operator+ function uses the re
+and im member variables of the Complex objects to compute the sum of the
+two complex numbers, and then it returns a new Complex object with the
+result.</em></p>
+<p><em>This Complex class allows you to create Complex objects and add
+them using the + operator, as shown in the following example:</em></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  Complex a<span class="op">(</span><span class="fl">1.0</span><span class="op">,</span> <span class="fl">2.0</span><span class="op">);</span>  <span class="co">// a = 1.0 + 2.0i</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  Complex b<span class="op">(</span><span class="fl">3.0</span><span class="op">,</span> <span class="fl">4.0</span><span class="op">);</span>  <span class="co">// b = 3.0 + 4.0i</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  Complex c <span class="op">=</span> a <span class="op">+</span> b<span class="op">;</span>    <span class="co">// c = (1.0 + 3.0) + (2.0 + 4.0)i = 4.0 + 6.0i</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><em>In this example, we create two Complex objects a and b, and then
+add them using the + operator. The result is a new Complex object c that
+represents the sum of the two operands. Because we have overloaded the +
+operator for the Complex class, the + operator will automatically call
+the operator+ member function of the Complex class to add the two
+objects and return the result.</em></p>
+<p>This is a very good explanation of the Complex number class created.
+GPT-3 was able to understand that this code relates to complex numbers
+based on the names of the class and member variables, even though the
+code was uncommented. Finally, it was able to write an example of how to
+use the Complex function to add two complex numbers using the overloaded
++ operator. Disclaimer: Data inputted into ChatGPT-3 is NOT treated as
+private or sensitive, so use this feature with caution and appropriately
+redact data.</p>
+<h2 id="use-case-3---explaining-arcane-error-messages">Use Case #3 -
+Explaining arcane error messages</h2>
+<p>A useful skill for a programmer to develop is the ability to
+interpret unhelpful or misleading error messages. The following C++ code
+compiles successfully, but generates a segfault at run-time.</p>
+<p><em>segfault.cpp</em></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;vector&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> v<span class="op">{</span><span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span><span class="op">};</span>  </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">1</span><span class="op">;</span> i<span class="op">&lt;=</span><span class="dv">4</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span> <span class="bu">std::</span>cout<span class="op"> &lt;&lt;</span> v<span class="op">[</span>i<span class="op">]</span> <span class="op">&lt;&lt;</span> <span class="bu">std::</span>endl<span class="op">;</span> <span class="op">}</span>    </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Yet when we run <code>g++ segfault.cpp</code>, which uses (GNU
+Compiler)[https://gcc.gnu.org] to compile the code to an executable, the
+following error message is generated at compilation:</p>
+<pre><code>segfault-example.cpp:5:20: error: expected &#39;;&#39; at end of declaration
+        std::vector&lt;int&gt; v{1,2,3};      
+                          ^
+                          ;
+1 error generated.</code></pre>
+<p>Helpfully, the error explains where a semicolon needs to be inserted.
+We could resolve the error by filling the vector on the next line, but
+that isn’t an elegant solution. The normal workflow for a programmer is
+to research the rules of expression for vectors in our <a
+href="https://en.cppreference.com/w/cpp/container/vector/vector">favorite
+C++ reference</a> and discover that this syntax is correct, as it uses
+an initializer list {1,2,3} to construct the vector.</p>
+<p>Something doesn’t make sense. The syntax used is valid, so why are we
+getting this error? Let’s revisit the link and carefully read again:</p>
+<p>[screenshot of implementation option 10), along with screenshot of
+code example near bottom]</p>
+<p>The initializer list syntax for vectors was not implemented until
+C++11! By default, the version of <code>g++</code> on my machine
+compiles to C++97 by default:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> g++ <span class="at">--version</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Apple</span> clang version 13.1.6 <span class="er">(</span><span class="ex">clang-1316.0.21.2</span><span class="kw">)</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> g++ <span class="at">-dM</span> <span class="at">-E</span> <span class="at">-x</span> c++  /dev/null <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-F</span> __cplusplus</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#define __cplusplus 199711L</span></span></code></pre></div>
+<p>None of this is obvious. A C++ novice trying to understand syntax
+will find this frustrating to debug. Can GPT-3 save the day? Will it get
+distracted by the obvious segfault issue? Or will it dig deeper and
+discover which g++ flag needs to be used to compile to C++11 and allow
+the use of vector intializer lists?</p>
+<p>Prompt:
+<code>Why won't this C++ code compile when I run "g++ file.cpp"?</code>
+Response:</p>
+<p><em>It looks like there is an issue with the for loop in your code.
+The loop variable i is being initialized to 1, and the loop is
+continuing as long as i is less than or equal to 4. This means that the
+loop will attempt to access the elements at indices 1, 2, 3, and 4 of
+the vector v. However, the vector v only has 3 elements (at indices 0,
+1, and 2), so attempting to access the element at index 4 will result in
+an out-of-bounds error.</em></p>
+<p><em>To fix this issue, you can modify the loop condition to stop the
+loop before i becomes greater than the size of the vector. For example,
+you could change the loop condition to i &lt; v.size() or i &lt; 3
+(since the vector has 3 elements).</em></p>
+<p>GPT-3 successfully discovered the run-time segfault that results from
+accessing an out-of-bounds value, but it failed to explain that gcc is
+not compiling to the correct version of C++. Let’s refine the prompt and
+try again:</p>
+<p>Prompt:
+<code>The error received for the previous code was:</code></p>
+<pre><code>segfault-example.cpp:5:20: error: expected &#39;;&#39; at end of declaration
+        std::vector&lt;int&gt; v{1,2,3};      
+                          ^
+                          ;
+1 error generated.</code></pre>
+<p>Response:<br />
+<em>I apologize for the mistake in my previous response. It looks like
+there is a different issue with your code.</em></p>
+<p><em>The error message expected ‘;’ at end of declaration is
+indicating that there is a problem with the line
+<code>std::vector&lt;int&gt; v{1,2,3};</code>. This line is using list
+initialization to create a new vector and initialize it with the
+elements 1, 2, and 3. The curly braces {} are used to enclose the list
+of elements, and a semicolon ; is used to terminate the statement. It
+looks like there is a typo in this line of code, and the semicolon is
+missing. To fix the error, add a semicolon ; after the closing curly
+brace }: After adding the semicolon, the code should compile without any
+issues.</em></p>
+<p>Politely, GPT-3 tries again to fix the error. However, the response
+misleads us into debugging the syntax once again, even after we provided
+ample hints that the problem resides not with the code, but the
+compiler. The correct solution is to compile the program with the
+command <code>g++ -std=c++11 segfault.cpp</code> so that the compiler
+uses the syntax rules of C++11 to generate the program.</p>
+<p>This example demonstrates that GPT-3 is capable of syntax debugging,
+but falls short when the problem lies outside of syntax mistakes. As a
+result, a programmer must still have a good idea of what the solution
+space for a problem looks like and recognize when they are being led
+astray.</p>
+<h2 id="summary-and-implications">Summary and Implications</h2>
+<p>AI tools like GitHub CoPilot and TabNine can be useful for
+programmers, but they have also faced
+(controversy)[https://matthewbutterick.com/chron/this-copilot-is-stupid-and-wants-to-kill-me.html].
+GPT-3 is unlikely to remain immune from similar questions about fair
+usage. Therefore, programmers should be cautious when relying on AI
+tools and approach results with a grain of salt.</p>
+<p>GPT-3 excels at processing close-ended, complete problems. These are
+problems where the shape of the solution is evident in the distance and
+slowly reveals itself in a progressive manner, like a distant island
+that an ocean castaway paddles towards. As long as they don’t lose sight
+or give up, they’ll reach their target.</p>
+<p>On the other hand, GPT-3 struggles with open-ended problems. These
+problems have multiple viable solutions, but it is unclear which path to
+pursue. These solutions are like distant stars to a spaceship - they all
+look equally far apart and appear about the same size and shape - how
+does the pilot decide where to fly? Each star requires a lot of research
+just to determine it’s composition, yet that doesn’t provide any
+guarantees about what might be there once one arrives.</p>
+<p>(use images in /assets/chat-gpt) (Prompt 1: Shiprecked guy who looks
+like a Flintstone is slowly paddling to a distant island with the sun
+setting in the distance)<br />
+(Prompt 2: A spaceship streaking through time and space)<br />
+(Generate both images with Dall-E, put footnote at very end of article.
+That will make the reward of reading the footnote feel exciting)</p>
+<p>Rather than fear automation in the field of software engineering,
+programmers should embrace it as a way to improve productivity and stay
+current with technological advances. Automation has been a part of the
+software engineering industry all the way to to it’s inception - from
+Ada Lovelace’s <a
+href="https://books.google.com/books?id=hPRmnQEACAAJ&amp;printsec=frontcover&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">description</a>
+of a language to run Charles Babbage’s analytical engine, to text
+editors with macros, to GUI buttons that enable shortcuts for series of
+commands with the click of a button.</p>
+<p>The history of technology is the history of automation. This is
+evident in other industries as well, such as the transition from <a
+href="https://youtu.be/YpWdOBwpLuE?t=323">crank lever</a> to [starter
+motors]
+(https://www.howacarworks.com/basics/how-the-starting-system-work) and
+ignition keys for automobiles.</p>
+<p>Imagine a future where a knowledge worker, on their first day of
+work, is issued a badge, a personal computer, and an AI assistant
+personalized to the knowledge and training they need to know for their
+job. One could ask the assistant to summarize complex documentation or
+get clarification on a process, among other use cases.</p>
+<p>For programmers specifically, there are other ways that AI tools can
+be folded into a workflow, such as <a
+href="https://books.google.com/books?id=hPRmnQEACAAJ&amp;printsec=frontcover&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">facilitating
+undirected learning</a>, improving <a
+href="https://www.swyx.io/learn-in-private">personal knowledge
+management</a>, and <a
+href="https://meta.stackoverflow.com/questions/419427/tips-for-searching-effectively-on-stack-overflow-novice-developer-training/419440#419440">maximizing
+learning</a> from complex programming problems.</p>
+<p>Ultimately, it’s up to the individual programmer to use AI tools
+responsibly and effectively in their work. By following best practices,
+such as not sharing proprietary software or information, and approaching
+results with a critical eye, programmers can take advantage of AI tools
+while minimizing the potential risks.</p>
+<h1 id="misc-notes">MISC NOTES</h1>
+<p>What do I mean by traditional sense of efficiency? Teh connotation
+for me is blah blah blah work smart not hard blah but that phrase never
+made sense to me for some reason. Efficiency has one meaning in physical
+systems, but the mind and body is a physiological symbiosis (mind-body
+??? Descartes?) blah blahAI doesn’t just automate away tasks. It can
+alleviate mental burden. In the morning, you come across some bizarre
+C++ syntax that you’ve never encountered while reviewing a colleague’s
+code. You have a few options:</p>
+<ul>
+<li>Ask the colleague what the heck that syntax is. Perhaps they’re very
+senior to you, and you’re still a bit timid about asking an uneducated
+question. Alright let’s just put off the conversation for a bit, I’ll go
+work on something else.</li>
+<li>Damn! I gotta finish that review. Hmm…now it’s 11AM which is kinda
+late for me to be asking such a basic question…alright I trust my
+colleague, let’s just approve this and I can move on to the rest of my
+day without worry.</li>
+</ul>
+<p>You might think, c’mon take more responsibility than that - that was
+only 2 hours. But the fact of the matter is, these scenarios happen a
+LOT among more junior colleagues. As a recent graduate from junior
+colleague to just colleage, I am not too far removed from those feelings
+myself. The feelings of inadequacy, of imposter syndrome. Of not knowing
+if you’re in the right career, of maybe being seen as a fraud for any
+number of reasons. For me it’s the fact that I don’t have any formal
+computer science degrees. It eats at me a lot more than I care to admit
+(he says, in a moment of rare personal vulnerability).</p>
+<p>Here’s the weird syntax I saw recently that I’m talking about:</p>
+<p>(go grab something weird CH did, change the variables, and post
+here)</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>code goes here<span class="op">&gt;</span></span></code></pre></div>
+<p>Wow! What is that??? [Once you see the code, share a few guesses then
+give up]. What are the options now? Maybe it’s time to go learn about
+each of these topics and see if any of them connect. If I had unlimited
+time and this was a school project, I would love to do that. But I don’t
+have the first and this isn’t the second. Another option is to schedule
+a quick call or send a chat to DB. Hmmm…he’s busy right now, and
+probably will be for a while. Don’t want to bug him…no one else on the
+team would have more context than I do, so asking another colleague is
+probably not productive. I’m running out of resources to ask now…ok what
+do I THINK it is? Let me try each of these guesses/potential rabbit
+holes. I will need an hour or two of uninterpreted time today to do
+that. Darn, there’s a scrum meeting in 20 minutes, which is scheduled
+for 15 minutes but will take more like 30. I have a 1:1 at noon and I
+have to prepare for that, so I don’t want to get too far down the rabbit
+hole and then forget. So let’s save this for after lunch…shoot maybe
+2PM, I told someone I would help them out with something around 1. Okay
+2-4PM works! But by the time I get out of my rabbit hole, it might be
+getting too late to contact the author and explain that I was too busy
+all day to ask a question.</p>
+<p>Does this spiral make any sense? I hope so, because I’m weighing
+these kinds of ridiculous calculations in my head. I know, I know - get
+better at your job so you’re brave enough to just ask a question.</p>
+<p>In my opinion, next to knowing when to ask for help, a skill of a
+great programmer is the ability to be highly resourceful. When facing
+certain problems, we want every debugging tool, every StackOverflow
+entry, every man page written since 1969, and (one more). The next
+“,and” should be a custom-trained AI. An AI personalized to the
+knowledge YOU need to know.</p>
+<p>(Okay right there - that is a GREAT business idea. And it comes from
+DIRECT, PERSONAL experience. So I know EXACTLY what I want it to do. I
+believe it will be extremely useful to anyone who can realize it’s
+value. I think the people who can will be those who see the future. This
+IS the future right here. I can see it, and I think others can, but I
+don’t know where they are or how to find them. - well, those ppl are in
+AI - right?)</p>
+<p>I started using GPT-3 to answer these kinds of tiny questions,
+redacted of any sensitive information, starting in early December. It
+had been maybe a week since I had vaguely heard of this new AI model in
+the news. Somehow, I got interested in it on a whim and decided to see
+if there was an API I could play with. Even better, a fully fledged
+chatbot! From there, I tried out a few simple questions that rapidly
+grew in complexity, until I was quite literally astounded by what I was
+looking at. I don’t feel like that happens very often in my life
+anymore, which was also shocking to me that a piece of technology could
+have this level of impact on me. I could see vastly capable futures
+spawning in front of me for the first time, directly as a result of this
+AI technology I was seeing here. In the current information age (is that
+what we’re currently in?), if knowledge workers can vastly improving
+their efficiency by making information more easily accessible, that’s as
+big as what the Internet meant when it first became public. There are
+likely entire industries in AI that have yet to be uncovered.</p>
+<p>What is the idea there? It’s that you offer a service that improves a
+software engineers ability to get answers. You ask them for as many
+details about their work life as you can. The more details the better.
+The problem is, no one will trust their sensitive company data to a
+freaking AI.</p>
+<p>What if it just connects to github? A lot of people host public code
+on github. It could be run on open-source packages. I think it already
+does, doesn’t it? What is Github Copilot?</p>
+<h2 id="is-my-job-at-risk-might-fit-in-implications-section">Is my job
+at risk? (might fit in implications section)</h2>
+<ul>
+<li>answer question rationally Start using the latest and greatest AI
+tools in your workflow so you can understand their strengths and
+weaknesses and stay relevant in your job. In this article we provided 3
+concrete use cases, but here are some others to try out:</li>
+<li>Improvement sentences and descriptions in your resume</li>
+</ul>
+<hr />
+<h2 id="original-introduction">Original Introduction</h2>
+<p>Prompt: Write an introductory paragraph about how to use GPT3 in your
+day-to-day work as a software engineer.<br />
+Response: <em>As a software engineer, you’re constantly working on
+complex projects and dealing with a vast amount of information. GPT-3,
+the state-of-the-art language processing model from OpenAI, can help you
+manage your workload and make your daily work more efficient. In this
+article, we’ll show you how to use GPT-3 to improve your productivity as
+a software engineer. We’ll provide tips on integrating GPT-3 into your
+development process, using it to generate code and documentation, and
+even using it to help you debug and troubleshoot your code. With GPT-3,
+you can easily access the information you need, quickly generate
+high-quality code and documentation, and stay on top of your tasks, all
+while saving time and reducing stress.</em></p>
+<p>Across 4 prompts, I slowly refined the request I had of GPT-3. I
+wanted an introduction, yes, but I needed a few other intangibles and I
+vaguely ventured towards a decent introduction that I liked by the end
+of the refinement process. GPT-3 clearly has some value with helping me
+write pseudo-technical articles, such as this one. But can it help me
+with day-to-day programming tasks? To answer that question, I replaced
+my typical Google/Stack Overflow querying process (find a better phrase)
+with simply asking Chat GPT-3 what was on my mind (reword). The results
+convinced me that AI of this type has as important a role in knowledge
+discovery as Internet forums and Google do currently (ugh rough thesis,
+refine it).</p>
+<h2 id="caveat">Caveat</h2>
+<p>I am a software engineer, but I do not work in AI or keep up enough
+to know what is cutting edge (reword). So if I’m seeing things
+incorrectly, or editorializing too much and not speaking factually, then
+I do apologize. But I also wanted to share the emotional aspect of why
+GPT-3 seems so significant to me.</p>
+<p>Prompt: Can you rephrase the previous paragraph to sound less
+awkward<br />
+Response: <em>As a software engineer, I am not well-versed in the latest
+developments in AI. If I have misstated any facts or come across as
+awkward in my writing, I apologize. However, I wanted to share my
+personal excitement about GPT-3 and why it feels like a significant
+milestone.</em></p>
+<p>Prompt: I don’t really like that response, can you try again?<br />
+Response: *Sure, here is another attempt at rephrasing the
+paragraph:</p>
+<p>As a software engineer, I am not an expert in the field of AI and may
+not be aware of the latest advancements. If my lack of knowledge leads
+to any inaccuracies in my writing, I apologize. I wanted to share my
+personal thoughts and feelings about GPT-3 and why it feels like an
+important achievement.*</p>
+<p>Much better. That whole process of coming up with a satisfactory
+introductory paragraph took about an hour from start to finish. I
+tweaked the original output from Chat GPT-3 so that it sounds more like
+my voice. So let’s start over. The beginning of the article starts…now:
+Prompt 1: Write an introductory paragraph to an article about how to use
+Chat GPT3 effectively.<br />
+Response: <em>GPT-3, or Generative Pretrained Transformer 3, is the
+latest in a series of powerful language processing models developed by
+OpenAI. With its impressive ability to understand and generate
+human-like text, GPT-3 has quickly become a popular tool for a variety
+of applications, including chatbots and conversational interfaces. In
+this article, we’ll provide some tips on how to effectively use GPT-3 in
+your chat applications, including how to fine-tune the model for
+specific use cases and how to integrate it into your chat platform.
+Whether you’re a developer looking to build a more intelligent chatbot
+or a user looking to have more engaging conversations, GPT-3 can be a
+valuable tool.</em></p>
+<p>Prompt 2: Write an introductory paragraph about how to use GPT3
+effectively, but with more emotion.<br />
+Response: <em>Are you ready to take your chat applications to the next
+level with GPT-3? This revolutionary language processing model from
+OpenAI is capable of understanding and generating human-like text,
+making it a valuable tool for a wide range of chat applications. In this
+article, we’ll show you how to effectively use GPT-3 to add more
+intelligence and emotion to your chatbots and conversational interfaces.
+Whether you’re a developer looking to build a more engaging chatbot or a
+user looking to have more natural conversations, GPT-3 can help you
+achieve your goals. We’ll provide tips on fine-tuning the model for
+specific use cases and integrating it into your chat platform, so you
+can start using GPT-3 to create more intelligent and emotionally-rich
+chat experiences.</em></p>
+<p>Prompt 3: Write an introductory paragraph about how to use GPT3 in
+your day-to-day work as a knowledge worker.<br />
+Response: <em>As a knowledge worker, you’re constantly dealing with a
+deluge of information and tasks, and it can be overwhelming to keep up
+with everything. GPT-3, the powerful language processing model from
+OpenAI, can help you manage your workload and make your daily work more
+efficient. In this article, we’ll show you how to use GPT-3 to
+streamline your work and stay organized. We’ll provide tips on
+integrating GPT-3 into your workflow, using it to generate reports and
+documents, and even using it to help you make decisions. With GPT-3, you
+can easily access the information you need, quickly generate
+high-quality content, and stay on top of your tasks, all while saving
+time and reducing stress.</em> —-</p>
+<h2 id="implications-attempt-1">Implications (Attempt 1)</h2>
+<p>What does it mean when the answers to a lot of minute, but difficult
+programming questions are at our fingerprints? Does it lower the bar for
+programmers across the board? Can anyone just generate code, rendering
+software engineering as a field obsolete? Conversely, is it dangerous to
+rely on AI tools like this at all, because it might render us all weaker
+problem-solvers in general? [I hate this sentence. It is a wild example
+of me generating a fake middle ground and resolving it. This is a cheesy
+rhetorical tactic, and it’s also just a middle ground fallacy.] Like
+most things, the answer probably lies in the middle. Certainly there are
+still many aspects to software engineering that can’t be answered by an
+online AI - such as who are the customers, what are their needs, and
+what are their real timelines. But it’s also unproductive to dismiss AI
+entirely, just as it would have been to dismiss Internet search engines
+and forums in the 1990s.</p>
+<hr />
