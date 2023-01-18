@@ -3,10 +3,10 @@ fun fibonacci_0 (i: int) =
 	let 
 		val c : int = 1 (* figuring out what value should go here is not hard to reason about, but choosing whether to set this to 0 or 1 is an easy mistake to make *)
 		val n : int = 1
-		val t : int = 0; (* temporary variable to hold value of c *)
+		val t : int = 0 (* temporary variable to hold value of c *)
 		val lst : int list = [1, 1]	
 	in
-		while i <> 0 do (
+		while (i <> 0) do (
 			t := c
 			c := n
 			n := t + n
@@ -14,7 +14,7 @@ fun fibonacci_0 (i: int) =
 		)
 		lst
 	end
-*) 
+*)
 
 (* c: current, n: next, lst: list of numbers, i: count to generate *)
 fun fibonacci_1 (c: int, n: int, lst: int list, i: int) =

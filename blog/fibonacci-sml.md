@@ -1,5 +1,7 @@
 # Creating a Fibonacci Function in Standard ML
 
+Date: December 26th, 2022
+
 ## Challenge  
 Write a recursive function in SML that accepts one `i: int` argument and returns a list of Fibonacci numbers of length `i`.
 
