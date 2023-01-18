@@ -1,4 +1,6 @@
-Nov 22 2022  
+First Draft: Nov 22 2022  
+Second Draft: Jan 17 2023
+
 PART 1  
 In retrospect, the access to information humanity once had was severely underappreciated in its time. When the Internet was unveiled, a decent percentage of even the general public DID know that it would be revolutionary, especially after the proof was very clear in only 2 decades from its inception to mass adoption. Those early generations knew, through experiments in e-mail, instant messaging, e-commerce, and social media, that what they had was a MILLION times better than the world where even the most basic of services was a chore and not free. 
 
