@@ -2,20 +2,15 @@
   color: #bbbbbb;
 }
 
-div.content {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: 1fr 1fr;
-}
 div.content .writing,
 div.content .music,
 div.content .photography,
 div.content .projects,
 div.content .about {
   color: #444444;
-}
-div.content .about {
   text-align: justify;
+  max-width: 720px;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */
