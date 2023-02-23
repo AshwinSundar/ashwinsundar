@@ -1,5 +1,7 @@
 # AI helping a programmer
 
+**February 2023**
+
 I am attempting to solve a homework problem that asks me to write a helper function to use in a later problem. I have gotten 95% of the way there with this function, written in Standard ML:
 
 ```sml
