@@ -42,7 +42,7 @@ function signature is now correct after making these modifications:</p>
 class="sourceCode sml"><code class="sourceCode sml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> longest_string_helper f sl =</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    foldl (<span class="kw">fn</span> (next,acc) =&gt; <span class="kw">if</span> f (String.size next, String.size acc) <span class="kw">then</span> acc <span class="kw">else</span> next) <span class="st">&quot;&quot;</span> sl</span></code></pre></div>
 <p>The function signature is now <em>val longest_string_helper = fn :
-(int </em> int -&gt; bool) -&gt; string list -&gt; string*.</p>
+(int * int -&gt; bool) -&gt; string list -&gt; string</em>.</p>
 <hr />
 <p>What did I learn? First, try to solve the problem without assistance
 - just use your brain. Second, re-read your notes and all available
