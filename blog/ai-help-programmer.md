@@ -30,7 +30,7 @@ fun longest_string_helper f sl =
 	foldl (fn (next,acc) => if f (String.size next, String.size acc) then acc else next) "" sl
 ```
 
-The function signature is now *val longest\_string\_helper = fn : (int * int -> bool) -> string list -> string*.
+The function signature is now *val longest\_string\_helper = fn : (int \* int -> bool) -> string list -> string*.
 
 -----
 
