@@ -22,11 +22,16 @@ createBlogPost() {
     echo "New blog post created at /drafts/$inp.md"
 }
 
-# bash scripts.sh deploy
-deploy() {
-    # Deploy prep
+
+compile() {
     compileSass
     compileMarkdown
+    compileMusicPages
+}
+
+# bash scripts.sh deploy
+deploy() {
+    compile
     git add . 
     read -p 'Enter commit message: ' msg
     git commit -m "$msg"
@@ -61,5 +66,20 @@ compileMarkdown() {
     done
     echo "Markdown files compiled"
 }
+
+compileMusicPages() {
+    IFS=$'\n' ## Internal File Separator. Changes from space to nl
+    cd music/
+    files=$(find . -name "*.mp3")
+    for f in $files; do
+        htmlFileName=$(echo "$f" | sed 's/mp3/html/g')
+        songName=$(echo "$f" | sed 's/.mp3//g' | sed 's/.\///g') ## music\/// means replace the string "music/" (escaped  with \) with nothing "//"
+        content='<div>'$songName'</div><audio controls controlsList="nodownload noplaybackrate"><source src="'$f'"/></audio>'
+        touch $htmlFileName
+        echo $content > $htmlFileName
+    done
+    echo "Music pages compiled"
+}
+
 
 "$@"

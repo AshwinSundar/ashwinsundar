@@ -1,0 +1,51 @@
+<!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
+<h1 id="ai-helping-a-programmer">AI helping a programmer</h1>
+<p>I am attempting to solve a homework problem that asks me to write a
+helper function to use in a later problem. I have gotten 95% of the way
+there with this function, written in Standard ML:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sml"><code class="sourceCode sml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> longest_string_helper f sl =</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    foldl (<span class="kw">fn</span> (next, acc) =&gt; <span class="kw">if</span> f (next, acc) <span class="kw">then</span> acc <span class="kw">else</span> next) <span class="st">&quot;&quot;</span> sl</span></code></pre></div>
+<p>The purpose of this function is to take a function <em>f</em> and
+apply something called a <strong>left fold</strong> across each element
+of the list <em>sl</em>. Each answer is stored in an
+<strong>accumulator</strong>, which is instantiated to the empty
+string.</p>
+<p>A hint in the homework suggested that the function signature for this
+problem should be <em>val longest_string_helper = fn : (int * int -&gt;
+bool) -&gt; string list -&gt; string</em>. However, the function I wrote
+has a function signature of <em>val longest_string_helper = fn : (string
+* string -&gt; bool) -&gt; string list -&gt; string</em>. The function
+passed in accepts a tuple <em>(string, string)</em>, when it should
+accept a tuple <em>(int, int)</em>.</p>
+<p>I changed the initial accumulator value to <em>0</em>, but this
+changed the function signature to <em>(int </em> int -&gt; bool) -&gt;
+int list -&gt; int*. The passed-in function’s signature was correct, but
+now remaining elements of the overall signature were wrong. I tried
+various other minor changes, with no luck. I knew the answer was within
+reach, but I couldn’t find it.</p>
+<p>After about two hours of reading notes, class forums, and an intense
+internet search, I finally resorted to asking ChatGPT-3. In the past, it
+has struggled to provide correct advice about Standard ML. So I warily
+asked it for help:</p>
+<p><img src="/blog/assets/ai-help-programmer/screenshot1.png" width="100%" style="max-width: 1280px;"/></p>
+<p>Right away, it is wrong. It seems to think the signature for the
+passed-in function is a tuple of <em>any-type a</em> and <em>string</em>
+returning a <em>bool</em>, when I saw this was not the case. So I
+decided to press on and ask a follow-up question:</p>
+<p><img src="/blog/assets/ai-help-programmer/screenshot2.png" width="100%" style="max-width: 1280px;"/></p>
+<p>This answer is close! The homework does not permit using this
+<em>size</em> function, but it does permit <em>String.size</em>. The
+function signature is now correct after making these modifications:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode sml"><code class="sourceCode sml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">fun</span> longest_string_helper f sl =</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    foldl (<span class="kw">fn</span> (next,acc) =&gt; <span class="kw">if</span> f (String.size next, String.size acc) <span class="kw">then</span> acc <span class="kw">else</span> next) <span class="st">&quot;&quot;</span> sl</span></code></pre></div>
+<p>The function signature is now <em>val longest_string_helper = fn :
+(int </em> int -&gt; bool) -&gt; string list -&gt; string*.</p>
+<hr />
+<p>What did I learn? First, try to solve the problem without assistance
+- just use your brain. Second, re-read your notes and all available
+class resources to gain further insight into the problem. Finally, if AI
+assistance must be used, learn everything possible about the final
+solution. In my case, I wrote this short report :)</p>
+</body> </html>
