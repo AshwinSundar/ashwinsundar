@@ -13,7 +13,7 @@ The purpose of this function is to take a function *f* and apply something calle
 
 A hint in the homework suggested that the function signature for this problem should be *val longest_string_helper = fn : (int \* int -> bool) -> string list -> string*. However, the function I wrote has a function signature of *val longest_string_helper = fn : (string \* string -> bool) -> string list -> string*. The function passed in accepts a tuple *(string, string)*, when it should accept a tuple *(int, int)*.
 
-I changed the initial accumulator value to *0*, but this changed the function signature to *(int * int -> bool) -> int list -> int*. The passed-in function's signature was correct, but now remaining elements of the overall signature were wrong. I tried various other minor changes, with no luck. I knew the answer was within reach, but I couldn't find it.
+I changed the initial accumulator value to *0*, but this changed the function signature to *(int \* int -> bool) -> int list -> int*. The passed-in function's signature was correct, but now remaining elements of the overall signature were wrong. I tried various other minor changes, with no luck. I knew the answer was within reach, but I couldn't find it.
 
 After about two hours of reading notes, class forums, and an intense internet search, I finally resorted to asking ChatGPT-3. In the past, it has struggled to provide correct advice about Standard ML. So I warily asked it for help: 
 

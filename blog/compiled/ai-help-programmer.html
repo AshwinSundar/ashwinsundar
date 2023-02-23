@@ -20,8 +20,8 @@ has a function signature of <em>val longest_string_helper = fn : (string
 passed in accepts a tuple <em>(string, string)</em>, when it should
 accept a tuple <em>(int, int)</em>.</p>
 <p>I changed the initial accumulator value to <em>0</em>, but this
-changed the function signature to <em>(int </em> int -&gt; bool) -&gt;
-int list -&gt; int*. The passed-in function’s signature was correct, but
+changed the function signature to <em>(int * int -&gt; bool) -&gt; int
+list -&gt; int</em>. The passed-in function’s signature was correct, but
 now remaining elements of the overall signature were wrong. I tried
 various other minor changes, with no luck. I knew the answer was within
 reach, but I couldn’t find it.</p>
