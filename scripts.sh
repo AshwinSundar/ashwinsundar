@@ -32,8 +32,8 @@ compile() {
 # bash scripts.sh deploy
 deploy() {
     compile
+	git add *
     read -p 'Enter commit message: ' msg
-	git add .
     git commit -m "$msg"
     git push
     sleep 3
