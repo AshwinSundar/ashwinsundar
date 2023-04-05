@@ -8,6 +8,8 @@ The <font color="green">Fall of Math</font> marked a significant waypoint in the
 
 The <i>Automonk</i> came about during the initial flurry of invention following the Fall of Math. A philosophy professor, known by the initials <i>HG</i>, constructed the robot after observing that the vocation of priesthood had gone extinct sometime in the last century. Unable to determine why this occurred, <i>HG</i> instead constructed several copies of their machine and distributed them to various monasteries in an attempt to revive religion.
 
+<img src="../assets/automonk/automonk-1.png" width="600px" />
+
 Trained on thousands of religious texts and millions of hours of religious ceremonies, the <i>Automonk</i> attended to idols with periodic ablutions, confidently paced the hall, and sat quietly, as though meditating. 
 
 <font color="green">अमर प्रकाश, अंतर्ज्योति</font><br>
