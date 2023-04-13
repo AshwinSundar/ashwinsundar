@@ -2,35 +2,107 @@
 - Introduction to Vim
 - A Handy guide to Vim
 - The Software Engineer's Guide to Vim (too dramatic?)
+- A Crash Course to Vim
 
 ## Introduction
-Vim, which stands for "Vi-Improved", is a terminal-based text-editor invented by Dutch computer programmer Bram Moolenaar and released in 1991. As the name suggests, it was designed as a successor to the vi text editor released in 1976. In either case, it seems like many programmers these days end up in Vim by accident, as indicated by this popular meme: 
+Vim (Vi-improved) is a terminal-based text-editor invented by Dutch computer programmer Bram Moolenaar and released in 1991. It was designed as a successor to the vi text editor released in 1976. Many programmers these days seem to end up in Vim by accident: 
 
 [How to get out of Vim meme]
 
-However, there is a lot more to learn about this quirky little text-editor other than how to exit it back to the safety of VSCode. Vim is great for staying in the terminal and jumping into a file for a quick edit. Billed as "a programmer's text editor" (cite Vim man page), Vim is also an excellent text-editor in its own right and has a lot of the same capabilities that even modern visual text editors have, such as global find-and-replace and multi-line edits.
+However, there is more to learn about Vim than how to exit and return to the safety of VSCode. Vim is great for staying in the terminal and jumping into a file for a quick edit. Billed as "a programmer's text editor" (cite Vim man page), Vim also has many of the same capabilities that modern visual text editors have, such as global find-and-replace and multi-line edits.
 
 ## Motivation
-The vast majority of developers in 2022 use a professional IDE such as Visual Studio Code or IntelliJ (https://survey.stackoverflow.co/2022/#most-popular-technologies-new-collab-tools). These IDEs offer a lot of capabilities for managing large development projects, such as integrated source control, custom keybindings and settings for different projects, and extensions to increase developer productivity. As an added bonus, modern IDEs don't make you feel like you're hacking into the upside-down in the 1980s in some sort of Stranger Things sequel (Disclaimer: I have only seen a couple of Stranger Things so far, but I imagine that's where things are going).
+(Start paragraph showing IDEs commonly in use. Create your own chart if you want) The vast majority of developers in 2022 use a professional IDE such as Visual Studio Code or IntelliJ (https://survey.stackoverflow.co/2022/#most-popular-technologies-new-collab-tools). These IDEs offer a lot of capabilities for managing large development projects, such as 
+- Integrated source control
+- Customizable keybindings
+- Configurable settings for different projects
+- Numerous extensions to increase developer productivity
 
-You might be wondering now, why should I stop using tried-and-tested tools that I'm familiar with? By all means, don't stop using your favorite editor! Editors are just tools after all, using a good editor is not the end-goal of writing code. However, it is helpful to know how to use multiple tools. A keyboard and mouse are the only tools a programmer uses to interact with and create lines of code. Vim places all the commands needed to modify code literally at the programmer's fingertips, perfectly organized into a keyboard layout that has not changed in over 100 years (a bit dramatic). While learning Vim has a steeper learning curve, I believe there is a greater scope for improvement in productivity. The point is, you'll know you're using Vim effectively when you are touch-typing your way through files and rarely reaching for the mouse.  
+As an added bonus, modern IDEs feel, well, modern. They don't make you feel like you're hacking into the upside-down in the 1980s in some sort of Stranger Things sequel.
+
+[Is this is a screenshot of my computer screen or from Stranger Things Season 6]
+
+Most developers have a favorite editor at this point, so why change tools? Editors are just tools after all, maximizing one's editor choice is a pedantic goal in itself and not the end-goal of writing code.
+
+## The Cost of Information Transfer 
+- <1 ratio transferred bits : received bits
+- >1 ratio transferred bits: received bits
+
+A user interface (UI) exists to transmit information. One symptom of a poor UI is lossy information transfer - the user must take several actions to transmit one bit of information the computer. Another is a high ratio of **transferred bits** to **received useful bits**. 
+
+As an example of lossy information transfer, consider the following: the goal of an artist is to transfer an imagined concept to reality. A musician who is suddenly asked to paint will struggle to express themselves at first. They lack the expertise and tool fluency to articulate complex ideas in the new medium. Many artists spend decades specializing in a single medium so that they can seamlessly express their imagination. 
+
+Let's return to the world of computing for an example of high bit-transfer ratio. Imagine a user signs up for a new service, and instead of clicking a checkbox to acknowledge the terms-of-service, the user must type out, in its entirety, the terms-of-service agreement. This is to guarantee that the user has read every work of the agreement.
+
+Why is this experience frustrating? The user is merely communicating that they accept the terms, a single bit of information. The user can communciate this understanding with one bit of information, via a single button click of a checkbox. Instead, they are forced to communicate this through thousands of individual keystrokes. The number of bits transmitted by the user to the number of bits received by the computer is extremely high. 
+
+In the first example of a lossy system, the bit ratio is less than 1. Useful information is lost in transit. In the second example of a burdensome system, the bit ratio is greater than 1. Useless information is required of the user, only to be immediately discarded. 
+
+In an ideal UI, the bit transfer ratio is 1. Useful information is not discarded, and useless information is not required. 
+
+|System|Bit transfer ratio|
+|------|------------------|
+|Lossy System| <1.0 |
+|Burdensome System | >1.0 |
+|Ideal System | = 1.0 |
+
+## Why Vim
+Learning Vim has a learning curve, but most users would agree that a couple hours is more than enough to master the basics. The goal of this article is to convince and educate.
+
+There are three reason for programmers to learn Vim. First, Vim is optimized for keyboard interactions. Second, learning Vim pairs well with general problem-solving used in programming. Third, Vim natively offers a focus-mode experience. (i hate calling it focus mode...something else)
+
+1) Vim is optimized for the keyboard
+Vim places all commands needed to modify code at the programmer's fingertips, perfectly organized into a keyboard layout that has not changed in over 100 years. In most visual editors, the actions needed to move a line of text up by 3 lines is as follows:
+
+- Use mouse to highlight entire line.
+- Press ctrl+x to cut line.
+- Press up arrow 3 times to move up 3 lines.
+- Press ctrl+v to paste line.
+
+This is not complicated, and takes a couple of seconds to complete. But can we do better? In Vim, these are the steps:
+
+- Press `dd3kp`.
+
+1 action, and 5 key strokes. For a proficient touch-typist, this will take a fraction of a second to express. But how is this idea so concise to express? Let us break it down: 
+
+- `d◌`represents the `delete` operator. It is followed by a `motion`, which in this case `d` represents a whole line. Taken in full, `dd` deletes a whole line. Crucially, it also stores the line in the buffer, making it available to future commands. 
+- `◌k` represents the `up` motion. It is synonymous with using the up arrow on the keyboard. `3k` means move up 3 lines.
+- `p` means paste the contents of the buffer, which handily contains the line just deleted. 
+
+Once proficiency in Vim is attained, the mouse becomes an extraneous computer accessory. All actions are completed through the keyboard. Instead of searching UI menus for refactoring options, one constructs a Vim command and executes it, all from the comfort of the optimized keyboard layout that everyone is familiar with.
+
+2) Vim serializes operations
  
-The second reason to learn Vim is that the act of using Vim serializes operations in your head. This point is a bit tough for me to express, so here's the first draft. It organizes the thoughts in your brain into a serializable pattern, one that interplays with modifying singular files very effectively. In my opinion, you develop a closer connection to the code you are editing, and it helps you understand it at some deeper level that I can't fully articulate yet.  
+The second reason to learn Vim is that the act of using Vim serializes operations in one's head. Vim helps organizes text-modification ideas into a serializable pattern, one that interplays with modifying singular files effectively. This process leads to deeper understanding of text and structure, as users are encouraged to think in terms of efficient commands and movements to express their thoughts. 
 
-- Point 3 - working in Vim strips out all distractions. There are no extensions to bother you, no font schemes to play around with, no annoying contextual help menus to lead you away from your current code. It's just you and a text file, for good or for bad, that's it. This is a different way of working, and could be soon as worse in some ways - why not have all tools always available to you? I like the unadulterated focus I can achieve for certain tasks, such as for taking notes, writing articles, and testing out short snippets of code. For that final use case, I particularly enjoy the extremely rapid build-test-fix cycles I can accomplish without leaving my keyboard. I also find that my mental map of the codebase is in much sharper focus from having to interact with the raw text files with such focus. 
+Programmers are known to enter a "zone", following trains of thoughts across cobwebs of code, rapidly experimenting with ideas. Struggling through an ugly or unfamiliar UI does not assist with staying in the zone. Keyboard-only interaction enables a heightened awareness of text manipulation, enabling increased productivity by enabling programmers to navigate large files and codebases with ease.
+
+Finally, the unique syntax and approach of Vim fosters a problem-solving mindset that is transferrable to other problem-solving and programming tasks. 
+
+3) Vim strips out distractions. 
+
+Out-of-the-box Vim has no distracting extensions, no pop-ups, no font schemes to play around with, no annoying contextual help menus to lead one away from the code. It's just developer and text file - that's it. Many argue against this approach - why not have all tools available all the time? It is analogous to why a specialized mechanic doesn't need every metric- and SAE-sized wrench. If the task at hand requires only a handful of tools, then having other similar tools is distracting, not helpful. Vim encourages unadulterated focus for certain tasks, such as for taking notes, writing articles, and testing out short snippets of code. One develops a sharper mental map of a codebase from having to interact with the files in this raw manner. 
 
 ## Installation
-Vim is available out-of-the-box on most Unix-based operating systems, such as Linux and macOS, as well as Windows. Simply type `which vim` on Linux or macOS to locate the program in the user's path. If the result of this expression is "vim not found", then Vim can be installed by following the instructions at https://www.vim.org/download.php. 
+Vim is available out-of-the-box on most Unix-based operating systems as well as Windows. `which vim` on Linux or macOS locates the program in the user's path. If the result of this expression is "vim not found", then Vim can be installed by following the instructions at https://www.vim.org/download.php. Otherwise, `vim {file.txt}` opens a file in Vim.
 
-## How to enter and exit vim
-"How to exit Vim" is a common meme at the moment, so let's cover that since I'm guessing 40% of my readers are here for just that. To discard changes and exit vim, type `:q!` and you're free! But instead of running away from our keyboards and jumping for joy, let's re-enter the file and explore a few other useful commands in what is known as Command Line mode.  
+## How to exit Vim
+`:q` exits Vim without saving the file. `:wq` saves the file and exits.
 
 To re-enter the file, type `vim <filename>` in the command line prompt. If a file with that name exists, it will be opened in Vim. Otherwise, a new file will be created with that name in the current working directory. 
 
-To enter Command Line Mode, hit `Esc` to exit the current mode and type `:`. At the bottom of the screen you should see the colon character appear, awaiting a command. Let's make a change to this file, save, and then exit. To do that, type "i" to enter what is called Insert Mode. This mode allows you to modify the contents of the file. Create a new line of text, something like "This is my first line of text.", and then hit `Esc` to exit Insert Mode. Return to Command Line Mode by typing `:`, following by `w` to save the file. Finally, type `:q` to exit back to the command line. 
-- enter
-- exit
-- temporarily place in background and return (ctrl+z, fg)
+To enter Command Line Mode, hit `Esc` to exit the current mode and type `:`. In the status bar at the bottom of the screen a colon character appears, awaiting a command. Let's make a change to this file, save, and then exit. 
+
+- Type "i" to enter what is called `Insert Mode`. This mode allows the user to modify the contents of the file. 
+- Type a new line of text and hit `Esc` to exit Insert Mode. 
+- Return to Command Line Mode by typing `:`, following by `w` to save the file. 
+- Type `:q` to exit back to the command line. 
+
+Another way to exit Vim is to change context. Hit `Esc` followed by `ctrl+z` to return to the command line. Vim is still running in the foreground, and can be accessed by typing `fg` in the command prompt. 
+
+====
+YOU ARE HERE - don't proofread yet, just keep typing through this. Halfway there
+===
 
 ## Modes
 We've seem a couple of modes so far - Command Line Mode and Insert Mode, which are two of many modes available in Vim. For this discussion, we will cover four primary modes of interaction with Vim. These are:
@@ -220,5 +292,10 @@ Here are some more advanced commands.
 
 - Find some youtube tutorials again and read the comments. That's where you can get some cool insights
 - Am I discussing Vim correctly? Am I afraid of coming off as naive? Increase the article quality for sure, but also ensure it remains accessible. This article is great -> https://pithological.com/vim-modal-editing/
-- I wonder if it's worth grabbing the Practical Vim book and skimming the intro/motivation, and then quickly reading the rest. let's do it
-- this could be a hands-on lunch-and-learn, could be fun - don't want to come off as a show-off though, so spend at least the first 5 minutes motivating why it's helpful to be proficient in Vim
+- 
+
+=====
+
+TOO CHATTY:
+I believe there is a greater scope for improvement in productivity. The point is, you'll know you're using Vim effectively when you are touch-typing your way through files and rarely reaching for the mouse.  
+"How to exit Vim" is a common meme at the moment, so let's cover that since I'm guessing 40% of my readers are here for just that. To discard changes and exit vim, type `:q!` and you're free! But instead of running away from our keyboards and jumping for joy, let's re-enter the file and explore a few other useful commands in what is known as Command Line mode.  
