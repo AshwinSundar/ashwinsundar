@@ -95,14 +95,12 @@ To enter Command Line Mode, hit `Esc` to exit the current mode and type `:`. In 
 
 - Type "i" to enter what is called `Insert Mode`. This mode allows the user to modify the contents of the file. 
 - Type a new line of text and hit `Esc` to exit Insert Mode. 
+
 - Return to Command Line Mode by typing `:`, following by `w` to save the file. 
 - Type `:q` to exit back to the command line. 
 
 Another way to exit Vim is to change context. Hit `Esc` followed by `ctrl+z` to return to the command line. Vim is still running in the foreground, and can be accessed by typing `fg` in the command prompt. 
 
-====
-YOU ARE HERE - don't proofread yet, just keep typing through this. Halfway there
-===
 
 ## Modes
 We've seem a couple of modes so far - Command Line Mode and Insert Mode, which are two of many modes available in Vim. For this discussion, we will cover four primary modes of interaction with Vim. These are:
@@ -112,7 +110,7 @@ We've seem a couple of modes so far - Command Line Mode and Insert Mode, which a
 - Visual Mode
 - Command Line Mode
 
-Each of these four modes has different key bindings, enabling advanced manipulation of text and files. The vast majority of time is spent in Insert Mode, where text entry and manipulation occurs, although each of the three other modes have their own use cases (don't like this sentence).
+Each of these four modes has different key bindings, enabling advanced manipulation of text and files. The vast majority of time is spent in Insert Mode, where text entry and manipulation occurs.
 
 | Mode | How to get there |
 |------|------------------|
@@ -121,12 +119,12 @@ Each of these four modes has different key bindings, enabling advanced manipulat
 | Visual | `Esc` + `ctrl+v` |
 | Command Line | `Esc` + `:` | 
 
-Normal Mode is kind of like base camp for Vim, so when things go sideways and it's not clear what mode you're in anymore, just hit `Esc` to get back to a known starting point. 
+Normal Mode is the default state for Vim, and can always be accessed by hitting `Esc`. Vim modes can be thought of as a finite state machine and can only exist in a set of defined modes. (see comment at https://stackoverflow.com/questions/11828270/how-do-i-exit-vim?utm_source=thenewstack&utm_medium=website&utm_content=inline-mention&utm_campaign=platform) - recreate that diagram in the comment about finite state machines
 
-To put it another way, Vim modes can be thought of as a finite state machine and can only exist in a set of defined modes. (see comment at https://stackoverflow.com/questions/11828270/how-do-i-exit-vim?utm_source=thenewstack&utm_medium=website&utm_content=inline-mention&utm_campaign=platform) - recreate that diagram in the comment about finite state machines
+## Navigation  
 
-## Navigation
-Navigating through a file is accomplished in Normal Mode, which you can enter from any mode by hitting `Esc`
+Navigating through a file is accomplished in Normal Mode, which you can enter from any mode by hitting `Esc`.  
+
 | Command | Description |
 |---------|-------------|
 | h, j, k, l | Move left, down, up, or right one character/line
@@ -138,8 +136,9 @@ Navigating through a file is accomplished in Normal Mode, which you can enter fr
 | gg | Places cursor at the start of the first line of the file 
 | G | Places cursor at the start of the last line of the file
 
-## Modification
-It might sound strange, but all of the commands below are entered while in Normal Mode, not Insert Mode. That is because if you are in Insert Mode and type a command such as `dd`, it will just modify the file at the current cursor location to insert the characters dd. 
+## Modification  
+
+All of the following commands can be accessed while in Normal Mode. 
 
 | Command | Description |
 |---------|-------------|
@@ -161,11 +160,24 @@ It might sound strange, but all of the commands below are entered while in Norma
 | u | undo. Unlike many programs, there is no limit to how many times you can use the "undo" command.
 | ctrl+r | redo. Keep in mind that this command works only immediately after undoing changes. If you undo several times and then choose to start editing again, the redo history is wiped out. (Does this make sense?). This means that using the same macro cannot be used repeatedly without some intermediary setup steps inbetween each macro call to ensure that the next call does what you want. To avoid this pitfall, ensure that the macro you record is record the ENTIRE repeatable sequence of commands you would use to edit n lines of a file in the same way. (Ugh good sentiment but figure out how to word this better)
 
+
 ## Meta Commands (not sure about that name)
-All of these commands take place in Command Line Mode, which you can enter by `Esc`aping to Normal Mode and then typing `:`.
+All of these commands take place in Command Line Mode. This mode is accessed by hitting `Esc` to enter Normal Mode and then typing `:`.
 
 | Command | Description |
+| w		| Save file |
+| wq 	| Save file and quit |
+| q		| Quit (without saving |
+| :split <file> | Splits screen horizontally, placing <file> in the top half | 
+| :vsplit <file> | Splits screen vertically, placing <file> on the left | 
+| :term | Splits screen horizontally, placing a new terminal window in the top half | 
+| /pattern | Searches file for next occurrence of `pattern`. 
+| :%s/old/new/g | Replaces all instances of `old` with `new`
 
+
+===
+YOU ARE HERE - don't proofread yet, just keep typing through this. 2/3 of the way there.
+===
 
 ## Command Composition 
 - the best insight I can provide about vim is that you should think of it as a sequence of english commands you are issuing. Modifier keys versus 
@@ -299,3 +311,5 @@ Here are some more advanced commands.
 TOO CHATTY:
 I believe there is a greater scope for improvement in productivity. The point is, you'll know you're using Vim effectively when you are touch-typing your way through files and rarely reaching for the mouse.  
 "How to exit Vim" is a common meme at the moment, so let's cover that since I'm guessing 40% of my readers are here for just that. To discard changes and exit vim, type `:q!` and you're free! But instead of running away from our keyboards and jumping for joy, let's re-enter the file and explore a few other useful commands in what is known as Command Line mode.  
+Normal Mode is kind of like base camp for Vim, so when things go sideways and it's not clear what mode you're in anymore, just hit `Esc` to get back to a known starting point. 
+It might sound strange, but all of the commands below are entered while in Normal Mode, not Insert Mode. That is because if you are in Insert Mode and type a command such as `dd`, it will just modify the file at the current cursor location to insert the characters dd. 
