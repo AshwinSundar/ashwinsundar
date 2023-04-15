@@ -1,0 +1,48 @@
+<!DOCTYPE html> <html> <head> <title>Ashwin's Blog</title> <meta name='author' content='Ashwin Sundar'> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="../../styles/compiled/global.css" /> <link rel="stylesheet" href="../../styles/compiled/blog.css" /> </head> <body>
+<h1 id="auto-versus-type-inference">auto versus type inference</h1>
+<p>April 2023</p>
+<p><strong>Question:</strong> Do <code>let</code> in Typescript and
+<code>auto</code> in C++ behave the same way as Standard MLs optional
+type annotations?</p>
+<p><code>auto x = {expr}</code> is an example of a “placeholder type”
+specifier. According to <a
+href="https://en.cppreference.com/w/cpp/language/auto">cppreference.com</a>,
+this <i>specifies that the type of the variable that is being declared
+will be automatically deduced from its initializer.</i>.</p>
+<p>How is the type deduced? Using <a
+href="https://en.cppreference.com/w/cpp/language/template_argument_deduction#Other_contexts">template
+argument deduction</a>, which is a fancy concept for describing “solving
+an equation” in math. In the equation, <span
+class="math inline"><em>x</em> + 1 = 7</span>, it is easy to deduce that
+<span class="math inline"><em>x</em> = 6</span>. Similarly, in the
+expression <code>auto x = 3</code>, it’s easy to deduce that the type of
+x is <code>integer</code>. Type deduction can get much more complicated,
+the study of which belongs to <a
+href="https://en.cppreference.com/w/cpp/language/template_argument_deduction#Other_contexts">type
+theory</a>.</p>
+<p>In a strongly-typed language like Standard ML, one is not required to
+specify parameter types or return types when defining a function. This
+seems paradoxical at first. If the language is strongly-typed (meaning
+variable types are known at compile-time), how can a programmer choose
+to <strong>not</strong> tell the compiler what types the function
+accepts and returns?</p>
+<p>Early Fortran, COBOL, and C all required explicit type annotations.
+Standard ML supported type inference in the 1970s, but was one of few
+languages to do so. Haskell, Scala, Rust, C++, and Typescript all joined
+afterwards.</p>
+<p>While type inference took some time to make its way into modern
+languages, the idea has been around for a long time, going back to
+logician <a
+href="https://en.wikipedia.org/wiki/Hindley–Milner_type_system">J Roger
+Hindley</a>, Turing Award winner <a
+href="https://en.wikipedia.org/wiki/Hindley–Milner_type_system">Robin
+Milner</a>, and mathematician <a
+href="https://en.wikipedia.org/wiki/Haskell_Curry">Haskell
+Curry</a>.</p>
+<p>Standard ML supports type-inference natively. It doesn’t even require
+a difference keyword. Just leave off the type annotation:</p>
+<p><code>var x &lt;s&gt;: int&lt;/s&gt; = 3</code></p>
+<p><code>fun sum (x &lt;s&gt;: int&lt;/s&gt;, y &lt;s&gt;: int&lt;/s&gt;) &lt;s&gt; -&gt; int&lt;/s&gt; = ...</code></p>
+<p>So yes. <code>auto</code>, <code>let</code>, and SML’s lack of
+annotation all represent the same concept - type inference.</p>
+</body> </html>
