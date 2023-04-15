@@ -16,8 +16,8 @@ While type inference took some time to make its way into modern languages, the i
 
 Standard ML supports type-inference natively. It doesn't even require a difference keyword. Just leave off the type annotation:
 
-`var x <s>: int</s> = 3`
+`var x` <s>`:int`</s>` = 3`
 
-`fun sum (x <s>: int</s>, y <s>: int</s>) <s> -> int</s> = ...`
+`fun sum (x `<s>`: int`</s>`, y `<s>`: int`</s>`) `<s>` -> int`</s>` = ...`
 
-So yes. `auto`, `let`, and SML's lack of annotation all represent the same concept - type inference. 
+So yes. using `auto` in C++, using `let` in Typescript, and omitting type annotation in Standard ML all represent the same concept - type inference. 
