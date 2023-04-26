@@ -17,7 +17,15 @@ While type inference took some time to make its way into modern languages, the i
 Standard ML supports type-inference natively. It doesn't even require a difference keyword. Just leave off the type annotation:
 
 `var x` <s>`:int`</s>` = 3`
-
 `fun sum (x `<s>`: int`</s>`, y `<s>`: int`</s>`) `<s>` -> int`</s>` = ...`
+
+Here's another example, borrowed from Dan Grossman's Programming Languages course: 
+
+```
+val x = 42
+fun f (y,z,w) = if y then z+x else 0
+```
+
+`x` is given type `int` because 42 is of type int. For the parameters of `f`, `y` must be type `bool` because it is tested in a conditional statement. `z` is of type int because it is being added to something else that is already known to be type `int`. Finally, `w` can be any type because it is never used in the expression. The type for f is `bool * int * 'a -> int`. 
 
 So yes. using `auto` in C++, using `let` in Typescript, and omitting type annotation in Standard ML all represent the same concept - type inference. 

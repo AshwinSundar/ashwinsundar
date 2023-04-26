@@ -28,3 +28,17 @@ There is no such thing as the **best** programming language, just like there is 
 Older cars (languages) sometimes are better because they are simpler and easier to understand. Popularity in and of itself is not evidence of being the "best".  Software development is precise, you don't get to just guess at how semantics work. You'll sound stupid if you say "I feel that conditional expressions might work like this". 
 
 Idioms make you a better programmer - you can infer how any language works if you understand basic constructs deeply. Booleans, conditional expressions are deep eternal truths about logic. It could be called "first principles" in another world - they hold true regardless of the environment. Understanding programming languages at this level won't get you a better job right away, but they lay a great foundation and enable you to better understand the field as a whole. 
+
+April 2023
+
+After some delay I've completed Part A. Beyond the course syllabus, here is what I've learned so far:  
+
+ - Programming languages are far more than tools. They are applications of computer science theory. They are conduits of ideas from applied mathematics. There is far more to them than meets the eye. A very human element exists to designing a good programming language - it's an exercise that blends engineering and art.  
+
+Starting Part B of the course, the first lesson includes the following statement that I found enlightening: 
+
+
+*For some reason, HTML is only rarely criticized for being littered with parentheses but it is a common complaint leveled against LISP, Scheme, and Racket. If you stop a programmer on the street and ask him or her about these languages, they may well say something about “all those parentheses.” This is a bizarre obsession: people who use these languages quickly get used to it and find the uniform syntax pleasant. For example, it makes it very easy for the editor to indent your code properly.  
+From the standpoint of learning about programming languages and fundamental programming constructs, you should recognize a strong opinion about parentheses (either for or against) as a syntactic prejudice. While everyone is entitled to a personal opinion on syntax, one should not allow it to keep you from learning advanced ideas that Racket does well, like hygienic macros or abstract datatypes in a dynamically typed language or first-class continuations. An analogy would be if a student of European history did not want to learn about the French Revolution because he or she was not attracted to people with french accents. 
+
+Coming into this class, one misconception I hold is that static typed languages are superior to dynamic typed languages. Static typing is for programmers who know what they're doing and can reason about a program sufficiently. Dynamic typing is for programmers who want to get something working quickly, and leave bugs to the client to deal with. I think my understanding of dynamically typed languages is shaky at best as a result. 
