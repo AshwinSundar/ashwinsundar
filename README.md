@@ -1,3 +1,5 @@
+# Personal Website
+
 Unorganized notes:
 
 - edit .scss files only
