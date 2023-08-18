@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ## Unorganized notes:
+=======
+# Personal Website
+
+Unorganized notes:
+>>>>>>> 1d2725ae1c52074be2007e174f81a1a3f4b44909
 
 - edit .scss files only
 - import from styles/compiled/\*.css
