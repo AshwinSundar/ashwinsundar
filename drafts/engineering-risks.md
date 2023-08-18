@@ -2,7 +2,7 @@
 
 Date: November 2022
 
-I recently saw an interesting, flippant post on Reddit:
+
 
 **SAVE THIS LOCALLY**
 <img src="https://i.redd.it/pk7ja7q739y91.jpg">
@@ -11,15 +11,11 @@ Why, indeed? One redditor responded,
 
 "NASA had to pay $14 billion for the oversize luggage fee."
 
-Haha, possibly.
-
-"Some poor baggage handler doesn't have to toss 200 space shuttles onto the plane, but they would have to toss 200 60 pound bags on the plane."
-
-Interesting, that makes sense. I think we're getting closer, but still not sure.
+Another stated,
 
 "Because weight management, fuel burn, and the airlines like money. Also, too much weight on an airplane can lead to it underperforming."
 
-Aha, okay! "Airlines like money" is a pretty generic argument but very popular currently. Who can disprove it?
+---
 
 "Space shuttle weight empty: 165,000 pounds
 

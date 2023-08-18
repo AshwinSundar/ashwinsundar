@@ -1,14 +1,16 @@
 # Web Development isn't Doomed
-August 2022
 
-INTRODUCTION: 
-Earlier this summer, StackOverflow released its annual ranking of most-loved programming languages. 61% of developers proclaimed their love for Javascript through this survey. 
+<!-- First Draft: August 2022 -->
+August 2023
 
-This was shocking to me. Developers have voiced so many criticisms of this language for decades (bunch of funny comments pop up on the screen). In a world of constantly changing technologies, why does Javascript persist through everything, like a cockroach during a nuclear holocaust? How was this language still topping the charts in popularity? Was this love affair for Javascript merely Stockholm Syndrome exhibited by developers who don’t know any better? 
+INTRODUCTION:  
+Earlier this summer, StackOverflow released its annual ranking of most-loved programming languages. 61% of developers proclaimed their love for Javascript through this survey.  
 
-For the uninitiated, Javascript is the programming language of the web. In the early days of the web, pages could only be static and lacked interactivity after the page loaded. Seeking to change this, Netscape hired a programmer named Brendan Eich to develop a scripting language for their product Netscape Navigator. He had only 10 days to create the language, and did it. One day I'll do some research to find out how long some other popular programming languages took to develop, and update this section with that information. But I would hazard a guess that Javascript is in a league of its own. 
+This surprised me. Developers have voiced so many criticisms of Javascript for decades (bunch of funny comments pop up on the screen). In a world of constantly changing technologies, why does Javascript persist through everything, like a cockroach cowering from a nuclear holocaust? How was this language still topping the charts in popularity? What kind of Stockholm Syndrome kind of relationship is this?  
 
-But wait, I thought Angular/Ember/Gatsby/Meteor/Mithril/NodeJS/Nuxt/Polymer/React/Vue was taking over? Well these are just different ice cream flavors that compile down to the single language your browser understands - Javascript. You might have a case for WebAssembly, but for now we’re stuck with Javascript and its numerous spawn. 
+Javascript is the programming language of the web. In the early days, web pages were static and lacked interactivity after the page loaded. Seeking to change this, Netscape hired a programmer to develop a scripting language for their product Netscape Navigator. He created the language in ten days [1]. One day I'll do some research to find out how long some other popular programming languages took to develop, and update this section with that information. But I would hazard a guess that Javascript is in a league of its own.  
+
+_But wait, I thought Angular/Ember/Gatsby/Meteor/Mithril/NodeJS/Nuxt/Polymer/React/Vue was taking over?_ Well these are just different ice cream flavors that compile down to the single language your browser understands - Javascript. You might have a case for WebAssembly, but for now we’re stuck with Javascript and its numerous spawn.  
 
 You might be wondering - why am I the ten millionth person to complain about the horrors of Javascript? Because, as we’ll see later, web development is a very twitchy and ADHD field, full of newcomers and non-engineers who don’t know what they’re talking about, and think Javascript should run everything from their website to their toaster. Rest assured, you're welcome to tune out at any time. I’ll try to keep this fun and light-hearted, and only offend Javascript programmers in the process.
 
@@ -20,16 +22,16 @@ This thesis implies that someone, perhaps myself, thinks they ARE doomed. And th
 
 NPM modules continue to spread across the entire observable universe, infecting every single code-base with pointless code (examples from left-pad, isArray, and isArray consensus) and constantly out-of-date dependencies. For the uninitiated - left-pad is an NPM dependency, or snippet of code, that was re-used across thousands of very large, very corporate projects. Projects they should have known better and practiced appropriate risk management in their applications. After a disagreement rooted in the ownership of open-source code, the author rightfully removed left-pad from the NPM ecosystem, causing thousands (how many dependencies were there on the day it was removed?) of applications to either cease working immediately, or be in imminent danger of doing so. In other words, 11 lines of code broke the internet for a few hours in 2016. To NPM’s credit, changes have been made since then, such as restricting unpublishing of publicly-available code. However, the root cause - excessive trust in SOUP - or Software of Unknown Provenance, remains (good opportunity for a joke or some funny pictures).
 
-Here is an example of very simple code that even the newest programmer should be able to write themselves - determining if something is an array. (https://www.npmjs.com/package/isarray). This function is a grand total of 2 lines of code, and really can be written in one line if condensed a bit more:  
+Here is an example of a basic programming task - determining if something is an array. (https://www.npmjs.com/package/isarray). This function is a grand total of 2 lines of code, and really can be written in one line if condensed a bit more:  
 ```
 var toString = {}.toString;
 module.exports = Array.isArray || function (arr) { return toString.call(arr) === '[object Array]'; };
 ```
 
-On the week I created this presentation, this module had been downloaded over 70 million times, in use across a wide variety of production and non-production projects. The size of the module on GitHub, a public code repository, is 3.43 kB. For reference, when I write these two lines of code and save them to a standalone file, it’s 129 bytes. That’s a reduction in file size of 96%. Granted, the module includes other things such as README.md file that explains how to use the function and some tests to make sure the code works, but for a function so miniscule this amounts to quite a bit of unnecessary overhead. 
+On the week I created this presentation, this module had been downloaded over 70 million times, in use across a wide variety of production and non-production projects. The size of the module on GitHub, a public code repository, is 3.43 kB. For reference, the above text takes up 129 bytes. That’s a reduction in file size of 96%. The module does include other things such as README.md file and tests to make sure the code works. Is this all needed for a function so small?
 
 [next slide of isArray consensus and its contents]
-And yeah - isArray consensus (fill in actual name) works by asking 5 different dependencies whether your input is an array, and picks the mode of the answers. It's like cheating off your neighbor and crowd-sourcing your math homework. isArray consensus was created as a joke, but it illustrates a real problem in web development - over-reliance on pointless dependencies. 
+And yeah - isArray consensus (fill in actual name) works by asking 5 different dependencies whether your input is an array, and picks the mode of the answers. It's like cheating off your neighbor and crowd-sourcing your math homework. isArray consensus was created as a joke, but it illustrates a real problem in web development - over-reliance on pointless dependencies.  
 
 This is just one example of a trend ubiquitous across web-programming. Some may know it as DRY - Don't Repeat Yourself (screenshot of first few paragraphs of wiki). In theory, that means minimizing code redundancy so that you can focus on solving unique problems. In practice, we end up with modules like the ones I showed previously.
 
