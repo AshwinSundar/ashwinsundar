@@ -1,21 +1,16 @@
 .headline
 {
-		color: #bbbbbb
+    color: #bbbbbb
 }
 
-div.content 
+div.content .writing,
+div.content .music,
+div.content .photography,
+div.content .projects,
+div.content	.about
 {
-
-    .writing,
-    .music,
-    .photography,
-    .projects,
-	.about
-    {
-        color: #444444; 
-        text-align: justify;
-        max-width: 720px; 
-        margin-bottom: 50px;
-    }
-
+    color: #444444; 
+    text-align: justify;
+    max-width: 720px; 
+    margin-bottom: 50px;
 }
