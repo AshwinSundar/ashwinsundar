@@ -1,5 +1,7 @@
 # Personal Website
 
+A pure web 1.0 site.  
+
 Unorganized notes:
 
 - edit .scss files only
@@ -7,7 +9,3 @@ Unorganized notes:
 - check out scripts.sh
 - push to main (or run `bash scripts.sh deploy`), gh-pages will detect changes and re-publish
 - certain scripts run on save, check out .vscode/settings.json
-
-## To Do
-
-[] remove SASS dependency
