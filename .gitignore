@@ -1,5 +1,5 @@
-scripts.sh
 .vscode
-README.md
+.DS_Store
+t README.md
 /drafts
 /lifespan
