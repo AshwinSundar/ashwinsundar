@@ -37,16 +37,6 @@ deploy() {
     gh run watch
 }
 
-# settings.json -> emeraldwalk.runonsave(.scss)
-compileSass() {
-    # TO DO - create script that only updates one file, instead of everything
-    files=$(find styles -name "*.scss")
-    for f in $files; do
-        sass $f styles/compiled/$(basename "${f%.*}").css
-    done
-    echo "Sass files compiled"
-}
-
 # settings.json -> emeraldwalk.runonsave(.md)
 compileMarkdown() {
     # DONE - add body/head tags so VSCode Live Server will update immediately when html file is updated by this script
