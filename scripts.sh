@@ -1,4 +1,3 @@
-# bash scripts.sh createPage
 ## $1 - name of page
 createPage() {
     # TO DO
@@ -7,7 +6,6 @@ createPage() {
     cp templates/htmlTemplate.txt $inp.html
 }
 
-# bash scripts.sh createBlogPost
 createBlogPost() {
     inp=$(tr '[:upper:]' '[:lower:]' <<< $1)
     for f in "blog"/*; do
@@ -29,7 +27,6 @@ compile() {
     compileMusicPages
 }
 
-# bash scripts.sh deploy
 deploy() {
     compile
 	git add -A
@@ -40,8 +37,7 @@ deploy() {
     gh run watch
 }
 
-# bash scripts.sh compileSass
-# settings.json -> emeralwalk.runonsave(.scss)
+# settings.json -> emeraldwalk.runonsave(.scss)
 compileSass() {
     # TO DO - create script that only updates one file, instead of everything
     files=$(find styles -name "*.scss")
@@ -51,8 +47,7 @@ compileSass() {
     echo "Sass files compiled"
 }
 
-# bash scripts.sh compileMarkdown
-# settings.json -> emeralwalk.runonsave(.md)
+# settings.json -> emeraldwalk.runonsave(.md)
 compileMarkdown() {
     # DONE - add body/head tags so VSCode Live Server will update immediately when html file is updated by this script
     # TO DO - create script that only updates one file, instead of everything
