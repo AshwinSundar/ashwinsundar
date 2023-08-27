@@ -22,9 +22,9 @@ createBlogPost() {
 
 
 compile() {
-    compileSass
     compileMarkdown
-    compileMusicPages
+    compileMusicPages 
+    tidy -indent --indent-spaces 4 -m index.html 2>&1 > /dev/null
 }
 
 deploy() {
@@ -37,7 +37,7 @@ deploy() {
     gh run watch
 }
 
-# settings.json -> emeraldwalk.runonsave(.md)
+
 compileMarkdown() {
     # DONE - add body/head tags so VSCode Live Server will update immediately when html file is updated by this script
     # TO DO - create script that only updates one file, instead of everything
