@@ -11,13 +11,16 @@ html {
 }
 body {
   max-width: 1280px; 
+  width: 100%;
 }
 
 code {
   font-family: Consolas,"courier new";
-  font-size: 10px;
   color: crimson;
   background-color: #f1f1f1;
   padding: 2px;
-  font-size: 80%;
+  max-width: 100%;
+  display: inline-block;
+  white-space: pre-wrap;
 }
+
