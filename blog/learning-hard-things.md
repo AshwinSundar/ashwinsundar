@@ -4,7 +4,7 @@
 
 I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively. It was also 2 hours before I wanted to be awake.
 
-In that class, we were [shown many things](https://www.math.ucla.edu/~akrieger/teaching/17f/pic10a/index.html). Variables! Inputs and outputs! Roman numerals! Classes! As a neuroscience major, I hadn't the faintest clue what the point of any of this. Was programming supposed to be this esoteric, this alien?
+In that class, we were [shown many things](https://www.math.ucla.edu/~akrieger/teaching/17f/pic10a/index.html). Variables! Inputs and outputs! Roman numerals! Classes! As a neuroscience major, I hadn't the faintest clue what the point of any of this was. Was programming supposed to be this esoteric, this alien?
 
 Computer science originated as an offshoot of mathematics. In my younger days, I was good at math - I received the top score on the AP tests for Calculus AB and BC in high school.
 
@@ -66,7 +66,7 @@ Many times, we are forced to choose the former - dive into the details.  This is
 > 571215
 ```
 
-...that many words long. For a markup language! Fortunately, most HTML tutorials don't just say "read the spec", and involve heavy use of mental models and abstractions. Those models and abstractions are usually right. Usually.
+...that many words long. For a markup language! Fortunately, most HTML tutorials don't just say "read the spec", but involve heavy use of mental models and abstractions. Those models and abstractions are usually right. Usually.
 
 <img title = "Pre-mystical-corpuscular" alt = "Pre-mystical-corpuscular" src = "/blog/assets/learn-hard-things/dali-temptation-st-anthony.JPG">
 
