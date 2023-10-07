@@ -6,21 +6,22 @@ I took a total of one computer science class in my undergraduate degree. It was 
 
 In that class, we were [shown many things](https://www.math.ucla.edu/~akrieger/teaching/17f/pic10a/index.html). Variables! Inputs and outputs! Roman numerals! Classes! As a neuroscience major, I hadn't the faintest clue what the point of any of this. Was programming supposed to be this esoteric, this alien?
 
-Computer science is supposed to be an offshoot of mathematics. In my younger days, I was good at math - I received the top score on the AP tests for Calculus AB and BC in high school.
+Computer science originated as an offshoot of mathematics. In my younger days, I was good at math - I received the top score on the AP tests for Calculus AB and BC in high school.
 
-Yet this looked nothing like math, nothing like anything I had ever seen before...
+Yet this looked nothing like math, nothing like anything I had seen before...
 
 <img title = "A veritable chrysalitic monster" alt = "A veritable chrysalitic monster" src = "/blog/assets/learn-hard-things/dali-sleep.JPG">
 
 I fell asleep a lot in that class. Several times, I experienced some form of [sleep paralysis](https://en.wikipedia.org/wiki/Sleep_paralysis) - unable to move, unable to breathe, my subconscious listened to the lecturer drone on about objects and assignments and operators. 
 
-Ultimately, I woke up and completed the course with some sort of passing grade, along with a deep distaste for anything related to code. I never took another class from the computer science department again. It would be several years before I'd write a single line of code again. 
+Ultimately, I woke up and completed the course with some sort of passing grade, along with a deep distaste for anything related to code. I never took another class from the computer science department again. It would be several years before I'd write another line of code.
 
 ## Heuristics
 
-What I did not gain from that class is a set of reusable mental models. In computer science and software engineering, one must rely on mental models to represent complex details and abstractions. The phenomenon one works with are often a combination of unobservable and non-existent. Bits and bytes can't be physically observed (unless one works with an [ancient system](https://en.wikipedia.org/wiki/Magnetic-core_memory). Relationships between services are only as strong as the code that defines them, which itself is merely a conglomeration of words that are compiled down to bits and bytes. The good software engineer MUST rely on abstractions to make any sense of the world. 
+What I did not gain from that class was a set of reusable mental models. In computer science and software engineering, one must rely on mental models to represent complex details and abstractions. The phenomenon one works with are often a combination of unobservable and non-existent. Bits and bytes can't be physically observed (unless one works with an [ancient system](https://en.wikipedia.org/wiki/Magnetic-core_memory)). Relationships between services are only as strong as the code that defines them, which itself is merely a conglomeration of symbols that are compiled down to bits and bytes. The good software engineer MUST rely on abstractions to make any sense of the world. 
 
-With that established , let's explore a few of my reusable mental models.
+With that established, let's explore a few of my reusable mental models.
+
 ## Interfaces are like Legos
 
 Legos interact with each other in a very well-defined manner. The circular interlocking portions must be manufactured to a tolerance of [10 micrometers](https://web.archive.org/web/20121209100137/http://cache.lego.com/upload/contentTemplating/AboutUsFactsAndFiguresContent/otherfiles/download98E142631E71927FDD52304C1C0F1685.pdf) so that the bricks lock as expected, but can be removed easily.
