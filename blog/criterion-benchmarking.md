@@ -27,7 +27,7 @@ The code used in this article can be found at https://github.com/AshwinSundar/Cr
      Created binary (application) package
 ```
 
-## 1. Add Criterion to `dev-dependencies`
+## 1. Add Criterion to dev-dependencies
 
 **$PROJECT/Cargo.toml**
 

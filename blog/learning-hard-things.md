@@ -34,7 +34,7 @@ Similarly, good interfaces shouldn't unreasonably constrain the user for the uni
 
 Finally, Lego interfaces behave like a "black box". One can attach a Lego to any interface of an existing Lego project without concern for what color the bricks are, how many bricks are connected, or even the types of all the other bricks involved. The interface is all that matters.
 
-## Testing is an `n-dimensional` space
+## Testing is an n-dimensional space
 
 When conducting experiments in school, one learns to modify only one independent variable at a time. This is to make it easy to measure its singular effect on the dependent variable. It is possible to test more variables at once, but it is hard to visualize, more time-consuming, and more difficult to plot nicely in a school report.
 
