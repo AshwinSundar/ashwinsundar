@@ -5,9 +5,11 @@ body {
   justify-content: center;
 }
 
-p {
-  font-size: 20px;
+p, 
+code { /* override code CSS def in global.css */
+  font-size: 2vmin;
 }
+
 
 img {
   max-width: 100%;
