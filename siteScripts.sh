@@ -24,7 +24,8 @@ createBlogPost() {
 compile() {
     compileMarkdown
     compileMusicPages 
-    tidy -indent --indent-spaces 4 -m index.html 2>&1 > /dev/null
+    pwd
+    tidy -config htmltidy.config -m index.html
 }
 
 deploy() {
@@ -64,6 +65,7 @@ compileMusicPages() {
         echo $content > $htmlFileName
     done
     echo "Music pages compiled"
+    cd -
 }
 
 
