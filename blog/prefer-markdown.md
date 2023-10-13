@@ -7,19 +7,19 @@ I have spent a lot of time writing HTML. I wrote my first HTML when I was around
 <img src = "/blog/assets/prefer-markdown/neopets-html.png" style="display: block; margin: auto; width: 90%" />
 <figcaption style = 'text-align: center'>Thank you, Neopets, for not changing the style of this page for 20 years.</figcaption>
 
-I stood up my entire personal website in raw HTML and about 20 lines of CSS. This site is remarkably simple for modern web standards - feel free to hit "Inspect" and peer at what's going on. It's not much. 
+I stood up my entire personal website in raw HTML and about 20 lines of CSS. This site is remarkably simple by modern web standards - feel free to hit "Inspect" and peer at what's going on. It's not much. 
 
 ## HTML?  
 
-Frankly, I don't get the appeal. Writing in HTML doesn't make me feel nostalgic. 
+Frankly, I don't get the appeal. Writing HTML doesn't make me feel nostalgic.  
 
-Rather, I feel the weight of old technologies dragging me down, preventing me from getting in a writing flow. It's really, really hard to write sentences and paragraphs when you have to constantly remember to close out HTML tags or the whole page will look like shit. Debugging the style of an HTML file is one of the most thoroughly uninteresting programming experiences a developer can have.
+Rather, I feel the weight of old technologies dragging me down. It's really, really hard to enter a state of "writing flow" when you have to constantly remember to close out HTML tags. The effect of forgetting a single `/>` is that the entire page looks like shit. Debugging the style of an HTML file is one of the most thoroughly uninteresting programming experiences a developer can have.
 
 Markdown has been my favorite markup language for the last several years. A raw Markdown file is very human-readable. In Markdown, there are few formatting rules that must be followed. Compare this with the tag detritus scattered about a standard HTML file.  
 
 
 <img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="display: block; margin: auto; width: 90%"/>
-<figcaption style = 'text-align: left'>Which is easier to read? Yes, that's the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.</figcaption>
+<figcaption style = 'text-align: left'>HTML vs Markdown. Which is easier to read? Yes, that's the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.</figcaption>
 
 Additionally, HTML can be embedded in Markdown. So if one really does need custom styling, raw HTML is still available as a fallback. That image and caption above? 
 
