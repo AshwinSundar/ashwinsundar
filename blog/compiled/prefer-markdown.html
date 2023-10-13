@@ -58,7 +58,7 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">pandoc</span> <span class="at">-f</span> markdown <span class="va">$f</span> <span class="op">&gt;</span> blog/compiled/<span class="va">$(</span><span class="fu">basename</span> <span class="st">&quot;</span><span class="va">${f</span><span class="op">%</span>.<span class="pp">*</span><span class="va">}</span><span class="st">&quot;</span><span class="va">)</span>.html</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">done</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
-<p>What about templates?</p>
+<p><code>done</code> is right! What about templates?</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mdToHtml2()</span> <span class="kw">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">files</span><span class="op">=</span><span class="va">$(</span><span class="fu">find</span> blog <span class="at">-name</span> <span class="st">&quot;*.md&quot;</span><span class="va">)</span></span>
@@ -72,8 +72,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Markdown files converted to HTML&quot;</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div>
 <p>Yes, that script is verbose and not optimized for organization. I
-don’t know remember why it writes to a temp file first. The styling on
-this site has issues. But it gets the job done.</p>
+don’t remember why it writes to a temp file first. The styling on this
+site has issues. But it gets the job done.</p>
 <h2 id="to-summarize">To summarize</h2>
 <ol type="1">
 <li><p>Markdown to HTML conversion is dead simple.</p></li>

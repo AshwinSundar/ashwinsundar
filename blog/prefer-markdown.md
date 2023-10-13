@@ -41,7 +41,7 @@ mdToHtml {
 }
 ```
 
-What about templates?
+`done` is right! What about templates?
 
 ```bash
 mdToHtml2() {
@@ -57,7 +57,7 @@ mdToHtml2() {
 }
 ```
 
-Yes, that script is verbose and not optimized for organization. I don't know remember why it writes to a temp file first. The styling on this site has issues. But it gets the job done.
+Yes, that script is verbose and not optimized for organization. I don't remember why it writes to a temp file first. The styling on this site has issues. But it gets the job done.
 
 ## To summarize
 
