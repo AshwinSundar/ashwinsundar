@@ -64,6 +64,6 @@ Yes, that script is verbose and not optimized for organization. I don't remember
 
 1) Markdown to HTML conversion is dead simple.
 
-2) Writing in markdown reduces cognitive load, enabling a writer to remain "in flow" much more easily.  
+2) Writing in Markdown reduces cognitive load, enabling a writer to remain "in flow" much more easily.  
 
 [^markup-def]: A [markup language](https://en.wikipedia.org/wiki/Markup_language) is used to control the display of a document. Common examples include HTML, Markdown, and LaTeX.
