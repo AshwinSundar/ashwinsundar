@@ -7,7 +7,6 @@ html {
   display: flex;
   justify-content: center;
   text-align: justify;
-  /* background-color: rgba(225, 222, 208, 0.3); */
   background-color: #fff1e5;
 }
 body {
@@ -16,6 +15,7 @@ body {
 }
 
 code {
+  font-size: 0.8em;
   color: #F95E6F;
   background-color: #f1f1f1;
   padding: 2px;

@@ -4,8 +4,8 @@ October 2023
 
 I have spent a lot of time writing HTML. I wrote my first HTML when I was around 12. I'm not trying to brag - I was obsessed with a website called `neopets.com`, a website geared for kids to take care of virtual pets. There were games, currency to earn, and pets to splurge on. Items could be earned, and sold in a "shop" to other players (for fake currency only). I wanted to customize my Neopets shop, which was allowed using this thing called "HTML". I had just learned to type, and was pretty good at Mavis Beacon at school. This became a way to practice my typing skills with the weirder keys.  
 
-<img src = "/blog/assets/prefer-markdown/neopets-html.png" style="max-width: 600px" />
-<figcaption style = 'text-align: left'>Thank you, Neopets, for not changing the style of this page for 20 years.</figcaption>
+<img src = "/blog/assets/prefer-markdown/neopets-html.png" style="display: block; margin: auto; width: 90%" />
+<figcaption style = 'text-align: center'>Thank you, Neopets, for not changing the style of this page for 20 years.</figcaption>
 
 I stood up my entire personal website in raw HTML and about 20 lines of CSS. This site is remarkably simple for modern web standards - feel free to hit "Inspect" and peer at what's going on. It's not much. 
 
@@ -18,19 +18,19 @@ Rather, I feel the weight of old technologies dragging me down, preventing me fr
 Markdown has been my favorite markup language for the last several years. A raw Markdown file is very human-readable. In Markdown, there are few formatting rules that must be followed. Compare this with the tag detritus scattered about a standard HTML file.  
 
 
-<img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="max-width: 600px" />
+<img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="display: block; margin: auto; width: 90%"/>
 <figcaption style = 'text-align: left'>Which is easier to read? Yes, that's the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.</figcaption>
 
 Additionally, HTML can be embedded in Markdown. So if one really does need custom styling, raw HTML is still available as a fallback. That image and caption above? 
 
 ```HTML
-<img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="max-width: 600px" />
+<img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="display: block; margin: auto; width: 100%" />
 <figcaption style = 'text-align: left'>Which is easier to read? Yes, that's the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.</figcaption>
 ```
 
 This is the raw HTML, embedded in-line with all this Markdown around it. I do not know the extent to which the full HTML spec is supported in Markdown. However, I have yet to encounter a situation that could not be served by reverting to HTML briefly.
 
-Of course, Markdown can't be published directly as a static page. One would think that this necessitates the use of complex React plug-ins - but no! A simple bash script and a handy tool called *pandoc* is all you need:
+Of course, Markdown can't be published directly as a static page. Browsers don't know how to read Markdown. One would think that this requires the use of a complex tool to convert from human-speak to browser-speak - but no! A simple bash script and a handy tool called *pandoc* is all you need:
 
 ```bash
 mdToHtml {
