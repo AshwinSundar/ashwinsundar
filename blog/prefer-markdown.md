@@ -2,7 +2,7 @@
 
 October 2023
 
-I have spent a lot of time writing HTML. I wrote my first HTML when I was around 12. I'm not trying to brag - I was obsessed with a website called `neopets.com`, a website geared for kids to take care of virtual pets. There were games, currency to earn, and pets to splurge on. Items could be earned, and sold in a "shop" to other players (for fake currency only). I wanted to customize my Neopets shop, which was allowed using this thing called "HTML". I had just learned to type, and was pretty good at Mavis Beacon at school. This became a way to practice my typing skills with the weirder keys.  
+I have spent a lot of time writing HTML. I wrote my first HTML when I was around 12. I'm not trying to brag - I was obsessed with a website called `neopets.com`, a website geared for kids to take care of virtual pets. There were games to place, currency to earn, and pets to splurge on. Items could be earned, and sold in a "shop" to other players (for fake currency only). I wanted to customize my Neopets shop, which was allowed using this thing called "HTML". I had just learned to type, and was pretty good at Mavis Beacon at school. This became a way to practice my typing skills with the weirder keys.  
 
 <img src = "/blog/assets/prefer-markdown/neopets-html.png" style="display: block; margin: auto; width: 90%" />
 <figcaption style = 'text-align: center'>Thank you, Neopets, for not changing the style of this page for 20 years.</figcaption>
