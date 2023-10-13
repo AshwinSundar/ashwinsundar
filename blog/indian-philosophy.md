@@ -4,17 +4,17 @@
 
 Thinking, writing, and speaking about any ancient culture using modern English is extremely challenging. A great deal is lost in translation. Many religions, including Hinduism, strongly encourage the study of the religion in the original language. As a child, I learned Hindu *slokas* in Sanskrit, with only a tenuous understanding of what the phrases meant.  
 
-As a result, I am always hesistant to attempt to describe theories of `Bharathiya Darshan`, or *Indian Philosophy*, in English. However, I do not know Sanskrit either - in fact [very few people](https://www.indiatoday.in/india/story/people-speak-sanskrit-india-home-ministry-language-department-2005594-2022-09-28) can claim to be fluent.
+As a result, I am always hesistant to attempt to describe theories of `Bharathiya Darshan`, or *Indian Philosophy*, in English. The original texts, along with much of the analysis has been written and conducted in Sanskrit. I do not know Sanskrit - in fact [very few people](https://www.indiatoday.in/india/story/people-speak-sanskrit-india-home-ministry-language-department-2005594-2022-09-28) can claim more than passing acquaintance with the language. 
 
-There are a few ways I have considered contending with this matter throughout my life:
+There are a few ways I have considered contending with this matter.
 
 ### Do not discuss Indian Philosophy in English
 
 Do not discuss Indian Philosophy in English. It is acceptable to discuss it in an Indian language, at minimum. That is because most Indian languages inherit from Sanskrit. 
 
-I believed until I was 18 years old, when I took Hindi 1 and Hindi 2 from a linguistics professor at UCLA. I learned that my mother tongue [Tamil](https://en.wikipedia.org/wiki/Tamil_language) is a Dravidian language and does not inherit from Sanskrit's Indo-Aryan linguistic roots.  
+I believed this until I was 18 years old, when I satisfied the foreign language requirement in college by taking Hindi 1 and 2 from a linguistics professor. I learned that my mother tongue [Tamil](https://en.wikipedia.org/wiki/Tamil_language) is a Dravidian language and does not inherit from Sanskrit's Indo-Aryan linguistic roots.  
 
-This realization was unfortunate for my belief held at that time. Besides, I am nowhere near conversant enough in Tamil to discuss philosophy.  
+This realization was unfortunate for my belief held at that time. Besides, I am nowhere near conversant enough in Tamil to discuss philosophy. So now I believed I had no native way to discuss Indian Philosophy.
 
 ### Add asterisks to everything said about Indian Philosophy
 
@@ -24,7 +24,7 @@ This is the option I pursued through most of my 20s, as a result of my revelatio
 
 I would very much love to, unfortunately one's time on this Earth is limited. Learning Sanskrit to the level where one can discuss **Bharathiya Darshan** in it's native tongue would consume most, if not all, of one's life. In India, `Vedapatasalas` are boarding schools where the curricular focus is culture and spiritualism for such a purpose.
 
-## Approach  
+## How to discuss Indian Philosophy
 
 I would like to learn more about *Indian philosophy*. The way I learn best is to write and talk about what I have learned thus far. In order to make that happen, I will be writing about what I have learned through the following lens.
 
@@ -38,7 +38,7 @@ I shall follow the markup convention of placing the `संस्कृत` and 
 
 Will this project be extraordinarily time-consuming as a result? Most likely. However, this seems like the best approach to tackling the complex matter. The project primarily serves to satisfy my own intellectual curiosity, but also help inform the Western reader.
 
-To Sanskrit scholars who are far more knowledgable than I am in these matters, I only ask for forgiveness in any mistakes I make.
+Ultimately, the audience for anyone reading this is people who grew up like me - a second-generation immigrant with a foot in each culture, feeling like a stranger to both[^intro]
 
 ## Introduction
 
@@ -87,7 +87,7 @@ Some common features shared by the systems include:
 
 ## Consciousness
 
-Let's revisit the idea of self-oriented spritual, and focus on the true nature of the self. `अवस्था` / `avastha` / *state of consciousness* consists of four states:
+Let's revisit the idea of self-oriented spritualism. Consider the true nature of the self. `अवस्था` / `avastha` / *state of consciousness* consists of four states:
 
 - `जगराता` / `jagratha` / *wakefulness*
 - `स्वप्न` / `svapna` / *dream-state*
@@ -96,7 +96,6 @@ Let's revisit the idea of self-oriented spritual, and focus on the true nature o
 
 One may experience `jagratha` / *wakefulness* in mundane daily interactions. `svapna` / *dream-state* can only be recognized after the fact - one is unaware of the dream they are in while they are experiencing it. `sushupti` / *dreamless sleep* occurs after one awakes with no recollection of their time asleep. `thuriya` / *transcendtal consciousness* is the most difficult to define, and may refer to a state of enlightenment.  
 
-
-### References 
+[^intro]: To Sanskrit scholars who are far more knowledgable than I am in these matters, I only ask for forgiveness in any mistakes I make.
 
 [^vedas]: The `Vedas` are a large body of ancient scriptures.
