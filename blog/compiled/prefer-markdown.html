@@ -15,7 +15,9 @@ Thank you, Neopets, for not changing the style of this page for 20
 years.
 </figcaption>
 <p>In college, I took advantage of self-hosting provided by the school
-to share my photography. Thank you, Wayback Machine, for keeping <a
+to share my photography. I created some HTML files, uploaded images, and
+told the server where to find them. Thank you, Wayback Machine, for
+keeping <a
 href="https://web.archive.org/web/20131122205041/http://ashiundar.bol.ucla.edu/">this
 snapshot</a>.</p>
 <p>Recently, I re-wrote my entire personal website in raw HTML and about
@@ -31,10 +33,11 @@ constantly remember to close out HTML tags. The effect of forgetting a
 single <code>/&gt;</code> is that the entire page looks like shit.
 Debugging the style of an HTML file is one of the most thoroughly
 uninteresting programming experiences a developer can have.</p>
-<p>Markdown has been my favorite markup language for the last several
-years. A raw Markdown file is very human-readable. In Markdown, there
-are few formatting rules that must be followed. Compare this with the
-tag detritus scattered about a standard HTML file.</p>
+<p>Markdown has been my favorite markup language<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> for
+the last several years. A raw Markdown file is very human-readable. In
+Markdown, there are few formatting rules that must be followed. Compare
+this with the tag detritus scattered about a standard HTML file.</p>
 <img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="display: block; margin: auto; width: 100%"/>
 <figcaption style="text-align: center">
 HTML vs Markdown. Which is easier to read? Yes, that’s the high contrast
@@ -43,12 +46,12 @@ vim-mode enabled.
 </figcaption>
 <p>Additionally, HTML can be embedded in Markdown. So if one really does
 need custom styling, raw HTML is still available as a fallback. That
-image and caption above?</p>
+image and caption above? This is the raw HTML, embedded in-line with all
+this Markdown around it:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span> <span class="er">src</span> <span class="ot">=</span> <span class="st">&quot;/blog/assets/prefer-markdown/html-vs-md.png&quot;</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;display: block; margin: auto; width: 100%&quot;</span> <span class="dt">/&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">figcaption</span> <span class="er">style</span> <span class="ot">=</span> <span class="st">&#39;text-align: center&#39;</span><span class="dt">&gt;</span>Which is easier to read? Yes, that&#39;s the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.<span class="dt">&lt;/</span><span class="kw">figcaption</span><span class="dt">&gt;</span></span></code></pre></div>
-<p>This is the raw HTML, embedded in-line with all this Markdown around
-it. I do not know the extent to which the full HTML spec is supported in
+<p>I do not know the extent to which the full HTML spec is supported in
 Markdown. However, I have yet to encounter a situation that could not be
 served by reverting to HTML briefly.</p>
 <p>Of course, Markdown can’t be published directly as a static page.
@@ -86,4 +89,15 @@ site has issues. But it gets the job done.</p>
 amount, compared to writing in HTML. This allows a writer to remain “in
 flow” much more easily.</p></li>
 </ol>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>A <a
+href="https://en.wikipedia.org/wiki/Markup_language">markup language</a>
+is used to control the display of a document. Common examples include
+HTML, Markdown, and LaTeX.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
 </body> </html>
