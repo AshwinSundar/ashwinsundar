@@ -11,7 +11,7 @@ Computer science originated as an offshoot of mathematics. In my younger days, I
 This classed looked nothing like math, nothing like anything I had seen before...
 
 <img title = "A veritable chrysalitic monster" alt = "A veritable chrysalitic monster" src = "/blog/assets/learn-hard-things/dali-sleep.JPG">
-<figcation style = 'text-align: center'>A vertical chronically-tired matriculate</figcaption>
+<figcaption style = 'text-align: center;'>A vertical chronically-tired matriculate</figcaption>
 
 I fell asleep a lot in that class. Several times, I experienced some form of [sleep paralysis](https://en.wikipedia.org/wiki/Sleep_paralysis) - unable to move, unable to breathe, my subconscious listened to the lecturer drone on about objects and assignments and operators. 
 
