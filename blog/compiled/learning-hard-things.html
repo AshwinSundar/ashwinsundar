@@ -4,8 +4,7 @@
 <p>I took a total of one computer science class in my undergraduate
 degree. It was a CS class geared towards non-CS majors. The class
 started at 10AM, which was about 2 hours before my brain started
-functioning effectively. It was also 2 hours before I wanted to be
-awake.</p>
+functioning effectively.</p>
 <p>In that class, we were <a
 href="https://www.math.ucla.edu/~akrieger/teaching/17f/pic10a/index.html">shown
 many things</a>. Variables! Inputs and outputs! Roman numerals! Classes!
@@ -13,11 +12,13 @@ As a neuroscience major, I hadn’t the faintest clue what the point of
 any of this was. Was programming supposed to be this esoteric, this
 alien?</p>
 <p>Computer science originated as an offshoot of mathematics. In my
-younger days, I was good at math - I received the top score on the AP
-tests for Calculus AB and BC in high school.</p>
-<p>Yet this looked nothing like math, nothing like anything I had seen
-before…</p>
-<p><img title = "A veritable chrysalitic monster" alt = "A veritable chrysalitic monster" src = "/blog/assets/learn-hard-things/dali-sleep.JPG"></p>
+younger days, I was good at math. “I got this!”, I said.</p>
+<p>This classed looked nothing like math, nothing like anything I had
+seen before…</p>
+<img title = "A veritable chrysalitic monster" alt = "A veritable chrysalitic monster" src = "/blog/assets/learn-hard-things/dali-sleep.JPG">
+<figcation style = 'text-align: center'>A vertical chronically-tired
+matriculate
+</figcaption>
 <p>I fell asleep a lot in that class. Several times, I experienced some
 form of <a href="https://en.wikipedia.org/wiki/Sleep_paralysis">sleep
 paralysis</a> - unable to move, unable to breathe, my subconscious
@@ -31,14 +32,16 @@ It would be several years before I’d write another line of code.</p>
 <p>What I did not gain from that class was a set of reusable mental
 models. In computer science and software engineering, one must rely on
 mental models to represent complex details and abstractions. The
-phenomenon one works with are often a combination of unobservable and
+phenomena one works with are often a combination of unobservable and
 non-existent. Bits and bytes can’t be physically observed (unless one
 works with an <a
 href="https://en.wikipedia.org/wiki/Magnetic-core_memory">ancient
 system</a>). Relationships between services are only as strong as the
 code that defines them, which itself is merely a conglomeration of
 symbols that are compiled down to bits and bytes. The good software
-engineer MUST rely on abstractions to make any sense of the world.</p>
+engineer<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> MUST rely on abstractions to make
+any sense of the world.</p>
 <p>With that established, let’s explore a few of my reusable mental
 models.</p>
 <h2 id="interfaces-are-like-legos">Interfaces are like Legos</h2>
@@ -60,27 +63,29 @@ href="https://web.math.ku.dk/~eilers/lego.html">915,103,765 ways</a>. It
 is unlikely any particular design decision by the designers enabled
 this, but it is as if they built a Turing-complete construction
 language.</p>
-<p>Similarly, good interfaces shouldn’t unreasonably constrain the user
-for the universe that the interface designer has created.</p>
+<p>Similarly, good interfaces shouldn’t unreasonably constrain the user,
+at least in the universe that the interface designer has created.</p>
 <p>Finally, Lego interfaces behave like a “black box”. One can attach a
 Lego to any interface of an existing Lego project without concern for
 what color the bricks are, how many bricks are connected, or even the
 types of all the other bricks involved. The interface is all that
 matters.</p>
+<p>Again, one should not need to dive deep into API source code just to
+figure out how to use an exposed adapter.</p>
 <h2 id="testing-is-an-n-dimensional-space">Testing is an n-dimensional
 space</h2>
 <p>When conducting experiments in school, one learns to modify only one
 independent variable at a time. This is to make it easy to measure its
 singular effect on the dependent variable. It is possible to test more
-variables at once, but it is hard to visualize, more time-consuming, and
+variables at once. But it is hard to visualize, more time-consuming, and
 more difficult to plot nicely in a school report.</p>
 <p>Using an idea from statistics called <a
 href="https://asq.org/quality-resources/design-of-experiments">Design of
 Experiments</a>, one can change two variables at once, creating a
 3-dimensional space with a 3-dimensional functions.</p>
-<p>What does this have to do with programming? A program is effectively
-a transformation of inputs into outputs. It is easier to think about
-this for an individual function:</p>
+<p>What does this have to do with software testing? A program is
+effectively a transformation of inputs into outputs. It is easier to
+think about this for an individual function:</p>
 <pre><code>fun (a int, b int) -&gt; int { 
     ...stuff... 
 }</code></pre>
@@ -126,4 +131,14 @@ acquisition of new skills.</p>
 <p>At the same time, one must avoid peering too closely at the
 abstraction, for the spindly legs upon which it is mounted may
 disintegrate and all that’s left is dust.</p>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a
+href="https://youtu.be/KmAY4FQ5L4E?si=s4xcaj64S4Xf5eKi&amp;t=155">JC is
+the good doctor</a><a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
 </body> </html>

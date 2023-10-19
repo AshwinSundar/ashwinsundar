@@ -2,15 +2,16 @@
 
 <a href="https://xkcd.com/1838/"><img alt = "The pile gets soaked with data and starts to get mushy over time, so it's technically recurrent." src = "https://imgs.xkcd.com/comics/machine_learning_2x.png"></a>
 
-I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively. It was also 2 hours before I wanted to be awake.
+I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively. 
 
 In that class, we were [shown many things](https://www.math.ucla.edu/~akrieger/teaching/17f/pic10a/index.html). Variables! Inputs and outputs! Roman numerals! Classes! As a neuroscience major, I hadn't the faintest clue what the point of any of this was. Was programming supposed to be this esoteric, this alien?
 
-Computer science originated as an offshoot of mathematics. In my younger days, I was good at math - I received the top score on the AP tests for Calculus AB and BC in high school.
+Computer science originated as an offshoot of mathematics. In my younger days, I was good at math. "I got this!", I said.
 
-Yet this looked nothing like math, nothing like anything I had seen before...
+This classed looked nothing like math, nothing like anything I had seen before...
 
 <img title = "A veritable chrysalitic monster" alt = "A veritable chrysalitic monster" src = "/blog/assets/learn-hard-things/dali-sleep.JPG">
+<figcation style = 'text-align: center'>A vertical chronically-tired matriculate</figcaption>
 
 I fell asleep a lot in that class. Several times, I experienced some form of [sleep paralysis](https://en.wikipedia.org/wiki/Sleep_paralysis) - unable to move, unable to breathe, my subconscious listened to the lecturer drone on about objects and assignments and operators. 
 
@@ -18,7 +19,7 @@ Ultimately, I woke up and completed the course with some sort of passing grade, 
 
 ## Heuristics
 
-What I did not gain from that class was a set of reusable mental models. In computer science and software engineering, one must rely on mental models to represent complex details and abstractions. The phenomenon one works with are often a combination of unobservable and non-existent. Bits and bytes can't be physically observed (unless one works with an [ancient system](https://en.wikipedia.org/wiki/Magnetic-core_memory)). Relationships between services are only as strong as the code that defines them, which itself is merely a conglomeration of symbols that are compiled down to bits and bytes. The good software engineer MUST rely on abstractions to make any sense of the world. 
+What I did not gain from that class was a set of reusable mental models. In computer science and software engineering, one must rely on mental models to represent complex details and abstractions. The phenomena one works with are often a combination of unobservable and non-existent. Bits and bytes can't be physically observed (unless one works with an [ancient system](https://en.wikipedia.org/wiki/Magnetic-core_memory)). Relationships between services are only as strong as the code that defines them, which itself is merely a conglomeration of symbols that are compiled down to bits and bytes. The good software engineer[^good-topgear] MUST rely on abstractions to make any sense of the world.  
 
 With that established, let's explore a few of my reusable mental models.
 
@@ -30,17 +31,19 @@ In a good software interface (e.g. an API), the parameters passed around can be 
 
 Back to Legos. Despite their extraordinarily tight specifications, in the precisely-defined Lego universe, there is practically nothing that can't be built with Legos. Six 2x4 bricks fit together in [915,103,765 ways](https://web.math.ku.dk/~eilers/lego.html). It is unlikely any particular design decision by the designers enabled this, but it is as if they built a Turing-complete construction language.
 
-Similarly, good interfaces shouldn't unreasonably constrain the user for the universe that the interface designer has created.
+Similarly, good interfaces shouldn't unreasonably constrain the user, at least in the universe that the interface designer has created.
 
 Finally, Lego interfaces behave like a "black box". One can attach a Lego to any interface of an existing Lego project without concern for what color the bricks are, how many bricks are connected, or even the types of all the other bricks involved. The interface is all that matters.
 
+Again, one should not need to dive deep into API source code just to figure out how to use an exposed adapter.  
+
 ## Testing is an n-dimensional space
 
-When conducting experiments in school, one learns to modify only one independent variable at a time. This is to make it easy to measure its singular effect on the dependent variable. It is possible to test more variables at once, but it is hard to visualize, more time-consuming, and more difficult to plot nicely in a school report.
+When conducting experiments in school, one learns to modify only one independent variable at a time. This is to make it easy to measure its singular effect on the dependent variable. It is possible to test more variables at once. But it is hard to visualize, more time-consuming, and more difficult to plot nicely in a school report.
 
 Using an idea from statistics called [Design of Experiments](https://asq.org/quality-resources/design-of-experiments), one can change two variables at once, creating a 3-dimensional space with a 3-dimensional functions.
 
-What does this have to do with programming? A program is effectively a transformation of inputs into outputs. It is easier to think about this for an individual function:
+What does this have to do with software testing? A program is effectively a transformation of inputs into outputs. It is easier to think about this for an individual function:
 
 ```
 fun (a int, b int) -> int { 
@@ -75,3 +78,4 @@ A good heuristic model is similar to a template for a software project. It repre
 At the same time, one must avoid peering too closely at the abstraction, for the spindly legs upon which it is mounted may disintegrate and all that's left is dust. 
 
 
+[^good-topgear]: [JC is the good doctor](https://youtu.be/KmAY4FQ5L4E?si=s4xcaj64S4Xf5eKi&t=155)
