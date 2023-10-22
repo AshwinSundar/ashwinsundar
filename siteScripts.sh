@@ -25,7 +25,6 @@ compile() {
     compileMarkdown
     compileMusicPages 
     pwd
-    tidy -config htmltidy.config -m index.html
 }
 
 deploy() {
