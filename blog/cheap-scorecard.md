@@ -2,7 +2,7 @@
 
 December 2023
 
-I recently came across [The "Cheap" Web](https://potato.cheap/), a self-described "solarpunk philosophy of web design. I highly recommend reading the whole article, for it's both a throwback to what the web used to be, as well as a vision for what the future may hold.
+I recently came across [The "Cheap" Web](https://potato.cheap/), a self-described "solarpunk philosophy of web design". I highly recommend reading the whole article, for it's both a throwback to what the web used to be, as well as a vision for what the future may hold.
 
 Towards the end of the article, the author proposes the following measures of cheapness. I decided to rate this website according to those measures.
 
