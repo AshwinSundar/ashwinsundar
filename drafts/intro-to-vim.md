@@ -1,44 +1,43 @@
-# TITLE
-- Introduction to Vim
-- A Handy guide to Vim
-- The Software Engineer's Guide to Vim (too dramatic?)
-- A Crash Course to Vim
+#  Vim: The Power of 100 <s>Limes</s> Lines
 
 ## Introduction
-Vim (Vi-improved) is a terminal-based text-editor invented by Dutch computer programmer Bram Moolenaar and released in 1991. It was designed as a successor to the vi text editor released in 1976. Many programmers these days seem to end up in Vim by accident: 
 
-[How to get out of Vim meme]
+Vim (Vi-improved) is a terminal-based text-editor created by Bram Moolenaar [^1] and released in 1991. It was designed as a successor to the vi text editor released in 1976. An introduction to an article about Vim is not complete without a reference to this stale meme:  
 
-However, there is more to learn about Vim than how to exit and return to the safety of VSCode. Vim is great for staying in the terminal and jumping into a file for a quick edit. Billed as "a programmer's text editor" (cite Vim man page), Vim also has many of the same capabilities that modern visual text editors have, such as global find-and-replace and multi-line edits.
+<img title = "how to exit vim" alt = "how to exit vim" src = "/blog/assets/vim/exit-vim.png">
+<figcaption style = 'text-align: center;'>How to exit Vim</figcaption>
+
+Beyond exiting, there are other things one can do.  
 
 ## Motivation
-(Start paragraph showing IDEs commonly in use. Create your own chart if you want) The vast majority of developers in 2022 use a professional IDE such as Visual Studio Code or IntelliJ (https://survey.stackoverflow.co/2022/#most-popular-technologies-new-collab-tools). These IDEs offer a lot of capabilities for managing large development projects, such as 
-- Integrated source control
-- Customizable keybindings
-- Configurable settings for different projects
-- Numerous extensions to increase developer productivity
 
-As an added bonus, modern IDEs feel, well, modern. They don't make you feel like you're hacking into the upside-down in the 1980s in some sort of Stranger Things sequel.
+(Start paragraph showing IDEs commonly in use. Create your own chart if you want) 
 
-[Is this is a screenshot of my computer screen or from Stranger Things Season 6]
+Most developers in 2023 use a professional IDE like Visual Studio Code or IntelliJ (https://survey.stackoverflow.co/2022/#most-popular-technologies-new-collab-tools). Modern IDEs are visual-editors, meaning their are easier to learn and offer more visual candy to the user.
 
-Most developers have a favorite editor at this point, so why change tools? Editors are just tools after all, maximizing one's editor choice is a pedantic goal in itself and not the end-goal of writing code.
+If modern IDEs are easier to learn and prettier, why change? IDEs are just tools after all. 
 
-## The Cost of Information Transfer 
-- <1 ratio transferred bits : received bits
-- >1 ratio transferred bits: received bits
+## The Cost of Information Transfer  
 
-A user interface (UI) exists to transmit information. One symptom of a poor UI is lossy information transfer - the user must take several actions to transmit one bit of information the computer. Another is a high ratio of **transferred bits** to **received useful bits**. 
+the goal of an artist is to transfer an imagined concept to reality. A musician who is suddenly asked to paint will struggle to express themselves at first. They lack the expertise and tool fluency to articulate complex ideas in the new medium. Many artists spend decades specializing in a single medium so that they can seamlessly express their imagination. 
 
-As an example of lossy information transfer, consider the following: the goal of an artist is to transfer an imagined concept to reality. A musician who is suddenly asked to paint will struggle to express themselves at first. They lack the expertise and tool fluency to articulate complex ideas in the new medium. Many artists spend decades specializing in a single medium so that they can seamlessly express their imagination. 
+To communicate, one must transfer information. This article so far, in pure textual content, contains `n` bits of information. Since the writing is not random alphanumeric digits, it has communicated more than `n` bits of ideas [^2].
 
-Let's return to the world of computing for an example of high bit-transfer ratio. Imagine a user signs up for a new service, and instead of clicking a checkbox to acknowledge the terms-of-service, the user must type out, in its entirety, the terms-of-service agreement. This is to guarantee that the user has read every work of the agreement.
+Effiency of information transfer may be defined as the ratio of transferred bits to received bits. These can be literal bits, in the form of binary switches, or they may be ideas composed of "bits" of information.
 
-Why is this experience frustrating? The user is merely communicating that they accept the terms, a single bit of information. The user can communciate this understanding with one bit of information, via a single button click of a checkbox. Instead, they are forced to communicate this through thousands of individual keystrokes. The number of bits transmitted by the user to the number of bits received by the computer is extremely high. 
+A user interface (UI) exists to transmit information between the user and the computer. To tell a computer "Yes", a user may press a button on a single-button device. This is example of 1:1 communication. It takes the user a single motion (movement of the finger) to transmit data, and the computer receives a single bit of data.
 
-In the first example of a lossy system, the bit ratio is less than 1. Useful information is lost in transit. In the second example of a burdensome system, the bit ratio is greater than 1. Useless information is required of the user, only to be immediately discarded. 
+One symptom of a poor UI is lossy information transfer - the user must take several actions to transmit one bit of information the computer. 
 
-In an ideal UI, the bit transfer ratio is 1. Useful information is not discarded, and useless information is not required. 
+An abstract example of lossy information transfer was provided in the intro of this section. Let's consider the following example in the world of computing. {some example of a user doing a bunch of stuff and the computer only getting a few bits of info}.
+
+Let's now consider the opposite extreme - a high bit-transfer a ratio. Imagine a user signs up for a new service. They must agree to the terms and conditions of the service. Typically, this is by showing the user hundreds of pages of legal jargon and placing a big green "ACCEPT" button at the bottom of the page. Instead, consider an interface where instead of clicking a checkbox to acknowledge the Terms and Conditions, the user must type out, in its entirety, the full agreement.  
+
+Why is this experience frustrating? The user is merely communicating that they accept the terms, a single bit of information. The user can communicate this understanding with one bit of information, via a single button click of a checkbox. Instead, they are forced to communicate this through thousands of individual keystrokes. The number of bits transmitted by the user to the number of bits received by the computer is extremely high.  
+
+In the first example of a lossy system, the bit ratio is less than 1. Useful information is lost in transit. In the second example of a burdensome system, the bit ratio is greater than 1. Useless information is required of the user, only to be immediately discarded.  
+
+In an ideal UI, the bit transfer ratio is 1. Useful information is not discarded, and useless information is not required.  
 
 |System|Bit transfer ratio|
 |------|------------------|
@@ -47,6 +46,11 @@ In an ideal UI, the bit transfer ratio is 1. Useful information is not discarded
 |Ideal System | = 1.0 |
 
 ## Why Vim
+
+<!-- resume editing from here -->
+
+[[ Vim Soap image ]]
+
 Learning Vim has a learning curve, but most users would agree that a couple hours is more than enough to master the basics. The goal of this article is to convince and educate.
 
 There are three reason for programmers to learn Vim. First, Vim is optimized for keyboard interactions. Second, learning Vim pairs well with general problem-solving used in programming. Third, Vim natively offers a focus-mode experience. (i hate calling it focus mode...something else)
@@ -313,3 +317,6 @@ I believe there is a greater scope for improvement in productivity. The point is
 "How to exit Vim" is a common meme at the moment, so let's cover that since I'm guessing 40% of my readers are here for just that. To discard changes and exit vim, type `:q!` and you're free! But instead of running away from our keyboards and jumping for joy, let's re-enter the file and explore a few other useful commands in what is known as Command Line mode.  
 Normal Mode is kind of like base camp for Vim, so when things go sideways and it's not clear what mode you're in anymore, just hit `Esc` to get back to a known starting point. 
 It might sound strange, but all of the commands below are entered while in Normal Mode, not Insert Mode. That is because if you are in Insert Mode and type a command such as `dd`, it will just modify the file at the current cursor location to insert the characters dd. 
+
+[^1]: The author of Vim, Bram Moolenaar recently passed away. If you have benefitted from this wonderful piece of freeware, please consider donating to the Ugandan charity Bram wished to sponsor, [ICCF-Holland](https://vimhelp.org/uganda.txt.html#iccfa)
+[^2]: By placing the letters 'v', 'i', and 'm' next to each other, in sequence, the author hopes to instill some ideas about what this article may be about, prior to actually exploring those ideas.  

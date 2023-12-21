@@ -1,4 +1,4 @@
-# The Cheapness Scorecard
+# The Cheap Web Scorecard
 
 December 2023
 
