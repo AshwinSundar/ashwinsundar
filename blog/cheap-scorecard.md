@@ -12,7 +12,9 @@ Towards the end of the article, the author proposes the following measures of ch
 
 **Rating: 9/10**
 
-This website uses 0 lines of Javascript. It is composed entirely of HTML and styled with a little bit of CSS. I write articles in Markdown, which are compiled to HTML using a custom shell script that I maintain. For deployment, I push to GitHub, where changes are picked up by a DigitalOcean static-file-deployment application. If DigitalOcean were to fall over tomorrow, it would probably take about half a day to either migrate to a new provider, or set up self-hosting. Given that this is only potential source of failure I see in the next 10 years, I'd say this site is doing pretty well on this metric. 4 hours of downtime is not a big deal, because no one visits this site, like, ever.
+This website uses 0 lines of Javascript. It is composed entirely of HTML and styled with a little bit of CSS. I write articles in Markdown, which are compiled to HTML using a custom shell script that I maintain. For deployment, I push to GitHub, where changes are picked up by a DigitalOcean static-file-deployment application. 
+
+If DigitalOcean were to fall over tomorrow, it would probably take about half a day to either migrate to a new provider, or set up self-hosting. Given that this is the only potential source of failure I see for the next several years, I'd say this site is doing pretty well on this metric. 4 hours of downtime is not a big deal, because no one visits this site, like, ever[^visits].
 
 ## Cheap to leave  
 
@@ -86,3 +88,5 @@ Feel free to submit a PR.
 | Overall | (47 + 🐟) / 6 |
 
 The main takeaway is that the simplicity of this site enabled it to score well on this "Cheap Web" scorecard. In the areas that could be rated, it averaged a 9.4/10. This site could use improvements in the area of accessibility, which will be very easy to make thanks to how simple the site is.  
+
+[^visits]: I assume this is true, but I don't track page visits. Or track anything for that matter
