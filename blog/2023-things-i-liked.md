@@ -6,7 +6,7 @@ Here are some software programs I liked[^caveat] in 2023[^subcaveat].
 
 **VSCode** - One of the few things Microsoft hasn't totally screwed up yet. Plug-in ecosystem is enormous. <font color = "green">**9/10**</font>
 
-**Vim** - At the other end of the spectrum. I forced myself to learn keybindings last year and now I can't not use them. I find myself unable to use text editors that lack a "vim mode". 2dWi" - fixed that missing quote! I find the extension ecosystem a bit puzzling still - extensions I install never seem to work quite right. Having to memorize extra keybindings for each plugin maxes out my mental load. <font color = "green">**8/10**</font>
+**Vim** - At the other end of the spectrum. I forced myself to learn keybindings last year and now I can't not use them. I find myself unable to use text editors that lack a "vim mode". 2Bi" - fixed that missing quote! I find the extension ecosystem a bit puzzling still - extensions I install never seem to work quite right. Having to memorize extra keybindings for each plugin maxes out my mental load. <font color = "green">**8/10**</font>
 
 **DigitalOcean** - A breath of fresh air compared to AWS. There are fewer services and quite a lot of abstraction. It fills the gap between walking to work and flying a fighter jet there. DO support has been super prompt and helpful the two times I've contacted them (even on the free support tier). If you need three+ 9's of reliability, call Amazon, Microsoft, or Google. For everything else there's DigitalOcean. <font color = "green">**9/10**</font>
 
