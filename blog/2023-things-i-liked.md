@@ -10,7 +10,7 @@ Here are some software programs I liked[^caveat] in 2023[^subcaveat].
 
 **DigitalOcean** - A breath of fresh air compared to AWS. There are fewer services and quite a lot of abstraction. It fills the gap between walking to work and flying a fighter jet there. DO support has been super prompt and helpful the two times I've contacted them (even on the free support tier). If you need three+ 9's of reliability, call Amazon, Microsoft, or Google. For everything else there's DigitalOcean. <font color = "green">**9/10**</font>
 
-**Django** - The first time I've enjoyed web development in quite some time. The abstraction level can get a bit silly at times, but I find that it's easy to peel back the layers of the onion, so to speak, and troubleshoot the inner workings. I really, really wish that a strongly-typed version of Python could be used. `mypy` and `typeddjango/django-stubs` just don't cut it. I want more compile-time errors! <font color = "green">**8/10**</font>
+**Django** - The first time I've enjoyed web development in quite some time. The abstraction level can get a bit silly at times, but I find that it's easy to peel back the layers of the onion, so to speak, and troubleshoot the inner workings. Still plagued by runtime errors. Maybe I'm bad at writing Python. `mypy` and `typeddjango/django-stubs` just don't cut it for me. I want more compile-time errors! <font color = "green">**8/10**</font>
 
 **Logic Pro** - Technically started using it in late 2021 but really got more into it this year. Used to produce music for a group of friends that play together. Tons of keybindings. Interface can get confusing, but it's a powerful tool. <font color = "green">**9/10**</font>
 
