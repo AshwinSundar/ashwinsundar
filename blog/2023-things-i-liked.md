@@ -14,7 +14,7 @@ Here are some software programs I liked[^caveat] in 2023[^subcaveat].
 
 **Logic Pro** - Technically started using it in late 2021 but really got more into it this year. Used to produce music for a group of friends that play together. Tons of keybindings. Interface can get confusing, but it's a powerful tool. <font color = "green">**9/10**</font>
 
-**regex101.com** - I am _alright_ at constructing regular expressions. I wish I was better. I ordered "Mastering Regular Expressions", but just couldn't get excited about reading 542 pages about regular expressions. If regex101.com didn't exist, this might not have happened:
+**regex101.com** - I am _alright_ at constructing regular expressions. I wish I was better. I ordered "Mastering Regular Expressions", but just couldn't get excited about reading 542 pages on regular expressions. If regex101.com didn't exist, this might not have happened:
 
 <img title = "Returning Regex 101" alt = "Returning Regex 101" src = "/blog/assets/2023-things-i-liked/regex-return.png">
 <figcaption style = 'text-align: center;'>I'm sorry, Mr. Friedl. It's me, not you. <font color = "green">**9/10**</font></figcaption>
