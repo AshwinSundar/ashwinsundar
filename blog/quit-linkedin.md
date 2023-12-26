@@ -33,6 +33,8 @@ So with that, goodbye LinkedIn! Thanks for the dozens of recruiter emails that i
 
 {{ farewell picture }}
 
+https://www.zenpencils.com/comic/128-bill-watterson-a-cartoonists-advice/
+
 ===
 
 Original post to LinkedIn for posteriority: 
@@ -44,6 +46,7 @@ I will be deleting my LinkedIn profile at the end of this year. This site has se
 Say hi at hi@ashwinsundar.com!
 
 Happy holidays! Stay sane! 
+
 
 [^clauses]: Complex sentences with 3+ independent clauses are especially fun to read.
 
