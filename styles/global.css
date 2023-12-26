@@ -6,7 +6,7 @@ html {
   margin: 25px;
   display: flex;
   justify-content: center;
-  text-align: justify;
+  text-align: left;
   background-color: #fff1e5;
 }
 body {

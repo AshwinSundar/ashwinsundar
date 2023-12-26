@@ -2,7 +2,6 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 720px;
-  justify-content: center;
 }
 
 p {
