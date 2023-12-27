@@ -16,3 +16,12 @@ figcaption {
   font-size: 0.8em;
   color: gray;
 }
+
+.definition:hover::after, /* mouse hover event */
+.definition:active::after { /* touch event */
+    content: "(" attr(data-def) ")";
+    display: contents;
+    background: white;
+    border-radius: 2px;
+    margin: 0 0 0 5px;
+}
