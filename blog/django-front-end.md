@@ -6,7 +6,7 @@
 
 ## <span class = "definition" data-def = "Django Template Language">DTL</span> Files
 
-Here's an example of of a <span class = "definition" data-def = "Django Template Language">DTL</span> file and its corresponding <span class = "definition" data-def = "Cascading Style Sheets">CSS</span> file:
+Here's an example of of a <span class = "definition" data-def = "Django Template Language">DTL</span>.
 
 
 ### stats-pane.html
