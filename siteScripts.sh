@@ -43,7 +43,7 @@ compileMarkdown() {
     # TO DO - create script that only updates one file, instead of everything
     files=$(find blog -name "*.md")
     for f in $files; do
-        pandoc -f -s markdown $f > blog/compiled/$(basename "${f%.*}").html
+        pandoc -s -f markdown $f > blog/compiled/$(basename "${f%.*}").html
         head=$(head -n10 templates/blogTemplate.txt) # first n = 7 lines 
         tail=$(tail -n2 templates/blogTemplate.txt) # last n = 2 lines
         echo $head | cat - blog/compiled/$(basename "${f%.*}").html > temp && mv temp blog/compiled/$(basename "${f%.*}").html
