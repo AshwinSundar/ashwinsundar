@@ -11,7 +11,7 @@ Here's an example of of a <span class = "definition" data-def = "Django Template
 
 ### stats-pane.html
 
-```django
+```djangotemplate
 {% load static %} <link rel = "stylesheet" href = "{% static 'css/stats-pane.css' %}">
 <div class = "stats-pane">
     <div class = "stat-component-A">
@@ -24,7 +24,6 @@ Here's an example of of a <span class = "definition" data-def = "Django Template
         {% include "components/stat-component.html" with title="Efficiency Index" numdetail=stats.efficiency green=9 yellow=4 red=0 %}
     </div>
 </div>
-
 ```
 
 Here is what is happening in this file:  
@@ -38,7 +37,7 @@ Here is what is happening in this file:
 
 Here are the contents of the `stat-component.html` file:
 
-```django
+```djangotemplate
 {% extends "components/generic-square.html" %}
 {% block content %}
     {% load static %} <link rel = "stylesheet" href = "{% static 'css/components/stat-component.css' %}">
