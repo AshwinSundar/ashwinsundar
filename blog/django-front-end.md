@@ -89,8 +89,13 @@ This definition applies styling characteristics to elements that have an attribu
 
 ## Conclusion  
 
-- The <span class = "definition" data-def = "Django Template Language">DTL</span> represents the "what" of the page - the structural elements and basic logic for the page.
-- CSS is the "how" of the page - how elements are rendered, and how they appear.
+- The <span class = "definition" data-def = "Django Template Language">DTL</span> represents the "what" of the page
+  - What are the structural elements (i.e. HTML elements)?
+  - What is the basic logic for the page (i.e. embedded scripting)?
+
+- CSS defines the "how" of the page:
+  - How are elements rendered (i.e. styles)?
+  - How do those elements appear on the page (i.e. animations, transitions)?
 
 While <span class = "definition" data-def = "Django Template Language">DTL</span> contains some Python-esque language features, it only permits a small subset of the Python language to be run. This is a design choice - permitting arbitrary Python code to run can be dangerous. That said, DTL is fairly powerful and extensible via custom filters and tags[^custom-tags]. 
 
