@@ -29,7 +29,7 @@ Here's an example of of a <span class = "definition" data-def = "Django Template
 Here is what is happening in this file:  
 
 - The file loads a <span class = "definition" data-def = "Cascading Style Sheets">CSS</span> stylesheet called `stats-pane.css`
-- The file defines a framework for containing three components - `stat-component-A`, `stat-component-B`, and `stat-component-C`  
+- The file establishes scaffolding for three components - `stat-component-A`, `stat-component-B`, and `stat-component-C`  
 - Each `div.stat-component` includes a template file called `stat-component.html`
   - Information is passed to these templates using the `with` keyword  
   

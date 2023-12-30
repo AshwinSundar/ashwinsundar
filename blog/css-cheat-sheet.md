@@ -9,6 +9,7 @@ I first learned <span class = 'definition' data-def = 'Cascading Style Sheets'>C
 
 - [The Box Model](#box-model)
 - [Selectors](#selectors)
+- [The Cascade](#cascade)  
 
 ## <a name = "box-model"></a>The Box Model  
 
@@ -258,3 +259,5 @@ a.my-class {
     color: red;
 }
 ```
+
+## <a name = "cascade">The Cascade</a>
