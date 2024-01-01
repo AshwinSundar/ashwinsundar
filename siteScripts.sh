@@ -45,7 +45,6 @@ compileMarkdown() {
     for f in $files; do
         output_name=blog/compiled/$(basename "${f%.*}").html
         pandoc -s -f markdown --css="" $f > $output_name
-        # cleanStyles $output_name
         head=$(head -n10 templates/blogTemplate.txt) # first n = 7 lines 
         tail=$(tail -n2 templates/blogTemplate.txt) # last n = 2 lines
         echo $head | cat - blog/compiled/$(basename "${f%.*}").html > temp && mv temp blog/compiled/$(basename "${f%.*}").html
@@ -69,25 +68,13 @@ compileMusicPages() {
     cd -
 }
 
-## Helper functions
-
-## Removes extra styling produced by pandoc -standalone
-cleanStyles() {
-    echo $1
-    input=$1
-    styles=$(sed -n -e '/<style>/,/<\/style>/p' "$input" | sed -e '1d' -e '$d')
-    filtered_styles=$(echo "$styles" | grep "^\s*code span") # only include styles that apply to descendants of code blocks
-    
-    sed -i '' -e "s/\(<style>\).*\(<\/style>\)/<style>$filtered_styles<\/style>/g" $input
-    # sed "/<style/,/<\/style>/s<style>$filtered_styles<\/style>" $input
-    # replace styles
-    # sed "/<style>/,/<\/style>/c\\
-    # <style>
-    # $filtered_styles
-    # </style>
-    # " "$input"
-
-    # echo "Filtered styles applied to $input"
+compileCss() {
+    files=$(find styles/scss -name "*.scss")
+    for f in $files; do
+        filename=$(basename $f | awk -F"." '{print $1}')
+        sass $f styles/css/$filename.css
+    done 
 }
+
 
 "$@"

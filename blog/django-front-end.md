@@ -6,7 +6,7 @@
 
 ## <span class = "definition" data-def = "Django Template Language">DTL</span> Files
 
-Here's an example of of a <span class = "definition" data-def = "Django Template Language">DTL</span>.
+Here's an example of a <span class = "definition" data-def = "Django Template Language">DTL</span> file.
 
 
 ### stats-pane.html
@@ -33,7 +33,7 @@ Here is what is happening in this file:
 - Each `div.stat-component` includes a template file called `stat-component.html`
   - Information is passed to these templates using the `with` keyword  
   
-### stat-component.html 
+### stat-component.html  
 
 Here are the contents of the `stat-component.html` file:
 

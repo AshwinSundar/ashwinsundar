@@ -1,0 +1,15 @@
+.headline {
+  color: #bbbbbb;
+}
+
+div.content .writing,
+div.content .music,
+div.content .photography,
+div.content .projects,
+div.content .about {
+  color: #444444;
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=index.css.map */

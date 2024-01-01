@@ -1,6 +1,6 @@
 # Learning Hard Things
 
-<a href="https://xkcd.com/1838/"><img alt = "The pile gets soaked with data and starts to get mushy over time, so it's technically recurrent." src = "https://imgs.xkcd.com/comics/machine_learning_2x.png"></a>
+<a href="https://xkcd.com/1838/"><img style = "max-height: 50vh; text-align: center;" alt = "The pile gets soaked with data and starts to get mushy over time, so it's technically recurrent." src = "https://imgs.xkcd.com/comics/machine_learning_2x.png"></a>
 
 I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively. 
 
