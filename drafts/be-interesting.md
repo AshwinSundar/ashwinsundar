@@ -14,7 +14,7 @@ But what does that mean? I have wondered this for many years now. Since that las
 
 In my life there have been several times where two paths were available. The first - common, easy and prestigious. The second - unknown, difficult, and of questionable value. Many times I chose the latter, hoping to _be an interesting person_ as a result of choosing the path less chosen.
 
-Those times rarely "worked out". I didn't always learn something when things failed. But this approach to have produced more interesting stories than I might have otherwise had.  
+Those times rarely "worked out". I didn't always learn something when things failed. One thing this approach did create, however, is interesting stories. I worked in a coffee shop for 2 years. I tried to start a doggy-photography business (and failed)[^starbucks]. Someone stole a falafel from me in Amsterdam[^falafel]. All these happened because I tried to pursue a path that most of my peers didn't choose.
 
 Through this process of making decisions based on whether I will *become more interesting*, I've learned a few lessons.
 
@@ -22,9 +22,12 @@ Through this process of making decisions based on whether I will *become more in
 
 In American society, we are often presented with garbage wrapped in a nice bow. We are convinced that garbage is not, in fact, garbage. Our personal space is assaulted with advertisements that garbage is actually luxury. We need this garbage to take us wherever we want. We need garbage to *be an interesting person*[^garbage]. 
 
+[literal ad with the words "be interesting"]
+[or maybe a bunch of them]
+
 This is wrong. Garbage, not matter how decorated and ornate, is still garbage. A glass of water tainted by even the tiniest amount of poop is no longer safe to drink - it's 100% poopy water.  
 
-One should learn to recognize garbage and avoid it. This includes obvious garbage in the form of food. The best food advice I have ever received is to educate oneself about ingredients and read the ingredients label of everything one consumes. If any ingredient is unrecognizable, or known to be bad - don't consume the item. It's that simple.
+One should learn to recognize garbage and avoid it. This includes obvious garbage in the form of food. The best food advice I have ever received is to educate oneself about ingredients and read the ingredients label of everything one consumes[^food-advice]. If any ingredient is unrecognizable, or known to be bad - don't consume the item. It's that simple.
 
 Then there is visual and auditory garbage - low quality filler videos that one watches before going to bed, crappy podcasts to listen to while puttering about the house. This can go too. How much of that information is actually retained? What damage does poorly-researched filler content do to one's critical reasoning skills? 
 
@@ -70,3 +73,6 @@ This is completely wrong. It's important to talk to many people with many differ
 [^nih]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9000408/
 [^ucla]: Paraphrased
 [^garbage]: Ironically, these advertisements end up as physical garbage themselves.
+[^starbucks]: From 2014 to 2016 I worked at Starbucks while attending ASU for graduate school. For one of the semesters, three days a week, I woke up at 230AM, worked a full 8-hour shift, then went to school in the afternoon. I also wrote a little bit of Starbucks fan-fiction that was minorly appreciated on Reddit. Maybe I'll dig up those posts one day and post them as an article.  
+[^falafel]: In 2022, I made a radical change by quitting my job at Medtronic and moving to work for a consulting firm. Later that year, we were invited to Amsterdam for a work retreat. Prior to the event, I was staying in Amsterdam and ordered a falafel from a Mediterranean restaurant near my hotel. While trying to quietly eat the falafel, a man approached me and asked to borrow my phone. I said no, so he stole my falafel from me instead.  
+[^food-advice]: Thanks to _Amma_ for this advice.

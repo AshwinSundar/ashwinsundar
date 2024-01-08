@@ -20,11 +20,10 @@ createBlogPost() {
     echo "New blog post created at /drafts/$inp.md"
 }
 
-
 compile() {
     compileMarkdown
     compileMusicPages 
-    pwd
+    compileCss
 }
 
 deploy() {
@@ -37,7 +36,6 @@ deploy() {
     gh run watch
 }
 
-
 compileMarkdown() {
     # DONE - add body/head tags so VSCode Live Server will update immediately when html file is updated by this script
     # TO DO - create script that only updates one file, instead of everything
@@ -45,7 +43,7 @@ compileMarkdown() {
     for f in $files; do
         output_name=blog/compiled/$(basename "${f%.*}").html
         pandoc -s -f markdown --css="" $f > $output_name
-        head=$(head -n10 templates/blogTemplate.txt) # first n = 7 lines 
+        head=$(head -n10 templates/blogTemplate.txt) # first n = 10 lines 
         tail=$(tail -n2 templates/blogTemplate.txt) # last n = 2 lines
         echo $head | cat - blog/compiled/$(basename "${f%.*}").html > temp && mv temp blog/compiled/$(basename "${f%.*}").html
         echo $tail >> blog/compiled/$(basename "${f%.*}").html
@@ -75,6 +73,5 @@ compileCss() {
         sass $f styles/css/$filename.css
     done 
 }
-
 
 "$@"

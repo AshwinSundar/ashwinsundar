@@ -10,6 +10,7 @@ I first learned <span class = 'definition' data-def = 'Cascading Style Sheets'>C
 - [The Box Model](#box-model)
 - [Selectors](#selectors)
 - [The Cascade](#cascade)  
+- [Specificity](#specificity)  
 
 ## <a name = "box-model"></a>The Box Model  
 
@@ -261,3 +262,56 @@ a.my-class {
 ```
 
 ## <a name = "cascade">The Cascade</a>
+
+The Cascade is an algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It decides which single style value applies for any particular element. To resolve conflicts, the algorithm processes CSS rules through the following stages:
+
+#### Position and order of appearance
+
+- Sequential order in which CSS rules appear
+
+#### Specificity
+
+- Numerical algorithm that awards points for how specific a selector is  
+- More details in [specificity](#specificity) section
+
+#### Origin
+
+- The original source of the CSS content
+- Hierarchy (top-to-bottom)
+
+1. User Agent styles with `!important`
+2. Local user styles with `!important`
+3. Authored CSS with `!important`
+4. Authored CSS
+5. Local user styles
+6. User Agent styles
+
+#### Importance
+
+- Specific elements have elevated importance
+- Hierarchy (top-to-bottom)
+
+1. `transition` rule-type
+2. `!important` rule-type
+3. `animation` rule-type
+4. all other rules, such as `font-size`, `background`, or `color`
+
+## <a name = "specificity">Specificity</a>
+
+Specificity is awarded on a points system. CSS rules with more points are used over rules with fewer points.
+
+### Scoring
+
+| Rule | Points | Example |
+| - | - | - |
+| Universal selector | 0 | <code>* {<br>&nbsp;color:red;<br>}</code> |
+| Element selector | 1 | <code>div {<br>&nbsp;color:red;<br>}</code> |
+| Pseudo-element selector | 1 | <code>::selection {<br>&nbsp;color:red;<br>}</code> |
+| Class selector | 10 | <code>.my-class {<br>&nbsp;color:red;<br>}</code> |
+| Pseudo-class selector | 10 | <code>:hover {<br>&nbsp;color:red;<br>}</code> |
+| Attribute selector | 10 | <code>[href='#'] {<br>&nbsp;color:red;<br>}</code> |
+| ID selector | 100 | <code>#myID {<br>&nbsp;color:red;<br>}</code> |
+| Inline style attribute | 1000 | `<div style = "color: red;"></div>` |
+| !important rule | 10000 | <code>.my-class {<br>&nbsp;color:red !important;<br>}</code> |
+
+NEXT -> example
