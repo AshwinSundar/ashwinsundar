@@ -106,7 +106,9 @@ my summarized notes.</p>
 <ul>
 <li><a href="#box-model">The Box Model</a></li>
 <li><a href="#selectors">Selectors</a></li>
-<li><a href="#cascade">The Cascade</a></li>
+<li><a href="#cascade">The Cascade</a><br />
+</li>
+<li><a href="#specificity">Specificity</a></li>
 </ul>
 <h2 id="the-box-model"><a name = "box-model"></a>The Box Model</h2>
 <ul>
@@ -319,6 +321,113 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb23-1"><a href="#
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h2 id="the-cascade"><a name = "cascade">The Cascade</a></h2>
+<p>The Cascade is an algorithm for solving conflicts where multiple CSS
+rules apply to an HTML element. It decides which single style value
+applies for any particular element. To resolve conflicts, the algorithm
+processes CSS rules through the following stages:</p>
+<h4 id="position-and-order-of-appearance">Position and order of
+appearance</h4>
+<ul>
+<li>Sequential order in which CSS rules appear</li>
+</ul>
+<h4 id="specificity">Specificity</h4>
+<ul>
+<li>Numerical algorithm that awards points for how specific a selector
+is<br />
+</li>
+<li>More details in <a href="#specificity">specificity</a> section</li>
+</ul>
+<h4 id="origin">Origin</h4>
+<ul>
+<li>The original source of the CSS content</li>
+<li>Hierarchy (top-to-bottom)</li>
+</ul>
+<ol type="1">
+<li>User Agent styles with <code>!important</code></li>
+<li>Local user styles with <code>!important</code></li>
+<li>Authored CSS with <code>!important</code></li>
+<li>Authored CSS</li>
+<li>Local user styles</li>
+<li>User Agent styles</li>
+</ol>
+<h4 id="importance">Importance</h4>
+<ul>
+<li>Specific elements have elevated importance</li>
+<li>Hierarchy (top-to-bottom)</li>
+</ul>
+<ol type="1">
+<li><code>transition</code> rule-type</li>
+<li><code>!important</code> rule-type</li>
+<li><code>animation</code> rule-type</li>
+<li>all other rules, such as <code>font-size</code>,
+<code>background</code>, or <code>color</code></li>
+</ol>
+<h2 id="specificity-1"><a name = "specificity">Specificity</a></h2>
+<p>Specificity is awarded on a points system. CSS rules with more points
+are used over rules with fewer points.</p>
+<h3 id="scoring">Scoring</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rule</th>
+<th>Points</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Universal selector</td>
+<td>0</td>
+<td><code>* {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="even">
+<td>Element selector</td>
+<td>1</td>
+<td><code>div {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="odd">
+<td>Pseudo-element selector</td>
+<td>1</td>
+<td><code>::selection {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="even">
+<td>Class selector</td>
+<td>10</td>
+<td><code>.my-class {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="odd">
+<td>Pseudo-class selector</td>
+<td>10</td>
+<td><code>:hover {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="even">
+<td>Attribute selector</td>
+<td>10</td>
+<td><code>[href=‘#’] {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="odd">
+<td>ID selector</td>
+<td>100</td>
+<td><code>#myID {<br> color:red;<br>}</code></td>
+</tr>
+<tr class="even">
+<td>Inline style attribute</td>
+<td>1000</td>
+<td><code>&lt;div style = "color: red;"&gt;&lt;/div&gt;</code></td>
+</tr>
+<tr class="odd">
+<td>!important rule</td>
+<td>10000</td>
+<td><code>.my-class {<br> color:red !important;<br>}</code></td>
+</tr>
+</tbody>
+</table>
+<p>NEXT -&gt; example</p>
 </body>
 </html>
 </body> </html>
