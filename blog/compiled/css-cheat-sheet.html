@@ -24,7 +24,7 @@
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -88,9 +88,6 @@
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <h1 id="css-cheat-sheet"><span class="definition"
@@ -142,12 +139,12 @@ __________|    |________________________|   |______________________|</code></pre
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">.my-css-rule</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                        __________________</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>      Declaration --<span class="op">&gt;</span>  <span class="op">|</span> <span class="kw">background</span>: <span class="cn">red</span><span class="op">;</span> <span class="op">|</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>      Declaration <span class="va">--</span><span class="op">&gt;</span>  <span class="op">|</span> background<span class="in">:</span> red; <span class="op">|</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                        ------------------</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                         ________   ________</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          Property --<span class="op">&gt;</span>  <span class="op">|</span> <span class="kw">color</span>: | | <span class="cn">beige</span><span class="op">;</span> <span class="op">|</span> &lt;-- Value</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          Property --<span class="op">&gt;</span>  <span class="op">|</span> color<span class="in">:</span> <span class="op">|</span> <span class="op">|</span> beige; <span class="op">|</span> &lt;-- Value</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                         --------   --------</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                        <span class="kw">font-size</span>: <span class="dv">1.2</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                        font-size<span class="in">:</span> 1<span class="fu">.2rem</span>;</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                    }</span></code></pre></div>
 <h3 id="types-of-selectors">Types of Selectors</h3>
 <h4 id="universal-selector">Universal selector</h4>
@@ -156,7 +153,7 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 </ul>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span> {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div>
 <h4 id="type-selector">Type selector</h4>
 <ul>
@@ -166,7 +163,7 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#c
 class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">section</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    section {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">padding</span>: <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">padding</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div>
 <h4 id="class-selector">Class selector</h4>
 <ul>
@@ -174,10 +171,10 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#c
 styles</li>
 </ul>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span> <span class="ot">=</span> <span class="st">&quot;my-class&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class </span><span class="op">=</span> <span class="st">&quot;my-class&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.my-class</span> {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div>
 <h4 id="id-selector">Id selector</h4>
 <ul>
@@ -185,10 +182,10 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#c
 styles</li>
 </ul>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">id</span> <span class="ot">=</span> <span class="st">&quot;my-id&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id </span><span class="op">=</span> <span class="st">&quot;my-id&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#my-id</span> {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">border</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">blue</span><span class="op">;</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div>
 <h4 id="attribute-selector">Attribute selector</h4>
 <ul>
@@ -196,29 +193,29 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#c
 the styles</li>
 </ul>
 <div class="sourceCode" id="cb10"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">data-type</span> <span class="ot">=</span> <span class="st">&quot;primary&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> data-type </span><span class="op">=</span> <span class="st">&quot;primary&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[data-type </span><span class="op">=</span><span class="st"> &#39;primary&#39;</span><span class="ex">]</span> {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[</span><span class="ss">data-type </span><span class="op">=</span> <span class="st">&#39;primary&#39;</span><span class="ex">]</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* matches any element with the data-type attribute, regardless of value */</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[data-type]</span> { </span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[</span><span class="ss">data-type</span><span class="ex">]</span> { </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">yellow</span><span class="op">;</span> </span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div>
 <h4 id="group-selector">group selector</h4>
 <ul>
 <li>matches multiple elements at once</li>
 </ul>
 <div class="sourceCode" id="cb12"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span> <span class="ot">=</span> <span class="st">&quot;first&quot;</span><span class="dt">&gt;</span>This is important<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span> <span class="ot">=</span> <span class="st">&quot;second&quot;</span><span class="dt">&gt;</span>So is this<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span> <span class="ot">=</span> <span class="st">&quot;third&quot;</span><span class="dt">&gt;</span>And this<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class </span><span class="op">=</span> <span class="st">&quot;first&quot;</span><span class="dt">&gt;</span>This is important<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class </span><span class="op">=</span> <span class="st">&quot;second&quot;</span><span class="dt">&gt;</span>So is this<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class </span><span class="op">=</span> <span class="st">&quot;third&quot;</span><span class="dt">&gt;</span>And this<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.first</span><span class="op">,</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.second</span><span class="op">,</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.third</span> {</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-size</span>: <span class="dv">2</span><span class="dt">em</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">em</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div>
 <h3 id="complex-selectors">Complex Selectors</h3>
 <ul>
@@ -247,7 +244,7 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb15-1"><a href="#
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>   <span class="op">|</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>   v</span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>div p {</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">blue</span><span class="op">;</span></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h4 id="child-selector">Child selector</h4>
 <ul>
@@ -268,7 +265,7 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb17-1"><a href="#
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    v</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>div <span class="op">&gt;</span> span {</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span>: <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h4 id="next-sibling-selector">Next-sibling selector</h4>
 <ul>
@@ -287,8 +284,8 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb19-1"><a href="#
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">|</span></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  v</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">+</span> span {</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span>: <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span></span>
 <span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h4 id="subsequent-sibling-selector">Subsequent-sibling selector</h4>
 <ul>
@@ -308,17 +305,17 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb21-1"><a href="#
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> </span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    v</span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>div <span class="op">~</span> p {</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span></span>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h4 id="compound-selectors">Compound selectors</h4>
 <ul>
 <li>selectors can be combined</li>
 </ul>
 <div class="sourceCode" id="cb22"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">class</span> <span class="ot">=</span> <span class="st">&quot;my-class&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class </span><span class="op">=</span> <span class="st">&quot;my-class&quot;</span><span class="dt">&gt;</span>...<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
 <div class="sourceCode" id="cb23"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>a<span class="fu">.my-class</span> {</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h2 id="the-cascade"><a name = "cascade">The Cascade</a></h2>
 <p>The Cascade is an algorithm for solving conflicts where multiple CSS
