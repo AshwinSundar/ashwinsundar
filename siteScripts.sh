@@ -24,6 +24,7 @@ compile() {
     compileMarkdown
     compileMusicPages 
     compileCss
+    compileTailwind
 }
 
 deploy() {
@@ -72,6 +73,16 @@ compileCss() {
         filename=$(basename $f | awk -F"." '{print $1}')
         sass $f styles/css/$filename.css
     done 
+}
+
+compileTailwind() {
+    tailwind -i styles/tailwind.css -o styles/o.tailwind.css
+    echo "Tailwind compiled"
+}
+
+live() {
+    live-server &
+    tailwind -i styles/tailwind.css -o styles/o.tailwind.css --watch
 }
 
 "$@"
