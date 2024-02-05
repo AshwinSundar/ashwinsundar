@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@layer components {
+  .notecard {
+    @apply p-4 lg:p-12 bg-yellow-50 border-solid border-gray-200 border-r-2 border-b-2 rounded-r-lg drop-shadow-sm;
+  }
+
+  a[href] {
+    @apply text-purple-800
+  }
+
+  a[href]:visited {
+    @apply text-purple-400
+  }
+}
