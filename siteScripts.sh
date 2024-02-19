@@ -1,11 +1,3 @@
-## $1 - name of page
-createPage() {
-    # TO DO
-    # add path argument
-    inp=$(tr '[:upper:]' '[:lower:]' <<< $1)
-    cp templates/htmlTemplate.txt $inp.html
-}
-
 createBlogPost() {
     inp=$(tr '[:upper:]' '[:lower:]' <<< $1)
     for f in "blog"/*; do
@@ -22,19 +14,7 @@ createBlogPost() {
 
 compile() {
     compileMarkdown
-    compileMusicPages 
-    compileCss
     compileTailwind
-}
-
-deploy() {
-    compile
-	git add -A
-    read -p 'Enter commit message: ' msg
-    git commit -m "$msg"
-    git push
-    sleep 3
-    gh run watch
 }
 
 compileMarkdown() {
@@ -44,35 +24,12 @@ compileMarkdown() {
     for f in $files; do
         output_name=blog/compiled/$(basename "${f%.*}").html
         pandoc -s -f markdown --css="" $f > $output_name
-        head=$(head -n10 templates/blogTemplate.txt) # first n = 10 lines 
-        tail=$(tail -n2 templates/blogTemplate.txt) # last n = 2 lines
+        head=$(head -n10 templates/blogTemplate.html) # first n = 10 lines 
+        tail=$(tail -n2 templates/blogTemplate.html) # last n = 2 lines
         echo $head | cat - blog/compiled/$(basename "${f%.*}").html > temp && mv temp blog/compiled/$(basename "${f%.*}").html
         echo $tail >> blog/compiled/$(basename "${f%.*}").html
     done
     echo "Markdown files compiled"
-}
-
-compileMusicPages() {
-    IFS=$'\n' ## Internal File Separator. Changes from space to nl
-    cd music/
-    files=$(find . -name "*.mp3")
-    for f in $files; do
-        htmlFileName=$(echo "$f" | sed 's/mp3/html/g')
-        songName=$(echo "$f" | sed 's/.mp3//g' | sed 's/.\///g') ## music\/// means replace the string "music/" (escaped  with \) with nothing "//"
-        content='<div>'$songName'</div><audio controls controlsList="nodownload noplaybackrate"><source src="'$f'"/></audio>'
-        touch $htmlFileName
-        echo $content > $htmlFileName
-    done
-    echo "Music pages compiled"
-    cd -
-}
-
-compileCss() {
-    files=$(find styles/scss -name "*.scss")
-    for f in $files; do
-        filename=$(basename $f | awk -F"." '{print $1}')
-        sass $f styles/css/$filename.css
-    done 
 }
 
 compileTailwind() {
