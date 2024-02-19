@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> | Ashwin Sundar</title>
+
+    <link rel="stylesheet" href="/css/o.tw.css">
+
+
+
+
+</head>
+<body>
+  <header>
+    <h1>Ashwin Sundar</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+  <h1></h1>
+
+  
+  
+  <time datetime="0001-01-01T00:00:00&#43;00:00">January 1, 1</time>
+
+  <h1 id="prefer-markdown">Prefer Markdown</h1>
+<p>October 2023</p>
+<p>I have spent a lot of time writing <!-- raw HTML omitted -->HTML<!-- raw HTML omitted -->. I wrote my first <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> when I was around 12 years old. I was obsessed with a website called <code>neopets.com</code>, a website geared for kids to take care of virtual pets. There were games to play, coins to earn, and pets to splurge on. Items could be earned and sold in a &ldquo;shop&rdquo; to other players (for fake currency only). I wanted to customize my Neopets shop, which was allowed using this thing called <!-- raw HTML omitted -->&ldquo;HTML&rdquo;<!-- raw HTML omitted -->.  This seemed like a fun way to test out these new typing skills I learned from <a href="https://en.wikipedia.org/wiki/Mavis_Beacon_Teaches_Typing">Mavis Beacon Teaches Typing</a>.</p>
+<!-- raw HTML omitted -->
+<p>In college, I took advantage of self-hosting provided by the school to share my photography. I created some HTML files, uploaded images, and told the server where to find them. Thank you, Wayback Machine, for keeping <a href="https://web.archive.org/web/20131122205041/http://ashiundar.bol.ucla.edu/">this snapshot</a>.</p>
+<p>Recently, I re-wrote my entire personal website in raw HTML and about 20 lines of CSS. This site is remarkably simple by modern web standards - feel free to hit &ldquo;Inspect&rdquo; and peer at what&rsquo;s going on. It&rsquo;s not much.</p>
+<h2 id="span-class--definition-data-def--hypertext-markup-languagehtmlspan"><!-- raw HTML omitted -->HTML<!-- raw HTML omitted -->?</h2>
+<p>Frankly, I don&rsquo;t get the appeal. Writing <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> doesn&rsquo;t make me feel nostalgic.</p>
+<p>Rather, I feel the weight of old technologies dragging me down. It&rsquo;s really, really hard to enter a state of &ldquo;writing flow&rdquo; when you have to constantly remember to close out <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> tags. The effect of forgetting a single <code>/&gt;</code> is that the entire page looks like shit. Debugging the style of an <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> file is one of the most thoroughly uninteresting programming experiences a developer can have.</p>
+<p>Markdown has been my favorite markup language<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> for the last several years. A raw Markdown file is very human-readable. In Markdown, there are few formatting rules that must be followed. Compare this with the tag detritus scattered about a standard <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> file.</p>
+<!-- raw HTML omitted -->
+<p>Additionally, <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> can be embedded in Markdown. So if one really does need custom styling, raw <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> is still available as a fallback. That image and caption above? This is the raw <!-- raw HTML omitted -->HTML<!-- raw HTML omitted -->, embedded in-line with all this Markdown around it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/blog/assets/prefer-markdown/html-vs-md.png&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: block; margin: auto; width: 100%&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">figcaption</span> <span style="color:#a6e22e">style </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;text-align: center&#39;</span>&gt;Which is easier to read? Yes, that&#39;s the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.&lt;/<span style="color:#f92672">figcaption</span>&gt;
+</span></span></code></pre></div><p>I do not know the extent to which the full <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> spec is supported in Markdown. However, I have yet to encounter a situation that could not be served by reverting to <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> briefly.</p>
+<p>Of course, Markdown can&rsquo;t be published directly as a static page. Browsers don&rsquo;t know how to read Markdown. One would think that this requires the use of a complex tool to convert from human-speak to browser-speak - but no! A simple bash script and a handy tool called <em>pandoc</em> is all you need:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mdToHtml <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    files<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find blog -name <span style="color:#e6db74">&#34;*.md&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> f in $files; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>        pandoc -f markdown $f &gt; blog/compiled/<span style="color:#66d9ef">$(</span>basename <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>f%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>.html
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>&ldquo;Done&rdquo; is right! What about templates?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mdToHtml2<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    files<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find blog -name <span style="color:#e6db74">&#34;*.md&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> f in $files; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>        pandoc -f markdown $f &gt; blog/<span style="color:#66d9ef">$(</span>basename <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>f%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>.html
+</span></span><span style="display:flex;"><span>        head<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>head -n10 templates/blogTemplate.txt<span style="color:#66d9ef">)</span> <span style="color:#75715e"># first n = 10 lines, header up to &lt;body&gt;</span>
+</span></span><span style="display:flex;"><span>        tail<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>tail -n2 templates/blogTemplate.txt<span style="color:#66d9ef">)</span> <span style="color:#75715e"># last n = 2 lines, &lt;/body&gt;&lt;/html&gt;</span>
+</span></span><span style="display:flex;"><span>        echo $head | cat - blog/<span style="color:#66d9ef">$(</span>basename <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>f%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>.html &gt; temp <span style="color:#f92672">&amp;&amp;</span> mv temp blog/<span style="color:#66d9ef">$(</span>basename <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>f%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>.html
+</span></span><span style="display:flex;"><span>        echo $tail &gt;&gt; blog/<span style="color:#66d9ef">$(</span>basename <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>f%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span>.html
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Markdown files converted to HTML&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Yes, that script is verbose and not optimized for organization. I don&rsquo;t remember why it writes to a temp file first. The styling on this site has issues. But it gets the job done.</p>
+<h2 id="to-summarize">To summarize</h2>
+<ol>
+<li>
+<p>Markdown to <!-- raw HTML omitted -->HTML<!-- raw HTML omitted --> conversion is dead simple.</p>
+</li>
+<li>
+<p>Writing in Markdown reduces cognitive load, enabling a writer to remain &ldquo;in flow&rdquo; much more easily.</p>
+</li>
+</ol>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>A <a href="https://en.wikipedia.org/wiki/Markup_language">markup language</a> is used to control the display of a document. Common examples include <!-- raw HTML omitted -->HTML<!-- raw HTML omitted -->, Markdown, and LaTeX.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  
+
+
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

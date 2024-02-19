@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ashwin Sundar</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Car Temperatures in Phoenix March 2017
+Using a wireless microcontroller, I monitored the temperature on my car&rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I&rsquo;m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:
+Particle Photon 2 Amphenol MA100BF103A NTC thermistors 3 C batteries (the heat really saps the batteries) The programs I used for recording and processing data were:">
+    <meta name="generator" content="Hugo 0.123.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/blog/car-temps-phx/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Car Temperatures in Phoenix March 2017
+Using a wireless microcontroller, I monitored the temperature on my car&rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I&rsquo;m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:
+Particle Photon 2 Amphenol MA100BF103A NTC thermistors 3 C batteries (the heat really saps the batteries) The programs I used for recording and processing data were:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/car-temps-phx/" /><meta property="article:section" content="blog" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Car Temperatures in Phoenix March 2017
+Using a wireless microcontroller, I monitored the temperature on my car&rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I&rsquo;m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:
+Particle Photon 2 Amphenol MA100BF103A NTC thermistors 3 C batteries (the heat really saps the batteries) The programs I used for recording and processing data were:">
+
+<meta itemprop="wordCount" content="538">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Car Temperatures in Phoenix March 2017
+Using a wireless microcontroller, I monitored the temperature on my car&rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I&rsquo;m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:
+Particle Photon 2 Amphenol MA100BF103A NTC thermistors 3 C batteries (the heat really saps the batteries) The programs I used for recording and processing data were:"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Ashwin Sundar
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Blogs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="car-temperatures-in-phoenix">Car Temperatures in Phoenix</h1>
+<p>March 2017</p>
+<p>Using a wireless microcontroller, I monitored the temperature on my car&rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I&rsquo;m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:</p>
+<ul>
+<li><a href="https://docs.particle.io/photon/">Particle Photon</a></li>
+<li>2 <a href="https://www.digikey.com/en/products/detail/amphenol-advanced-sensors/MA100BF103A/272974">Amphenol MA100BF103A</a> NTC thermistors</li>
+<li>3 C batteries (the heat really saps the batteries)</li>
+</ul>
+<p>The programs I used for recording and processing data were:</p>
+<ul>
+<li>Particle command line interface</li>
+<li>MATLAB</li>
+<li>Excel</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>The sun rose at 5:18AM, when the outside temperature was 80.6F.</p>
+<!-- raw HTML omitted -->
+<p>My car was parked in full shade of the neighbor&rsquo;s house to the east until 9:14AM. At that time, the dashboard temperature rapidly spikes, climbing at a rate of about 1F per minute. At 12:47PM, the dashboard reaches its peak of 212F - the boiling point of water! Meanwhile, the ambient (footwell) temperature is a tolerable 126.1F, and the outside temperature is 107.6F [joke about dry heat].</p>
+<!-- raw HTML omitted -->
+<p>Around 1:45PM, the car moves into some tree shade, and the dashboard quickly cools off again. Meanwhile, the ambient temperature in the car continues to climb, peaking at 2:43PM at 134.8F. The outside temperature is 111.2F. From here, temperatures cool somewhat for the rest of the day.</p>
+<p>The C++ code used to control the Particle Photon is as follows:</p>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;math.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Particle.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> thermistor1Analog; <span style="color:#75715e">// contains raw analog data from thermistor 1 circuit VOut
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> thermistor2Analog;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> thermistor1Resistance; <span style="color:#75715e">// converts analog reading to resistance
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> thermistor2Resistance;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> temperature1; <span style="color:#75715e">// converts thermistor resistance to temperature, according to Amphenol datasheet
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> temperature2;
+</span></span><span style="display:flex;"><span>String temperatures <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>; <span style="color:#75715e">// store temperatures in a buffer, send the whole thing once buffer fills to conserve power
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Timer <span style="color:#a6e22e">tempTimer</span>(<span style="color:#ae81ff">60000</span>, checkTemp); <span style="color:#75715e">// Checks temperature once every minute
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    tempTimer.start(); <span style="color:#75715e">// starts the timer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">checkTemp</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    thermistor1Analog <span style="color:#f92672">=</span> analogRead(A5); <span style="color:#75715e">// short thermistor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    thermistor2Analog <span style="color:#f92672">=</span> analogRead(A4); <span style="color:#75715e">// long thermistor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// convert resistance to ohms using voltage divider equation, where R1 = 10k ohms
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// shielded equation from dividing by zero by putting it in an if statement
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (thermistor1Analog <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4095</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        thermistor1Resistance <span style="color:#f92672">=</span> (<span style="color:#ae81ff">9820</span><span style="color:#f92672">*</span>thermistor1Analog<span style="color:#f92672">/</span><span style="color:#ae81ff">4095</span>)<span style="color:#f92672">/</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>thermistor1Analog<span style="color:#f92672">/</span><span style="color:#ae81ff">4095</span>); <span style="color:#75715e">// 9820 is multimeter measurement of resistor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (thermistor1Analog <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4095</span>) <span style="color:#75715e">// if the analog reads 4095, then there is a short or the thermistor has failed.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        thermistor1Resistance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (thermistor2Analog <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4095</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        thermistor2Resistance <span style="color:#f92672">=</span> (<span style="color:#ae81ff">9910</span><span style="color:#f92672">*</span>thermistor2Analog<span style="color:#f92672">/</span><span style="color:#ae81ff">4095</span>)<span style="color:#f92672">/</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>thermistor2Analog<span style="color:#f92672">/</span><span style="color:#ae81ff">4095</span>); <span style="color:#75715e">// 9910 is multimeter measurement of resistor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (thermistor2Analog <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">4095</span>) <span style="color:#75715e">// if the analog reads 4095, then there is a short or the thermistor has failed.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        thermistor2Resistance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// calculated temperature by plotting a line of best fit using linear algebra and MATLAB. Error was found to be 3.7998*10^-4 Kelvins using Igor Pro. Compressed some of the math operations to reduce floating point error.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    temperature1 <span style="color:#f92672">=</span> pow((<span style="color:#ae81ff">.0011106</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.00023724</span><span style="color:#f92672">*</span>log(thermistor1Resistance) <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.000000074738</span><span style="color:#f92672">*</span>pow(log(thermistor1Resistance), <span style="color:#ae81ff">3</span>)), <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">273.15</span>;
+</span></span><span style="display:flex;"><span>    temperature2 <span style="color:#f92672">=</span> pow((<span style="color:#ae81ff">.0011106</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.00023724</span><span style="color:#f92672">*</span>log(thermistor2Resistance) <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.000000074738</span><span style="color:#f92672">*</span>pow(log(thermistor2Resistance), <span style="color:#ae81ff">3</span>)), <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">273.15</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// rounds the temperature to 2 decimals, truncates last 6 elements (trailing zeroes))
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Particle.publish only accepts chars or strings
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    temperatures <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;s, &#34;</span>;
+</span></span><span style="display:flex;"><span>    temperatures <span style="color:#f92672">+=</span> String(temperature1);
+</span></span><span style="display:flex;"><span>    temperatures <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;, l, &#34;</span>;
+</span></span><span style="display:flex;"><span>    temperatures <span style="color:#f92672">+=</span> String(temperature2);
+</span></span><span style="display:flex;"><span>    temperatures <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;, &#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Ashwin Sundar 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

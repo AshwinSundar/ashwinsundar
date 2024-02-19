@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> | Ashwin Sundar</title>
+
+    <link rel="stylesheet" href="/css/o.tw.css">
+
+
+
+
+</head>
+<body>
+  <header>
+    <h1>Ashwin Sundar</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+  <h1></h1>
+
+  
+  
+  <time datetime="0001-01-01T00:00:00&#43;00:00">January 1, 1</time>
+
+  <h1 id="auto-versus-type-inference">auto versus type inference</h1>
+<p>April 2023</p>
+<p><strong>Question:</strong> Do <code>let</code> in Typescript and <code>auto</code> in C++ behave the same way as Standard MLs optional type annotations?</p>
+<p><code>auto x = {expr}</code> is an example of a &ldquo;placeholder type&rdquo; specifier. According to <a href="https://en.cppreference.com/w/cpp/language/auto">cppreference.com</a>, this <!-- raw HTML omitted -->specifies that the type of the variable that is being declared will be automatically deduced from its initializer.<!-- raw HTML omitted -->.</p>
+<p>How is the type deduced? Using <a href="https://en.cppreference.com/w/cpp/language/template_argument_deduction#Other_contexts">template argument deduction</a>, which is a fancy concept for describing &ldquo;solving an equation&rdquo; in math. In the equation, $x+1=7$, it is easy to deduce that $x=6$. Similarly, in the expression <code>auto x = 3</code>, it&rsquo;s easy to deduce that the type of x is <code>integer</code>. Type deduction can get much more complicated, the study of which belongs to <a href="https://en.cppreference.com/w/cpp/language/template_argument_deduction#Other_contexts">type theory</a>.</p>
+<p>In a strongly-typed language like Standard ML, one is not required to specify parameter types or return types when defining a function. This seems paradoxical at first. If the language is strongly-typed (meaning variable types are known at compile-time), how can a programmer choose to <strong>not</strong> tell the compiler what types the function accepts and returns?</p>
+<p>Early Fortran, COBOL, and C all required explicit type annotations. Standard ML supported type inference in the 1970s, but was one of few languages to do so. Haskell, Scala, Rust, C++, and Typescript all joined afterwards.</p>
+<p>While type inference took some time to make its way into modern languages, the idea has been around for a long time, going back to logician <a href="https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system">J Roger Hindley</a>, Turing Award winner <a href="https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system">Robin Milner</a>, and mathematician <a href="https://en.wikipedia.org/wiki/Haskell_Curry">Haskell Curry</a>.</p>
+<p>Standard ML supports type-inference natively. It doesn&rsquo;t even require a difference keyword. Just leave off the type annotation:</p>
+<p><code>var x</code> <!-- raw HTML omitted --><code>:int</code><!-- raw HTML omitted --><code> = 3</code>
+<code>fun sum (x </code><!-- raw HTML omitted --><code>: int</code><!-- raw HTML omitted --><code>, y </code><!-- raw HTML omitted --><code>: int</code><!-- raw HTML omitted --><code>) </code><!-- raw HTML omitted --><code> -&gt; int</code><!-- raw HTML omitted --><code> = ...</code></p>
+<p>Here&rsquo;s another example, borrowed from Dan Grossman&rsquo;s Programming Languages course:</p>
+<pre tabindex="0"><code>val x = 42
+fun f (y,z,w) = if y then z+x else 0
+</code></pre><p><code>x</code> is given type <code>int</code> because 42 is of type int. For the parameters of <code>f</code>, <code>y</code> must be type <code>bool</code> because it is tested in a conditional statement. <code>z</code> is of type int because it is being added to something else that is already known to be type <code>int</code>. Finally, <code>w</code> can be any type because it is never used in the expression. The type for f is <code>bool * int * 'a -&gt; int</code>.</p>
+<p>So yes. using <code>auto</code> in C++, using <code>let</code> in Typescript, and omitting type annotation in Standard ML all represent the same concept - type inference.</p>
+
+  
+
+
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>
