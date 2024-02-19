@@ -1,12 +1,4 @@
 # Personal Website
 
-A pure web 1.0 site.  
+A pure web 1.0 site. 0 lines of Javascript, styled with Tailwind.
 
-Unorganized notes:
-
-- edit .scss files only
-- import from styles/compiled/\*.css
-- check out scripts.sh
-- push to main (or run `bash scripts.sh deploy`), gh-pages will detect changes and re-publish
-- certain scripts run on save, check out .vscode/settings.json
-- run local web server with `python3 -m http.server`, open localhost:8080
