@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ashwin Sundar</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Creating a Fibonacci Function in Standard ML Date: December 26th, 2022
+Challenge Write a recursive function in SML that accepts one i: int argument and returns a list of Fibonacci numbers of length i.
+Approach Let&rsquo;s approach this problem in 3 stages. First, we&rsquo;ll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge.">
+    <meta name="generator" content="Hugo 0.123.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/blog/fibonacci-sml/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Creating a Fibonacci Function in Standard ML Date: December 26th, 2022
+Challenge Write a recursive function in SML that accepts one i: int argument and returns a list of Fibonacci numbers of length i.
+Approach Let&rsquo;s approach this problem in 3 stages. First, we&rsquo;ll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/fibonacci-sml/" /><meta property="article:section" content="blog" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Creating a Fibonacci Function in Standard ML Date: December 26th, 2022
+Challenge Write a recursive function in SML that accepts one i: int argument and returns a list of Fibonacci numbers of length i.
+Approach Let&rsquo;s approach this problem in 3 stages. First, we&rsquo;ll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge.">
+
+<meta itemprop="wordCount" content="479">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Creating a Fibonacci Function in Standard ML Date: December 26th, 2022
+Challenge Write a recursive function in SML that accepts one i: int argument and returns a list of Fibonacci numbers of length i.
+Approach Let&rsquo;s approach this problem in 3 stages. First, we&rsquo;ll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Ashwin Sundar
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Blogs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="creating-a-fibonacci-function-in-standard-ml">Creating a Fibonacci Function in Standard ML</h1>
+<p>Date: December 26th, 2022</p>
+<h2 id="challenge">Challenge</h2>
+<p>Write a recursive function in SML that accepts one <code>i: int</code> argument and returns a list of Fibonacci numbers of length <code>i</code>.</p>
+<h2 id="approach">Approach</h2>
+<p>Let&rsquo;s approach this problem in 3 stages. First, we&rsquo;ll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge.</p>
+<h2 id="attempt-1">Attempt 1</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sml" data-lang="sml"><span style="display:flex;"><span><span style="color:#75715e">(* c: current, n: next, lst: list of numbers, i: count to generate *)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fibonacci_1</span> (c: int, n: int, lst: int list, i: int) =
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> i <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#ae81ff">1</span> =&gt; lst
+</span></span><span style="display:flex;"><span>	  | _ =&gt; fibonacci_1 (n, c+n, n::lst, i-<span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>This function accepts four arguments - the current number, the next number, a list of numbers, and the quantity of numbers to generated. For example, <code>fibonacci_1 (1, 1, [1], 8)</code> generates the first 8 numbers and returns a list <code>[21, 13, 8, 5, 3, 2, 1, 1]</code>.</p>
+<p>This function is a bit unwieldy to use for a few reasons. First, a list containing the first Fibonacci number <code>1</code> must be passed in, which is not very intuitive. Second, the list that is returned is in reverse order.</p>
+<h2 id="attempt-2">Attempt 2</h2>
+<p>Next, let&rsquo;s change the function so that it only needs to accept one argument. We will accomplish this by recognizing that the only argument that needs to be passed in by the caller is <code>i</code>, and the remaining arguments can be handled by a local function using pattern matching.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sml" data-lang="sml"><span style="display:flex;"><span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fibonacci_2</span> (i: int) =
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">let</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">f</span> (c: int, n: int, lst: int list, i: int) =
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">case</span> i <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#ae81ff">1</span> =&gt; lst
+</span></span><span style="display:flex;"><span>	  		| _ =&gt; f (n, c+n, n::lst, i-<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>		f (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, [<span style="color:#ae81ff">1</span>], i)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>The result of <code>fibonacci_2(8)</code> is once again <code>[21, 13, 8, 5, 3, 2, 1, 1]</code>. This function is much easier to use than <code>fibonacci_1</code>, since it only requires one argument - the number of values to generate.</p>
+<h2 id="attempt-3">Attempt 3</h2>
+<p>Finally, let&rsquo;s return the list in the correct order by reversing it with another local function that uses pattern matching.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sml" data-lang="sml"><span style="display:flex;"><span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">fibonacci_3</span> (i: int) =
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">let</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">f</span> (c: int, n: int, lst: int list, i: int) =
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">case</span> i <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#ae81ff">1</span> =&gt; rev lst
+</span></span><span style="display:flex;"><span>	  		| _ =&gt; f (n, c+n, n::lst, i-<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">rev</span> (l : int list) =
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">case</span> l <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>				[] =&gt; []
+</span></span><span style="display:flex;"><span>			  | x::xs =&gt; rev xs @ [x]
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>		f (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, [<span style="color:#ae81ff">1</span>], i)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>The result of calling <code>fibonacci_3(8)</code> is <code>[1, 1, 2, 3, 5, 8, 13, 21]</code>. The function recursively calculates Fibonacci numbers and only needs one argument passed in, which is the quantity of Fibonacci numbers to generate. Therefore, we have successfully completed the challenge.</p>
+<h2 id="summary">Summary</h2>
+<p>Through three phases, we iteratively modified the Fibonacci function and ended up with a recursive solution written in a functional programming style.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Ashwin Sundar 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ashwin Sundar</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="auto versus type inference April 2023
+Question: Do let in Typescript and auto in C&#43;&#43; behave the same way as Standard MLs optional type annotations?
+auto x = {expr} is an example of a &ldquo;placeholder type&rdquo; specifier. According to cppreference.com, this specifies that the type of the variable that is being declared will be automatically deduced from its initializer..
+How is the type deduced? Using template argument deduction, which is a fancy concept for describing &ldquo;solving an equation&rdquo; in math.">
+    <meta name="generator" content="Hugo 0.123.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/blog/auto-vs-type-annotations/">
+    
+
+    <meta property="og:title" content="" />
+<meta property="og:description" content="auto versus type inference April 2023
+Question: Do let in Typescript and auto in C&#43;&#43; behave the same way as Standard MLs optional type annotations?
+auto x = {expr} is an example of a &ldquo;placeholder type&rdquo; specifier. According to cppreference.com, this specifies that the type of the variable that is being declared will be automatically deduced from its initializer..
+How is the type deduced? Using template argument deduction, which is a fancy concept for describing &ldquo;solving an equation&rdquo; in math." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/auto-vs-type-annotations/" /><meta property="article:section" content="blog" />
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="auto versus type inference April 2023
+Question: Do let in Typescript and auto in C&#43;&#43; behave the same way as Standard MLs optional type annotations?
+auto x = {expr} is an example of a &ldquo;placeholder type&rdquo; specifier. According to cppreference.com, this specifies that the type of the variable that is being declared will be automatically deduced from its initializer..
+How is the type deduced? Using template argument deduction, which is a fancy concept for describing &ldquo;solving an equation&rdquo; in math.">
+
+<meta itemprop="wordCount" content="415">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="auto versus type inference April 2023
+Question: Do let in Typescript and auto in C&#43;&#43; behave the same way as Standard MLs optional type annotations?
+auto x = {expr} is an example of a &ldquo;placeholder type&rdquo; specifier. According to cppreference.com, this specifies that the type of the variable that is being declared will be automatically deduced from its initializer..
+How is the type deduced? Using template argument deduction, which is a fancy concept for describing &ldquo;solving an equation&rdquo; in math."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Ashwin Sundar
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Blogs
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="auto-versus-type-inference">auto versus type inference</h1>
+<p>April 2023</p>
+<p><strong>Question:</strong> Do <code>let</code> in Typescript and <code>auto</code> in C++ behave the same way as Standard MLs optional type annotations?</p>
+<p><code>auto x = {expr}</code> is an example of a &ldquo;placeholder type&rdquo; specifier. According to <a href="https://en.cppreference.com/w/cpp/language/auto">cppreference.com</a>, this <!-- raw HTML omitted -->specifies that the type of the variable that is being declared will be automatically deduced from its initializer.<!-- raw HTML omitted -->.</p>
+<p>How is the type deduced? Using <a href="https://en.cppreference.com/w/cpp/language/template_argument_deduction#Other_contexts">template argument deduction</a>, which is a fancy concept for describing &ldquo;solving an equation&rdquo; in math. In the equation, $x+1=7$, it is easy to deduce that $x=6$. Similarly, in the expression <code>auto x = 3</code>, it&rsquo;s easy to deduce that the type of x is <code>integer</code>. Type deduction can get much more complicated, the study of which belongs to <a href="https://en.cppreference.com/w/cpp/language/template_argument_deduction#Other_contexts">type theory</a>.</p>
+<p>In a strongly-typed language like Standard ML, one is not required to specify parameter types or return types when defining a function. This seems paradoxical at first. If the language is strongly-typed (meaning variable types are known at compile-time), how can a programmer choose to <strong>not</strong> tell the compiler what types the function accepts and returns?</p>
+<p>Early Fortran, COBOL, and C all required explicit type annotations. Standard ML supported type inference in the 1970s, but was one of few languages to do so. Haskell, Scala, Rust, C++, and Typescript all joined afterwards.</p>
+<p>While type inference took some time to make its way into modern languages, the idea has been around for a long time, going back to logician <a href="https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system">J Roger Hindley</a>, Turing Award winner <a href="https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system">Robin Milner</a>, and mathematician <a href="https://en.wikipedia.org/wiki/Haskell_Curry">Haskell Curry</a>.</p>
+<p>Standard ML supports type-inference natively. It doesn&rsquo;t even require a difference keyword. Just leave off the type annotation:</p>
+<p><code>var x</code> <!-- raw HTML omitted --><code>:int</code><!-- raw HTML omitted --><code> = 3</code>
+<code>fun sum (x </code><!-- raw HTML omitted --><code>: int</code><!-- raw HTML omitted --><code>, y </code><!-- raw HTML omitted --><code>: int</code><!-- raw HTML omitted --><code>) </code><!-- raw HTML omitted --><code> -&gt; int</code><!-- raw HTML omitted --><code> = ...</code></p>
+<p>Here&rsquo;s another example, borrowed from Dan Grossman&rsquo;s Programming Languages course:</p>
+<pre tabindex="0"><code>val x = 42
+fun f (y,z,w) = if y then z+x else 0
+</code></pre><p><code>x</code> is given type <code>int</code> because 42 is of type int. For the parameters of <code>f</code>, <code>y</code> must be type <code>bool</code> because it is tested in a conditional statement. <code>z</code> is of type int because it is being added to something else that is already known to be type <code>int</code>. Finally, <code>w</code> can be any type because it is never used in the expression. The type for f is <code>bool * int * 'a -&gt; int</code>.</p>
+<p>So yes. using <code>auto</code> in C++, using <code>let</code> in Typescript, and omitting type annotation in Standard ML all represent the same concept - type inference.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Ashwin Sundar 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

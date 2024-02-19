@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> | Ashwin Sundar</title>
+
+    <link rel="stylesheet" href="/css/o.tw.css">
+
+
+
+
+</head>
+<body>
+  <header>
+    <h1>Ashwin Sundar</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+  <h1></h1>
+
+  
+  
+  <time datetime="0001-01-01T00:00:00&#43;00:00">January 1, 1</time>
+
+  <h1 id="the-cheap-web-scorecard">The Cheap Web Scorecard</h1>
+<p>December 2023</p>
+<p>I recently came across <a href="https://potato.cheap/">The &ldquo;Cheap&rdquo; Web</a>, a self-described &ldquo;solarpunk philosophy of web design&rdquo;. I highly recommend reading the whole article, for it&rsquo;s both a throwback to what the web used to be, as well as a vision for what the future may hold.</p>
+<p>Towards the end of the article, the author proposes the following measures of cheapness. I decided to rate this website according to those measures.</p>
+<h2 id="cheap-to-maintain">Cheap to maintain</h2>
+<p><strong>Definition</strong>: <em>Most webpages should work indefinitely without falling over.</em></p>
+<p><strong>Rating: 9/10</strong></p>
+<p>This website uses 0 lines of Javascript. It is composed entirely of HTML and styled with a little bit of CSS. I write articles in Markdown, which are compiled to HTML using a custom shell script that I maintain. For deployment, I push to GitHub, where changes are picked up by a DigitalOcean static-file-deployment application.</p>
+<p>If DigitalOcean were to fall over tomorrow, it would probably take about half a day to either migrate to a new provider, or set up self-hosting. Given that this is the only potential source of failure I see for the next several years, I&rsquo;d say this site is doing pretty well on this metric. 4 hours of downtime is not a big deal, because no one visits this site, like, ever<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<h2 id="cheap-to-leave">Cheap to leave</h2>
+<p><strong>Definition</strong>: <em>Opting-out of the web should be painless.</em></p>
+<p><strong>Rating: 10/10</strong></p>
+<p>How to leave this website:</p>
+<ol>
+<li>Click the [X] in the top right (or top left on macos)</li>
+<li>Go outside.</li>
+</ol>
+<h2 id="cheap-to-access">Cheap to access</h2>
+<p><strong>Definition</strong>: <em>Most websites should be compatible with screenreaders, etc.</em></p>
+<p><strong>Rating: 8/10</strong></p>
+<p>Reader-view looks pretty good for the blog posts. I think I missed a few <code>&lt;alt&gt;</code> tags for images here and there though. I don&rsquo;t know how to make <code>&lt;audio&gt;</code> tags compatible with a screenreader. And the index page doesn&rsquo;t seem to be reader-friendly for some reason.</p>
+<h2 id="cheap-to-participate">Cheap to participate</h2>
+<p><strong>Definition</strong>: <em>Interacting with the web should be possible on a Wii.</em></p>
+<p><strong>Rating: 10/10</strong></p>
+<p><a href="https://en.wikipedia.org/wiki/Lynx_(web_browser)">Lynx</a>, a terminal-based web browser that predates Mosaic, is still alive and kicking. Here&rsquo;s what this site looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt; lynx https://ashwinsundar.com
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>That&rsquo;s pretty usable. Someone with the cheapest computer and slowest internet connection can still read my inane thoughts and musings.</p>
+<h2 id="cheap-to-explore">Cheap to explore</h2>
+<p><strong>Definition</strong>: <em>Exploring the web should be pleasant on 1W of power.</em></p>
+<p><strong>Rating: ?/10</strong></p>
+<p>I don&rsquo;t own a computing device that runs on 1W of power. The Energy tab in macos&rsquo;s Activity Monitor shows this:</p>
+<!-- raw HTML omitted -->
+<p>Helpfully, Apple decided that including units in this table was too confusing for the average Mac user. So we are only left to wonder how many units of energy Firefox uses when it is opened to this site.</p>
+<h2 id="cheap-to-contribute">Cheap to contribute</h2>
+<p><strong>Definition</strong>: <em>Making/hosting websites should be easier than scrapbooking.</em></p>
+<p><strong>Rating: 10/10</strong></p>
+<p><a href="https://github.com/AshwinSundar/ashwinsundar.github.io">https://github.com/AshwinSundar/ashwinsundar.github.io</a></p>
+<p>Feel free to submit a PR.</p>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cheap to maintain</td>
+<td>9/10</td>
+</tr>
+<tr>
+<td>Cheap to leave</td>
+<td>10/10</td>
+</tr>
+<tr>
+<td>Cheap to access</td>
+<td>8/10</td>
+</tr>
+<tr>
+<td>Cheap to participate</td>
+<td>10/10</td>
+</tr>
+<tr>
+<td>Cheap to explore</td>
+<td>🐟/10</td>
+</tr>
+<tr>
+<td>Cheap to contribute</td>
+<td>10/10</td>
+</tr>
+<tr>
+<td>Overall</td>
+<td>(47 + 🐟) / 6</td>
+</tr>
+</tbody>
+</table>
+<p>The main takeaway is that the simplicity of this site enabled it to score well on this &ldquo;Cheap Web&rdquo; scorecard. In the areas that could be rated, it averaged a 9.4/10. This site could use improvements in the area of accessibility, which will be very easy to make thanks to how simple the site is.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>I assume this is true, but I don&rsquo;t track page visits. Or track anything for that matter&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  
+
+
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

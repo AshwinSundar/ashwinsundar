@@ -1,0 +1,17 @@
+{
+  "name": "ashwin",
+  "version": "1.0.0",
+  "description": "## Features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/o.tw.css",
+    "tw:watch": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/o.tw.css -w --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
