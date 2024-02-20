@@ -4,3 +4,4 @@ title = 'Ashwin Sundar'
 theme = 'ashwin'
 enableEmoji = 'true'
 enableRobotsTXT = 'true'
+summaryLength = 20

@@ -3,44 +3,27 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title> | Ashwin Sundar</title>
+<title>Untitled Story | Ashwin Sundar</title>
 
     <link rel="stylesheet" href="/css/o.tw.css">
 
 
-
-
 </head>
-<body>
+<body class="p-2">
   <header>
     <h1>Ashwin Sundar</h1>
-
-  <nav>
-    <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a aria-current="true" class="ancestor" href="/posts/">Posts</a>
-    </li>
-    <li>
-      <a href="/tags/">Tags</a>
-    </li>
-    </ul>
-  </nav>
 
 
   </header>
   <main>
     
-  <h1></h1>
+  <h1>Untitled Story</h1>
 
   
   
-  <time datetime="0001-01-01T00:00:00&#43;00:00">January 1, 1</time>
+  <time datetime="2017-04-09T00:00:00&#43;00:00">April 9, 2017</time>
 
   <h1 id="visualizing-nba-pace">Visualizing NBA Pace</h1>
-<p>Date: April 9th, 2017</p>
 <h2 id="part-1-inspiration">Part 1: Inspiration</h2>
 <p>I saw <a href="https://www.reddit.com/r/dataisbeautiful/comments/61rl0r/the_resulting_scores_of_15741_american_football/">this post</a> and knew immediately that I needed to do something similar for the NBA. However, I had a few things going against me. Unlike <a href="http://www.pro-football-reference.com/boxscores/game-scores.htm">Pro Football Reference</a>, <a href="http://www.basketball-reference.com">Basketball Reference</a> doesn&rsquo;t have one single page containing every single game that&rsquo;s ever been played. Rather, it is split up into <a href="http://www.basketball-reference.com/leagues/">season and months</a>. And that&rsquo;s because over 58 <strong>thousand</strong> NBA/ABA/BAA games have been played since the inception of professional basketball in 1946. This presented a challenge - I needed to store the outcomes of every single professional basketball game that&rsquo;s ever been played in one location so that I could start analyzing data and finding trends. And that&rsquo;s exactly what I did - I wrote an R script (getNBAgames.R) that builds a key-value pair of season:months, builds the URL where the games for that month are located, and then goes to that URL, gets the HTML table, converts it to a dataframe, and saves it as an R object. Then, I load the R objects into my Shiny app and feed the data into Plotly to generate heatmaps of the data.</p>
 <p>The result is that I can visualize the pace of the game in a way that has never been done before - by era. I always hear talks of how the 60s had an unusually fast pace (based on raw numbers), but now I can actually <!-- raw HTML omitted -->see<!-- raw HTML omitted --> how much faster the game was back then! Likewise, you can see how lopsided matches are based on era - an oval distribution about the diagonal indicates relatively close matches, while a more circular shape indicates more lopsided victories.</p>
