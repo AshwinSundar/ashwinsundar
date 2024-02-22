@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Ashwin Sundar</title>
+    <title>Ashwin Sundar</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Home on Ashwin Sundar</description>
+    <description>Recent content on Ashwin Sundar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
@@ -13,70 +13,70 @@
       <link>http://localhost:1313/posts/catching-ideas/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/catching-ideas/</guid>
-      <description>Stop Trying to Catch Ideas It&amp;rsquo;s not a good idea to maximize catching ideas.&#xA;The brain needs time to refresh itself.</description>
+      <description>Stop Trying to Catch Ideas It&amp;rsquo;s not a good idea to maximize catching ideas.&#xA;The brain needs time to refresh itself. This is not meant to be a scientific claim by any means, merely a psychological observation. When an idea arrives, don&amp;rsquo;t race to write it down. Chew on it for a while. Let it stew. Turn it into food for thought.&#xA;Even this particular idea right now - that ideas aren&amp;rsquo;t precious - has been with me for some time.</description>
     </item>
     <item>
       <title>Django Template Language</title>
       <link>http://localhost:1313/posts/django-front-end/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/django-front-end/</guid>
-      <description>Django Template Language &amp;ldquo;Front-end&amp;rdquo; in web development refers to the visual appearance of an application or website. In Django, a web development framework, the front-end is created in DTL (Django Template Language), which is a superset of HTML (Hypertext Markup Language).</description>
+      <description>Django Template Language &amp;ldquo;Front-end&amp;rdquo; in web development refers to the visual appearance of an application or website. In Django, a web development framework, the front-end is created in DTL (Django Template Language), which is a superset of HTML (Hypertext Markup Language).&#xA;DTL represents the &amp;ldquo;what&amp;rdquo; of the page - the actual contents. The &amp;ldquo;how&amp;rdquo; of the page - how the page appears - is defined by CSS (Cascading Style Sheets).</description>
     </item>
     <item>
       <title>Think Slowly</title>
       <link>http://localhost:1313/posts/think-slowly/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/think-slowly/</guid>
-      <description>Think Slowly January 2024&#xA;I recently purchased a mechanical, ergonomic, and split keyboard1. I love the idea of yet another tech gadget to keep me engaged.</description>
+      <description>Think Slowly January 2024&#xA;I recently purchased a mechanical, ergonomic, and split keyboard1. I love the idea of yet another tech gadget to keep me engaged.&#xA;However, I quickly found myself in over my head. This keyboard is programmable, so the first thing I did was spend several hours tweaking the keys to my exact preference. I soon learned that key placement wouldn&amp;rsquo;t solve my immediate problem - which was the drastic reduction in my typing speed.</description>
     </item>
     <item>
       <title>Predictions for 2024</title>
       <link>http://localhost:1313/posts/2024-predictions/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2024-predictions/</guid>
-      <description>2024 Predictions “Halvening” of bitcoin supply around May will result in the price of bitcoin reaching ~$100,000 USD, per the stock-to-flow model.</description>
+      <description>2024 Predictions “Halvening” of bitcoin supply around May will result in the price of bitcoin reaching ~$100,000 USD, per the stock-to-flow model. https://www.lookintobitcoin.com/charts/stock-to-flow-model/&#xA;AI will enter another ice age, rather unexpectedly, after it is discovered that {company} helped generate a bunch of fake political ads (including faked audio and video)&#xA;The US will withdraw significant financial and military support from Ukraine&#xA;… in order to support Taiwan during a conflict that will break out in Spring 2024</description>
     </item>
     <item>
       <title>Software I liked in 2023</title>
       <link>http://localhost:1313/posts/2023-things-i-liked/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2023-things-i-liked/</guid>
-      <description>Software I liked in 2023 Here are some software programs I liked1 in 20232.&#xA;mermaid.js - Excellent tool for creating architecture (and other) diagrams from text.</description>
+      <description>Software I liked in 2023 Here are some software programs I liked1 in 20232.&#xA;mermaid.js - Excellent tool for creating architecture (and other) diagrams from text. Add to a markdown file with special syntax. Renders in GitHub natively. Has some bugs, but team seems to have a good head on its shoulders and should hopefully work them out soon. 8/10&#xA;VSCode - One of the few things Microsoft hasn&amp;rsquo;t totally screwed up yet.</description>
     </item>
     <item>
       <title>Cheap Web Scorecard</title>
       <link>http://localhost:1313/posts/cheap-scorecard/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/cheap-scorecard/</guid>
-      <description>The Cheap Web Scorecard I recently came across The &amp;ldquo;Cheap&amp;rdquo; Web, a self-described &amp;ldquo;solarpunk philosophy of web design&amp;rdquo;. I highly recommend reading the whole article, for it&amp;rsquo;s both a throwback to what the web used to be, as well as a vision for what the future may hold.</description>
+      <description>The Cheap Web Scorecard I recently came across The &amp;ldquo;Cheap&amp;rdquo; Web, a self-described &amp;ldquo;solarpunk philosophy of web design&amp;rdquo;. I highly recommend reading the whole article, for it&amp;rsquo;s both a throwback to what the web used to be, as well as a vision for what the future may hold.&#xA;Towards the end of the article, the author proposes the following measures of cheapness. I decided to rate this website according to those measures.</description>
     </item>
     <item>
       <title>Empty Web Frameworks</title>
       <link>http://localhost:1313/posts/empty-web-fw/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/empty-web-fw/</guid>
-      <description>Empty project sizes for popular web frameworks in 2023 Framework Popularity New project size # files React 1 340000K 38219 htmx * 44K 1 Angular 5 295000K 23757 Django 13 20K 9 Gatsby 24 542000K 47703 jQuery 3 88K 1 *: Not in top 34</description>
+      <description>Empty project sizes for popular web frameworks in 2023 Framework Popularity New project size # files React 1 340000K 38219 htmx * 44K 1 Angular 5 295000K 23757 Django 13 20K 9 Gatsby 24 542000K 47703 jQuery 3 88K 1 *: Not in top 34&#xA;Methodology React Reference&#xA;Install React (via npm) &amp;gt; npm install react &amp;gt; npm view react version 18.2.0 Create a project &amp;gt; npx create-react-project empty-react-project Analyze disk usage &amp;gt; du -h -d 1 emptyDjangoProject 339M&#x9;empty-react-project/node_modules 36K&#x9;empty-react-project/public 368K&#x9;empty-react-project/.</description>
     </item>
     <item>
       <title>Indian Philosophy</title>
       <link>http://localhost:1313/posts/indian-philosophy/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/indian-philosophy/</guid>
-      <description>Introduction to Indian Philosophy Preamble Thinking, writing, and speaking about any ancient culture using modern English is extremely challenging. A great deal is lost in translation.</description>
+      <description>Introduction to Indian Philosophy Preamble Thinking, writing, and speaking about any ancient culture using modern English is extremely challenging. A great deal is lost in translation. Many religions, including Hinduism, strongly encourage the study of the religion in the original language. As a child, I learned Hindu slokas in Sanskrit, with only a tenuous understanding of what the phrases meant.&#xA;As a result, I am always hesistant to attempt to describe theories of Bharathiya Darshan, or Indian Philosophy, in English.</description>
     </item>
     <item>
       <title>Prefer Markdown</title>
       <link>http://localhost:1313/posts/prefer-markdown/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/prefer-markdown/</guid>
-      <description>Prefer Markdown I have spent a lot of time writing HTML. I wrote my first HTML when I was around 12 years old.</description>
+      <description>Prefer Markdown I have spent a lot of time writing HTML. I wrote my first HTML when I was around 12 years old. I was obsessed with a website called neopets.com, a website geared for kids to take care of virtual pets. There were games to play, coins to earn, and pets to splurge on. Items could be earned and sold in a &amp;ldquo;shop&amp;rdquo; to other players (for fake currency only).</description>
     </item>
     <item>
       <title>AWS Cheatsheet</title>
       <link>http://localhost:1313/posts/aws-notes/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/aws-notes/</guid>
-      <description>AWS Cheatsheet Compute Services ECR - Elastic Container Registry, stores images (e.g. Docker)&#xA;ECS - Elastic Container Service, orchestrates/scales Docker containers</description>
+      <description>AWS Cheatsheet Compute Services ECR - Elastic Container Registry, stores images (e.g. Docker)&#xA;ECS - Elastic Container Service, orchestrates/scales Docker containers&#xA;EC2 - Elastic Compute Cloud, virtual machine. Rent in cloud. Common use case is as a server for a web application. Do whatever on it though&#xA;Load Balancing - Allows traffic to be distributed among multiple EC2 instances&#xA;Cloud Watch - collects logs and metrics from EC2 instances&#xA;Auto Scaling - defines policies to create new EC2 instances based on traffic, etc</description>
     </item>
     <item>
       <title>Future Business</title>
@@ -90,112 +90,112 @@
       <link>http://localhost:1313/posts/learning-hard-things/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/learning-hard-things/</guid>
-      <description>Learning Hard Things I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors.</description>
+      <description>Learning Hard Things I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively.&#xA;In that class, we were shown many things. Variables! Inputs and outputs! Roman numerals! Classes! As a neuroscience major, I hadn&amp;rsquo;t the faintest clue what the point of any of this was.</description>
     </item>
     <item>
       <title>Programming is Engineering</title>
       <link>http://localhost:1313/posts/programming-is-engineering/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/programming-is-engineering/</guid>
-      <description>Programming is Engineering Some people say that computer science isn&amp;rsquo;t engineering. They&amp;rsquo;re right. Computer science is the field of first principles, much like physics and chemistry are to mechanical engineering and chemical engineering.</description>
+      <description>Programming is Engineering Some people say that computer science isn&amp;rsquo;t engineering. They&amp;rsquo;re right. Computer science is the field of first principles, much like physics and chemistry are to mechanical engineering and chemical engineering. Computer science itself is an abstraction layer to another field - mathematics. Depending on what one works on, they may be closer on the spectrum to &amp;ldquo;applied mathematics&amp;rdquo; than &amp;ldquo;computer science&amp;rdquo;.&#xA;This is true for other engineering fields as well.</description>
     </item>
     <item>
       <title>AI helping a programmer</title>
       <link>http://localhost:1313/posts/ai-help-programmer/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ai-help-programmer/</guid>
-      <description>AI helping a programmer I am attempting to solve a homework problem that asks me to write a helper function to use in a later problem.</description>
+      <description>AI helping a programmer I am attempting to solve a homework problem that asks me to write a helper function to use in a later problem. I have gotten 95% of the way there with this function, written in Standard ML:&#xA;fun longest_string_helper f sl = foldl (fn (next, acc) =&amp;gt; if f (next, acc) then acc else next) &amp;#34;&amp;#34; sl The purpose of this function is to take a function f and apply something called a left fold across each element of the list sl.</description>
     </item>
     <item>
       <title>The Automonk</title>
       <link>http://localhost:1313/posts/automonk/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/automonk/</guid>
-      <description>The Automonk The Automonk patiently paced the hall, chanting अमर प्रकाश, अंतर्ज्योति in a muted manner that failed to reverbate in the austere marble hall.</description>
+      <description>The Automonk The Automonk patiently paced the hall, chanting अमर प्रकाश, अंतर्ज्योति in a muted manner that failed to reverbate in the austere marble hall. The phrase, Amar Prakash, Antar Jyoti - Eternal Light, Inner Flame, was derived from analyzing thousands of religious texts and millions of hours of ceremonies through a bespoke neural network designed for the Automonk. Eyes closed, the hooded figure of brass and steel gave the main hall of the monastery a cold, ascetic background noise.</description>
     </item>
     <item>
       <title>Fibonacci Series in Standard ML</title>
       <link>http://localhost:1313/posts/fibonacci-sml/</link>
       <pubDate>Mon, 26 Dec 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/fibonacci-sml/</guid>
-      <description>Creating a Fibonacci Function in Standard ML Date: December 26th, 2022&#xA;Challenge Write a recursive function in SML that accepts one i: int argument and returns a list of Fibonacci numbers of length i.</description>
+      <description>Creating a Fibonacci Function in Standard ML Date: December 26th, 2022&#xA;Challenge Write a recursive function in SML that accepts one i: int argument and returns a list of Fibonacci numbers of length i.&#xA;Approach Let&amp;rsquo;s approach this problem in 3 stages. First, we&amp;rsquo;ll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge.</description>
     </item>
     <item>
       <title>Untitled Story</title>
       <link>http://localhost:1313/posts/untitled-part1/</link>
       <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/untitled-part1/</guid>
-      <description>First Draft: Nov 22 2022&#xA;Second Draft: Jan 17 2023&#xA;PART 1&#xA;In retrospect, the access to information humanity once had was severely underappreciated in its time.</description>
+      <description>First Draft: Nov 22 2022&#xA;Second Draft: Jan 17 2023&#xA;PART 1&#xA;In retrospect, the access to information humanity once had was severely underappreciated in its time. When the Internet was unveiled, a decent percentage of even the general public DID know that it would be revolutionary, especially after the proof was very clear in only 2 decades from its inception to mass adoption. Those early generations knew, through experiments in e-mail, instant messaging, e-commerce, and social media, that what they had was a MILLION times better than the world where even the most basic of services was a chore and not free.</description>
     </item>
     <item>
       <title>Risk Analysis for Software Projects</title>
       <link>http://localhost:1313/posts/rm-101/</link>
       <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/rm-101/</guid>
-      <description>Risk Analysis for Software Projects Original: October 11th, 2022 Revised: August 2023&#xA;Introduction In regulated engineering, FMEAs, FTAs, and PRAs are common acronyms for risk management documents.</description>
+      <description>Risk Analysis for Software Projects Original: October 11th, 2022 Revised: August 2023&#xA;Introduction In regulated engineering, FMEAs, FTAs, and PRAs are common acronyms for risk management documents. Outside of that world, &amp;ldquo;risk management&amp;rdquo; is a bit of a snoozer of a topic. Behind this deceptive veneer lie some valuable tools that could benefit software projects at large, and not just in regulated environments.&#xA;One of these tools is the FMEA, or Failure Modes and Effects Analysis.</description>
     </item>
     <item>
       <title>Programming Languages</title>
       <link>http://localhost:1313/posts/programming-languages/</link>
       <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/programming-languages/</guid>
-      <description>Programming Languages I recently began a Coursera course called &amp;ldquo;Programming Languages&amp;rdquo;, offered by Dan Grossman at the University of Washington. I decided to take this course because the description advertises it as a way to understand the underpinning of all programming languages more thoroughly.</description>
+      <description>Programming Languages I recently began a Coursera course called &amp;ldquo;Programming Languages&amp;rdquo;, offered by Dan Grossman at the University of Washington. I decided to take this course because the description advertises it as a way to understand the underpinning of all programming languages more thoroughly. When I first learned to program on my own, I always assumed that once I had more experience and learned more languages, I would began to understand the commonalities and differences between programming languages, and that would be sufficient.</description>
     </item>
     <item>
       <title>Back to Square One</title>
       <link>http://localhost:1313/posts/no-more-gatsby/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/no-more-gatsby/</guid>
-      <description>Back to Square One Date: August 1st, 2022&#xA;The original version of this website was written using GatsbyJS, a headless CMS engine that&amp;rsquo;s all the rage right now in the world of web development.</description>
+      <description>Back to Square One Date: August 1st, 2022&#xA;The original version of this website was written using GatsbyJS, a headless CMS engine that&amp;rsquo;s all the rage right now in the world of web development. After a few weeks, I learned that it was tremendously overkill for a personal website with maybe a few dozen pages (including all my blog posts). Most importantly though, GatsbyJS is bloated with dependencies that take forever for me troubleshoot when all I want to do is add support for MathML.</description>
     </item>
     <item>
       <title>Technical Communication</title>
       <link>http://localhost:1313/posts/technical-non-tech/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/technical-non-tech/</guid>
-      <description>Technical communications for a non-technical audience Date: August 1st, 2022&#xA;In every technical contributor&amp;rsquo;s career, they will be required to communicate technical work to a non-technical audience.</description>
+      <description>Technical communications for a non-technical audience Date: August 1st, 2022&#xA;In every technical contributor&amp;rsquo;s career, they will be required to communicate technical work to a non-technical audience. This task typically manifests itself in the form of e-mail, instant message, and one-on-one verbal communication. As they rise through the ranks, they will eventually present their work to larger groups and higher ranks, but the basic lay-person communication task remains the same.</description>
     </item>
     <item>
       <title>Ideas that Created the Future</title>
       <link>http://localhost:1313/posts/ideas-created-future/</link>
       <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ideas-created-future/</guid>
-      <description>Review - Ideas that Created the Future Date: July 31st, 2022&#xA;In late July 2022, I began reading an excellent book called Ideas that Created the Future - Classic Papers of Computer Science by Harry R.</description>
+      <description>Review - Ideas that Created the Future Date: July 31st, 2022&#xA;In late July 2022, I began reading an excellent book called Ideas that Created the Future - Classic Papers of Computer Science by Harry R. Lewis. As I began exploring theoretical computer science in more detail, I immediately sought out &amp;ldquo;review&amp;rdquo; papers, which I recalled from grad school often provide a great overview of a particular subfield. These papers can be a bit lengthy, but the content is generally pretty digestible compared to culiminating work of a thesis, for example.</description>
     </item>
     <item>
       <title>Benchmarking Rust code with Criterion.rs</title>
       <link>http://localhost:1313/posts/criterion-benchmarking/</link>
       <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/criterion-benchmarking/</guid>
-      <description>Benchmarking Rust code using Criterion.rs Introduction Benchmarking is a method of systematically assessing a program for performance. This process is a valuable component of regression testing because it helps you compare changes and improvements to your code.</description>
+      <description>Benchmarking Rust code using Criterion.rs Introduction Benchmarking is a method of systematically assessing a program for performance. This process is a valuable component of regression testing because it helps you compare changes and improvements to your code. The systems programming language Rust offers many statistically rigorous analysis techniques, such as the Criterion crate, which is a popular tool used for benchmarking in Rust. In this article, we&amp;rsquo;ll go into more detail on how to use Criterion to compare various Rust functions to solve a problem from Project Euler.</description>
     </item>
     <item>
       <title>Parallel Processing in Rust</title>
       <link>http://localhost:1313/posts/parallel-processing-rust/</link>
       <pubDate>Wed, 06 Apr 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/parallel-processing-rust/</guid>
-      <description>Parallel Processing in Rust Date: April 6th, 2022&#xA;Rust is a systems programming language that is quickly gaining traction at well-known companies including Amazon, Discord, Dropbox, Meta, Alphabet, and Microsoft.</description>
+      <description>Parallel Processing in Rust Date: April 6th, 2022&#xA;Rust is a systems programming language that is quickly gaining traction at well-known companies including Amazon, Discord, Dropbox, Meta, Alphabet, and Microsoft. It is built for performance, reliability, and productivity and has been voted the most loved programming language according to Stack Overflow&amp;rsquo;s Annual Developer Survey since 2016. Some large-scale commercial projects that have been built using Rust include:&#xA;Mozilla&amp;rsquo;s Servo parallel browser engine Discord&amp;rsquo;s Read States service Polkadot&amp;rsquo;s Substrate blockchain engine Figma&amp;rsquo;s Multiplayer service All of these real-world use cases of Rust utilize and benefit from concurrent and parallel processing, which can be daunting to implement on a good day, and pretty terrifying when implemented badly.</description>
     </item>
     <item>
       <title>The Color of Film</title>
       <link>http://localhost:1313/posts/film-strips/</link>
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/film-strips/</guid>
-      <description>The Color of Film Date: April 11th, 2017&#xA;They say a picture is worth a thousand words, so I took that literally and built average color pictures for each episode in the first season of Game of Thrones.</description>
+      <description>The Color of Film Date: April 11th, 2017&#xA;They say a picture is worth a thousand words, so I took that literally and built average color pictures for each episode in the first season of Game of Thrones. Each vertical line represents one second of the show. Here&amp;rsquo;s what I got : https://imgur.com/a/naPeJ.&#xA;Here&amp;rsquo;s some examples using a couple of popular movies: https://imgur.com/a/4g2lJ. Which movies do you think they are?</description>
     </item>
     <item>
       <title>Untitled Story</title>
       <link>http://localhost:1313/posts/visualizing-nba-pace/</link>
       <pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/visualizing-nba-pace/</guid>
-      <description>Visualizing NBA Pace Part 1: Inspiration I saw this post and knew immediately that I needed to do something similar for the NBA.</description>
+      <description>Visualizing NBA Pace Part 1: Inspiration I saw this post and knew immediately that I needed to do something similar for the NBA. However, I had a few things going against me. Unlike Pro Football Reference, Basketball Reference doesn&amp;rsquo;t have one single page containing every single game that&amp;rsquo;s ever been played. Rather, it is split up into season and months. And that&amp;rsquo;s because over 58 thousand NBA/ABA/BAA games have been played since the inception of professional basketball in 1946.</description>
     </item>
     <item>
       <title>Car Temperatures in Phoenix</title>
       <link>http://localhost:1313/posts/car-temps-phx/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/car-temps-phx/</guid>
-      <description>Car Temperatures in Phoenix March 2017&#xA;Using a wireless microcontroller, I monitored the temperature on my car&amp;rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix.</description>
+      <description>Car Temperatures in Phoenix March 2017&#xA;Using a wireless microcontroller, I monitored the temperature on my car&amp;rsquo;s dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I&amp;rsquo;m a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:&#xA;Particle Photon 2 Amphenol MA100BF103A NTC thermistors 3 C batteries (the heat really saps the batteries) The programs I used for recording and processing data were:</description>
     </item>
   </channel>
 </rss>

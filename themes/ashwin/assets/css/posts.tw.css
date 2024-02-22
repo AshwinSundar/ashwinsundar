@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  a[href] {
+    @apply text-purple-800
+  }
+
+  a[href]:visited {
+    @apply text-purple-400
+  }
+
+  h1 { 
+    @apply text-4xl pb-4
+  }
+
+  h2 { 
+    @apply text-3xl pb-2 pt-4
+  }
+
+  h3 { 
+    @apply text-2xl pb-2 pt-4
+  }
+  
+  html {
+    @apply max-w-6xl
+    
+  }
+
+  p {
+    @apply pt-4 text-justify
+  }
+
+  ul {
+    @apply list-disc ml-4
+  }
+
+  ol {
+    @apply list-decimal ml-8
+  }
+
+  .footnotes {
+    @apply 
+      pt-8 pb-8 flex flex-col space-y-4
+      [&>hr]:border-gray-300 
+      [&>hr]:mt-8 
+      [&>hr]:mb-8 
+  }
+
+}

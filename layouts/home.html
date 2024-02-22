@@ -1,22 +1,20 @@
 {{ define "main" }}
-  {{ .Content }}
   <div class="flex">
     <div class="flex flex-col space-y-4">
-      <h2 class="text-2xl">Technical Writing</h2>
-      <div class="flex flex-col space-y-1">
+      <h2>Technical Writing</h2>
+      <div class="flex flex-col space-y-2">
         {{ range site.RegularPages }}
           <div>
-            <h2><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h2>
-            {{/*  {{ .Summary }}  */}}
+            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
           </div>
         {{ end }}
       </div>
     </div>
-    <div>
-      <h2 class="text-2xl">Various Projects</h2>
-      <div class="flex flex-col space-y-1">
+    <div class="flex flex-col space-y-4">
+     <h2>Various Projects</h2>
+     <div class="flex flex-col space-y-2">
       {{ range site.Data.projects }}
-        <div class="flex flex-row space-y-4">
+        <div>
           <a href="{{ .link }}">{{ .name }}</a>
         </div>
       {{ end }}
