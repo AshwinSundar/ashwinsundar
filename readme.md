@@ -21,9 +21,24 @@
 - `cd themes/ashwin`
 - `./tw-dev.sh`
 
-## Production
+## Production Build
 
 - use `./tw-prod.sh` instead
+
+## Docker Build
+
+```sh
+docker build \                                                                
+  -t ashwinsundar \
+  --build-arg HUGO_BASEURL=http://localhost:8080 \
+  .
+```
+
+## Docker Run
+
+```sh
+docker run -p 8080:80 ashwinsundar
+```
 
 ## Code tree
 
