@@ -554,21 +554,6 @@ a[href]:visited {
   color: rgb(192 132 252 / var(--tw-text-opacity));
 }
 
-h1 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .static {
   position: static;
 }
