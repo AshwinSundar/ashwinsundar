@@ -1,0 +1,9 @@
+name: Test Workflow
+on: [push]
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test run
+        run: |
+          echo "This is a test job"
