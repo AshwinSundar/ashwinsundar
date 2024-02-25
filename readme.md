@@ -27,17 +27,19 @@
 
 ## Docker Build
 
+- [documentation](https://hugomods.com/docs/docker/)
+
 ```sh
-docker build \                                                                
-  -t ashwinsundar \
-  --build-arg HUGO_BASEURL=http://localhost:8080 \
-  .
+docker build -t ashwinsundar --build-arg HUGO_BASEURL=http://localhost:8080 .
 ```
 
 ## Docker Run
 
 ```sh
-docker run -p 8080:80 ashwinsundar
+docker run -p 8080:8080 \
+  -v ${PWD}:/src \
+  hugomods/hugo \
+  hugo server --bind 0.0.0.0 -p 8080
 ```
 
 ## Code tree
