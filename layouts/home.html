@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <div class="flex">
+    <div class="flex flex-col space-y-4">
+      <h2>Technical Writing</h2>
+      <div class="flex flex-col space-y-2">
+        {{ range site.RegularPages }}
+          <div>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="flex flex-col space-y-4">
+     <h2>Side Quests</h2>
+     <div class="flex flex-col space-y-2">
+      {{ range site.Data.projects }}
+        <div>
+          <a href="{{ .link }}">{{ .name }}</a>
+        </div>
+      {{ end }}
+      </div>
+    </div>
+  <div>
+{{ end }}

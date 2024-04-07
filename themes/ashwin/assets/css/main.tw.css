@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  a[href] {
+    @apply text-purple-800
+  }
+
+  a[href]:visited {
+    @apply text-purple-400
+  }
+
+}

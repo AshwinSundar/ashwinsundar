@@ -1,0 +1,7 @@
+baseURL = 'https://ashwinsundar.com/'
+languageCode = 'en-us'
+title = 'Ashwin Sundar'
+theme = 'ashwin'
+enableEmoji = 'true'
+enableRobotsTXT = 'true'
+
