@@ -5,8 +5,6 @@ draft = false
 date = 2023-12-01
 +++
 
-# Empty project sizes for popular web frameworks in 2023
-
 
 | Framework | [Popularity](https://survey.stackoverflow.co/2023/#technology-most-popular-technologies) | New project size | # files | 
 | :- | :- | -: | -: | 
@@ -26,7 +24,7 @@ date = 2023-12-01
 
 [Reference](https://create-react-app.dev/docs/getting-started/)
 
-1) Install React (via npm)
+1. Install React (via npm)
 
 ```bash
 > npm install react
@@ -34,13 +32,13 @@ date = 2023-12-01
 18.2.0
 ```
 
-2) Create a project
+2. Create a project
 
 ```bash
 > npx create-react-project empty-react-project
 ```
 
-3) Analyze disk usage
+3. Analyze disk usage
 
 ```bash
 > du -h -d 1 emptyDjangoProject 

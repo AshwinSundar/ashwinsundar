@@ -1,13 +1,9 @@
 +++
-linkTitle = "Think Slowly"
-title = "Think Slowly"
+linkTitle = "Thinking Slowly"
+title = "Thinking Slowly"
 draft = false
 date = 2024-01-01
 +++
-
-# Think Slowly
-
-January 2024
 
 I recently purchased a mechanical, ergonomic, and split keyboard[^more]. I love the idea of yet another tech gadget to keep me engaged.
 

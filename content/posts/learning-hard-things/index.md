@@ -5,9 +5,7 @@ draft = false
 date = 2023-06-01
 +++
 
-# Learning Hard Things
-
-<a href="https://xkcd.com/1838/"><img style = "max-height: 50vh; text-align: center;" alt = "The pile gets soaked with data and starts to get mushy over time, so it's technically recurrent." src = "https://imgs.xkcd.com/comics/machine_learning_2x.png"></a>
+![xkcd](https://imgs.xkcd.com/comics/machine_learning_2x.png)
 
 I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively. 
 
@@ -17,8 +15,8 @@ Computer science originated as an offshoot of mathematics. In my younger days, I
 
 This classed looked nothing like math, nothing like anything I had seen before...
 
-<img title = "A veritable chrysalitic monster" alt = "A veritable chrysalitic monster" src = "/blog/assets/learn-hard-things/dali-sleep.JPG">
-<figcaption style = 'text-align: center;'>A vertical chronically-tired matriculate</figcaption>
+![A veritable chrysalitic monster - A vertical chronically-tired matriculate](dali-sleep.JPG)
+*A vertical chronically-tired matriculate*
 
 I fell asleep a lot in that class. Several times, I experienced some form of [sleep paralysis](https://en.wikipedia.org/wiki/Sleep_paralysis) - unable to move, unable to breathe, my subconscious listened to the lecturer drone on about objects and assignments and operators. 
 
@@ -52,7 +50,7 @@ Using an idea from statistics called [Design of Experiments](https://asq.org/qua
 
 What does this have to do with software testing? A program is effectively a transformation of inputs into outputs. It is easier to think about this for an individual function:
 
-```
+```text
 fun (a int, b int) -> int { 
     ...stuff... 
 }
@@ -78,7 +76,7 @@ Many times, we are forced to choose the former - dive into the details.  This is
 
 ...that many words long. For a markup language! Fortunately, most HTML tutorials don't just say "read the spec", but involve heavy use of mental models and abstractions. Those models and abstractions are usually right. Usually.
 
-<img title = "Pre-mystical-corpuscular" alt = "Pre-mystical-corpuscular" src = "/blog/assets/learn-hard-things/dali-temptation-st-anthony.JPG">
+![Pre-mystical-corpuscular](dali-temptation-st-anthony.JPG)
 
 A good heuristic model is similar to a template for a software project. It represents a solid starting point, is applicable for most projects, and can be easily modified or extended. Developing and utilizing these mental models reduces cognitive load and eases the acquisition of new skills.
 

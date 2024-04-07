@@ -5,8 +5,6 @@ draft = false
 date = 2024-01-01
 +++
 
-# Django Template Language
-
 "Front-end" in web development refers to the visual appearance of an application or website. In Django, a web development framework, the front-end is created in DTL (Django Template Language), which is a superset of HTML (Hypertext Markup Language).
 
 <span class = "definition" data-def = "Django Template Language">DTL</span> represents the "what" of the page - the actual contents. The "how" of the page - how the page appears - is defined by CSS (Cascading Style Sheets).  
@@ -18,7 +16,7 @@ Here's an example of a <span class = "definition" data-def = "Django Template La
 
 ### stats-pane.html
 
-```djangotemplate
+```django
 {% load static %} <link rel = "stylesheet" href = "{% static 'css/stats-pane.css' %}">
 <div class = "stats-pane">
     <div class = "stat-component-A">
@@ -44,7 +42,7 @@ Here is what is happening in this file:
 
 Here are the contents of the `stat-component.html` file:
 
-```djangotemplate
+```django
 {% extends "components/generic-square.html" %}
 {% block content %}
     {% load static %} <link rel = "stylesheet" href = "{% static 'css/components/stat-component.css' %}">

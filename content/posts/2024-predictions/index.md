@@ -5,8 +5,6 @@ draft = false
 date = 2023-12-29
 +++
 
-# 2024 Predictions
-
 - “Halvening” of bitcoin supply around May will result in the price of bitcoin reaching ~$100,000 USD, per the stock-to-flow model. https://www.lookintobitcoin.com/charts/stock-to-flow-model/
 
 - AI will enter another ice age, rather unexpectedly, after it is discovered that {company} helped generate a bunch of fake political ads (including faked audio and video)

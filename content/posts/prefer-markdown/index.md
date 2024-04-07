@@ -5,12 +5,10 @@ draft = false
 date = 2023-10-01
 +++
 
-# Prefer Markdown
-
 I have spent a lot of time writing <span class = "definition" data-def = "Hypertext Markup Language">HTML</span>. I wrote my first <span class = "definition" data-def = "Hypertext Markup Language">HTML</span > when I was around 12 years old. I was obsessed with a website called `neopets.com`, a website geared for kids to take care of virtual pets. There were games to play, coins to earn, and pets to splurge on. Items could be earned and sold in a "shop" to other players (for fake currency only). I wanted to customize my Neopets shop, which was allowed using this thing called <span class = "definition" data-def = "Hypertext Markup Language">"HTML"</span>.  This seemed like a fun way to test out these new typing skills I learned from [Mavis Beacon Teaches Typing](https://en.wikipedia.org/wiki/Mavis_Beacon_Teaches_Typing).
 
-<img src = "/blog/assets/prefer-markdown/neopets-html.png" style="display: block; margin: auto; width: 90%" />
-<figcaption style = 'text-align: center'>Thank you, Neopets, for not changing the style of this page for 20 years.</figcaption>
+![Neopets](./neopets-html.png)
+*Thank you, Neopets, for not changing the style of this page for 20 years.*
 
 In college, I took advantage of self-hosting provided by the school to share my photography. I created some HTML files, uploaded images, and told the server where to find them. Thank you, Wayback Machine, for keeping [this snapshot](https://web.archive.org/web/20131122205041/http://ashiundar.bol.ucla.edu/).
 
@@ -24,8 +22,8 @@ Rather, I feel the weight of old technologies dragging me down. It's really, rea
 
 Markdown has been my favorite markup language[^markup-def] for the last several years. A raw Markdown file is very human-readable. In Markdown, there are few formatting rules that must be followed. Compare this with the tag detritus scattered about a standard <span class = "definition" data-def = "Hypertext Markup Language">HTML</span> file.  
 
-<img src = "/blog/assets/prefer-markdown/html-vs-md.png" style="display: block; margin: auto; width: 100%"/>
-<figcaption style = 'text-align: center'>HTML vs Markdown. Which is easier to read? Yes, that's the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.</figcaption>
+![HTML vs Markdown](html-vs-md.png)
+*HTML vs Markdown. Which is easier to read? Yes, that's the high contrast theme in VSCode. Yes, I use VSCode to write articles. Yes, I have vim-mode enabled.*
 
 Additionally, <span class = "definition" data-def = "Hypertext Markup Language">HTML</span> can be embedded in Markdown. So if one really does need custom styling, raw <span class = "definition" data-def = "Hypertext Markup Language">HTML</span> is still available as a fallback. That image and caption above? This is the raw <span class = "definition" data-def = "Hypertext Markup Language">HTML</span>, embedded in-line with all this Markdown around it:
 

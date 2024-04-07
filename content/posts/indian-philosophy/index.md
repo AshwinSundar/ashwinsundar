@@ -5,8 +5,6 @@ draft = false
 date = 2023-12-01
 +++
 
-# Introduction to Indian Philosophy
-
 ## Preamble
 
 Thinking, writing, and speaking about any ancient culture using modern English is extremely challenging. A great deal is lost in translation. Many religions, including Hinduism, strongly encourage the study of the religion in the original language. As a child, I learned Hindu *slokas* in Sanskrit, with only a tenuous understanding of what the phrases meant.  

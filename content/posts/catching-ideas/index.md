@@ -5,8 +5,6 @@ draft = false
 date = 2024-01-01
 +++
 
-# Stop Trying to Catch Ideas
-
 It's not a good idea to maximize catching ideas.
 
 The brain needs time to refresh itself. This is not meant to be a scientific claim by any means, merely a psychological observation. When an idea arrives, don't race to write it down. Chew on it for a while. Let it stew. Turn it into food for thought.

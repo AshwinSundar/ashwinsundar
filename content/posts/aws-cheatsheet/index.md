@@ -5,8 +5,6 @@ draft = false
 date = 2023-08-01
 +++
 
-# AWS Cheatsheet
-
 ## Compute Services
 
 `ECR` - Elastic Container Registry, stores images (e.g. Docker)  

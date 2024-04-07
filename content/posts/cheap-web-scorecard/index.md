@@ -5,8 +5,6 @@ draft = false
 date = 2023-12-01
 +++
 
-# The Cheap Web Scorecard
-
 I recently came across [The "Cheap" Web](https://potato.cheap/), a self-described "solarpunk philosophy of web design". I highly recommend reading the whole article, for it's both a throwback to what the web used to be, as well as a vision for what the future may hold.
 
 Towards the end of the article, the author proposes the following measures of cheapness. I decided to rate this website according to those measures.
@@ -51,9 +49,9 @@ Reader-view looks pretty good for the blog posts. I think I missed a few `<alt>`
 ```shell
 > lynx https://ashwinsundar.com
 ```
+![ashwinsundar.com in Lynx 2023](lynx.png)
 
-<img title = "ashwinsundar.com in Lynx 2023" alt = "ashwinsundar.com in Lynx 2023" src = "/blog/assets/cheap-scorecard/lynx.png">
-<figcaption style = 'text-align: center;'>ashwinsundar.com in Lynx 2023</figcaption>
+*ashwinsundar.com in Lynx 2023*
 
 That's pretty usable. Someone with the cheapest computer and slowest internet connection can still read my inane thoughts and musings.
 
@@ -65,8 +63,8 @@ That's pretty usable. Someone with the cheapest computer and slowest internet co
 
 I don't own a computing device that runs on 1W of power. The Energy tab in macos's Activity Monitor shows this:
 
-<img title = "florbs of power used by ashwinsundar.com" alt = "florbs of power used by ashwinsundar.com" src = "/blog/assets/cheap-scorecard/energy.png">
-<figcaption style = 'text-align: center;'>Florbs of power used by ashwinsundar.com</figcaption>
+![florbs of power used by ashwinsundar.com](energy.png)
+*Florbs of power used by ashwinsundar.com*
 
 Helpfully, Apple decided that including units in this table was too confusing for the average Mac user. So we are only left to wonder how many units of energy Firefox uses when it is opened to this site.
 
