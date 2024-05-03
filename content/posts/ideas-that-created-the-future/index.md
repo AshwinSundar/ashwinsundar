@@ -5,10 +5,6 @@ draft = false
 date = 2022-07-31
 +++
 
-# Review - Ideas that Created the Future
-
-Date: July 31st, 2022
-
 In late July 2022, I began reading an excellent book called _Ideas that Created the Future - Classic Papers of Computer Science_ by Harry R. Lewis. As I began exploring theoretical computer science in more detail, I immediately sought out "review" papers, which I recalled from grad school often provide a great overview of a particular subfield. These papers can be a bit lengthy, but the content is generally pretty digestible compared to culiminating work of a thesis, for example. A format like _Ideas that Created the Future_ is ideal for someone new to theoretical computer science, such as myself. I've always been a huge fan of history, because I need the context of where an idea fits in time relative to the rest of its field. In _Ideas that Created the Future_, Lewis provides a brief introduction to each article to place it correctly in history and offer context to what challenges the author was facing and trying to solve.
 
 As I read this book, I'm summarizing my thoughts on some of the papers as well. So here is my review of Lewis's review of all of these influential papers. In some cases I pull straight from the article itself and let the quote stand on its own.
@@ -37,12 +33,13 @@ _(The Principle of Contradiction)...it is impossible for any being to possess a 
 
 This is expressed by:
 
-$x^2 = x$
 
-$x^2 - x = 0$
+\[x^2 = x\]
 
-$x(1-x) = 0$
+\[x^2 - x = 0\]
 
-$x$ is the entity (i.e. being), and $(1-x)$ is NOT the entity. The intersection of the entity and not the entity is precisely $0$.
+\[x(1-x) = 0\]
+
+\(x\) is the entity (i.e. being), and \(1-x\) is NOT the entity. The intersection of the entity and not the entity is precisely \(0\).
 
 Still reading this article, and will finish writing it up here later.

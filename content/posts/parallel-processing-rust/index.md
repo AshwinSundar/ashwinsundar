@@ -5,10 +5,6 @@ draft = false
 date = 2022-04-06
 +++
 
-# Parallel Processing in Rust
-
-Date: April 6th, 2022
-
 [Rust](https://www.rust-lang.org/) is a systems programming language that is quickly gaining traction at well-known companies including Amazon, Discord, Dropbox, Meta, Alphabet, and Microsoft. It is built for [performance, reliability, and productivity](https://www.rust-lang.org/) and has been voted the most loved programming language according to Stack Overflow's [Annual Developer Survey](https://insights.stackoverflow.com/survey) since 2016. Some large-scale commercial projects that have been built using Rust include:
 
 - Mozilla's [Servo](https://servo.org/) parallel browser engine
@@ -101,7 +97,7 @@ fn euler1_par(input: i32) -> i64 {
 
 Let's see how long this function takes to run:
 
-```
+```rust
 use easybench::{bench};
 let input = 1000000;
 println!("{}", euler1_par(input));
@@ -112,6 +108,7 @@ println!("{}", euler1_par(input));
 The parallelized function takes about `7.3` milliseconds to execute.
 
 **Conclusion**
+
 The parallelized code runs almost twice as fast as our unparallelized code, and we seem to only lose a little performance due to the overhead of setting up the threads. Nice!
 
 This example demonstrates a way to get started with parallel processing in Rust. You often need to design your program with parallelization in mind from the get-go, as you are forced to think about the flow of your code and determine what pieces of the code take the longest to run and would benefit from parallelization.

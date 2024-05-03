@@ -47,7 +47,7 @@ Reader-view looks pretty good for the blog posts. I think I missed a few `<alt>`
 [Lynx](https://en.wikipedia.org/wiki/Lynx_(web_browser)), a terminal-based web browser that predates Mosaic, is still alive and kicking. Here's what this site looks like:  
 
 ```shell
-> lynx https://ashwinsundar.com
+> lynx www.ashwinsundar.com
 ```
 ![ashwinsundar.com in Lynx 2023](lynx.png)
 
