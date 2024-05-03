@@ -5,3 +5,17 @@ theme = 'ashwin'
 enableEmoji = 'true'
 enableRobotsTXT = 'true'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # renders embedded html
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+[params]
+  math = true
+
+# https://gohugo.io/content-management/mathematics/ - more info on math formatting

@@ -5,9 +5,7 @@ draft = false
 date = 2022-10-11
 +++
 
-# Risk Analysis for Software Projects
 
-Original: October 11th, 2022
 Revised: August 2023
 
 ## Introduction
@@ -16,23 +14,25 @@ In regulated engineering, FMEAs, FTAs, and PRAs are common acronyms for risk man
 
 One of these tools is the FMEA, or **Failure Modes and Effects Analysis**. Before diving into the FMEA though, let's set up a little background information.
 
-<img src = '../assets/rm-101/Seinfeld-RM.png' style = 'display: block; margin: auto; width: 50%;'/>
-<figcaption style = 'text-align: center'>_"The Fatigues"_, Seinfeld (1996)</figcaption>
+!["The Fatigues", Seinfeld (1996)](Seinfeld-RM.png)
+_The Fatigues_, Seinfeld (1996)
 
 ## Background
 
 In the broader discipline of engineering, a failure can be defined as an unintended consequence in a manufactured item. The manifestation of a failure in software development is commonly known as a bug.
 
 Here is a formalized definition of a bug:  
-_Unexpected behavior in a deployed application as a result of code that does not adequately cover all possible field use conditions_
+
+**Unexpected behavior in a deployed application as a result of code that does not adequately cover all possible field use conditions**
 
 In simpler terms:  
-_Code that doesn't behave the way it was designed_
+
+**Code that doesn't behave the way it was designed**
 
 Some bugs are immediately obvious and can be fixed in the moment. Others only manifest themselves in the field or in a production environment. The cost of fixing a bug grows [exponentially](https://deepsource.io/blog/exponential-cost-of-fixing-bugs/) from the time it is created all the way to field deployment. This means the cost to fix a bug in code as soon as one writes the code is very minimal. This is compared to noticing it when the code base is more mature, core engineers have left the project, and eventually the product is deployed to the field and might require a recall. Depending on the software, one might be able to deploy an over-the-air patch, but in critical embedded systems this may not be an option.
 
-<img src = '../assets/rm-101/SiliconValley-bugs.jpg' style = 'display: block; margin: auto; width: 100%;'/>
-<figcaption style = 'text-align: center'>_"Russfest"_, Silicon Valley (2019)</figcaption>
+!["Russfest", Silicon Valley (2019)](SiliconValley-bugs.jpg)
+_Russfest_, Silicon Valley (2019)
 
 ### "Just eliminate risk!"
 
@@ -44,8 +44,8 @@ This is extremely concerning to most managers. These situations may be handled w
 
 - And a personal favorite: _Just eliminate risk!_
 
-<img src = '../assets/rm-101/Office-Nonsense.png' style = 'display: block; margin: auto; width: 100%;'/>
-<figcaption style = 'text-align: center'>_"A.A.R.M.", The Office (2013)_</figcaption>
+!["A.A.R.M.", The Office (2013)](Office-Nonsense.png)
+*"A.A.R.M.", The Office (2013)*
 
 With a bold statement like that, context matters. The gold standard in highly regulated industries is 6 nines - or 99.9999% reliability. This corresponds to approximate [3.4 defects per million opportunities of failure](https://en.wikipedia.org/wiki/Six_Sigma#Sigma_levels).
 
@@ -68,7 +68,8 @@ So what's the motivation? Why go to all this effort to analyze a manufactured pr
 
 When a regulated device fails, the manufacturer has to explain to the regulatory body WHY it failed, and how they will fix it in the future. This is the top-down story. The FDA and FAA are examples of regulated bodies. All they know is that the device failed at the user level, and it's up to the manufacturer to guide them into the details of the device, identify the root cause of the failure, and fix it.
 
-<img src = '../assets/rm-101/Component-System-Failures.png' style = 'display: block; margin: auto; width: 75%;'/>
+![Component System Failures](Component-System-Failures.png)
+*Component System Failures*
 
 If a manufacturer is unable to provide a resolution, the device can be pulled from the market, either voluntarily by the manufacturer or as mandated by a regulatory body. A recent high-profile instance of this was the Boeing 737 MAX, which experienced a software failure in a program called MCAS (Maneuvering Characteristics Augmentation System) and ultimately caused 2 [fatal accidents](https://en.wikipedia.org/wiki/Maneuvering_Characteristics_Augmentation_System).
 
@@ -78,7 +79,8 @@ If a manufacturer is unable to provide a resolution, the device can be pulled fr
 
 Airplanes and medical devices are very complicated systems, so let's use an example everyone is familiar with - a bicycle. Let's pretend that we want to get into the road bike space. Our task as engineers is to build a bicycle that is fast and safe. After all, if we want to sell our bike, we need to both convince customers that it's fast enough to win races, and safe enough to meet the minimum requirements imposed by the FBA (Federal Bicycle Administration), an imaginary entity that allows manufacturers to sell bicycles in the United States.
 
-<img src = '../assets/rm-101/Bicycle-Components.png' style = 'display: block; margin: auto; width: 100%;'/>
+![Bicycle Components](Bicycle-Components.png)
+*Bicycle Components*
 
 ### Components and Functions
 
@@ -185,7 +187,8 @@ The next step is to determine causality. Why are these failures occurring? In th
 
 These 3 span a wide variety of potential root causes, and it’s common to separate out an FMEA into design FMEAs, process FMEAs, and use case FMEAs in order to organize the risk analysis better. For our example, we’ll only focus on design deficiencies.
 
-<img src = '../assets/rm-101/FMEAs.png' style = 'display: block; margin: auto; width: 100%;'/>
+![FMEAs](FMEAs.png)
+*FMEAs*
 
 Let's identify some causes of failure. A reason the drivetrain might fail to convert rotational motion into horizontal motion is because the _pedals detach_. Brake failure might occur because the _brake cable snaps_, or the _brake disc overheats_. Finally, the frame may fail because the _seat tube or head tube detaches_.
 
@@ -304,11 +307,13 @@ Now that we have created a rudimentary FMEA, what's next?
 
 By introducing some math, we can start to visualize our risk burndown in much more interesting ways.
 
-<img src = '../assets/rm-101/sankey-unweighted.svg' style = 'display: block; margin: auto; width: 100%;'/>
+![Sankey Unweighted](sankey-unweighted.svg)
+*Unweighted Sankey diagram*
 
 For example, here is a [Sankey diagram](https://en.wikipedia.org/wiki/Sankey_diagram) I created. This type of chart is called a flow diagram, where the width of each connection represents a vaguely-defined "riskiness" measure that I've just made up. You could think of this as some sort of product of `probability of failure` x `severity of failure`, broken down by component. In this naive example, I'm assuming that every component contributes equally to this made-up "riskiness" measure.
 
-<img src = '../assets/rm-101/sankey-weighted.svg' style = 'display: block; margin: auto; width: 100%;'/>
+![Sankey Weighted](sankey-weighted.svg)
+*Weighted Sankey diagram*
 
 But by creating a mathematical framework for our components to interact with, we can start to come up with a more interesting diagram. This diagram can now tell us which particular components and sub-components contribute the most to our overall risk profile. With this information, we can decide where our efforts are best directed in order to reduce the overall risk profile of the project.
 

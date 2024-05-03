@@ -2,10 +2,8 @@
 title = 'Diagrams as Code'
 date = 2024-02-29T17:24:50-07:00
 
-draft = true
+draft = false
 +++
-
-Note: https://steemit.com/mermaid/@misterbiggs/how-to-post-mermaid-diagrams-on-a-ghost-blog
 
 A major pain point in the process of maintaining documentation is that, while a product is in development, documentation tends to go stale quickly. This can occur for a number of reasons:
 
@@ -118,7 +116,7 @@ end
 
 A minimalist, clean, and informative diagram (such as the one above) is created with the following mermaid.js code:
 
-```shell
+```text
 sequenceDiagram
 
 participant API as API
@@ -170,7 +168,7 @@ end
 
 In a traditional WYSIWYG editor, this task could take some time and incur significant frustration, because many distinct GUI elements must be manually moved or re-drawn. Not the case in a text-first diagramming tool:
 
-```git
+```text
 sequenceDiagram
  
  participant API as API

@@ -4,6 +4,18 @@
   {{ block "css" . }}
     {{ partial "main_head.html" . }}
   {{ end }}
+
+  {{ if.Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
+  {{ if .Store.Get "hasMermaid" }}
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  {{ end }}
+
 </head>
 
 <body class="p-6 md:p-12 bg-paper">

@@ -5,8 +5,6 @@ draft = false
 date = 2023-02-01
 +++
 
-# AI helping a programmer
-
 I am attempting to solve a homework problem that asks me to write a helper function to use in a later problem. I have gotten 95% of the way there with this function, written in Standard ML:
 
 ```sml
@@ -30,11 +28,11 @@ I changed the initial accumulator value to `0`, but this changed the function si
 
 After about two hours of reading notes, class forums, and an intense internet search, I finally resorted to asking ChatGPT-3. In the past, it has struggled to provide correct advice about Standard ML. So I warily asked it for help: 
 
-<img src="/blog/assets/ai-help-programmer/screenshot1.png" width="100%" style="max-width: 1280px;"/>
+![Screenshot of ChatGPT answering the question "What is the function signature for the (above) SML function?"](screenshot1.png)
 
 Right away, the answer is wrong. ChatGPT-3 seems to think the signature for the passed-in function is a tuple of any-type `'a` and `string` returning a `bool`, when this clearly was not the case. I next asked a follow-up question:
 
-<img src="/blog/assets/ai-help-programmer/screenshot2.png" width="100%" style="max-width: 1280px;"/>
+![Follow up to above question](screenshot2.png)
 
 This answer is close! The homework does not permit using this `size` function, but it does permit `String.size`. The function signature is now correct after making these modifications:
 

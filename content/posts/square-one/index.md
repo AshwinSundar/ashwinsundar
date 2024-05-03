@@ -5,10 +5,6 @@ draft = false
 date = 2022-08-01
 +++
 
-# Back to Square One
-
-Date: August 1st, 2022
-
 The original version of this website was written using GatsbyJS, a headless CMS engine that's all the rage right now in the world of web development. After a few weeks, I learned that it was tremendously overkill for a personal website with maybe a few dozen pages (including all my blog posts). Most importantly though, GatsbyJS is bloated with dependencies that take forever for me troubleshoot when all I want to do is add support for MathML.
 
 The zipped, compressed, ready-to-deploy GatsbyJS package is 18.6 MEGABYTES. For a couple dozen pages. It's nuts. I'm a little scared of looking at how big the uncompressed source code is..._waiting for Mac Finder to calculate size_...1.03 GIGABYTES for 62 THOUSAND items??? Are you kidding me??? How many NPM modules do I need to run this tiny site???

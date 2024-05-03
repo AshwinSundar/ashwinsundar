@@ -5,17 +5,15 @@ draft = false
 date = 2022-06-14
 +++
 
-# Benchmarking Rust code using Criterion.rs
-
 ## Introduction
 
 Benchmarking is a method of systematically assessing a program for performance. This process is a valuable component of regression testing because it helps you compare changes and improvements to your code. The systems programming language Rust offers many statistically rigorous analysis techniques, such as the [_Criterion_](https://docs.rs/criterion/latest/criterion/) crate, which is a popular tool used for benchmarking in Rust. In this article, we'll go into more detail on how to use _Criterion_ to compare various Rust functions to solve a problem from [Project Euler](https://projecteuler.net/).
 
-## About Criterion
+### About Criterion
 
 _Criterion_ is a benchmarking crate that specializes in statistically rigorous analysis techniques, as well as generating useful and attractive charts using `gnuplot`. The [primary goals](https://github.com/bheisler/criterion.rs#goals) of _Criterion_ are to measure the performance of code, prevent performance regressions, and accurately measure optimizations.
 
-# Example
+## Example
 
 To understand how to use _Criterion_ for benchmarking, let's re-use an example from a previous article where we learned how to implement [parallel processing in Rust](https://engineering.deptagency.com/parallel-processing-in-rust). In that article we explored how to parallelize a commutative loop. This time, let's compare the parallelized function to a function that solves the problem with an arithmetic series. The problem:
 
@@ -27,7 +25,7 @@ The code used in this article can be found at https://github.com/AshwinSundar/Cr
 
 **Terminal**
 
-```
+```text
 ❯ cargo init
      Created binary (application) package
 ```
@@ -36,7 +34,7 @@ The code used in this article can be found at https://github.com/AshwinSundar/Cr
 
 **$PROJECT/Cargo.toml**
 
-```json
+```text
 [dev-dependencies]
 criterion = {version = "0.3", features = ["html_reports"]}
 
@@ -90,7 +88,7 @@ Finally, due to [implementation constraints](https://bheisler.github.io/criterio
 
 Now that we've written some boilerplate code for the benchmark, let's return to the actual problem and compare a few possible solutions.
 
-# Solutions
+## Solutions
 
 If you're interested in the details of each solution, read this section. Otherwise, you can skip to the [Creating Benchmarks](#creating-benchmarks) section. Just know that the three solutions are, in order of least to most efficient, a simple for-loop, a parallelized for-loop, and an arithmetic series.
 
@@ -205,23 +203,23 @@ Since the calculations in each subset of the range are independent of each other
 
 ## Solution 3: Arithmetic Series
 
-The sum of the multiples of 3 or 5 is a composite arithmetic series. An [_arithmetic series_](https://mathworld.wolfram.com/ArithmeticSeries.html) is the sum of a sequence of numbers where each subsequent term can be calculated by adding a constant $d$ to the last term. For example, for the sequence $2,5,8,...a_n$, $a_1=2$, $d=3$, and can be represented as:
+The sum of the multiples of 3 or 5 is a composite arithmetic series. An [_arithmetic series_](https://mathworld.wolfram.com/ArithmeticSeries.html) is the sum of a sequence of numbers where each subsequent term can be calculated by adding a constant \(d\) to the last term. For example, for the sequence \(2,5,8,...a_n\), for \(a_1=2\), \(d=3\), and can be represented as:
 
-$a_1, a_2 = a_1 + d, a_3 = a_1 + 2d,...a_{n-1} = a_1 + (n-2)d, a_n = a_1 + (n - 1)d$
+\[a_1, a_2 = a_1 + d, a_3 = a_1 + 2d,...a_{n-1} = a_1 + (n-2)d, a_n = a_1 + (n - 1)d\]
 
 Naturally, it follows that the sum of this sequence is:
 
-$S_n = a_1 + (a_1 + d) + (a_1 + 2d) + ... + (a_1 + (n-2)d) + (a_1 + (n - 1)d)$
+\[S_n = a_1 + (a_1 + d) + (a_1 + 2d) + ... + (a_1 + (n-2)d) + (a_1 + (n - 1)d)\]
 
-Cleverly, the series formula is derived by rewriting this sum in another way, with respect to the last value in the sequence $a_n$:
+Cleverly, the series formula is derived by rewriting this sum in another way, with respect to the last value in the sequence \(a_n\):
 
-$S_n = (a_n - (n-1)d) + (a_n - (n-2)d) + ... + (a_n - 2d) + (a_n - d) + a_n$
+\[S_n = (a_n - (n-1)d) + (a_n - (n-2)d) + ... + (a_n - 2d) + (a_n - d) + a_n\]
 
-Adding these two formulas together causes all terms involving $d$ to cancel out, and we're left with $2S_n = n(a_1 + a_n)$, which simplifies to $S_n = \frac{n}{2}(a_1 + a_n)$.
+Adding these two formulas together causes all terms involving \(d\) to cancel out, and we're left with \(2S_n = n(a_1 + a_n)\), which simplifies to \(S_n = \frac{n}{2}(a_1 + a_n)\).
 
-In the special case where each number in the sequence is a multiple of the first (e.g. 3, 6, 9, 12), then $a_n = n * a_1$, and the formula can be written as $S_n = \frac{n}{2}(a_1 + n * a_1)$, which simplifies to:
+In the special case where each number in the sequence is a multiple of the first (e.g. 3, 6, 9, 12), then \(a_n = n * a_1\), and the formula can be written as \(S_n = \frac{n}{2}(a_1 + n * a_1)\), which simplifies to:
 
-$S_n = \frac{n * a_1}{2}(1 + n)$
+\[S_n = \frac{n * a_1}{2}(1 + n)\]
 
 This is the formula we'll implement in the code below.
 
@@ -245,7 +243,7 @@ pub fn euler1_series(input: i64) -> i64 {
 
 Recall that the original problem asks to calculate the sum of the multiples _below_ `input`, which is why we first declare `let val = input - 1;`. This was implicitly handled in the `for` loops in the previous two solutions, because the upper bound of the range iterator is [exclusive](https://doc.rust-lang.org/std/ops/struct.Range.html#fields). Next, we find the number of terms `n` by using the fact that the integer type in Rust implements division in such a way that the result is floored, so that the answers remains an integer. Finally, we implement the series formula for multiples of 3 and multiples of 5, add the results, and subtract the sum of the multiples of 15, because it is the least common multiple of 3 and 5.
 
-# Creating Benchmarks
+## Creating Benchmarks
 
 Replace the code in `benches/euler1_benchmark.rs` with:
 
@@ -270,7 +268,8 @@ In the above code, `.bench_function` defines a benchmark with a _name_ and a _cl
 
 To run the benchmark, type `cargo bench` in the terminal. After several seconds, you should see an output like this:
 
-```
+```bash
+> cargo bench
 Benchmarking simple: Warming up for 3.0000 s
 simple                  time:   [1.1540 ms 1.1564 ms 1.1589 ms]
 Found 2 outliers among 100 measurements (2.00%)
@@ -291,7 +290,7 @@ The `time` array represents a 95% confidence interval, where the mean execution 
 
 A more consumable version of this information is automatically generated and is available in `$PROJECT/target/criterion/{benchmark-name}/report/index.html`.
 
-# Under the Hood
+## Under the Hood
 
 Before we compare the charts for each function, let's briefly explore what _Criterion_ is doing behind the scenes. The first step of the process is warm-up, which involves running the function repeatedly for a short period of time in order to allow the CPU and OS caches to adapt to the new load.
 
@@ -308,16 +307,13 @@ More details about the analysis process can be found at https://bheisler.github.
 Let's look at the reports for each function.
 
 _euler1_simple_
-
-<img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot3.png" style="width:100%; max-width: 1080px;" />
+![Euler 1 Simple - Probability Density Function, Linear Regression, R^2, and Standard Deviation](Criterion_Screenshot3.png)
 
 _euler1_par_
-
-<img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot4.png" style="width:100%; max-width: 1080px;" />
+![Euler 1 Parallelized - Probability Density Function, Linear Regression, R^2, and Standard Deviation](Criterion_Screenshot4.png)
 
 _euler1_series_
-
-<img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot5.png" style="width:100%; max-width: 1080px;" />
+![Euler 1 Arithmetic Series - Probability Density Function, Linear Regression, R^2, and Standard Deviation](Criterion_Screenshot5.png)
 
 The top left plot in each report is a [probability density function](https://en.wikipedia.org/wiki/Probability_density_function), which depicts the average time per iteration of the function. The blue bar represents the overall mean. The shaded region represents the probability that execution of this function will take a particular amount of time, while integrating the area between two times will provide the probability that the function will execute within that range of time. The top right plot is the linear regression for the function. Each iteration is plotted in order and the y-axis represents cumulative time to execute all iterations up to that point. The slope of this line is given under **Additional Statistics**.
 
@@ -325,7 +321,7 @@ _R_<sup>_2_</sup> and _standard deviation_ are also useful statistics to look at
 
 For _euler1_par_, this is in fact the case. I think the reason that this function in particular has a lot of variability is because it is implementing a parallelization routine, which relies on the processor to queue up tasks. How each `handle` is queued may vary based on the instantaneous load when each iteration is executed.
 
-The _standard deviation_ tells you (for a roughly normally distributed curve) that 95% of the samples landed between $µ ± 2σ$ (mean time ± 2 standard deviations).
+The _standard deviation_ tells you (for a roughly normally distributed curve) that 95% of the samples landed between \(µ ± 2σ\) (mean time ± 2 standard deviations).
 
 ## Advanced Features
 
@@ -333,7 +329,7 @@ _Criterion_ has a lot of advanced features for the statistically inclined, two o
 
 ### criterion::Criterion::benchmark_group
 
-It's apparent that the parallelized function($µ=227.90$ us) is nearly 1 order of magnitude faster than the simple($µ=1.1564$ ms) function, while the series function($µ=2.4645$ ns) is nearly 3 orders of magnitude faster. We can generate a combined report that summarizes the performance of all three functions by associating them with each other using `benchmark_group`.
+It's apparent that the parallelized function(\(µ=227.90 us\)) is nearly 1 order of magnitude faster than the simple(\(µ=1.1564 ms\)) function, while the series function(\(µ=2.4645 ns\)) is nearly 3 orders of magnitude faster. We can generate a combined report that summarizes the performance of all three functions by associating them with each other using `benchmark_group`.
 
 ```rust
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
@@ -354,7 +350,7 @@ criterion_main!(benches);
 
 In the above code, we follow nearly the same process as individual benchmarking, except we first create and name a `BenchmarkGroup` using `c.benchmark_group(name)`, which is merely an entity used to group related benchmarks for analysis and reporting. The compiled output is available at `$PROJECT/target/criterion/Euler 1/report/index.html`, while individual reports for each function are available at `$PROJECT/target/criterion/Euler1/{benchmark-name}/report/index.html`.
 
-<img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot6.png" style="width:100%; max-width: 1080px;" />
+![Benchmark Group](Criterion_Screenshot6.png)
 
 ### criterion::Criterion::bench_with_input
 
@@ -389,13 +385,13 @@ criterion_main!(benches);
 
 Note that we added `BenchmarkId` to the `use` declaration for _Criterion_. Next, we create an array of input values to assess, as well as a new `BenchmarkGroup`. We then iterate across the array of inputs, and call `bench_with_input` with a unique `BenchmarkId` and a closure that passes input `i` to the function being tested.
 
-<img src="/blog/assets/criterion-benchmarking/Criterion_Screenshot2.png" style="width:100%; max-width: 1080px;" />
+![benchmark Index](Criterion_Screenshot2.png)
 
 A summary of all of our reports so far is available at `$PROJECT/criterion/report/index.html`. The tabular format for the _Multiple inputs_ tests is a great way to compare multiple functions across a range of inputs, as well as slice the data by two explanatory variables - the function and the input. This level of detail allows us to explore relationships between multiple explanatory variables using a concept called [Response Surface Methodology](https://en.wikipedia.org/wiki/Response_surface_methodology). Unfortunately, Criterion is currently lacking in the abilty to generate 3-dimensional graphs needed to explore this concept in more detail.
 
-Benchmarking across a wide range of inputs helps you find use cases that suffer from sub-optimal performance. For example, I found that `euler1_simple` and `euler1_par` take a significant amount of time to process the maximum value available in `i64`, ~$9.22 * 10^{18}$, indicating that these functions should be modified to accept an integer type with a smaller number space as an input parameter.
+Benchmarking across a wide range of inputs helps you find use cases that suffer from sub-optimal performance. For example, I found that `euler1_simple` and `euler1_par` take a significant amount of time to process the maximum value available in `i64`, ~\(9.22 * 10^{18}\), indicating that these functions should be modified to accept an integer type with a smaller number space as an input parameter.
 
-# Final Thoughts
+## Final Thoughts
 
 If you write code for a living, chances are that someone else will have to reference, re-use, or adapt your code for another purpose in the future. Therefore, it's important to be a good custodian of the code you write by considering performance and ensuring it can function as expected through the range of its intended use conditions and beyond. Benchmarking is a key tool for understanding how your code functions under the hood and making improvements in a scientific manner.
 

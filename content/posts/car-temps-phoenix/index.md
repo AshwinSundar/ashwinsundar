@@ -5,10 +5,6 @@ draft = false
 date = 2017-03-01
 +++
 
-# Car Temperatures in Phoenix
-
-March 2017
-
 Using a wireless microcontroller, I monitored the temperature on my car's dashboard and in the passenger footwell for a whole day during a particular hot spell in June in Phoenix. Even though I'm a Phoenix native, I was surprised by just how hot the inside of my car gets. The hardware components used were:
 
 - [Particle Photon](https://docs.particle.io/photon/)
@@ -21,23 +17,21 @@ The programs I used for recording and processing data were:
 - MATLAB
 - Excel
 
-<img src="/blog/assets/car-temps-phx/full-image.jpeg" width="100%" style="max-width: 1280px;"/>
-
-<img src="/blog/assets/car-temps-phx/sunrise.jpeg" width="50%;" style="max-width: 640px;"/>
+![Full chart from sunrise to sunset](full-image.jpeg)
 
 The sun rose at 5:18AM, when the outside temperature was 80.6F.
 
-<img src="/blog/assets/car-temps-phx/midday.jpeg" width="37%;" style="max-width: 480px;"/>
+![Sunrise](sunrise.jpeg)
 
 My car was parked in full shade of the neighbor's house to the east until 9:14AM. At that time, the dashboard temperature rapidly spikes, climbing at a rate of about 1F per minute. At 12:47PM, the dashboard reaches its peak of 212F - the boiling point of water! Meanwhile, the ambient (footwell) temperature is a tolerable 126.1F, and the outside temperature is 107.6F [joke about dry heat].
 
-<img src="/blog/assets/car-temps-phx/evening.jpeg" width="37%;" style="max-width: 480px;"/>
+![Midday](midday.jpeg)
 
 Around 1:45PM, the car moves into some tree shade, and the dashboard quickly cools off again. Meanwhile, the ambient temperature in the car continues to climb, peaking at 2:43PM at 134.8F. The outside temperature is 111.2F. From here, temperatures cool somewhat for the rest of the day.
 
-The C++ code used to control the Particle Photon is as follows:
+![Evening](evening.jpeg)
 
----
+The C++ code used to control the Particle Photon is as follows:
 
 ```C++
 #include <math.h>

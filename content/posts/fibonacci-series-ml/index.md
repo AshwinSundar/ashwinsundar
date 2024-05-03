@@ -5,14 +5,12 @@ draft = false
 date = 2022-12-26
 +++
 
-# Creating a Fibonacci Function in Standard ML
-
-Date: December 26th, 2022
-
 ## Challenge  
+
 Write a recursive function in SML that accepts one `i: int` argument and returns a list of Fibonacci numbers of length `i`.
 
 ## Approach  
+
 Let's approach this problem in 3 stages. First, we'll write a function that generates Fibonacci numbers, without worrying about recursion or number of arguments. From there, we will progressively improve the function until it meets the requirements of the challenge. 
 
 ## Attempt 1
@@ -30,6 +28,7 @@ This function accepts four arguments - the current number, the next number, a li
 This function is a bit unwieldy to use for a few reasons. First, a list containing the first Fibonacci number `1` must be passed in, which is not very intuitive. Second, the list that is returned is in reverse order.
 
 ## Attempt 2
+
 Next, let's change the function so that it only needs to accept one argument. We will accomplish this by recognizing that the only argument that needs to be passed in by the caller is `i`, and the remaining arguments can be handled by a local function using pattern matching.
 
 ```sml
@@ -47,6 +46,7 @@ fun fibonacci_2 (i: int) =
 The result of `fibonacci_2(8)` is once again `[21, 13, 8, 5, 3, 2, 1, 1]`. This function is much easier to use than `fibonacci_1`, since it only requires one argument - the number of values to generate. 
 
 ## Attempt 3
+
 Finally, let's return the list in the correct order by reversing it with another local function that uses pattern matching.
 
 ```sml

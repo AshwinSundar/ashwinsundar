@@ -5,10 +5,6 @@ draft = false
 date = 2017-04-11
 +++
 
-# The Color of Film
-
-Date: April 11th, 2017
-
 They say a picture is worth a thousand words, so I took that literally and built average color pictures for each episode in the first season of Game of Thrones. Each vertical line represents one second of the show. Here's what I got : <https://imgur.com/a/naPeJ>.
 
 Here's some examples using a couple of popular movies: <https://imgur.com/a/4g2lJ>. Which movies do you think they are?
@@ -25,6 +21,7 @@ If you want to extract just a limited number of frames, you can use the above co
 
 1.  Download and install ffmpeg, a command line tool - <http://ffmpeg.org/download.html>
 2.  Extract images from the video
+
     a. Navigate to C:\Users\Ashwin\Documents\ffmpeg-20160610-git-0a9e781-win64-static (or wherever you unzipped ffmpeg to)
     b. Open `ff-prompt`
     c. Within FF Prompt, navigate to the video directory using `cd {directory name}`

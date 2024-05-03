@@ -5,8 +5,6 @@ draft = false
 date = 2022-10-01
 +++
 
-# Programming Languages
-
 I recently began a Coursera course called "Programming Languages", offered by Dan Grossman at the University of Washington. I decided to take this course because the description advertises it as a way to understand the underpinning of all programming languages more thoroughly. When I first learned to program on my own, I always assumed that once I had more experience and learned more languages, I would began to understand the commonalities and differences between programming languages, and that would be sufficient. However, I am realizing that while I do have more experience now, I still lack the big picture view that I desire. Learning Rust made me realize that there is a LOT more to the theory of programming languages than I ever imagined.
 
 I always saw a language as a means to an end - it was merely a tool for creating a program that does something. But a programming language, much like human language, has its own intrinsic meaning, independent of any semantics that are assigned when used in the confines of a particular application.
@@ -23,18 +21,18 @@ The reason for this was more subtle than I could appreciate at the time - I mere
 
 As I continue through this course, I will update this article.
 
-December 2022
+## December 2022
 
 I have completed half of course 1 and feel like I have a better understanding of the course motivation.
 
 Lecture notes: 
-There is no such thing as the **best** programming language, just like there is no such thing as the **best** car. Programming languages, like anything else, are designed to optimize some aspects at the expense of others. To extend the analogy, mechanics might focus on certain types of cars, just like programmers might prefer some cars over others. A good mechanic might have a specialty he prefers, but he generally understands how "cars" (not certain makes/models) work. He won't refuse to work on a car because the upholstery is blue (kind of similar to how to programmers bicker about syntax, an unessential detail). A good mechanical engineer knows how cars work, how to get the most out of them, and how to design better ones. Similar analogy to a programming language reseasrcher. 
+There is no such thing as the **best** programming language, just like there is no such thing as the **best** car. Programming languages, like anything else, are designed to optimize some aspects at the expense of others. To extend the analogy, mechanics might focus on certain types of cars, just like programmers might prefer some cars over others. A good mechanic might have a specialty he prefers, but he generally understands how "cars" (not certain makes/models) work. He won't refuse to work on a car because the upholstery is blue (kind of similar to how programmers bicker about syntax, an unessential detail). A good mechanical engineer knows how cars work, how to get the most out of them, and how to design better ones. Similar analogy to a programming language reseasrcher. 
 
 Older cars (languages) sometimes are better because they are simpler and easier to understand. Popularity in and of itself is not evidence of being the "best".  Software development is precise, you don't get to just guess at how semantics work. You'll sound stupid if you say "I feel that conditional expressions might work like this". 
 
 Idioms make you a better programmer - you can infer how any language works if you understand basic constructs deeply. Booleans, conditional expressions are deep eternal truths about logic. It could be called "first principles" in another world - they hold true regardless of the environment. Understanding programming languages at this level won't get you a better job right away, but they lay a great foundation and enable you to better understand the field as a whole. 
 
-April 2023
+## April 2023
 
 After some delay I've completed Part A. Beyond the course syllabus, here is what I've learned so far:  
 
