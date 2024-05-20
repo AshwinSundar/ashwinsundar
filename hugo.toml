@@ -1,4 +1,4 @@
-baseURL = 'https://ashwinsundar.com/'
+baseURL = 'www.ashwinsundar.com/'
 languageCode = 'en-us'
 title = 'Ashwin Sundar'
 theme = 'ashwin'
@@ -8,7 +8,7 @@ enableRobotsTXT = 'true'
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true # renders embedded html
+      unsafe = true 
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
@@ -17,5 +17,3 @@ enableRobotsTXT = 'true'
           inline = [['\(', '\)']]
 [params]
   math = true
-
-# https://gohugo.io/content-management/mathematics/ - more info on math formatting
