@@ -59,13 +59,14 @@ Thus, the following tests were developed:
 ## Results
 
 > The best-laid schemes o' mice an' men
-  Gang aft agley
-
-*To A Mouse*, Robert Burns (1785)
+>
+> Gang aft agley
+>
+> -- Robert Burns, *To a Mouse* (1785)
 
 Unbeknownst to the developer, the cloud provider does not permit a database to be "down-provisioned" - the storage capacity can only be increased, not decreased. As a result, the tests could not be executed in the order planned. 
 
-After several tests with minimal impact on latency, the developer made a key observation: the database server and application server did not reside in the same location. The database resided in the `NYC3` datacenter, while the app server resided in the `SFO3` datacenter. These locations are separated by nearly 3000 miles. Any time the app server needed to make a database query, a request was sent west-to-east across the country, and the response traveled east-to-west.
+After several tests with minimal impact on latency, the developer made a key observation: the database server and application server did not reside in the same location. The database resided in the `NYC3` datacenter, while the app server resided in the `SFO3` datacenter. These locations are separated by nearly 3000 miles. Any time the app server needed to make a database query, a request was sent in one direction across the country, and the response traveled all the way back across the country in the other direction.
 
 The developer decided to pivot, and investigate a different parameter of the database - the location of the server. Thus, the following tests were run:
 
@@ -82,13 +83,13 @@ The developer decided to pivot, and investigate a different parameter of the dat
 
 Each test was run 10 times each, on multiple pages in the Django application. Each page that was loaded required a user to be authenticated in to the system. For baseline 1, only data on the homepage could be collected (due to a mistake by the developer). The following is the summarized results:
 
-#### Baseline 1
+### Baseline 1
 
-CPU: Shared Regular
-Disk type: SSD
-Storage: 10 GB
-RAM: 1 GB RAM
-Datacenters: database @ NYC3, web server @ Colorado
+- CPU: Shared Regular
+- Disk type: SSD
+- Storage: 10 GB
+- RAM: 1 GB RAM
+- Datacenters: database @ NYC3, web server @ Colorado
 
 | Page | Load time +/- 2σ (milliseconds) |
 | - | - |
@@ -98,13 +99,13 @@ Datacenters: database @ NYC3, web server @ Colorado
 | View 3 | - |
 | View 4 | - |
 
-#### Baseline 2
+### Baseline 2
 
-CPU: Shared AMD
-Disk type: NVMe
-Storage: 45 GB
-RAM: 1 GB RAM
-Datacenters: database @ NYC3, web server @ SFO3
+- CPU: Shared AMD
+- Disk type: NVMe
+- Storage: 45 GB
+- RAM: 1 GB RAM
+- Datacenters: database @ NYC3, web server @ SFO3
 
 | Page | Load time |
 | - | - |
@@ -114,13 +115,13 @@ Datacenters: database @ NYC3, web server @ SFO3
 | View 3 | 2165 +/- 75 ms |
 | View 4 | 2059 +/- 72 ms |
 
-#### Test 1
+### Test 1
 
-CPU: Shared Regular
-Disk type: SSD
-Storage: 40 GB
-RAM: 2 GB RAM
-Datacenters: database @ NYC3, web server @ Colorado
+- CPU: Shared Regular
+- Disk type: SSD
+- Storage: 40 GB
+- RAM: 2 GB RAM
+- Datacenters: database @ NYC3, web server @ Colorado
 
 | Page | Load time |
 | - | - |
@@ -130,13 +131,13 @@ Datacenters: database @ NYC3, web server @ Colorado
 | View 3 | 1704 +/- 93 ms |
 | View 4 | 1656 +/- 76 ms |
 
-#### Test 2
+### Test 2
 
-CPU: Shared AMD
-Disk type: NVMe
-Storage: 45 GB
-RAM: 1 GB RAM
-Datacenters: database @ NYC3, web server @ Colorado
+- CPU: Shared AMD
+- Disk type: NVMe
+- Storage: 45 GB
+- RAM: 1 GB RAM
+- Datacenters: database @ NYC3, web server @ Colorado
 
 | Page | Load time |
 | - | - |
@@ -146,13 +147,13 @@ Datacenters: database @ NYC3, web server @ Colorado
 | View 3 | 1692 +/- 30 ms |
 | View 4 | 1657 +/- 69 ms |
 
-#### Test 3
+### Test 3
 
-CPU: Shared AMD
-Disk type: NVMe
-Storage: 45 GB
-RAM: 1 GB RAM
-Datacenters: database @ SFO3, web server @ Colorado
+- CPU: Shared AMD
+- Disk type: NVMe
+- Storage: 45 GB
+- RAM: 1 GB RAM
+- Datacenters: database @ SFO3, web server @ Colorado
 
 | Page | Load time |
 | - | - |
@@ -162,13 +163,13 @@ Datacenters: database @ SFO3, web server @ Colorado
 | View 3 | 1192 +/- 50 ms |
 | View 4 | 1141 +/- 33 ms |
 
-#### Test 4
+### Test 4
 
-CPU: Shared AMD
-Disk type: NVMe
-Storage: 45 GB
-RAM: 1 GB RAM
-Datacenters: database @ SFO3, web server @ SFO3
+- CPU: Shared AMD
+- Disk type: NVMe
+- Storage: 45 GB
+- RAM: 1 GB RAM
+- Datacenters: database @ SFO3, web server @ SFO3
 
 | Page | Load time |
 | - | - |
