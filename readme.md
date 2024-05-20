@@ -60,6 +60,7 @@ docker run -p 1313:80 ashwinsundar
 ### Server
 
 - `docker image pull ashwinsundar/ashwinsundar`
+- `docker container stop <id>`
 - `docker container run -p 1313:80 ashwinsundar/ashwinsundar`
 
 ## Server Setup
