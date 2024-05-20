@@ -1,4 +1,4 @@
-baseURL = 'www.ashwinsundar.com/'
+baseURL = ''
 languageCode = 'en-us'
 title = 'Ashwin Sundar'
 theme = 'ashwin'

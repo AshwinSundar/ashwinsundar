@@ -19,7 +19,18 @@ WORKDIR /src
 # Copy code
 COPY ./ /src
 
+# Install tailwindcss
+RUN curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.3/tailwindcss-linux-x64
+RUN chmod +x tailwindcss-linux-x64
+RUN mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
+
+# Generate public assets
+RUN chmod +X themes/ashwin/tw-prod.sh
+WORKDIR themes/ashwin
+RUN sh tw-prod.sh
+
 # Build the Hugo site
+WORKDIR /src
 RUN hugo --environment production
 
 # Create a new stage with the Nginx Alpine image
