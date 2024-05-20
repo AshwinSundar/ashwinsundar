@@ -77,6 +77,10 @@
     @apply bg-transparent text-white px-0 py-0 rounded-none
   }
 
+  blockquote {
+    @apply pl-8 italic text-red-500
+  }
+
   .footnotes {
     @apply 
       pt-8 pb-8 flex flex-col space-y-4
