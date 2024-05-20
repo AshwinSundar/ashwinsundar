@@ -50,6 +50,17 @@ docker build -t ashwinsundar .
 ```sh
 docker run -p 1313:80 ashwinsundar
 ```
+## Deployment
+
+### Local
+
+- `docker image build -t ashwinsundar/ashwinsundar .`
+- `docker image push ashwinsundar/ashwinsundar`
+
+### Server
+
+- `docker image pull ashwinsundar/ashwinsundar`
+- `docker container run -p 1313:80 ashwinsundar/ashwinsundar`
 
 ## Server Setup
 
