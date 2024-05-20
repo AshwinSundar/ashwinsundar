@@ -29,6 +29,22 @@
     
   }
 
+  table {
+    @apply my-8 border-black border-4 shadow-lg hover:shadow-slate-950 hover:mx-2 hover:my-10
+  }
+
+  th {
+    @apply p-2 border-black border-2 text-gray-500 text-left bg-slate-100
+  }
+
+  tr > td {
+    @apply p-2 border-2 border-black
+  }
+
+  tr:nth-child(even) {
+    @apply bg-white
+  }
+
   p {
     @apply pt-4 text-justify
   }
@@ -45,12 +61,20 @@
     @apply bg-gray-200 text-gray-800 px-2 py-1 rounded-md;
   }
 
-  pre {
+  pre:not(.mermaid) {
     @apply bg-gray-800 text-white p-4 rounded-md overflow-auto;
   }
 
+  pre.mermaid {
+    @apply my-8 px-4 py-8 bg-white rounded-lg drop-shadow-lg hover:drop-shadow-2xl
+  }
+
+  pre:has(code) {
+    @apply my-8
+  }
+
   pre code {
-    @apply bg-transparent text-white px-0 py-0 rounded-none;
+    @apply bg-transparent text-white px-0 py-0 rounded-none
   }
 
   .footnotes {
