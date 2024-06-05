@@ -141,7 +141,7 @@ Replace {server_name} with {domain}?
 │   └── posts # markdown posts for blog. create new post with `hugo new content posts/{title}.md`
 ├── data # data objects, accessible from templates with
 │   └── projects.json # independent projects that I've worked on, accessible from templates with `site.Data.projects
-├── hugo.toml # hugo config
+├── config.toml # hugo config
 ├── layouts
 │   |── 404.html # 404 page layout
 │   └── home.html # homepage layout
