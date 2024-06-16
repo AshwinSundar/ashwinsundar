@@ -1,5 +1,6 @@
 +++
 linkTitle = "Risk Analysis for Software Projects"
+shortTitle = "Risk Analysis Software"
 title = "Risk Analysis for Software Projects"
 draft = false
 genres = ["technical"]

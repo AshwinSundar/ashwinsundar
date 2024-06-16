@@ -1,5 +1,6 @@
 +++
 linkTitle = "Django Template Language"
+shortTitle = "Django Template Language"
 title = "Django Template Language"
 draft = false
 genres = ["technical"]

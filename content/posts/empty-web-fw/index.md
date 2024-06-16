@@ -1,5 +1,6 @@
 +++
 linkTitle = "Empty Web Frameworks"
+shortTitle = "Empty Web Frameworks"
 title = "Empty Web Frameworks"
 draft = false
 genres = ["technical"]

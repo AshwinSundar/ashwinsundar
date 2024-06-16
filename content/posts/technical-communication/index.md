@@ -1,5 +1,6 @@
 +++
 linkTitle = "Technical Communication"
+shortTitle = "Technical Communication"
 title = "Technical Communication"
 draft = false
 genres = ["technical"]

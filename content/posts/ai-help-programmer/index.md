@@ -1,5 +1,6 @@
 +++
 linkTitle = "AI helping a programmer"
+shortTitle = "AI help"
 title = "AI helping a programmer"
 draft = false
 genres = ["technical"]

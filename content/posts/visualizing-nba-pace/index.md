@@ -1,5 +1,6 @@
 +++
 linkTitle = "Visualizing NBA Pace"
+shortTitle = "NBA Pace"
 title = "Visualizing NBA Pace"
 draft = false
 date = 2017-04-09

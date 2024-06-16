@@ -1,5 +1,6 @@
 +++
 linkTitle = "Untitled Story"
+shortTitle = "Untitled Story"
 title = "Untitled Story"
 draft = false
 genres = ["short-story"]

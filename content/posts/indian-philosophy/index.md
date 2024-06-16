@@ -1,5 +1,6 @@
 +++
 linkTitle = "Indian Philosophy"
+shortTitle = "Indian Philosophy"
 title = "Indian Philosophy"
 draft = false
 genres = ["other"]

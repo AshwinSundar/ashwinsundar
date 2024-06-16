@@ -1,5 +1,6 @@
 +++
 linkTitle = "Benchmarking Rust with Criterion.rs"
+shortTitle = "Criterion Benchmarking"
 title = "Benchmarking Rust code with Criterion.rs"
 draft = false
 genres = ["technical"]

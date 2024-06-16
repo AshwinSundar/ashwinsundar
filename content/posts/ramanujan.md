@@ -1,6 +1,7 @@
 +++
-linkTitle = "Ramanujan"
 title = "Ramanujan"
+linkTitle = "Ramanujan"
+shortTitle = "Ramanujan"
 draft = true
 genres = ["other"]
 date = 2024-01-01

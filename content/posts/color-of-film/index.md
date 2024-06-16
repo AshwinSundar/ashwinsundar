@@ -1,5 +1,6 @@
 +++
 linkTitle = "The Color of Film"
+shortTitle = "Color of Film"
 title = "The Color of Film"
 draft = false
 genres = ["technical"]

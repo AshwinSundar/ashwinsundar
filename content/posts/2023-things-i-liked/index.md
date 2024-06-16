@@ -1,5 +1,6 @@
 +++
 linkTitle = "Software I liked in 2023"
+shortTitle = "Software 2023"
 title = "Software I liked in 2023"
 draft = false
 genres = ["technical"]

@@ -1,5 +1,6 @@
 +++
 linkTitle = "Cheap Web Scorecard"
+shortTitle = "Cheap Web Scorecard"
 title = "Cheap Web Scorecard"
 draft = false
 genres = ["technical"]

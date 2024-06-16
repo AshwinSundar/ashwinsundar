@@ -1,5 +1,6 @@
 +++
 linkTitle = "Prefer Markdown"
+shortTitle = "Prefer Markdown"
 title = "Prefer Markdown"
 draft = false
 genres = ["technical"]

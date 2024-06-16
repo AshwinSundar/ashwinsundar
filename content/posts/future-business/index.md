@@ -1,5 +1,6 @@
 +++
 linkTitle = "Future Business"
+shortTitle = "Future Business"
 title = "Future Business"
 draft = false
 genres = ["other"]

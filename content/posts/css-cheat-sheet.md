@@ -1,5 +1,6 @@
 +++
 linkTitle = "Incomplete CSS Cheatsheet"
+shortTitle = "Incomplete CSS Cheatsheet"
 title = "Incomplete CSS Cheatsheet"
 draft = false
 genres = ["technical"]

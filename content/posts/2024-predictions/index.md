@@ -1,5 +1,6 @@
 +++
 linkTitle = "Predictions for 2024"
+shortTitle = "Predictions 2024"
 title = "Predictions for 2024"
 draft = false
 genres = ["other"]

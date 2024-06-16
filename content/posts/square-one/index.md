@@ -1,5 +1,6 @@
 +++
 linkTitle = "Square One"
+shortTitle = "Square One"
 title = "Back to Square One"
 draft = false
 genres = ["other"]

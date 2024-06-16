@@ -1,5 +1,6 @@
 +++
 linkTitle = "Programming Languages"
+shortTitle = "Programming Languages"
 title = "Programming Languages"
 draft = false
 genres = ["technical"]

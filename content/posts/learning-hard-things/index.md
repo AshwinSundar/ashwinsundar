@@ -1,5 +1,6 @@
 +++
 linkTitle = "Learning Hard Things"
+shortTitle = "Learning Hard Things"
 title = "Learning Hard Things"
 draft = false
 genres = ["other"]

@@ -1,6 +1,7 @@
 +++
-linkTitle = "Quitting LinkedIn"
 title = "Quitting LinkedIn"
+linkTitle = "Quitting LinkedIn"
+shortTitle = "Quitting LinkedIn"
 draft = true
 genres = ["other"]
 date = 2023-12-01

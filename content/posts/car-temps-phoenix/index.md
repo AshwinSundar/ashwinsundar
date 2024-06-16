@@ -1,5 +1,6 @@
 +++
 linkTitle = "Car Temperatures in Phoenix"
+shortTitle = "Car Temps Phoenix"
 title = "Car Temperatures in Phoenix"
 draft = false
 genres = ["technical"]

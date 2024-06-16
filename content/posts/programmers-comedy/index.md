@@ -1,5 +1,6 @@
 +++
 linkTitle = "Programmer's Comedy"
+shortTitle = "Programmer's Comedy"
 title = "Programmer's Comedy"
 draft = false
 genres = ["other"]

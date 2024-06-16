@@ -1,7 +1,7 @@
 +++
 linkTitle = "Programming is Engineering"
 title = "Programming is Engineering"
-draft = false
+draft = true
 genres = ["other"]
 date = 2023-04-01
 +++

@@ -1,5 +1,6 @@
 +++
 linkTitle = "Ideas that Created the Future"
+shortTitle = "Ideas Created Future"
 title = "Ideas that Created the Future"
 draft = false
 genres = ["technical"]

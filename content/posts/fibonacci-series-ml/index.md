@@ -1,5 +1,6 @@
 +++
 linkTitle = "Fibonacci Standard ML"
+shortTitle = "Fibonacci Ml"
 title = "Fibonacci Series in Standard ML"
 draft = false
 genres = ["technical"]

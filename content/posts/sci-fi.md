@@ -1,5 +1,7 @@
 +++
 title = 'Sci Fi'
+linkTitle = 'Sci Fi'
+shortTitle = 'Sci Fi'
 date = 2024-06-10T17:27:36-06:00
 genres = ["short-story"]
 draft = true

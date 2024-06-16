@@ -1,5 +1,6 @@
 +++
 linkTitle = "auto vs type inference"
+shortTitle = "Type Inference"
 title = "auto vs type inference"
 draft = true
 genres = ["technical"]

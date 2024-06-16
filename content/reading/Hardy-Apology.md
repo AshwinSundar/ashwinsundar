@@ -1,5 +1,7 @@
 +++
 title = "G.H. Hardy (1940) - A Mathematician's Apology"
+linkTitle = "G.H. Hardy (1940) - A Mathematician's Apology"
+shortTitle = "G.H. Hardy (1940) - A Mathematician's Apology"
 date = 2024-06-15T22:29:12-06:00
 genres = ["reading", "2024"]
 draft = false

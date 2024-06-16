@@ -1,5 +1,6 @@
 +++
 linkTitle = "AWS Cheatsheet"
+shortTitle = "AWS Cheatsheet"
 title = "AWS Cheatsheet"
 draft = false
 genres = ["technical"]

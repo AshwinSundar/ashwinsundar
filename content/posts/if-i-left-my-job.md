@@ -1,5 +1,7 @@
 +++
 title = 'The q-word'
+linkTitle = 'The q-word'
+shortTitle = 'Q-word'
 date = 2024-06-09T21:19:26-06:00
 genres = ["other"]
 draft = true
