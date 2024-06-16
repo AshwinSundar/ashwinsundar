@@ -2,6 +2,7 @@
 linkTitle = "AI helping a programmer"
 title = "AI helping a programmer"
 draft = false
+genres = ["technical"]
 date = 2023-02-01
 +++
 

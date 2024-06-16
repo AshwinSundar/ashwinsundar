@@ -2,6 +2,7 @@
 linkTitle = "Risk Analysis for Software Projects"
 title = "Risk Analysis for Software Projects"
 draft = false
+genres = ["technical"]
 date = 2022-10-11
 +++
 

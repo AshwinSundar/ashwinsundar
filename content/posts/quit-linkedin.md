@@ -2,6 +2,7 @@
 linkTitle = "Quitting LinkedIn"
 title = "Quitting LinkedIn"
 draft = true
+genres = ["other"]
 date = 2023-12-01
 +++
 

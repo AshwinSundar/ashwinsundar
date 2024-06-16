@@ -1,15 +1,16 @@
 +++
-linkTitle = "CSS Cheatsheet"
-title = "CSS Cheatsheet"
-draft = true
+linkTitle = "Incomplete CSS Cheatsheet"
+title = "Incomplete CSS Cheatsheet"
+draft = false
+genres = ["technical"]
 date = 2024-01-01
 +++
 
-# <span class = 'definition' data-def = 'Cascading Style Sheets'>CSS</span> Cheat Sheet
-
 ## Introduction
 
-I first learned <span class = 'definition' data-def = 'Cascading Style Sheets'>CSS</span> at least ten years ago. Since then, I have acquired knowledge and skills piecemeal. I recently decided to sit down and learn the best practices of the specification in 2023 from [this site](https://web.dev/learn/css/). Here are my summarized notes.
+Some running notes about CSS. 
+
+I first used <span class = 'definition' data-def = 'Cascading Style Sheets'>CSS</span> at least ten years ago. Since then, I have acquired knowledge and skills piecemeal. I recently decided to sit down and learn the best practices of the specification in 2023 from [this site](https://web.dev/learn/css/). Here are my summarized notes.
 
 ## Table of Contents
 
@@ -52,15 +53,15 @@ __________|    |________________________|   |______________________|
 - `value` - the configuration
 
 ```css
-                    .my-css-rule {
-                        __________________
-      Declaration -->  | background: red; |
-                        ------------------
-                         ________   ________
-          Property -->  | color: | | beige; | <-- Value
-                         --------   --------
-                        font-size: 1.2rem;
-                    }
+                .my-css-rule {
+                    __________________
+  Declaration -->  | background: red; |
+                    ------------------
+                     ________   ________
+      Property -->  | color: | | beige; | <-- Value
+                     --------   --------
+                    font-size: 1.2rem;
+                }
 
 ```
 
@@ -71,9 +72,9 @@ __________|    |________________________|   |______________________|
 - matches all HTML elements and applies the styles
 
 ```css
-    * {
-        color: green;
-    }
+* {
+    color: green;
+}
 ```
 
 #### Type selector
@@ -81,13 +82,13 @@ __________|    |________________________|   |______________________|
 - matches an HTML element directly and applies the styles
 
 ```html
-    <section>...</section>
+<section>...</section>
 ```
 
 ```css
-    section {
-        padding: 2em;
-    }
+section {
+    padding: 2em;
+}
 ```
 
 #### Class selector
@@ -95,13 +96,13 @@ __________|    |________________________|   |______________________|
 - matches any element containing `my-class` and applies the styles
 
 ```html
-    <div class = "my-class">...</div>
+<div class = "my-class">...</div>
 ```
 
 ```css
-    .my-class {
-        color: red;
-    }
+.my-class {
+    color: red;
+}
 ```
 
 #### Id selector
@@ -113,9 +114,9 @@ __________|    |________________________|   |______________________|
 ```
 
 ```css
-    #my-id {
-        border: 1px solid blue;
-    }
+#my-id {
+    border: 1px solid blue;
+}
 ```
 
 #### Attribute selector
@@ -123,18 +124,18 @@ __________|    |________________________|   |______________________|
 - matches any element with `{attr} = {value}` and applies the styles
 
 ```html
-    <div data-type = "primary">...</div>
+<div data-type = "primary">...</div>
 ```
 
 ```css
-    [data-type = 'primary'] {
-        color: red;
-    }
+[data-type = 'primary'] {
+    color: red;
+}
 
-    /* matches any element with the data-type attribute, regardless of value */
-    [data-type] { 
-        background-color: yellow; 
-    }
+/* matches any element with the data-type attribute, regardless of value */
+[data-type] { 
+    background-color: yellow; 
+}
 ```
 
 #### group selector
@@ -142,17 +143,17 @@ __________|    |________________________|   |______________________|
 - matches multiple elements at once
 
 ```html
-    <div class = "first">This is important</div>
-    <div class = "second">So is this</div>
-    <div class = "third">And this</div>
+<div class = "first">This is important</div>
+<div class = "second">So is this</div>
+<div class = "third">And this</div>
 ```
 
 ```css
-    .first,
-    .second,
-    .third {
-        font-size: 2em
-    }
+.first,
+.second,
+.third {
+    font-size: 2em
+}
 ```
 
 ### Complex Selectors
@@ -167,11 +168,11 @@ __________|    |________________________|   |______________________|
 - may be applied recursively
 
 ```html
-    <div>
-        <p>This is styled by a descendant selector
-            <p>So is this</p>
-        </p>
-    </div>
+<div>
+    <p>This is styled by a descendant selector
+        <p>So is this</p>
+    </p>
+</div>
 ```
 
 ```css
@@ -190,12 +191,12 @@ div p {
 - combinator is `>`
 
 ```html
-    <div>
-        <span>This span is styled</span>
-        <section>
-            <span>This one is not, because it's not a direct child of a div</span>
-        </section>
-    </div>
+<div>
+    <span>This span is styled</span>
+    <section>
+        <span>This one is not, because it's not a direct child of a div</span>
+    </section>
+</div>
 ```
 
 ```css
@@ -320,4 +321,3 @@ Specificity is awarded on a points system. CSS rules with more points are used o
 | Inline style attribute | 1000 | `<div style = "color: red;"></div>` |
 | !important rule | 10000 | <code>.my-class {<br>&nbsp;color:red !important;<br>}</code> |
 
-NEXT -> example

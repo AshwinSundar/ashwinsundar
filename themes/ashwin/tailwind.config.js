@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         paper: "#fff1e5", // background color
-      }
+      },
     },
   },
   plugins: [],

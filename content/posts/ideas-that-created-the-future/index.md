@@ -2,6 +2,7 @@
 linkTitle = "Ideas that Created the Future"
 title = "Ideas that Created the Future"
 draft = false
+genres = ["technical"]
 date = 2022-07-31
 +++
 

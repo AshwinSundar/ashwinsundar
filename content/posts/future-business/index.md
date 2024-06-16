@@ -2,6 +2,7 @@
 linkTitle = "Future Business"
 title = "Future Business"
 draft = false
+genres = ["other"]
 date = 2023-06-01
 +++
 

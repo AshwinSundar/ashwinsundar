@@ -1,7 +1,7 @@
 +++
 title = 'Web App Performance Investigation'
 date = 2024-05-18T21:35:30-06:00
-
+genres = ["technical"]
 draft = false
 +++
 

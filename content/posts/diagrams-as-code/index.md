@@ -1,7 +1,7 @@
 +++
 title = 'Diagrams as Code'
 date = 2024-02-29T17:24:50-07:00
-
+genres = ["technical"]
 draft = false
 +++
 

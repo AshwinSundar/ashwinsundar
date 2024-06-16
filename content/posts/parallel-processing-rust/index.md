@@ -2,6 +2,7 @@
 linkTitle = "Parallel Processing in Rust"
 title = "Parallel Processing in Rust"
 draft = false
+genres = ["technical"]
 date = 2022-04-06
 +++
 

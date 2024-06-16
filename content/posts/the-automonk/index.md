@@ -2,6 +2,7 @@
 linkTitle = "The Automonk"
 title = "The Automonk"
 draft = false
+genres = ["short-story"]
 date = 2023-01-01
 +++
 

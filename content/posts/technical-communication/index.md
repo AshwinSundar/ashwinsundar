@@ -2,6 +2,7 @@
 linkTitle = "Technical Communication"
 title = "Technical Communication"
 draft = false
+genres = ["technical"]
 date = 2022-08-01
 +++
 

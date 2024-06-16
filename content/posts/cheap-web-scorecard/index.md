@@ -2,6 +2,7 @@
 linkTitle = "Cheap Web Scorecard"
 title = "Cheap Web Scorecard"
 draft = false
+genres = ["technical"]
 date = 2023-12-01
 +++
 

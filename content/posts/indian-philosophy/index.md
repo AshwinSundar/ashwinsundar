@@ -2,6 +2,7 @@
 linkTitle = "Indian Philosophy"
 title = "Indian Philosophy"
 draft = false
+genres = ["other"]
 date = 2023-12-01
 +++
 

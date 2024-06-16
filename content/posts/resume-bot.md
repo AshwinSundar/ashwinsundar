@@ -2,6 +2,7 @@
 linkTitle = "Resume Bot"
 title = "Resume Bot"
 draft = true
+genres = ["other"]
 date = 2022-12-01
 +++
 

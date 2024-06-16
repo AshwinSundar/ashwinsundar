@@ -1,7 +1,7 @@
 +++
 title = 'IDE Setup'
 date = 2024-02-19T20:48:46-07:00
-
+genres = ["technical"]
 draft = true
 +++
 

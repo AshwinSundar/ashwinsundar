@@ -2,6 +2,7 @@
 linkTitle = "Programming Languages"
 title = "Programming Languages"
 draft = false
+genres = ["technical"]
 date = 2022-10-01
 +++
 

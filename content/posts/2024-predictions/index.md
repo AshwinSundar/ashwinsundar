@@ -2,6 +2,7 @@
 linkTitle = "Predictions for 2024"
 title = "Predictions for 2024"
 draft = false
+genres = ["other"]
 date = 2023-12-29
 +++
 

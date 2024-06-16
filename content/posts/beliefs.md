@@ -1,7 +1,7 @@
 +++
 title = 'Beliefs'
 date = 2024-06-05T19:53:20-06:00
-
+genres = ["other"]
 draft = true
 +++
 

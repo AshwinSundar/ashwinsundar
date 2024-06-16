@@ -2,6 +2,7 @@
 linkTitle = "Learning Hard Things"
 title = "Learning Hard Things"
 draft = false
+genres = ["other"]
 date = 2023-06-01
 +++
 

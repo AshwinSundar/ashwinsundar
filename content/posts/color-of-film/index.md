@@ -2,6 +2,7 @@
 linkTitle = "The Color of Film"
 title = "The Color of Film"
 draft = false
+genres = ["technical"]
 date = 2017-04-11
 +++
 
