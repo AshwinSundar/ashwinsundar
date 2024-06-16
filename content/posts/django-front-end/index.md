@@ -2,6 +2,7 @@
 linkTitle = "Django Template Language"
 title = "Django Template Language"
 draft = false
+genres = ["technical"]
 date = 2024-01-01
 +++
 

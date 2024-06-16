@@ -1,7 +1,7 @@
 +++
 title = 'Design After Implementation'
 date = 2024-04-20T16:33:30-06:00
-
+genres = ["technical"]
 draft = true
 +++
 

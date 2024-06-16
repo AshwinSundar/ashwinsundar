@@ -2,6 +2,7 @@
 linkTitle = "Software I liked in 2023"
 title = "Software I liked in 2023"
 draft = false
+genres = ["technical"]
 date = 2023-12-20
 +++
 

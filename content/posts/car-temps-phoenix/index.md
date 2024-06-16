@@ -2,6 +2,7 @@
 linkTitle = "Car Temperatures in Phoenix"
 title = "Car Temperatures in Phoenix"
 draft = false
+genres = ["technical"]
 date = 2017-03-01
 +++
 

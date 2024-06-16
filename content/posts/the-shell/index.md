@@ -2,6 +2,7 @@
 linkTitle = "Untitled Story"
 title = "Untitled Story"
 draft = false
+genres = ["short-story"]
 date = 2022-11-22
 +++
 

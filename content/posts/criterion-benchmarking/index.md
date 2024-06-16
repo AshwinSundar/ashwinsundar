@@ -2,6 +2,7 @@
 linkTitle = "Benchmarking Rust with Criterion.rs"
 title = "Benchmarking Rust code with Criterion.rs"
 draft = false
+genres = ["technical"]
 date = 2022-06-14
 +++
 

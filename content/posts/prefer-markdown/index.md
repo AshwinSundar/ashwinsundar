@@ -2,6 +2,7 @@
 linkTitle = "Prefer Markdown"
 title = "Prefer Markdown"
 draft = false
+genres = ["technical"]
 date = 2023-10-01
 +++
 

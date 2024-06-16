@@ -9,7 +9,11 @@
 
 ## Create new blog post
 
-`hugo new content/posts/<post_name>.md`
+`hugo new content posts/<post_name>.md`
+
+## Add reading
+
+`hugo new content posts/<reading_name>.md'
 
 ## Development Mode
 

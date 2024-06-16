@@ -3,6 +3,7 @@ linkTitle = "Visualizing NBA Pace"
 title = "Visualizing NBA Pace"
 draft = false
 date = 2017-04-09
+genres = ["technical"]
 +++
 
 ## Part 1: Inspiration

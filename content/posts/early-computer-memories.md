@@ -1,7 +1,7 @@
 +++
 title = 'Early Computer Memories'
 date = 2024-02-25T18:08:58-07:00
-
+genres = ["technical"]
 draft = true
 +++
 

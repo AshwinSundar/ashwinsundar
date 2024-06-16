@@ -2,6 +2,7 @@
 linkTitle = "Square One"
 title = "Back to Square One"
 draft = false
+genres = ["other"]
 date = 2022-08-01
 +++
 

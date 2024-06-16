@@ -2,6 +2,7 @@
 linkTitle = "Catching Ideas"
 title = "Catching Ideas"
 draft = false
+genres = ["other"]
 date = 2024-01-01
 +++
 

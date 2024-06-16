@@ -1,16 +1,28 @@
 {{ define "main" }}
-  <div class="flex">
-    <div class="flex flex-col space-y-4">
-      <h2>Writing</h2>
+{{ $technical_articles := where .Site.RegularPages "Params.genres" "intersect" (slice "technical") }}
+{{ $short_stories := where .Site.RegularPages "Params.genres" "intersect" (slice "short-story") }}
+{{ $reading2024 := where (where .Site.RegularPages "Params.genres" "intersect" (slice "reading")) "Params.genres" "intersect" (slice "2024") }}
+{{ $other := where .Site.RegularPages "Params.genres" "intersect" (slice "other") }}
+  <div class="flex flex-col md:flex-row justify-between w-full">
+    <div class="flex flex-col space-y-4 w-full md:w-1/2">
+      <h2>Technical Writing</h2>
       <div class="flex flex-col space-y-2">
-        {{ range site.RegularPages }}
+        {{ range $technical_articles }}
+          <div>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </div>
+        {{ end }}
+      </div>
+      <h2>Short Stories</h2>
+      <div class="flex flex-col space-y-2">
+        {{ range $short_stories }}
           <div>
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
           </div>
         {{ end }}
       </div>
     </div>
-    <div class="flex flex-col space-y-4">
+    <div class="flex flex-col space-y-4 w-full md:w-1/2">
      <h2>Side Quests</h2>
      <div class="flex flex-col space-y-2">
       {{ range site.Data.projects }}
@@ -19,6 +31,22 @@
         </div>
       {{ end }}
       </div>
+      <h2>Other</h2>
+      <div class="flex flex-col space-y-2">
+        {{ range $other }}
+          <div>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          </div>
+        {{ end }}
+      </div>
+      <h2>Reading in 2024</h2>
+      <div class="flex flex-col space-y-2">
+      {{ range $reading2024 }}
+        <div>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </div>
+      {{ end }}
+      </div>
     </div>
-  <div>
+  </div>
 {{ end }}

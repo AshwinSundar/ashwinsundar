@@ -2,6 +2,7 @@
 linkTitle = "auto vs type inference"
 title = "auto vs type inference"
 draft = true
+genres = ["technical"]
 date = 2023-02-01
 +++
 

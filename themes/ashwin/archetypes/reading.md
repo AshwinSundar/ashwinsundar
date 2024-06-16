@@ -1,6 +1,6 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = {{ .Date }}
-genres = []
-draft = true
+genres = ["reading", "2024"]
+draft = false
 +++

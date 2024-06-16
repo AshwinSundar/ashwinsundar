@@ -2,6 +2,7 @@
 linkTitle = "AWS Cheatsheet"
 title = "AWS Cheatsheet"
 draft = false
+genres = ["technical"]
 date = 2023-08-01
 +++
 

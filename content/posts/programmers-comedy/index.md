@@ -1,11 +1,10 @@
 +++
 linkTitle = "Programmer's Comedy"
 title = "Programmer's Comedy"
-draft = true
+draft = false
+genres = ["other"]
 date = 2024-01-01
 +++
-
-# Programmer's Comedy[^disclaimer]
 
 I'm not a one-trick pony;  
 I can do more things.  
@@ -27,7 +26,7 @@ The Humanities reply,
 As you avoid eye-to-eye.  
 
 "Humanities require more Vespene Gas!"  
-"Not enough minerals!", you cry back.  
+"Not enough minerals!", you cry back,  
 "We need more Rust developers!  
 Can you spare us one or 3?"  
 
@@ -36,11 +35,11 @@ Can you spare us one or 3?"
 "...what?" they timidly ask?  
 "Child, pray, and heed."
 
-<img src = "/blog/assets/programmers-comedy/rust-crab1.png" style="display: block; margin: auto; width: 90%" />
+![Rust Crab 1](./rust-crab1.png)
 <br>
-<img src = "/blog/assets/programmers-comedy/babies.png" style="display: block; margin: auto; width: 90%" />
+![Babies](./babies.png)
 <br>
-<img src = "/blog/assets/programmers-comedy/rust-crab2.png" style="display: block; margin: auto; width: 90%" />
+![Rust Crab 2](./rust-crab2.png)
 
 Read this brief primer.  
 It's only five hun-dred pages long.  
@@ -52,13 +51,9 @@ Sometimes your adwords just hypnotize me.
 I can write this flashy jinx,  
 Guess-that's-why-(software)-engineers all get the big links.  
 
----
-
 "You're kidding, right?"  
 The Humanities cry.  
 "Keep the change, ya filthy animal.  
 Just give us the receipt."  
-
-[^disclaimer]: [Comedy](https://www.merriam-webster.com/dictionary/comedy)
 
 [^meter]: In poetry, there is something called meter, but I don't know what it is.

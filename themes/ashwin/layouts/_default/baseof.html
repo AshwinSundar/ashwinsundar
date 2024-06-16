@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html title="AS" lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
   {{ block "css" . }}
     {{ partial "main_head.html" . }}
@@ -8,7 +8,6 @@
   {{ if.Param "math" }}
     {{ partialCached "math.html" . }}
   {{ end }}
-
 
   {{/*  Should be set in render-codeblock-mermaid.html  */}}
   {{/*  Commented out bc doesn't seem to work in deployed application  */}}
@@ -28,8 +27,12 @@
   <main>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer class="pt-8">
+
+  <!-- ugly footer -->
+  <!-- 
+  <footer class="pt-72">
     {{ partial "footer.html" . }}
   </footer>
+  -->
 </body>
 </html>

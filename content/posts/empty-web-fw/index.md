@@ -2,6 +2,7 @@
 linkTitle = "Empty Web Frameworks"
 title = "Empty Web Frameworks"
 draft = false
+genres = ["technical"]
 date = 2023-12-01
 +++
 

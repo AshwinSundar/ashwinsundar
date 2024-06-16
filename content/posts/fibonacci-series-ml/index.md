@@ -2,6 +2,7 @@
 linkTitle = "Fibonacci Standard ML"
 title = "Fibonacci Series in Standard ML"
 draft = false
+genres = ["technical"]
 date = 2022-12-26
 +++
 
