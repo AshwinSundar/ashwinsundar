@@ -1,5 +1,11 @@
-# Abstractions and Interfaces  
-**September 2023**
+#+++
+linkTitle = "Abstractions and Interfaces"
+shortTitle = "Abstractions and Interfaces"
+title = "Abstractions and Interfaces"
+draft = true
+genres = ["technical"]
+date = 2023-09-01
++++
 
 ### Hypothesis
 
