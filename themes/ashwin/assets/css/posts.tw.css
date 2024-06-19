@@ -82,7 +82,7 @@
   }
 
   hr {
-    @apply border-blue-300 my-8 border-2 animate-pulse rounded-full active:border-blue-800
+    @apply border-blue-300 my-8 border-2 animate-pulse rounded-full active:border-blue-800 z-20
   }
 
   .footnotes {

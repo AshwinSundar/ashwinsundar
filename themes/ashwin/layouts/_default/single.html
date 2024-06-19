@@ -6,7 +6,7 @@
   <h1>{{ .Title }}</h1>
   {{ with .Params.music }}
   <div>
-    <div class="sm:fixed sm:w-auto inline-block top-4 right-4 bg-black text-white p-4 rounded transition-opacity duration-500">
+    <div class="sm:fixed sm:w-auto inline-block top-4 right-4 bg-black text-white p-4 rounded z-10">
       <audio id="audio" controls>
         <source src="{{ . }}" type="audio/mpeg">
         Your browser does not support the audio element.
