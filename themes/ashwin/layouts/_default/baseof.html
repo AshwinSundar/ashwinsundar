@@ -5,6 +5,9 @@
     {{ partial "main_head.html" . }}
   {{ end }}
 
+  {{ block "js" . }}
+  {{ end }}
+
   {{ if.Param "math" }}
     {{ partialCached "math.html" . }}
   {{ end }}

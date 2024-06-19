@@ -5,13 +5,35 @@ title = "The Automonk"
 draft = false
 genres = ["short-story"]
 date = 2023-01-01
+music = "TenPercentChange.mp3"
 +++
+
+<div class="flex p-4">
+  <div class="inline-flex flex-col space-y-2">
+  {{< music-control "resume-at" 0 >}}
+    Start at 0:00
+  {{</ music-control >}}
+
+  {{< music-control "pause" >}}
+  Pause music
+  {{</ music-control >}}
+
+  {{< music-control "resume" >}}
+  Resume music
+  {{</ music-control >}}
+  </div>
+</div>
 
 The *Automonk* patiently paced the hall, chanting:
 
 अमर प्रकाश, अंतर्ज्योति
 
+
+
+
 in a muted manner that failed to reverbate in the austere marble hall. The phrase, *Amar Prakash, Antar Jyoti - Eternal Light, Inner Flame*, was derived from analyzing thousands of religious texts and millions of hours of ceremonies through a bespoke neural network designed for the *Automonk*.  Eyes closed, the hooded figure of brass and steel gave the main hall of the monastery a cold, ascetic background noise. A couple of small groups of devotees sat equidistantly apart, some reverently conversing, others with eyes closed and prayer beads in hand. The whine of the air conditioning was faintly audible, otherwise, no other noise permeated the hall. 
+
+<a href="#" class="timestamp" data-start="60">Resume at 1:00</a>
 
 The *Fall of Math* marked a significant waypoint in the decline of humanity. The scientific surety of previous generations was no longer guaranteed. Driven mad with uncertainty, most researchers decided that computing models driven by artificial intelligence were the only ways to make progress in a non-deterministic universe. This strategy was wildly successful. Knowledge advanced rapidly. With the help of artificial intelligence, decades of research crystallized at a previously unimaginable pace. But then, humanity's cumulative knowledge reached an asymptote. Returns on research efforts vastly diminished. Scientists became convinced that no more grand unifying theories - hallmarks of previous centuries of scientific discovery - were left to uncover. No one is certain why this happened. The most popular theory is that artificial intelligence can only create new knowledge and discoveries based on existing theories. Once existing solution spaces were exhausted, new discovery became impossible.
 
