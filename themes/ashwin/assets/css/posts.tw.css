@@ -81,12 +81,16 @@
     @apply pl-8 italic text-red-500
   }
 
+  hr {
+    @apply border-blue-300 my-8 border-2 animate-pulse rounded-full active:border-blue-800
+  }
+
   .footnotes {
     @apply 
-      pt-8 pb-8 flex flex-col space-y-4
+      my-8
       [&>hr]:border-gray-300 
-      [&>hr]:mt-8 
-      [&>hr]:mb-8 
+      [&>hr]:my-8
+      [&>hr]:animate-none
   }
 
 }

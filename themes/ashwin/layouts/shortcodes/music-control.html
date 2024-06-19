@@ -52,22 +52,22 @@ Resume music
   </script>
 {{ end }}
 
-{{ $commonOuterStyles := "group music-control inline-block cursor-pointer rounded-md px-2 shadow-lg hover:animate-pulse relative pr-4 select-none" }}
+{{ $commonOuterStyles := "group music-control cursor-pointer rounded-md px-2 shadow-lg hover:animate-pulse relative pr-4 select-none" }}
 {{ $commonIconStyles := "absolute flex -right-2 -top-2 opacity-0 group-hover:opacity-100 w-6 h-6 rounded-full bg-white items-center justify-center shadow-lg" }}
 
 {{ if eq (.Get 0) "resume-at" }}
-  <div class="{{ $commonOuterStyles }} active:shadow-lime-500" data-action="{{ .Get 0 }}" data-time="{{ .Get 1 }}">
+  <span class="{{ $commonOuterStyles }} active:shadow-lime-500" data-action="{{ .Get 0 }}" data-time="{{ .Get 1 }}">
     {{ .Inner }}
     <span class="{{ $commonIconStyles }} shadow-lime-500">&#x23F5;</span>
-  </div>
+  </span>
 {{ else if eq (.Get 0) "pause" }}
-  <div class="{{ $commonOuterStyles }} active:shadow-red-500 focus:shadow-red-500" data-action="{{ .Get 0 }}" data-time="{{ .Get 1 }}">
+  <span class="{{ $commonOuterStyles }} active:shadow-red-500 focus:shadow-red-500" data-action="{{ .Get 0 }}" data-time="{{ .Get 1 }}">
     {{ .Inner }}
     <span class="{{ $commonIconStyles }} shadow-red-500">&#x23F8;</span>
-  </div>
+  </span>
 {{ else if eq (.Get 0) "resume" }}
-  <div class="{{ $commonOuterStyles }} active:shadow-blue-500 focus:shadow-blue-500" data-action="{{ .Get 0 }}" data-time="{{ .Get 1 }}">
+  <span class="{{ $commonOuterStyles }} active:shadow-blue-500 focus:shadow-blue-500" data-action="{{ .Get 0 }}" data-time="{{ .Get 1 }}">
     {{ .Inner }}
     <span class="{{ $commonIconStyles }} shadow-blue-500">&#x23F5;</span>
-  </div>
+  </span>
 {{ end }}
