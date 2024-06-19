@@ -5,7 +5,8 @@ title = "The Automonk"
 draft = false
 genres = ["short-story"]
 date = 2023-01-01
-music = "TenPercentChange.mp3"
+audioFile = "TenPercentChange.mp3"
+audioTitle = "Ten Percent Chance"
 +++
 
 <div class="flex p-4">
