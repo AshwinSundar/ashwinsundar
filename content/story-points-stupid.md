@@ -41,7 +41,7 @@ gantt
         Birth year of average developer: 1985, 30d
         Developers cite "Mythical Man-Month": 1975, 50y
     section Real World
-      Ford become President: 1974, 30d
+      Ford becomes President: 1974, 30d
       Carter becomes President: 1977, 30d
       Reagan becomes President: 1981, 30d
       George HW Bush becomes President: 1989, 30d
