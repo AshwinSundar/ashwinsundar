@@ -13,7 +13,7 @@
 
 ## Add reading
 
-`hugo new content posts/<reading_name>.md'
+`hugo new content reading/<reading_name>.md`
 
 ## Development Mode
 
