@@ -1,7 +1,7 @@
 +++
-linkTitle = 'Story Points Stupid'
-title = 'Story Points are a Stupid Idea'
-shortTitle = 'Story Points Stupid'
+linkTitle = 'Story Points Are Stupid'
+title = 'Story Points Are Stupid'
+shortTitle = 'Story Points Are Stupid'
 date = 2024-07-16T23:29:31-06:00
 genres = ['technical']
 draft = false
