@@ -1,13 +1,13 @@
 +++
-linkTitle = 'Story Points Are Stupid'
-title = 'Story Points Are Stupid'
-shortTitle = 'Story Points Are Stupid'
+linkTitle = 'Story Points Are Not a Good Idea'
+title = 'Story Points Are Not a Good Idea'
+shortTitle = 'Story Points Not a Good Idea'
 date = 2024-07-16T23:29:31-06:00
 genres = ['technical']
 draft = false
 +++
 
-I recently said "fuck it" to "story points". Story points are a made-up system for estimating made-up work in software. It involves getting six software developers in a room, and asking about their deepest wishes, their deepest insecurities, and their deepest fears. After that therapeutic session, the Master of Ceremonies asks each developer for their favorite number. Their favorite number! The Master averages all of these numbers, and then picks another number close to those numbers to represent how "hard" a task is. 
+Story points are a made-up system for estimating made-up work in software. It involves getting six software developers in a room, and asking about their deepest wishes, their deepest insecurities, and their deepest fears. After that therapeutic session, the Master of Ceremonies asks each developer for their favorite number. Their favorite number! The Master averages all of these numbers, and then picks another number close to those numbers to represent how "hard" a task is. 
 
 Why does any tech company do this? Because every tech company does this. Software teams at large companies employ this system because they like to be safe and copy other companies, cargo-cult style[^cargo-cult]. The "harder" a task, the more "story points" it's worth. Does this sound ridiculous and infantilizing? It is.
 
