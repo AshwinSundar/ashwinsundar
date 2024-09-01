@@ -1,7 +1,7 @@
 +++
-title = 'Jana Bacevic (2022) - Epistemic Autonomy and The Free Nose Guy Problem'
-linkTitle = 'Jana Bacevic (2022) - Epistemic Autonomy and The Free Nose Guy Problem'
-shortTitle = 'Jana Bacevic (2022) - Epistemic Autonomy and The Free Nose Guy Problem'
+title = 'Jana Bacevic - Epistemic Autonomy and The Free Nose Guy Problem (2022)'
+linkTitle = 'Jana Bacevic - Epistemic Autonomy and The Free Nose Guy Problem (2022)'
+shortTitle = 'Jana Bacevic - Epistemic Autonomy and The Free Nose Guy Problem (2022)'
 date = 2024-06-15T22:37:10-06:00
 genres = ["reading", "2024"]
 draft = false
