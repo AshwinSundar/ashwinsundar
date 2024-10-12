@@ -45,7 +45,7 @@ Can you spare us one or 3?"
 Read this brief primer.  
 It's only five hun-dred pages long.  
 If that doesn't light The Borrow Way,  
-Then we shall write you a song[^meter].
+Then we shall write you a song.
 
 Rusty rusty rusty, can't you see?  
 Sometimes your adwords just hypnotize me.  
@@ -54,7 +54,5 @@ Guess-that's-why-(software)-engineers all get the big links.
 
 "You're kidding, right?"  
 The Humanities cry.  
-"Keep the change, ya filthy animal.  
+"Keep the change, ya filthy animals.  
 Just give us the receipt."  
-
-[^meter]: In poetry, there is something called meter, but I don't know what it is.

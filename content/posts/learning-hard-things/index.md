@@ -7,7 +7,7 @@ genres = ["other"]
 date = 2023-06-01
 +++
 
-![xkcd](https://imgs.xkcd.com/comics/machine_learning_2x.png)
+<img src="https://imgs.xkcd.com/comics/machine_learning_2x.png" alt="xkcd-1838" style="width: 400px;"/>
 
 I took a total of one computer science class in my undergraduate degree. It was a CS class geared towards non-CS majors. The class started at 10AM, which was about 2 hours before my brain started functioning effectively. 
 
@@ -17,8 +17,7 @@ Computer science originated as an offshoot of mathematics. In my younger days, I
 
 This classed looked nothing like math, nothing like anything I had seen before...
 
-![A veritable chrysalitic monster - A vertical chronically-tired matriculate](dali-sleep.JPG)
-*A vertical chronically-tired matriculate*
+<img src="dali-sleep.JPG" alt="xkcd-1838" style="width: 600px;" title="A vertical, chronically-tired matriculate"/>
 
 I fell asleep a lot in that class. Several times, I experienced some form of [sleep paralysis](https://en.wikipedia.org/wiki/Sleep_paralysis) - unable to move, unable to breathe, my subconscious listened to the lecturer drone on about objects and assignments and operators. 
 
