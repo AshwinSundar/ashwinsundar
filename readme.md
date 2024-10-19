@@ -36,7 +36,8 @@
 ```shell
 ├── assets
 ├── content
-│   └── posts # markdown posts for blog. create new post with `hugo new content posts/{title}.md`
+│   |── posts # markdown posts for blog. create new post with `hugo new content posts/{title}.md`
+|   └── reading # each file corresponds a book, article, etc... for the 'Reading' section
 ├── data # data objects, accessible from templates with
 │   └── projects.json # independent projects that I've worked on, accessible from templates with `site.Data.projects
 ├── config.toml # hugo config
@@ -47,6 +48,8 @@
 ├── readme.md
 ├── resources
 ├── static
+│   |── images # images for blog posts
+    └── photos # for the actual Photos section
 └── themes
     └── ashwin
         |── archetypes
