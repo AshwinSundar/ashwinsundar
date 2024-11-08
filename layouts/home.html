@@ -51,8 +51,9 @@
     </div>
   </div>
   <div>
-    <h2>Photos</h2>
-    {{ partial "image-gallery" (dict "context" . "gallery_dir" "/photos") }}
+    <!-- Maybe just downscale all photos until they load rapidly. No waiting around for hundreds of photos even-->
+    <!-- <h2>Photos</h2> -->
+    <!-- {{ partial "image-gallery" (dict "context" . "gallery_dir" "/photos") }} -->
   </div>
 </div>
 {{ end }}
