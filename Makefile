@@ -8,6 +8,6 @@ new-post:
 	@read -p "Enter the name of the post: " NAME; \
 	hugo new "content/posts/$$NAME.md"
 
-new-post:
+new-reading:
 	@read -p "Enter the name of the reading: " NAME; \
 	hugo new "content/reading/$$NAME.md"
