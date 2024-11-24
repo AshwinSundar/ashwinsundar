@@ -4,7 +4,7 @@ title = 'Long Title'
 shortTitle = 'Software I Liked 2024'
 date = 2024-11-10T01:02:53-07:00
 genres = ['technical']
-draft = false
+draft = true
 audioFile = "file.mp3"
 audioTitle = ""
 +++

@@ -21,7 +21,7 @@ Here's the "new" system for estimating software work that I propose:
 - 2 "points" is 1-2 person days
 - etc...
 
-That's it. This is how humanity has estimated work from the dawn of Work. It works[^less-than-one].
+That's it. This is how humanity has estimated work from the dawn of Work. It works.
 
 Does that sound obvious? Then you must not be a software developer. See, some crackpot developer decided thirty years ago that a man named Fred Brooks[^brooks] was right - software is a magical process of divining "codes" from the ether. This process cannot be rushed, for the Ether is temperamental. Rushing any Process will Anger the Gods of Bits and Bytes, residing within the Ether. Thus, Story Points must be used to make developers feel special - like they're fighting dragons, not pushing numbers around.
 
@@ -57,16 +57,13 @@ gantt
       Donald Trump becomes President: 2017, 30d
       Joe Biden becomes President: 2021, 30d
 
-
 ```
 
 We are not wizards of the occult. We do not have super powers. We do not pull castles from the ether for the world to marvel at. Everyone, get over yourselves. You're white-collar workers with cushy jobs, fat paychecks, and matching 401ks. You aren't rebels - you're just like your parents. You listen to "The Anthem" by Good Charlotte while coding, thinking you're cool - but you wanna be just like them. Quit building air-castles, throwing tantrums, and accumulating story points. Grow the fuck up.
 
 [^cargo-cult]: Tech companies love to make excuses like, "managing people is not the goal of our company. It's writing software," and then go on to foist imaginary systems of management on us all, like some big hilarious experiment to see how stupid we all are.  
 
-[^brooks]: Fred Brooks was a brilliant scientist and engineer. He also likened programmers to one who "builds castles in the air, from air, creating by exertion of the imagination." This may have been a likely analogy in his day, but today, 9/10 "programmers" shamelessly proclaim they would copy and paste code written on a baboon's behind, if it meant they could log off for the day at 3PM instead of 4PM.
-
-[^less-than-one]: Have a task that's much less than 1 day of work? Here are two options. 1) Combine these tasks into one larger task that takes 1 day of work, or 2) Invent a "0.5" point. This task takes no more than a few hours, from starting the task to completing all acceptance criteria and merging any PRs. Don't include these tasks in any estimates of "velocity". Don't like these suggestions? Then fuck off.
+[^brooks]: Fred Brooks was a brilliant scientist and engineer. He also likened programmers to one who "builds castles in the air, from air, creating by exertion of the imagination." This may have been a likely analogy in his day, but today, a plurality of "programmers" shamelessly proclaim they would copy and paste code written on a baboon's behind, if it meant they could log off for the day at 3PM instead of 4PM.
 
 [^fibonacci]: Fibonacci pointing is a process where six software "engineers" (\$150/hr each, billable to the client) sit in a Zoom call with a Certified Scrum Master(\$125/hr each, billable to the client), who asks each software "engineer" (\$150/hr each, billable to the client) to estimate how "hard" a task is. They are asked to use the Fibonacci sequence (e.g. 1, 2, 3, 5, 8, 11, etc) to measure how "hard" the task is. Why isn't this just a simple scale of 1-10? Beats me...And yes, there really is a certification called "Certified Scrum Master". In fact, anyone reading this is only 3 days and \$299 away from having the hallowed honorific "CSM" after their name on their next job application!
 
