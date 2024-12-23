@@ -46,7 +46,7 @@
   }
 
   p {
-    @apply pt-4 text-justify
+    @apply pt-4 text-justify leading-tight
   }
 
   ul {
