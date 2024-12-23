@@ -10,7 +10,7 @@ audioTitle = ""
 +++
 
 
-A tech founder recently one-upped Steve Jobs [jobs-bicycle] by describing AI as "like a jumbo jet for the mind" [^founder].
+A tech founder recently one-upped Steve Jobs[^jobs-bicycle] by describing AI as "like a jumbo jet for the mind"[^founder].
 
 What does that mean? To me, Steve Jobs comment that "a computer is like a bicycle for the mind" was about improved intellectual efficiency. Over 30 years later, this is still a fantastic analogy.
 
