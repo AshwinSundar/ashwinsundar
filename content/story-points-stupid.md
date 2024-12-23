@@ -19,7 +19,7 @@ Here's the "new" system for estimating software work that I propose:
 
 - 1 "point" is anything between 0.5 and 1 person-day of work
 - 2 "points" is 1-2 person days
-- etc...
+- etc . . . 
 
 That's it. This is how humanity has estimated work from the dawn of Work. It works.
 
@@ -65,6 +65,6 @@ We are not wizards of the occult. We do not have super powers. We do not pull ca
 
 [^brooks]: Fred Brooks was a brilliant scientist and engineer. He also likened programmers to one who "builds castles in the air, from air, creating by exertion of the imagination." This may have been a likely analogy in his day, but today, a plurality of "programmers" shamelessly proclaim they would copy and paste code written on a baboon's behind, if it meant they could log off for the day at 3PM instead of 4PM.
 
-[^fibonacci]: Fibonacci pointing is a process where six software "engineers" (\$150/hr each, billable to the client) sit in a Zoom call with a Certified Scrum Master(\$125/hr each, billable to the client), who asks each software "engineer" (\$150/hr each, billable to the client) to estimate how "hard" a task is. They are asked to use the Fibonacci sequence (e.g. 1, 2, 3, 5, 8, 11, etc) to measure how "hard" the task is. Why isn't this just a simple scale of 1-10? Beats me...And yes, there really is a certification called "Certified Scrum Master". In fact, anyone reading this is only 3 days and \$299 away from having the hallowed honorific "CSM" after their name on their next job application!
+[^fibonacci]: Fibonacci pointing is a process where six software "engineers" (\$150/hr each, billable to the client) sit in a Zoom call with a Certified Scrum Master(\$125/hr each, billable to the client), who asks each software "engineer" (\$150/hr each, billable to the client) to estimate how "hard" a task is. They are asked to use the Fibonacci sequence (e.g. 1, 2, 3, 5, 8, 11, etc) to measure how "hard" the task is. Why isn't this just a simple scale of 1-10? Beats me . . . And yes, there really is a certification called "Certified Scrum Master". In fact, anyone reading this is only 3 days and \$299 away from having the hallowed honorific "CSM" after their name on their next job application!
 
 [^mythical-man-month]: The book, through which Fred Brooks became famous among engineers, came out nearly fifty years ago. It contains pithy sayings like, "Nine women cannot make a baby in a month", and the afore-mentioned Castles in the Sky commentary. Developers in their twenties cite this book as if it's some sort of gospel. "The Mythical Man-Month" was once ahead of its time, but that time has long passed.  

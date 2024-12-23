@@ -33,7 +33,7 @@ Can you spare us one or 3?"
 
 "What's Rust?", they ask.  
 "WHAT'S RUST???", you scream.  
-"...what?" they timidly ask?  
+" . . . what?" they timidly ask?  
 "Child, pray, and heed."
 
 ![Rust Crab 1](./rust-crab1.png)

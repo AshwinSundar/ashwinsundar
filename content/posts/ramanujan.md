@@ -35,5 +35,5 @@ South India in the late 19th century lacked running water, electricity, and dece
 
 **Sir Chandrasekhara Venkata Raman**: (b. 1888 in Tiruchirapalli, Madras Presidency, British India): 1930 Nobel Prize in Physics for discovery of Raman scattering
 
-**Subrahmanyan Chandrasekhar**: (b. 1910 in Lahore, Punjab, British India): 1983 Nobel Peace Prize for Physics for "...theoretical studies of the physical processes of importance to the structure and evolution of the stars"  
+**Subrahmanyan Chandrasekhar**: (b. 1910 in Lahore, Punjab, British India): 1983 Nobel Peace Prize for Physics for " . . . theoretical studies of the physical processes of importance to the structure and evolution of the stars"  
 

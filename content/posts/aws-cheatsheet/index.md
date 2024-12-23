@@ -16,7 +16,7 @@ date = 2023-08-01
 `Cloud Watch` - collects logs and metrics from EC2 instances  
 `Auto Scaling` - defines policies to create new EC2 instances based on traffic, etc  
 `Elastic Beanstalk` - More abstraction on top of EC2 and all the above services (aka PaaS - Platform as a Service)  
-`Lightsail` - Even more abstraction...  
+`Lightsail` - Even more abstraction . . .  
 `Lambda` - Functions as a Service, aka Serverless. Code runs only when an event occurs. Only pay for requests and compute time, not constant uptime  
 `Serverless Repo` - more abstraction on top of a Lambda  
 `Outposts` - Runs AWS APIs on your personal server  

@@ -51,7 +51,7 @@ Ultimately, the audience for anyone reading this is people who grew up like me -
 
 Through my upbringing, I have been a lifelong student of *Hinduism*.  
 
-> Sidebar: Why wasn't the phrase *Hinduism* introduced in Sanskrit and transliterated, through the process described in the Preamble above? Because *Hinduism* is an [exonym](https://en.wikipedia.org/wiki/Endonym_and_exonym) for the set of beliefs shared by people arbitarily grouped together and residing in or around the Indian subcontinent. In fact, *India* began as an exonym awarded by European...visitors, and eventually stuck.  
+> Sidebar: Why wasn't the phrase *Hinduism* introduced in Sanskrit and transliterated, through the process described in the Preamble above? Because *Hinduism* is an [exonym](https://en.wikipedia.org/wiki/Endonym_and_exonym) for the set of beliefs shared by people arbitarily grouped together and residing in or around the Indian subcontinent. In fact, *India* began as an exonym awarded by European . . . visitors, and eventually stuck.  
 
 > The discussed philosophies will sounds confusing as a result. None of what will be described fits into a nice package, ready to hand off to a prospective believer. The group of philosophies was developed by no single person, and during no single period of time. It was iterated on over thousands of years, by individuals separated by as much time as we are from Aristotle.
 

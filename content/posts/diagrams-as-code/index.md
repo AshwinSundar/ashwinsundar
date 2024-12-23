@@ -90,7 +90,7 @@ Enough pedantry, let's take a look at a couple of examples. I have taken a likin
 
 ### Sequence Diagrams
 
->...a sequence diagram captures the behavior of a single scenario. The diagram shows a number of example objects and the messages that are passed between these objects within the user case.
+> . . . a sequence diagram captures the behavior of a single scenario. The diagram shows a number of example objects and the messages that are passed between these objects within the user case.
 >
 > -- <cite>Fowler, Martin. UML Distilled: A Brief Guide to the Standard Object Modeling Language. 3rd ed., 2003</cite>
 

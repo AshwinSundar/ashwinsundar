@@ -37,11 +37,11 @@ The problem is specific to web page loading. Modern browsers offer a suite of de
 
 All tests were run under the same fixed conditions - from within a Docker container created from an image that was built off the same commit. The Docker container was run from the developer's local machine. The version of the database was held constant as well (Postgres 16).
 
-The Django application is hosted on a cloud provider (AWS, GCP, etc...). The cloud provider allows the following parameters for the database to be modified:
+The Django application is hosted on a cloud provider (AWS, GCP, etc . . .). The cloud provider allows the following parameters for the database to be modified:
 
 - CPU + disk type (Shared SSD, Shared AMD + NVMe, Shared Intel + NVMe)
-- Storage (10 GB, 15 GB, 20 GB...)
-- RAM (1 GB, 2 GB, 4 GB, ...)
+- Storage (10 GB, 15 GB, 20 GB . . .)
+- RAM (1 GB, 2 GB, 4 GB,  . . .)
 - datacenter location (NYC, SFO)
 - web server location (NYC, SFO)
 

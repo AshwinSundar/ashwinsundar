@@ -19,7 +19,7 @@ This article was naively inspiring, a phrase I just made up that I hope has a po
 
 ## _Babbage's Analytical Engine_ - Luigi Federico Menabrea, 1843
 
-_Charles Babbage and Ada Lovelace trod the spectacular wilderness of the field, but the shortcomings of their technology and the passage of time largely obliterated the path they blazed until others began to follow it again..._
+_Charles Babbage and Ada Lovelace trod the spectacular wilderness of the field, but the shortcomings of their technology and the passage of time largely obliterated the path they blazed until others began to follow it again . . . _
 
 The analytical engine designed by Babbage and idealized by Lovelace was ultimately unable to be built, because of the lack of precision machining available in their day. This was another fascinating and inspiring article (actually a series of lectures, written up by Menabrea and annotated by Ada Lovelace). Babbage envisions a techno-utopia, like Leibniz.
 
@@ -31,7 +31,7 @@ This article is written in an interesting style. It feels laborious to read, onl
 
 I found the following statement insightful, from 4.3.16 page 38:
 
-_(The Principle of Contradiction)...it is impossible for any being to possess a quality, and at the same time not possess it._
+(The Principle of Contradiction) . . . it is impossible for any being to possess a quality, and at the same time not possess it._
 
 This is expressed by:
 

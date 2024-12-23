@@ -20,7 +20,7 @@ Did the founder mean that AI, like the jumbo jet, is flashy and powerful? Did he
 
 Did he mean that AI will replace our need to actually think? Perhaps so, similar to how a piloted jumbo jet replaces all of our needs to know how to do anything more than 1. swipe a credit card, 2. sit in a chair.
 
-Or is this an excessively cynical? That founder might have just been making a point about magnitude - the leap between walking and cycling was much smaller than the leap between cycling and flying through the air at the speed of sound. So that's what AI is offering - the ability to stop walking with computers, and start flying...with AI.
+Or is this an excessively cynical? That founder might have just been making a point about magnitude - the leap between walking and cycling was much smaller than the leap between cycling and flying through the air at the speed of sound. So that's what AI is offering - the ability to stop walking with computers, and start flying . . . with AI.
 
 [^jobs-bicycle]: https://www.youtube.com/watch?v=L40B08nWoMk
 [^founder]: https://www.youtube.com/watch?v=JmD9rohDnjQ&t=520s

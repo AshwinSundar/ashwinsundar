@@ -15,7 +15,7 @@ In that class, we were [shown many things](https://www.math.ucla.edu/~akrieger/t
 
 Computer science originated as an offshoot of mathematics. In my younger days, I was good at math. "I got this!", I said.
 
-This classed looked nothing like math, nothing like anything I had seen before...
+This classed looked nothing like math, nothing like anything I had seen before . . . 
 
 <img src="dali-sleep.JPG" alt="xkcd-1838" style="width: 600px;" title="A vertical, chronically-tired matriculate"/>
 
@@ -53,7 +53,7 @@ What does this have to do with software testing? A program is effectively a tran
 
 ```text
 fun (a int, b int) -> int { 
-    ...stuff... 
+     . . . stuff . . .  
 }
 ```
 
@@ -75,7 +75,7 @@ Many times, we are forced to choose the former - dive into the details.  This is
 > 571215
 ```
 
-...that many words long. For a markup language! Fortunately, most HTML tutorials don't just say "read the spec", but involve heavy use of mental models and abstractions. Those models and abstractions are usually right. Usually.
+ . . . that many words long. For a markup language! Fortunately, most HTML tutorials don't just say "read the spec", but involve heavy use of mental models and abstractions. Those models and abstractions are usually right. Usually.
 
 ![Pre-mystical-corpuscular](dali-temptation-st-anthony.JPG)
 

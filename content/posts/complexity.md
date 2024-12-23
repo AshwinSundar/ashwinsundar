@@ -33,7 +33,7 @@ I was mistaken - after implementing this design, I realized that a second `nginx
 
 I soon became consumed with other projects, so some somewhat unacceptable site bugs lingered. The site was only accessible at `http://`, for example. Secure HTTP was not being proxied correctly by the dual `nginx` services. After finding some time revisit the setup, it appeared as if it could be bandaged together by updating the `nginx.conf` file inside the Docker container.
 
-But this was incorrect. Since some months had gone by, I had forgotten about the second `nginx.conf` file lurking in `/etc/config/nginx/sites-available/ashwinsundar` on the Raspberry Pi. This file has been created manually and then forgotten about, since it didn't live in version control or my normal line-of-sight. After several hours of futile debugging of the Docker `nginx.conf`, I discovered this second config file...and decided that this was enough. It was time for a v.3.
+But this was incorrect. Since some months had gone by, I had forgotten about the second `nginx.conf` file lurking in `/etc/config/nginx/sites-available/ashwinsundar` on the Raspberry Pi. This file has been created manually and then forgotten about, since it didn't live in version control or my normal line-of-sight. After several hours of futile debugging of the Docker `nginx.conf`, I discovered this second config file . . . and decided that this was enough. It was time for a v.3.
 
 `mermaid diag of current v3`
 

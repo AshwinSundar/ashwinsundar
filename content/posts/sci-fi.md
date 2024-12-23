@@ -27,9 +27,9 @@ KennyBlanken 51 minutes ago | parent | prev [–]
 
 > Pesticides are a factor in insect loss, but they are VERY far from the major cause of lost biodiversity in general
 
-Oh hey, look at that - the exact position of the insecticide industry...
+Oh hey, look at that - the exact position of the insecticide industry . . . 
 
-...which does not explain why bee die-offs in various countries (at different times) have coincided with the introduction of neonic pesticides in that country.
+ . . . which does not explain why bee die-offs in various countries (at different times) have coincided with the introduction of neonic pesticides in that country.
 
 reply 
 
