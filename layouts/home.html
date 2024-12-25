@@ -27,7 +27,7 @@
         {{ range site.Data.music }}
           <h5>{{ .name }}</h5>
           <audio controls>
-            <source src="{{ .link }}" type="audio/mp3">
+            <source src="music/{{ .link }}" type="audio/mp3">
           </audio>
         {{ end }}
       </div>
