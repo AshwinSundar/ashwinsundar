@@ -15,6 +15,11 @@
 
 `hugo new content reading/<reading_name>.md`
 
+## New Music
+
+1) Add file to `static/music`
+2) Add entry to `data/music.json`
+
 ## Development Mode
 
 ### Process 1
