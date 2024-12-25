@@ -25,10 +25,12 @@
       <h2 className="pb-0">Music</h2>
       <div class="flex flex-col space-y-2">
         {{ range site.Data.music }}
+        <div>
           <h5>{{ .name }}</h5>
           <audio controls>
             <source src="music/{{ .link }}" type="audio/mp3">
           </audio>
+        </div>
         {{ end }}
       </div>
     </div>
