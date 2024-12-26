@@ -1,22 +1,27 @@
 [
   {
     "name": "Queen of Thrones (2024 Remaster)",
-    "link": "Queen of Thrones REMASTERED.mp3"
+    "link": "Queen of Thrones REMASTERED.mp3",
+    "twcolor": "pink-500"
   },
   {
     "name": "Journalistic Integrity Take 2",
-    "link": "Journalistic Integrity Take 2.mp3"
+    "link": "Journalistic Integrity Take 2.mp3",
+    "twcolor": "green-500"
   },
   {
     "name": "Trailer Trash",
-    "link": "Trailer Trash 2024.mp3"
+    "link": "Trailer Trash 2024.mp3",
+    "twcolor": "green-200"
   },
   {
     "name": "Pizza Man",
-    "link": "Pizza Man Final Really Final this time.mp3"
+    "link": "Pizza Man Final Really Final this time.mp3",
+    "twcolor": "red-500"
   },
   {
     "name": "Seasides",
-    "link": "Seasides.mp3"
+    "link": "Seasides.mp3",
+    "twcolor": "blue-200"
   }
 ]
