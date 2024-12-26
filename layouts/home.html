@@ -23,9 +23,9 @@
         {{ end }}
       </div>
       <h2 className="pb-0">Music</h2>
-      <div class="flex flex-col space-y-2">
+      <div class="flex flex-col pr-4 font-gray-100 text-gray-200">
         {{ range site.Data.music }}
-        <div>
+        <div class="flex flex-col pb-2 rounded-2xl shadow-black shadow-md items-center even:bg-red-600 odd:bg-blue-600 hover:even:bg-red-800 hover:odd:bg-blue-800">
           <h5>{{ .name }}</h5>
           <audio controls>
             <source src="music/{{ .link }}" type="audio/mp3">
