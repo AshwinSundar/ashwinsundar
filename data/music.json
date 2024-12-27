@@ -33,5 +33,10 @@
     "name": "Jack O'Secrets",
     "link": "Jack O'Secrets.mp3",
     "twcolor": "orange-500"
+  },
+  {
+    "name": "taintuniquereference()",
+    "link": "Tainted.mp3",
+    "twcolor": "green-500"
   }
 ]
