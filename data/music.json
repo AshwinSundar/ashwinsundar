@@ -1,8 +1,13 @@
 [
   {
-    "name": "Queen of Thrones (2024 Remaster)",
+    "name": "Queen of Thrones",
     "link": "Queen of Thrones REMASTERED.mp3",
     "twcolor": "pink-500"
+  },
+  {
+    "name": "Ten Percent Chance",
+    "link": "Ten Percent Chance.mp3",
+    "twcolor": "yellow-500"
   },
   {
     "name": "Journalistic Integrity Take 2",
