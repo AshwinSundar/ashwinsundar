@@ -1,7 +1,6 @@
 +++
 linkTitle = 'Seeing Like a State'
 title = 'Seeing Like a State - James C. Scott (1998)'
-title = 'Long Title'
 shortTitle = 'Seeing Like a State'
 date = 2025-04-08T09:48:06-06:00
 genres = ["reading", "2025"]
