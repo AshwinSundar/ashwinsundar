@@ -2,7 +2,7 @@
 linkTitle = 'Language Specialization'
 title = 'Language Specialization'
 shortTitle = 'Language Specialization'
-date = 2025-03-09T14:12:26-06:00
+date = 2025-05-15T00:28:26-06:00
 genres = ['technical']
 draft = false
 audioFile = ""
@@ -70,19 +70,14 @@ This is yet another step forward in making Python a great option for getting int
 ## It's where the cool kids are playing
 
 Scientists and researchers seem to prefer Python. 
-An unintentional mistake I made in grad school was to complete my master's work in MATLAB and R, thinking those were beneficial to my future employment.
-Python barely registered in my mind in 2016, as a language to write a signal-processing algorithm - I thought it was just a teaching language. 
-Jupyter Notebook was new, but seemed incomplete compared to MATLAB. 
-From people who worked in industry, I had heard that R and MATLAB were what the professionals used.
+An unintentional mistake I made in grad school was to complete my master's work in MATLAB and R, thinking those were beneficial for my career prospects. I had heard engineers tend to use MATLAB for calculations, so it only made sense to demonstrate proficiency in it by writing a novel algorithm in it.
+Python barely registered in my mind in 2016 as a language to write a signal-processing algorithm. 
+Jupyter Notebook was new, but seemed incomplete compared to MATLAB's integrated programming and problem-solving environment. 
 So I chose the latter as the language to implement an empirical mode decomposition algorithm, for processing a non-linear signal in the form of an electrocardiogram.
 
 I've considered re-writing my master's project and potentially turning it into a library for handling ECG data with a non frequency-domain technique, which can be useful in low-power applications.
 I had no idea how to do this in MATLAB (and still have no idea). 
 But Python could be a promising alternative. 
-
-Anecdotally, the scientific community seems to prefer Python and Jupyter Notebook for their computations and data analysis.
-This is a compelling reason for me to become a Python expert. These are the people I want to work with, and potentially "professionalize" their code into something a software professional can work with. There appears to be a lot of potential in that particular space.
-
 
 ## Conclusion
 
