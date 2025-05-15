@@ -13,13 +13,11 @@ In high school, I became very interested in philosophy, psychology, and current 
 
 *deep cringe*
 
-The summer before college, I became interested in what I thought was neuroscience, but could probably be called "pop neuroscience". Books like "The Man who Mistook his Wife for a Hat" by Oliver Sacks, "Society of Mind" by Marvin Minsky, and "Tao of Physics" by Fritjof Chapra were read (and even annotated). Neuroscience will be my declared major in college, I decided.
+The summer before college, I became interested in what I thought was neuroscience. Books like "The Man who Mistook his Wife for a Hat" by Oliver Sacks, "Society of Mind" by Marvin Minsky, and "Tao of Physics" by Fritjof Chapra were read (and even annotated). Neuroscience will be my declared major in college, I decided.
 
-Why this sudden change of heart? Why did I choose to read these books, when all my life previously, I had been a huge science and technology nerd? I had used computers constantly since a young age, and while I never went so far as to learn to program them, I was a techno-enthusiast. I liked math a lot too. So why didn't I choose computer science or even engineering to study in college?
+Why this sudden change of heart? Where did this interest in the brain come from, when all my life previously, I had been a huge science and technology nerd? I had used computers constantly since a young age, and while I never went so far as to learn to program them, I was a techno-enthusiast. I liked math a lot too. So why didn't I choose computer science or even engineering to study in college?
 
-Somehow, the influence of the study of philosophy, politics, and current events via my club activity shifted my STEM-oriented inclinations along a more meta-axis - what was actually happening in my own mind? I wanted to find out, and what better way than to study that actual biological organ?
-
-Alas, I would grow disappointed with my decision to study neuroscience quickly. Piles of chemistry and biology classes, along with stacks of flashcards to memorize for each subject left me worn out and disillusioned with my choice of major. 
+Somehow, my transient focus on philosophy, politics, and current events via my club activity shifted my STEM-oriented inclinations along a more meta-axis. I wanted to know what was actually happening in my own mind. What better way than to study that actual biological organ - the brain?
 
 ---
 
@@ -41,13 +39,11 @@ In the novel *Snow Crash* by Neal Stephenson, Hiro Protagonist encounters a garg
 
 ---
 
-Before getting into why I just quoted a highly indecipherable book with extremely convoluted analogies, let me set the scene. It is 2014, and I am in graduate school for biomedical engineering. Having determined that biological sciences were not my forte, I made a late pivot to study engineering finally. Specifically, I wanted to study computer science, but the graduate programs I contacted told me to apply after getting another 4-year bachelor's degree, but in computer science instead. 
+It is now 2014, and I am in graduate school for biomedical engineering. Having determined that biological sciences were not my forte, I made a late pivot to study engineering. Specifically, I wanted to study computer science, but the graduate programs I contacted didn't feel like I was qualified to study graduate computer science after receiving middling grades in a completely unrelated field.
 
-That wasn't happening. I decided that biomedical engineering was the closest I can get, and searched for schools which would accept a lowly neuroscience major with a middling GPA. Two schools took me up on that offer. One was quite good and quite expensive, and the other was inexpensive and average. I chose the latter.
+I didn't like that answer. I found that I **could** get into a graduate program for biomedical engineering. Once in, my plan was to study math and computer science at every opportunity instead. In fact, I only took four classes that could be considered biomedical engineering, in my entire 2.5 years in graduate school.
 
-In graduate school, I made every effort to study math and computer science at every opportunity, despite the title of my degree. In fact, I only took four classes that could be considered biomedical engineering, in my entire 2.5 years in graduate school. The lessened financial pressure of the degree helped me focus on my actual schoolwork, rather than panicking about bills. It also helps that I was able to live at home for the majority of my graduate education.
-
-We're getting back to *Snow Crash* soon, and to get there we need to explore another experience I had at this time. I worked as a barista at Starbucks by day, and by evening I would peruse the */r/starbucks* subreddit, itself its own text-based metaverse. Here, I opted an alter ego as a manic Starbucks employee working at an insane company, with zealous passion for the store. Here is one story written by that persona:
+We're getting back to *Snow Crash* soon, and to get there we need to explore another experience I had at this time. I worked as a barista at Starbucks by day, and by evening I would peruse the */r/starbucks* subreddit, itself its own text-based metaverse. Here, I co-opted an alter ego as a manic Starbucks employee that had zealous, patriotic passion for his store and his company. Here is one story:
 
 > "Bling!!!!"
 
@@ -73,13 +69,13 @@ After receiving an unnecessary number of upvotes, one person replied:
 
 > *You seem like someone heavily influenced by Snow Crash.*
 
-I had never heard of, or read this book. I ordered the book on Amazon and promptly placed it on a bookshelf, where it remains to this day.
+I had never heard of, or read this book. It would take ten more years for me to come across a physical copy of the book, but it always was lurking in the back of my mind. What was *Snow Crash*? What does that phrase even mean? 
 
-I did not come across this book again for more than ten years, but it always was lurking in the back of my mind. What was *Snow Crash*? What does that phrase even mean? Serendipitously, I encountered another copy of this book, in its physical form, while on a walk before a blizzard last week. A nearby elementary school had closed, and on its property was one of those mini-libraries in a tiny house mounted on a post. Usually, I walk right past these fixtures, but something compelled me to take a closer look that day. I could sense something beckoning from within.
+Serendipitously, I encountered an old paperback while on a golden evening walk prior to a blizzard last week. A nearby elementary school had closed, and on its property was one of those mini-libraries in a tiny house mounted on a mailbox post. Usually, I walk right past these fixtures, but something compelled me to take a closer look that day. Something beckoned from within that mailbox.
 
-I lazily read a few titles, when I saw it. *Snow Crash*. That legendary book, which I failed to read ten years ago. I took the book and quickly walked back home. After dinner, I opened the book and began to read.
+I walked up and lazily read a few titles, and then saw it. *Snow Crash*. That legendary book, which I failed to read ten years ago. I took the book and quickly walked back home. After dinner, I opened the book and began to read.
 
-Within one chapter, I recognized the writing style. It was me. Somehow Neal Stephenson and I had come across the same style of writing - heavy with made-up jargon and words, yet somehow perfectly coherent if one suspends judgment and belief. That comment from the Starbucks metaverse suddenly rang true - I had inadvertently channeled Neal Stephenson in my extracurricular fiction writing [^oreosonfire].
+One chapter in, and I recognized the writing style. It was me. Somehow Neal Stephenson and I had come across the same style of writing - heavy with made-up jargon and words, yet somehow perfectly coherent if one suspends judgment and belief. That comment from the Starbucks metaverse suddenly rang true - I had inadvertently channeled Neal Stephenson in my extracurricular fiction writing [^oreosonfire].
 
 ---
 
