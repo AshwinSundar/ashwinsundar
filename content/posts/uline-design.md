@@ -111,7 +111,7 @@ Uline's tables are great. They use only two border thickness (thin and thick), p
 
 It's almost as if Edward Tufte designed the table himself.
 
-There are thousands, perhaps ten thousand tables across this catalog, covering every imaginable product that can be ordered in public, from "A-Frame Panel Trucks", "Baby Changing Stations", and "Cabinet Workbenches", all the way to "Wafer Seals", "X-Acto® Knife", and "Zebra Printers/Supplies". Yet they all have an identical format and design. If a reader understood one table, they understood them all.
+There are thousands, perhaps ten thousand tables across this catalog covering every imaginable product, from "A-Frame Panel Trucks", "Baby Changing Stations", and "Cabinet Workbenches", all the way to "Wafer Seals", "X-Acto® Knife", and "Zebra Printers/Supplies". Yet they all have an identical format and design. If a reader understands one table, they understand them all.
 
 ## Flippability
 
