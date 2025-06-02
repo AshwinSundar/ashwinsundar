@@ -1,7 +1,7 @@
 run:
 	hugo server run
 
-tailwind:
+tw:
 	cd themes/ashwin && ./tw-gen.sh
 
 new-post:

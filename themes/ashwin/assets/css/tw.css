@@ -1,104 +1,101 @@
+@config "../../tailwind.config.js";
+@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind variants;
 
-@layer components {
-  a[href] {
+a[href] {
     @apply text-purple-800
-  }
+}
 
-  a[href]:visited {
+a[href]:visited {
     @apply text-purple-400
-  }
+}
 
-  h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     @apply pt-2 pb-2
-  }
+}
 
-  h1 { 
+h1 { 
     @apply text-4xl
-  }
+}
 
-  h2 { 
+h2 { 
     @apply text-3xl
-  }
+}
 
-  h3 { 
+h3 { 
     @apply text-2xl
-  }
+}
   
-  html {
+html {
     @apply max-w-6xl
-    
-  }
+}
 
-  table {
+table {
     @apply my-8 border-black border-4 shadow-lg hover:shadow-slate-950 hover:mx-2 hover:my-10
-  }
+}
 
-  th {
+th {
     @apply p-2 border-black border-2 text-gray-500 text-left bg-slate-100
-  }
+}
 
-  tr > td {
+tr > td {
     @apply p-2 border-2 border-black
-  }
+}
 
-  tr:nth-child(even) {
+tr:nth-child(even) {
     @apply bg-white
-  }
+}
 
-  p {
+p {
     @apply text-justify leading-tight pb-4
-  }
+}
 
-  ul, ol {
+ul, ol {
     @apply pt-4 pb-4 leading-tight ml-8
-  }
+}
 
-  ul {
+ul {
     @apply list-disc
-  }
+}
 
-  ol {
+ol {
     @apply list-decimal
-  }
+}
 
-  code {
+code {
     @apply bg-gray-200 text-gray-800 px-2 py-1 rounded-md;
-  }
+}
 
-  pre:not(.mermaid) {
+pre:not(.mermaid) {
     @apply bg-gray-800 text-white p-4 rounded-md overflow-auto;
-  }
+}
 
-  pre.mermaid {
+pre.mermaid {
     @apply my-8 px-4 py-8 bg-white rounded-lg drop-shadow-lg hover:drop-shadow-2xl
-  }
+}
 
-  pre:has(code) {
+pre:has(code) {
     @apply my-8
-  }
+}
 
-  pre code {
+pre code {
     @apply bg-transparent text-white px-0 py-0 rounded-none
-  }
+}
 
-  blockquote {
+blockquote {
     @apply pl-8 italic text-red-500
-  }
+}
 
-  hr {
+hr {
     @apply border-blue-300 my-8 border-2 animate-pulse rounded-full active:border-blue-800 z-20
-  }
+}
 
-  .footnotes {
+.footnotes {
     @apply 
       my-8
       [&>hr]:border-gray-300 
       [&>hr]:my-8
       [&>hr]:animate-none
-  }
-
 }
