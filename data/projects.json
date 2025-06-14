@@ -4,6 +4,10 @@
     "link": "https://github.com/AshwinSundar/bittorrent"
   },
   {
+    "name": "Congress.gov MCP Server",
+    "link": "https://github.com/AshwinSundar/congress_gov_mcp"
+  },
+  {
     "name": "A transpiler written in Rust",
     "link": "https://github.com/AshwinSundar/teenytiny"
   },
