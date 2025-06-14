@@ -1,5 +1,9 @@
 [
   {
+    "name": "A BitTorrent Client in Python (in progress)",
+    "link": "https://github.com/AshwinSundar/bittorrent"
+  },
+  {
     "name": "A transpiler written in Rust",
     "link": "https://github.com/AshwinSundar/teenytiny"
   },
