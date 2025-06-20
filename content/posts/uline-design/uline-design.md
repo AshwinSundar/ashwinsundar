@@ -9,12 +9,28 @@ audioFile = ""
 audioTitle = ""
 +++
 
+<figure>
+  <img
+  src="/images/uline-design/uline-cover.jpg"
+  alt="Uline Print Catalog Cover">
+  <figcaption><i>Uline Print Catalog, Spring/Summer 2025</i></figcaption>
+</figure>
+<br>
+
 A shipping supply catalog is an odd place to seek design inspiration, but hear me out. I believe that the Uline print catalog is impeccably designed. At less than an inch thick, it somehow contains 907 pages of pure design bliss. Every product inside is advertised in exactly the same, boring manner. Each listing contains:
 
 - A heavy title in all caps, such as **SHIPPING LABELS**
 - Up to, but no more than 5 bullet points describing the product. The bullet points are double-spaced apart, and never contain more than about 15 words. Many are much shorter
-- An image, usually paired with a relevant caption. The caption never merely describes the image, but provides a place for additional product data, such as a SKU number
+- An image, usually paired with a relevant caption. The caption never merely describes the image, but does provide a place for additional product data, such as a SKU number
 - A table of product information, to inform a purchasing decision
+
+<figure>
+  <img
+  src="/images/uline-design/uline-p459-full.jpg"
+  alt="Uline Print Catalog Page 459 - Platform Trucks">
+  <figcaption><i>Page 459, Platform Trucks</i></figcaption>
+</figure>
+<br>
 
 And that's about it. This information framework is extremely consistent throughout the catalog. There are very few design cues present, yet there are absolutely zero people in this company's target demographic who would fail to grasp their offering.
 
