@@ -18,7 +18,7 @@ What began as a resume-builder and jobs board has turned into a full-fledged soc
 <img title = "Office Space flair" alt = "Office Space flair" src = "/blog/assets/quit-linkedin/office-space-flair.jpg">
 <figcaption style = 'text-align: center;'>Pins might have been better</figcaption>
 
-Accumulating “recommendations” and “endorsements” are how one accumulates flair. Tactics like timing posts such that colleagues see it during their lunch break or on the way home is the newest form of soft-power in the workplace. Carefully crafted posts that parrot one’s employer’s media guidelines are how one builds clout. Writing in passive voice and third-person about topics, in a vague and circumspect manner, with strange punctuation, is how one gets "reactions" - the social currency of LinkedIn[^clauses].
+Accumulating “recommendations” and “endorsements” are how one accumulates flair. It is important to carefully submit new posts such that colleagues see it during their lunch break or on the way home. Tactics like this are the newest form of soft-power in the workplace. Carefully crafted posts that parrot one’s employer’s media guidelines are how one builds clout. Writing in passive voice and third-person about topics, in a vague and circumspect manner, with strange punctuation, is how one gets "reactions" - the social currency of LinkedIn[^clauses].
 
 ---
 
