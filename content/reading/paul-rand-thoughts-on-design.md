@@ -35,7 +35,7 @@ While there are interesting quotes throughout the book, they are often paired wi
 
 ---
 
-But to me, it is not the first paragraph, but the last paragraph of the book which really resonates with me: 
+But to me, it is not the first paragraph, but the last paragraph of the book which really resonates: 
 
 > Even if it is true that the average man is most comfortable with the commonplace and familiar, it is equally true that catering to bad taste, which we so readily attribute to the average reader, merely perpetuates that mediocrity and denies the reader one of the most easily accessible means for esthetic development and eventual enjoyment. (page 95)
 
