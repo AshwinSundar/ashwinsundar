@@ -65,11 +65,11 @@ ol {
 }
 
 code {
-    @apply bg-gray-200 text-gray-800 px-2 py-1 rounded-md;
+    @apply bg-yellow-100 text-gray-800 px-1 py-0 rounded-sm
 }
 
 pre:not(.mermaid) {
-    @apply bg-gray-800 text-white p-4 rounded-md overflow-auto;
+    @apply bg-gray-800 text-white p-4 rounded-md overflow-auto
 }
 
 pre.mermaid {
