@@ -49,7 +49,7 @@ tr:nth-child(even) {
 }
 
 p {
-    @apply text-justify leading-tight pb-4
+    @apply leading-tight pb-4
 }
 
 ul, ol {
@@ -85,7 +85,7 @@ pre code {
 }
 
 blockquote {
-    @apply pl-8 italic text-red-500
+    @apply pl-8 italic text-red-800
 }
 
 hr {
