@@ -38,7 +38,7 @@ Duck-typing, which I think should be called "interface-matching" instead, allows
 Let's say you have two objects, `Dog` and `UnknownAnimal`. 
 One could state that `Dog`s can `bark`, `sit`, and `eat`. 
 If `UnknownAnimal` can also do those three things, then one can infer that it is probably a `Dog`.
-If this doesn't sound like enough info to categorize an `UnknownAnimal` as a `Dog`, then add more things that `Dog`s do - `walk`, `fetch`, `be_a_good_boy` - whatever is needed to narrow down the interface.
+If this doesn't sound like enough info to categorize an `UnknownAnimal` as a `Dog`, then describe more things that `Dog`s do - `walk`, `fetch`, `be_a_good_boy` - whatever is needed to narrow down the interface.
 
 I find this wonderfully logical and a practical application of [Set Theory](https://en.wikipedia.org/wiki/Set_theory).
 
