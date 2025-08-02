@@ -1,7 +1,7 @@
 +++
-linkTitle = 'Legibility and Programming'
-title = 'Connecting legibility to theory building in programming'
-shortTitle = 'Legibility and Programming'
+linkTitle = 'Do the Illegible'
+title = 'Do the Illegible'
+shortTitle = 'Do the Illegible'
 date = 2025-07-14T16:01:42-06:00
 genres = ['technical']
 draft = false
