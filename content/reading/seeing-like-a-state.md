@@ -1,5 +1,5 @@
 +++
-linkTitle = 'Seeing Like a State'
+linkTitle = 'Seeing Like a State - James C. Scott (1998)'
 title = 'Seeing Like a State - James C. Scott (1998)'
 shortTitle = 'Seeing Like a State'
 date = 2025-04-08T09:48:06-06:00

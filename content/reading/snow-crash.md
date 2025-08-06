@@ -1,12 +1,10 @@
 +++
-linkTitle = 'Snow Crash State of Mind'
-title = 'Snow Crash State of Mind'
+linkTitle = 'Neal Stephenson - Snow Crash (1992)'
+title = 'Long Title'
 shortTitle = 'Snow Crash'
-date = 2024-11-09T22:50:11-07:00
-genres = ['other'] 
+date = 2025-08-06T11:05:21-06:00
 draft = false
-audioFile = ""
-audioTitle = ""
+genres = ["reading", "2025"]
 +++
 
 In high school, I became very interested in philosophy, psychology, and current events. This was by way of a couple clubs I was involved in - Speech & Debate and Model UN. Yes, I am ashamed to admit I was one of those kids. The uber nerds, the try-hards, the Ivy-League wannabes. I even dressed the part, unnecessarily wearing (rather ugly) dress shirts to school because I thought "people will take me seriously", which someone quoted me as saying in the yearbook.
@@ -89,5 +87,6 @@ That sounds . . . reasonable. So this is all just a bit of navel-gazing, a messy
 [^metaverse]: *Snow Crash* was written in 1993, and contains the first use of the word *Metaverse*.
 [^oreosonfire]: To be perfectly honest, at the time I, I was attempting to emulate the writing style of another oddball redditor on the /r/nba subreddit, whom I now suspect was deeply influenced by *Snow Crash* as well.
 [^snow-crash]: Not sure how this fits in yet, but *Snow Crash* is a term from 3rd-generation computing that refers to a computer crash so potent, it disrupts the display tube's rendering capabilities and causes random static, or "snow", to appear.
+
 
 

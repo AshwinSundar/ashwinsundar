@@ -1,5 +1,5 @@
 +++
-linkTitle = 'Thoughts on Design'
+linkTitle = 'Paul Rand - Thoughts on Design (1947)'
 title = 'Paul Rand - Thoughts on Design (1947)'
 shortTitle = 'Thoughts on Design'
 date = 2025-07-23T21:24:52-06:00
