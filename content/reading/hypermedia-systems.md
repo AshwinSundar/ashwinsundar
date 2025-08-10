@@ -45,7 +45,7 @@ run:
 
 run-prod:
 	python manage.py migrate
-	gunicorn --worker-tmp-dir /dev/shm core.wsgi
+	gunicorn core.wsgi
 
 configure:
 	ln -f git_hooks/* .git/hooks/
@@ -73,11 +73,11 @@ test:
 	uv sync
 	python3 manage.py test --shuffle -v 2
 ```
-`manage.py` is a Django-generated script. It's not a leaky abstraction, however - I have never needed to peer under the hood to find out what the commands do. But it's not hard to do so - <a href="https://github.com/django/django/tree/main/django/core/management/commands" target="_blank">here it is</a>.
+`manage.py` is a Django-generated script. It's not a <a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/" target="_blank">leaky abstraction</a> - I have never needed to peer under the hood to find out what the commands do. But it's not hard to do so - <a href="https://github.com/django/django/tree/main/django/core/management/commands" target="_blank">here it is</a>.
 
 If you can't do these things on your own as a web developer, what exactly is your skillset? You work for Next.js and React, and are an unpaid shill of their ecosystems, because all the features defined above are major selling points of the "great developer experience" they are selling you. They hire the best developer relations folks out there, but YOU, my friend, are their best one! Because you use their product, evangelize it for them on behalf of your company, fix their bugs, and keep using it, despite all the horrible experiences you have had! You sometimes even pay huge amounts of money for the privilege of hosting your website on their platform! You are suffering from Stockholm Syndrome, and know of no way out.
 
-You are a frameworker, not an engineer [^frameworker]. You are forgetting how to code, and instead learning how to use brittle, leaky abstractions[^leaky-abstractions] that won't hold up over time or end up being transferable skills, as far as being an engineer is concerned.
+You are a frameworker, not an engineer[^frameworker]. You are forgetting how to code, and instead learning how to use brittle, leaky abstractions that won't hold up over time or end up being transferable skills, as far as being an engineer is concerned.
 
 It doesn't have to be this way. Read Hypermedia Systems. I was able to successfully develop and deploy a medium-sized codebase (10k LoC of Django with HTMX, Alpine.js and Tailwind sprinkled throughout) based on these principles. The code is solving a <a href="https://www.mousehouse.bio" target="_blank">real-world need</a> for scientists at the top university in the country. HTMX isn't a toy or novelty, it gets the job done and lets me focus on the actual real-world problems I want to solve. 
 
@@ -87,8 +87,6 @@ It doesn't have to be this way. Read Hypermedia Systems. I was able to successfu
 
 (More quotes coming)
 
-[^soapbox]: How is it possible that 5% of websites use React, yet seemingly 75% of all web developer job postings ask for React experience? Why does no one ask for jQuery experience, when 73% of websites use it? Simple answer: React code is constantly broken, and needs to be fixed. jQuery codebases are deployed, functional, and solves a business need. You don't hire people to fix things that work.
+[^soapbox]: How is it possible that 5% of websites use React, yet seemingly 75% of all web developer job postings ask for React experience? Why does no one ask for jQuery experience, when 73% of websites use it? Simple answer: React code is constantly broken, and needs to be fixed. jQuery codebases are deployed, functional, and solve real problems that people have. You don't hire people to fix things that work.
 
 [^frameworker]: https://archive.ph/XSPRr
-
-[^leaky-abstractions]: https://www.jlonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/
