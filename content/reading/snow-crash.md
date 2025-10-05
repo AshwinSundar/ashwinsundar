@@ -1,8 +1,8 @@
 +++
 linkTitle = 'Neal Stephenson - Snow Crash (1992)'
-title = 'Long Title'
+title = 'Snow Crash'
 shortTitle = 'Snow Crash'
-date = 2025-08-06T11:05:21-06:00
+date = 2024-11-19T11:05:21-06:00
 draft = false
 genres = ["reading", "2025"]
 +++
@@ -61,19 +61,23 @@ We're getting back to *Snow Crash* soon, and to get there we need to explore ano
 > 4) Additions of Oprah Cream
 > 5) Icements, via the Icemakerbin 25 (with obvious)
 > 6) Holy whipps, said to be freshest from the summit of Mt Rainier
+
 > teenagerOz handings off the drinks, salutationing, "Having an excellent days Jayson!", and returnings to dayworks. These are the times and days that teenagerOz lives for. This be his true love, his joy - his passiontea.
 
-After receiving an unnecessary number of upvotes, one person replied:
+After receiving an unnecessary number of upvotes for this absurd story, one person replied:
 
 > *You seem like someone heavily influenced by Snow Crash.*
 
 I had never heard of, or read this book. It would take ten more years for me to come across a physical copy of the book, but it always was lurking in the back of my mind. What was *Snow Crash*? What does that phrase even mean? 
 
-Serendipitously, I encountered an old paperback while on a golden evening walk prior to a blizzard last week. A nearby elementary school had closed, and on its property was one of those mini-libraries in a tiny house mounted on a mailbox post. Usually, I walk right past these fixtures, but something compelled me to take a closer look that day. Something beckoned from within that mailbox.
+
+---
+
+I embarked on a golden evening walk last week, just prior to an incoming blizzard. A nearby elementary school had closed, and on its property was one of those mini-libraries in a tiny house mounted on a mailbox post. Usually, I walk right past these fixtures, but something compelled me to take a closer look that day. Something beckoned from within that mailbox.
 
 I walked up and lazily read a few titles, and then saw it. *Snow Crash*. That legendary book, which I failed to read ten years ago. I took the book and quickly walked back home. After dinner, I opened the book and began to read.
 
-One chapter in, and I recognized the writing style. It was me. Somehow Neal Stephenson and I had come across the same style of writing - heavy with made-up jargon and words, yet somehow perfectly coherent if one suspends judgment and belief. That comment from the Starbucks metaverse suddenly rang true - I had inadvertently channeled Neal Stephenson in my extracurricular fiction writing [^oreosonfire].
+One chapter in, and I recognized the writing style. It was me. Somehow Neal Stephenson and I had come across the same style of writing - heavy with invented jargon and unnecessary deference to technology, yet somehow perfectly coherent if one suspends judgment and belief. That comment from the Starbucks metaverse suddenly rang true - I had inadvertently channeled Neal Stephenson in my extracurricular fiction writing [^oreosonfire].
 
 ---
 
