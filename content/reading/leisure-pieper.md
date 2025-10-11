@@ -29,13 +29,13 @@ I read the first few chapters of this book while on vacation at a homestay in Ke
 
 > The Middle Ages drew a distinction between the understanding as *ratio* and the understanding as *intellectus*. *Ratio* is the power of **discursive, logical thought, of searching and examination, of abstraction, of definition and drawing conclusions**. *Intellectus*, on the other hand, is the name for the understanding in so far as it is the capacity of *simplex intuitus*, Of that **simple vision to which truth offers itself like a landscape to the eye**. (p. 26)
 
-> That is how th ematter is put by [Thomas] Aquinas in *Quaestiones disputate de veritate*. It means to say that man participates in the angelic faculty of **non-discursive vision**, which is the capacity to apprehend the spiritual in the same manner that our eye apprehends light or our ear sound. (p. 27)
+> That is how the matter is put by [Thomas] Aquinas in *Quaestiones disputate de veritate*. It means to say that man participates in the angelic faculty of **non-discursive vision**, which is the capacity to apprehend the spiritual in the same manner that our eye apprehends light or our ear sound. (p. 27)
 
 > When Kant speaks of philosophizing as a "herculean labour", he does not simply mean that it is characteristic of philosophizing; he regards the labour involved as a justification of philosophy: philosophizing is genuine in so far as it is "herculean labour". (p. 29)
 
 In other words, Kant says that labor legitimizes knowledge work. It's a view that persists to this day in America.
 
-> "Hard work is what is good"? In the *Summa Theologica** we find St. Thomas propounding a contrary opinion: "The essence of virtue consists in the good rather than the difficult." "Not everything that is more difficult is necessarily more meritorious; it must be more difficult in such a way that it is at the same time good in a yet higher way." (p. 31)
+> "Hard work is what is good"? In the *Summa Theologica* we find St. Thomas propounding a contrary opinion: "The essence of virtue consists in the good rather than the difficult." "Not everything that is more difficult is necessarily more meritorious; it must be more difficult in such a way that it is at the same time good in a yet higher way." (p. 31)
 
 > ...the fixed, mask-like readiness to suffer *in vacuo*, without relation to anything. (p. 32)
 
@@ -53,7 +53,7 @@ In other words, Kant says that labor legitimizes knowledge work. It's a view tha
 
 > *Acedia* is the "despair from weakness" which Kierkegaard analysed as the "despairing refusal to be oneself." Metaphysically and theologically, the notion of *acedia* means that a man does not, in the last resort, give the consent of his will to his own being...(p. 38)
 
-> The contrary of *acedia*...is man's **happy and cheerful affirmation of his own being, his acquiescence in the world and in God - which is to say love. (p. 39)
+> The contrary of *acedia*...is man's **happy and cheerful affirmation** of his own being, his acquiescence in the world and in God - which is to say love. (p. 39)
 
 > Leisure, it must be clearly understood, is a **mental and spiritual attitude**...it is not the inevitable result of spare time, a holiday, a week-end or a vacation. (p. 40)
 
