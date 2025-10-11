@@ -85,7 +85,7 @@ pre code {
 }
 
 blockquote {
-    @apply pl-8 italic text-red-800
+    @apply pl-8 text-red-800
 }
 
 hr {
