@@ -104,3 +104,28 @@ We see right before our eyes, since mathematics drives away the cloud." - Edmund
 > Clutter calls for a **design solution**, not a content reduction. (p 120)
 
 ## The Fundamental Princples of Analytical Design
+
+1) Show **comparisons**, contrasts, differences
+2) Show **causality**, mechanism, explanation, systematic structure
+3) Show **multivariate data**; that is, show more than 1 or 2 variables
+4) Completely **integrate** words, numbers, images, diagrams
+5) Thoroughly **describe the evidence**. Provide a detailed title, indicate the authors and sponsors, document the data sources, show complete measurement scales, point out relevant issues. 
+6) Analytical presentations **ultimately stand or fall** depending on the quality, relevance, and integrity of their content. 
+
+> Most images and tables used in public presentations should be annotated with words explaining what is going on. In exploratory data analysis, however, the integration of evidence needs to be thought through. (p 131)
+
+> A deeper understanding of human behavior may well result from integrating a diversity of evidence, *whatever it takes to explain something*. (p 131)
+
+> Publicly attributed authorship indicates to readers that someone is taking responsibility for the analysis; conversely, the **absence of names signals an evasion of responsibility**. Readers can follow up and communicate with named sources. Also, names may have reputations for credibility - or not. (p 133)
+
+> Authorship credit is too often absent from corporate or government reports; we should remember that *people* do things, not agencies, bureaus, departments, divisions. People may do better work when they receive public acknowledgment and take **public responsiblity for their work**...Undocumented displays are inherently suspect. (p 134)
+
+> The purpose of an evidence presentation is to **assist thinking**. Thus presentations should be constructed so as to assist with the fundamental intellectual tasks in reasoning about evidence: describing the data, making multivariate comparisons, understanding causality, integrating a diversity of evidence, and documenting the analysis. (p 137)
+
+Always assume that the audience is an intelligent consumer of data and evidence. 
+
+## Corruption in Evidence Presentations: Effects Without Causes, Cherry-Picking, Overreaching, Chartjunk, and the Rage to Conclude
+
+> Making a presentation is a **moral act** as well as an intellectual activity. The use of corrupt manipulations and blatant rhetorical ploys in a report or presentation...suggests that the presenter **lacks both credibility and evidence**. (p 141)
+
+> ...consumers of presentations should insist that presenters be held intellectually and ethically responsible for what they show and tell. Thus *consuming* a presentation is also an intellectual and a moral activity.
