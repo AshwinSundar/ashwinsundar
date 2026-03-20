@@ -4,6 +4,7 @@ title = 'Ashwin Sundar'
 theme = 'ashwin'
 enableEmoji = 'true'
 enableRobotsTXT = 'true'
+enableGitInfo = 'true'
 
 [markup]
   [markup.goldmark]
