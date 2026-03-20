@@ -17,3 +17,6 @@ enableRobotsTXT = 'true'
           inline = [['\(', '\)']]
 [params]
   math = true
+[outputs]
+    home = ["HTML", "RSS"]
+    page = ["HTML", "RSS"]
