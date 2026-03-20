@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'https://ashwinsundar.com/'
 languageCode = 'en-us'
 title = 'Ashwin Sundar'
 theme = 'ashwin'
@@ -20,3 +20,13 @@ enableRobotsTXT = 'true'
 [outputs]
     home = ["HTML", "RSS"]
     page = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+    isPlainText = false
+    rel = "alternate"
+    isHTML = false
+    noUgly = true
+    permalinkable = false
