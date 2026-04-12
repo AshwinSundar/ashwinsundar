@@ -76,4 +76,52 @@ Not totally sure I understand this on first read. There is something interesting
 
 Interesting idea...language as a common good, can be degraded intentionally, but usually unintentionally, by bureaucrats and corporations. Usually done so out of pure ignorance and incompetence. Hence the frustration when regular people talk by bureaucrats or the companies advertising to us all...this an example of being "brainwashed".
 
+### 3. Enabling Distinctions
+
+### Congestion versus paralysis
+
+> People become prisoners to time-consuming acceleration, stupefying education and sick-making medicine because beyond a certain theshold of intensity, **dependence on a bill of industrial and professional goods destroys human potential, and does so in a specific way**.
+
+> The paralysis of human action by sociall destructive energy quanta has not yet been accepted as an argument for reducing the call for energy.
+
+Precursor to degrowth?
+
+### Industrial versus convivial tools
+
+> Throughout history, most tools were labour-intensive means that could be used to satisfy the user of the tool, and were used in domestic production.
+
+This holds true pre-industrial revolution.
+
+> From a social point of view, we ought to reserve the designation of "technical progress" to instances in which new tools expand the capacity and the effectiveness of a wider range of people, especially when new tools permit more autonomous production of use-values.
+
+Good tools are ones which increase our judgement and awareness, not put us in a comatose state of "consumption" without thought. 
+
+### Liberties versus rights 
+
+> Liberties protect use-values as rights protect the access to commodities. And just as commodities can extinguish the possibility of producing use-values and turn into impoverishing wealth, so the professional definition of rights can extinguish liberties and establish a tyranny that smothers people underneath their rights.
+
+> Civil liberties ordinarily do not force others to act in accord with one's own wishes. I have the freedom to speak and publish my opinion, but no specific newspaper is obliged to print it, nor are fellow citizens required to read it. I am free to paint as I see beauty, but no museum has to buy my canvas.
+
+> ...rights give meaning and reality to equality, while liberties give possibility and shape to freedom. 
+
+### 4. Equity in Useful Unemployment
+
+> An active woman who runs a house and brings up children and takes in those of others is distinguished from a woman who 'works', no matter how useless or damaging the product of this work might be. 
+
+> In the Middle Ages there was no salvation outside the Church, and the theologians had a hard time explaining what God did with those pagans who were visibly virtuous or saintly. Similarly, in contemporary society **effort is not productive unless it is done at the behest of a boss**, and economists have a hard time dealing with the obvious usefulness of people when they are outside the corporate control of a corporation, volunteer agency, or labour camp. Work is productive, respectable, worthy of the citizen **only when the work process is planned, monitored, and controlled by a professional agent**, who insures that the work meets a certified need in a standardized fashion.
+
+Precursor to the *legibility* argument made in *Seeing Like a State* by James C Scott in 1998. 
+
+### 5. Outflanking the New Professional
+
+> The symbolic power of experts which, while defining needs, eviscerates personal competence is now seen to be more perilous than their technical capability, which is confined to servicing the needs they create.
+
+### 6. The Post-Professional Ethos
+
+> A retooling of contemporary society with convivial rather than industrial tools implies a shift of emphases in our struggle for social justice; it implies a new kind of subordination of distributive to participatory justice. **In an industrial society, individuals are trained for extreme specialization**. They are rendered impotent to shapre or to satisfy their own needs.
+
+
+
+
+
 
