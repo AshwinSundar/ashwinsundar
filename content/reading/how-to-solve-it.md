@@ -1,6 +1,6 @@
 +++
-linkTitle = 'How to Solve It - George Polya (1945)'
-title = 'How to Solve It - George Polya (1945)'
+linkTitle = 'George Polya - How to Solve It (1945)'
+title = 'George Polya - How to Solve It (1945)'
 shortTitle = 'How to Solve It'
 date = 2026-04-04T13:50:07-06:00
 genres = ["reading", "2026"]
