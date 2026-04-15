@@ -1,5 +1,9 @@
 [
   {
+    "name": "MouseHouse",
+    "link": "https://mousehouse.bio"
+  },
+  {
     "name": "A BitTorrent Client in Python (in progress)",
     "link": "https://github.com/AshwinSundar/bittorrent"
   },
