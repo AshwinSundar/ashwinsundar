@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} — Ashwin Sundar{% endblock %}
+{% block head %}
+{% if post.has_music_controls %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.music-control').forEach(function (el) {
+      el.addEventListener('click', function (event) {
+        event.preventDefault();
+        var audio = document.getElementById('audio');
+        var action = el.getAttribute('data-action');
+        if (action === 'pause') {
+          audio.pause();
+        } else if (action === 'resume-at') {
+          audio.currentTime = parseFloat(el.getAttribute('data-time'));
+          audio.play();
+        } else if (action === 'resume') {
+          audio.play();
+        }
+      });
+    });
+  });
+</script>
+{% endif %}
+{% endblock %}
+{% block main %}
+<h1>{{ post.title }}</h1>
+{% if post.audio_file %}
+<div class="py-4">
+  <div class="sm:fixed sm:w-auto space-y-2 inline-block top-4 right-4 bg-black text-white p-4 rounded z-10">
+    <div>{{ post.audio_title }}</div>
+    <audio id="audio" controls>
+      <source src="/posts/{{ post.slug }}/{{ post.audio_file }}" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+{% endif %}
+<div class="pb-4">
+  <time>{{ post.date.strftime("%B %-d, %Y") }}</time>
+</div>
+{{ post.html | safe }}
+{% endblock %}

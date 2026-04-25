@@ -1,2 +1,6 @@
-public
 tailwindcss
+.venv
+__pycache__
+.mypy_cache
+*.pyc
+.env

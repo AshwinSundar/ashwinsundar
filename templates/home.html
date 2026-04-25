@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="flex flex-col space-y-24">
+  <div class="flex flex-col md:flex-row justify-between w-full">
+
+    <div class="flex flex-col space-y-4 w-full md:w-1/2">
+      <h2>Technical Writing</h2>
+      <div class="flex flex-col space-y-2">
+        {% for post in technical %}
+        <div>
+          <a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+          <sup>{{ post.date.strftime("%b %Y") }}</sup>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Short Stories</h2>
+      <div class="flex flex-col space-y-2">
+        {% for post in short_stories %}
+        <div>
+          <a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+          <sup>{{ post.date.strftime("%b %Y") }}</sup>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Music</h2>
+      <div class="flex flex-col pr-8 space-y-2">
+        {% for track in music %}
+        <div class="flex flex-col pb-2 rounded-2xl shadow-black shadow-md items-center bg-{{ track.twcolor }}">
+          <h5>{{ track.name }}</h5>
+          <audio controls class="w-3/4">
+            <source src="/static/music/{{ track.link }}" type="audio/mp3">
+          </audio>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-4 w-full md:w-1/2">
+      <h2>Side Quests</h2>
+      <div class="flex flex-col space-y-2">
+        {% for project in projects %}
+        <div>
+          {% if project.link.startswith("http") %}
+          <a href="{{ project.link }}">{{ project.name }}</a>
+          {% else %}
+          <a href="/{{ project.link }}">{{ project.name }}</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Other</h2>
+      <div class="flex flex-col space-y-2">
+        {% for post in other %}
+        <div>
+          <a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+          <sup>{{ post.date.strftime("%b %Y") }}</sup>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Reading in 2026</h2>
+      <div class="flex flex-col space-y-2">
+        {% for post in reading2026 %}
+        <div>
+          <a href="/reading/{{ post.slug }}">{{ post.title }}</a>
+          <sup>{{ post.date.strftime("%b %Y") }}</sup>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Read in 2025</h2>
+      <div class="flex flex-col space-y-2">
+        {% for post in reading2025 %}
+        <div>
+          <a href="/reading/{{ post.slug }}">{{ post.title }}</a>
+          <sup>{{ post.date.strftime("%b %Y") }}</sup>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Read in 2024</h2>
+      <div class="flex flex-col space-y-2">
+        {% for post in reading2024 %}
+        <div>
+          <a href="/reading/{{ post.slug }}">{{ post.title }}</a>
+          <sup>{{ post.date.strftime("%b %Y") }}</sup>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
