@@ -1,10 +1,10 @@
 run:
 	make configure
-	.venv/bin/uvicorn app.main:app --reload
+	.venv/bin/fastapi dev app/main.py
 
 run-prod:
 	make configure
-	.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+	.venv/bin/fastapi run app/main.py
 
 configure:
 	[ -d .venv ] || python3 -m venv .venv
