@@ -1,4 +1,5 @@
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request
@@ -9,6 +10,7 @@ from fastapi.templating import Jinja2Templates
 from .content import load_music, load_posts, load_projects, load_reading
 
 BASE_DIR = Path(__file__).parent.parent
+BASE_URL = os.getenv("BASE_URL", "https://ashwinsundar.com").rstrip("/")
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
@@ -80,6 +82,22 @@ async def post_asset(slug: str, filename: str):
     if not asset.exists() or asset.suffix.lower() == ".md":
         raise HTTPException(404)
     return FileResponse(asset)
+
+
+@app.get("/index.xml", include_in_schema=False)
+async def rss(request: Request):
+    # Preserve the feed URL Hugo used to serve at the site root.
+    items = [p for p in _posts if not p.draft]
+    return templates.TemplateResponse(
+        request,
+        "rss.xml",
+        {
+            "posts": items,
+            "base_url": BASE_URL,
+            "build_date": datetime.now(timezone.utc),
+        },
+        media_type="application/rss+xml",
+    )
 
 
 @app.get("/reading/{slug}")
