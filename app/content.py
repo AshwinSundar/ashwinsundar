@@ -7,6 +7,10 @@ from pathlib import Path
 import frontmatter
 from markdown_it import MarkdownIt
 from mdit_py_plugins.footnote import footnote_plugin
+from pygments import highlight as pygments_highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import TextLexer, get_lexer_by_name, guess_lexer
+from pygments.util import ClassNotFound
 
 from .shortcodes import process
 
@@ -14,7 +18,21 @@ BASE_DIR = Path(__file__).parent.parent
 CONTENT_DIR = BASE_DIR / "content"
 DATA_DIR = BASE_DIR / "data"
 
-_md = MarkdownIt(options_update={"html": True})
+_pygments_formatter = HtmlFormatter(nowrap=True, cssclass="hl")
+
+
+def _highlight_code(code: str, lang: str, attrs: str) -> str:
+    try:
+        lexer = get_lexer_by_name(lang) if lang else guess_lexer(code)
+    except ClassNotFound:
+        lexer = TextLexer()
+
+    body = pygments_highlight(code, lexer, _pygments_formatter)
+    lang_class = f' class="language-{lang}"' if lang else ""
+    return f'<pre class="hl"><code{lang_class}>{body}</code></pre>'
+
+
+_md = MarkdownIt(options_update={"html": True, "highlight": _highlight_code})
 footnote_plugin(_md)
 
 

@@ -31,10 +31,6 @@ templates = Jinja2Templates(directory=BASE_DIR / "templates")
 
 _include_drafts = os.getenv("DRAFTS", "").lower() in ("1", "true", "yes")
 
-_posts = load_posts(include_drafts=_include_drafts)
-_reading = load_reading(include_drafts=_include_drafts)
-_posts_by_slug = {p.slug: p for p in _posts}
-_reading_by_slug = {p.slug: p for p in _reading}
 _music = load_music()
 _projects = load_projects()
 
@@ -49,16 +45,18 @@ def _by_year(posts, year):
 
 @app.get("/")
 async def homepage(request: Request):
+    posts = load_posts(include_drafts=_include_drafts)
+    reading = load_reading(include_drafts=_include_drafts)
     return templates.TemplateResponse(
         request,
         "home.html",
         {
-            "technical": _by_genre(_posts, "technical"),
-            "short_stories": _by_genre(_posts, "short-story"),
-            "other": _by_genre(_posts, "other"),
-            "reading2026": _by_year(_reading, 2026),
-            "reading2025": _by_year(_reading, 2025),
-            "reading2024": _by_year(_reading, 2024),
+            "technical": _by_genre(posts, "technical"),
+            "short_stories": _by_genre(posts, "short-story"),
+            "other": _by_genre(posts, "other"),
+            "reading2026": _by_year(reading, 2026),
+            "reading2025": _by_year(reading, 2025),
+            "reading2024": _by_year(reading, 2024),
             "music": _music,
             "projects": _projects,
         },
@@ -67,7 +65,8 @@ async def homepage(request: Request):
 
 @app.get("/posts/{slug}")
 async def post(request: Request, slug: str):
-    p = _posts_by_slug.get(slug)
+    posts = load_posts(include_drafts=_include_drafts)
+    p = next((item for item in posts if item.slug == slug), None)
     if not p:
         raise HTTPException(404)
     return templates.TemplateResponse(request, "post.html", {"post": p})
@@ -75,7 +74,8 @@ async def post(request: Request, slug: str):
 
 @app.get("/posts/{slug}/{filename}")
 async def post_asset(slug: str, filename: str):
-    p = _posts_by_slug.get(slug)
+    posts = load_posts(include_drafts=_include_drafts)
+    p = next((item for item in posts if item.slug == slug), None)
     if not p or not p.asset_dir:
         raise HTTPException(404)
     asset = p.asset_dir / filename
@@ -87,7 +87,8 @@ async def post_asset(slug: str, filename: str):
 @app.get("/index.xml", include_in_schema=False)
 async def rss(request: Request):
     # Preserve the feed URL Hugo used to serve at the site root.
-    items = [p for p in _posts if not p.draft]
+    posts = load_posts(include_drafts=_include_drafts)
+    items = [p for p in posts if not p.draft]
     return templates.TemplateResponse(
         request,
         "rss.xml",
@@ -102,7 +103,8 @@ async def rss(request: Request):
 
 @app.get("/reading/{slug}")
 async def reading(request: Request, slug: str):
-    p = _reading_by_slug.get(slug)
+    notes = load_reading(include_drafts=_include_drafts)
+    p = next((note for note in notes if note.slug == slug), None)
     if not p:
         raise HTTPException(404)
     return templates.TemplateResponse(request, "post.html", {"post": p})

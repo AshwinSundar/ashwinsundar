@@ -9,5 +9,6 @@ dependencies = [
     "markdown-it-py>=3.0",
     "mdit-py-plugins>=0.4",
     "toml>=0.10",
+    "pygments>=2.18",
 ]
 

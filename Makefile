@@ -1,6 +1,6 @@
 run:
 	make configure
-	.venv/bin/fastapi dev app/main.py
+	.venv/bin/fastapi dev app/main.py --port 1313
 
 run-prod:
 	make configure
