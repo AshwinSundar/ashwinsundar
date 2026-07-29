@@ -15,7 +15,7 @@ My preferred web development stack of the last few years has been Django, HTMX, 
 
 I decided that [Python is the language for me](https://ashwinsundar.com/posts/specializing/).
 
-There are a lot of reasons to also not like Python - second-class (or third-class even) support of types; [ugly dunder methods](https://news.ycombinator.com/item?id=44579717#44580071)[^caveat]; the 2 to 3 switch[^switch]. Programming languages are a [collection of ways to express ideas](https://ashwinsundar.com/posts/programming-languages]. Of course, any idea can theoretically be expressed in any Turing-complete language[^turing-complete], but we all know that some languages make certain ideas easier to express than others.
+There are a lot of reasons to also not like Python - second-class (or third-class even) support of types; [ugly dunder methods](https://news.ycombinator.com/item?id=44579717#44580071)[^caveat]; the 2 to 3 switch[^switch]. Programming languages are a [collection of ways to express ideas](https://ashwinsundar.com/posts/programming-languages). Of course, any idea can theoretically be expressed in any Turing-complete language[^turing-complete], but we all know that some languages make certain ideas easier to express than others.
 
 Python makes it easy to express the ideas in my head. It might be a feature/bug of the way I think. I'd rather focus more on building, than techno-psychoanalyzing though.
 
