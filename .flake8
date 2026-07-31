@@ -1,0 +1,3 @@
+[flake8]
+ignore = E501, W503, ANN001, ANN002, ANN003, ANN101,ANN201, ANN204
+exclude = __init__.py,.venv

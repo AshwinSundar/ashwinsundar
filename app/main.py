@@ -31,17 +31,6 @@ templates = Jinja2Templates(directory=BASE_DIR / "templates")
 
 _include_drafts = os.getenv("DRAFTS", "").lower() in ("1", "true", "yes")
 
-_music = load_music()
-_projects = load_projects()
-
-
-def _by_genre(posts, genre):
-    return [p for p in posts if genre in p.genres]
-
-
-def _by_year(posts, year):
-    return [p for p in posts if str(year) in p.genres]
-
 
 @app.get("/")
 async def homepage(request: Request):
@@ -51,14 +40,14 @@ async def homepage(request: Request):
         request,
         "home.html",
         {
-            "technical": _by_genre(posts, "technical"),
-            "short_stories": _by_genre(posts, "short-story"),
-            "other": _by_genre(posts, "other"),
-            "reading2026": _by_year(reading, 2026),
-            "reading2025": _by_year(reading, 2025),
-            "reading2024": _by_year(reading, 2024),
-            "music": _music,
-            "projects": _projects,
+            "technical": [p for p in posts if "technical" in p.genres],
+            "short_stories": [p for p in posts if "short-story" in p.genres],
+            "other": [p for p in posts if "other" in p.genres],
+            "reading2026": [r for r in reading if "2026" in r.genres],  # reading material has a year in the genre frontmatter
+            "reading2025": [r for r in reading if "2025" in r.genres],
+            "reading2024": [r for r in reading if "2024" in r.genres],
+            "music": load_music(),
+            "projects": load_projects(),
         },
     )
 
