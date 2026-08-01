@@ -76,10 +76,11 @@ And this actually connects nicely to today, to a very modern and relevant phenom
 If Naur is right (and I think he is), vibe-coding is *precisely the wrong direction* we should be going as software professionals! We are ceding all attempts at Theory Building to AI systems, systems owned and trained by the biggest corporations on the planet, hoovering up all our theories of programming and leaving us with stochastic parrots to play slots with, whose inner-workings even the corporations do not understand! 
 
 We should not cede control like this to the big corporations. But we also should not sneeze at AI as something to avoid. Let's use AI to learn more about the systems we're building, ask better questions, interactively red-team our designs and architectures, and yes even generate code (which we then spend the time to understand and save to our *illegible* knowledge repositories).
-
 --
 
 The link between Naur, Scott, and the state of software today has been interesting to uncover. I hope to organize my thoughts better and do another dive into this subject. I still need to finish "Seeing Like a State" as well. My GitHub access has since been restored, so it is now time for me to return to being a good cog in the legible system.
+
+PS: Many kind people read and commented on this article on [lobste.rs](https://lobste.rs/s/ckr3r2/do_illegible)
 
 [^github-revoked]: Turns out, at *{INSTITUTION REDACTED}*, you need to submit a PR which adds a person to a secret text file somewhere, in order to modify permissions in GitHub. Multiple people had to approve the PR. Someone had styling-feedback about how the array of names needs to end with a `,`. But at least it's legible!
 [^perlis]: [Perlis, Alan. *Epigrams on Programming*. Association for Computing Machinery SIGPLAN, 1982.](https://www.cs.yale.edu/homes/perlis-alan/quotes.html#:~:text=19.%20A%20language%20that%20doesn%27t%20affect%20the%20way%20you%20think%20about%20programming%2C%20is%20not%20worth%20knowing)

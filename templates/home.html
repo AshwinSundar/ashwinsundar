@@ -51,6 +51,15 @@
         {% endfor %}
       </div>
 
+      <h2>Photo Albums</h2>
+      <div class="flex flex-col space-y-2">
+        {% for album in albums %}
+        <div>
+          <a href="/albums/{{ album.folder }}">{{ album.name }}</a>
+        </div>
+        {% endfor %}
+      </div>
+
       <h2>Other</h2>
       <div class="flex flex-col space-y-2">
         {% for post in other %}

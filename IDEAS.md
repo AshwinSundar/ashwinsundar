@@ -24,3 +24,8 @@
     - i like this. start here, then add more refinement as needed
 
 
+-- 
+
+aight i went with option 2. i created an albums.json that will hold metadata about each photo album. then there is a load_photos function that will use Pillow to load images into a nice object. Finally, there is an albums endpoint that will return a template displaying the album.
+
+

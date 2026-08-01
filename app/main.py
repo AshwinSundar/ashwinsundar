@@ -6,8 +6,9 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from PIL import Image
 
-from .content import load_music, load_posts, load_projects, load_reading
+from .content import load_albums, load_photos, load_music, load_posts, load_projects, load_reading
 
 BASE_DIR = Path(__file__).parent.parent
 BASE_URL = os.getenv("BASE_URL", "https://ashwinsundar.com").rstrip("/")
@@ -16,7 +17,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 # Hugo served static/ at the root; preserve /images and /photos URLs from old content
 app.mount("/images", StaticFiles(directory=BASE_DIR / "static" / "images"), name="images")
-app.mount("/photos", StaticFiles(directory=BASE_DIR / "static" / "photos"), name="photos")
+app.mount("/photos", StaticFiles(directory=BASE_DIR / "content" / "photos"), name="photos")
 
 
 @app.get("/favicon.ico", include_in_schema=False)
@@ -46,6 +47,7 @@ async def homepage(request: Request):
             "reading2026": [r for r in reading if "2026" in r.genres],  # reading material has a year in the genre frontmatter
             "reading2025": [r for r in reading if "2025" in r.genres],
             "reading2024": [r for r in reading if "2024" in r.genres],
+            "albums": load_albums(),
             "music": load_music(),
             "projects": load_projects(),
         },
@@ -97,3 +99,28 @@ async def reading(request: Request, slug: str):
     if not p:
         raise HTTPException(404)
     return templates.TemplateResponse(request, "post.html", {"post": p})
+
+
+# individual layout page for an album
+# NEXT -> create a template to display images in a simple gallery
+# nice got a template! off to the races
+# let's get git lfs configured next and then push up the changes
+@app.get("/albums/{album_name}")
+async def albums(request: Request, album_name: str):
+    photos: list[Image] = load_photos(album_name)
+    return templates.TemplateResponse(
+        request,
+        "album.html",
+        {
+            "photos": [
+                {
+                    "url": request.url_for("photos", path=f"{album_name}/{Path(photo.filename).name}"),
+                }
+                for photo in photos
+            ]
+        }
+    )
+
+
+# individual photo endpoint
+# @app.get("/photos/{album}/{photo_name}"
