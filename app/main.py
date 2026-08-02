@@ -104,7 +104,6 @@ async def reading(request: Request, slug: str):
 # individual layout page for an album
 # NEXT -> create a template to display images in a simple gallery
 # nice got a template! off to the races
-# let's get git lfs configured next and then push up the changes
 @app.get("/albums/{album_name}")
 async def albums(request: Request, album_name: str):
     photos: list[Image] = load_photos(album_name)
@@ -115,6 +114,8 @@ async def albums(request: Request, album_name: str):
             "photos": [
                 {
                     "url": request.url_for("photos", path=f"{album_name}/{Path(photo.filename).name}"),
+                    "height": photo.height,
+                    "width": photo.width,
                 }
                 for photo in photos
             ]
