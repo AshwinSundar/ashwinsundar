@@ -1,10 +1,29 @@
 {% extends "base.html" %}
 {% block main %}
 
-<div class="slideshow h-screen flex gap-[4vw] overflow-x-scroll overscroll-x-contain snap-x snap-mandatory hover:scroll-smooth">
+<div class="flex flex-col space-y-4">
   {% for photo in photos %}
-    <figure class="shrink-0 w-full h-full flex items-center justify-center snap-start">
-      <img loading="lazy" src="{{ photo.url }}" class="max-w-full max-h-full object-contain" />
+    <figure class="relative inline-block p-3">
+      <img
+        class="object-cover"
+        loading="lazy"
+        src="{{ photo.url }}"
+      />
+      <!-- Wobbly border overlay -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="wobble">
+          <feTurbulence type="fractalNoise" baseFrequency="{{ range(4, 8) | random / 100 }}" numOctaves="{{ range(3, 6) | random }}" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+          </filter>
+        </defs>
+        <rect
+          x="12" y="12" width="calc(100% - 24px)" height="calc(100% - 24px)"
+          fill="none" stroke="currentColor" stroke-width="8"
+          filter="url(#wobble)"
+          class="bg-black"
+        />
+      </svg>
     </figure>
   {% endfor %}
 </div>

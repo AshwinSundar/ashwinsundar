@@ -1,7 +1,21 @@
 [
   {
     "name": "Test Misc",
-    "folder": "Test_Misc"
+    "folder": "Test_Misc",
+    "photos": [
+      {
+        "filename": "IMAG0949.jpg",
+        "caption": ""
+      },
+      {
+        "filename": "photo 4.jpg",
+        "caption": "test caption"
+      },
+      {
+        "filename": "IMAG0953.jpg",
+        "caption": "test caption"
+      }
+    ]
   },
   {
     "name": "August Evenings",

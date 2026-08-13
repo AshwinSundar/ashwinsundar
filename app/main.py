@@ -1,14 +1,17 @@
+import logging
 import os
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from PIL import Image
 
-from .content import load_albums, load_photos, load_music, load_posts, load_projects, load_reading
+from .content import load_albums, load_music, load_posts, load_projects, load_reading
+
+logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).parent.parent
 BASE_URL = os.getenv("BASE_URL", "https://ashwinsundar.com").rstrip("/")
@@ -102,25 +105,35 @@ async def reading(request: Request, slug: str):
 
 
 # individual layout page for an album
-# NEXT -> create a template to display images in a simple gallery
-# nice got a template! off to the races
 @app.get("/albums/{album_name}")
 async def albums(request: Request, album_name: str):
-    photos: list[Image] = load_photos(album_name)
-    return templates.TemplateResponse(
-        request,
-        "album.html",
-        {
-            "photos": [
-                {
-                    "url": request.url_for("photos", path=f"{album_name}/{Path(photo.filename).name}"),
-                    "height": photo.height,
-                    "width": photo.width,
-                }
-                for photo in photos
-            ]
-        }
-    )
+    album = next((a for a in load_albums() if a["folder"] == album_name), None)
+    if not album:
+        raise HTTPException(404)
+
+    photos = []
+    for p in album.get("photos", []):
+        filename = p.get("filename")
+        if not filename:
+            logger.warning("Album %r has a photo entry with no filename, skipping", album_name)
+            continue
+
+        file_path = BASE_DIR / "content" / "photos" / album_name / filename
+        if not file_path.exists():
+            logger.warning("Album %r references missing file: %s", album_name, file_path)
+            continue
+
+        photo_path = quote(f"{album_name}/{filename}")
+        photos.append({
+            "url": request.url_for("photos", path=photo_path),
+            "caption": p.get("caption", ""),
+            "aspect": p.get("aspect", "")
+        })
+
+    if not photos:
+        logger.warning("Album %r has no photos to display", album_name)
+
+    return templates.TemplateResponse(request, "album.html", {"photos": photos})
 
 
 # individual photo endpoint

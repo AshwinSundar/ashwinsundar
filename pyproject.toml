@@ -10,6 +10,5 @@ dependencies = [
     "mdit-py-plugins>=0.4",
     "toml>=0.10",
     "pygments>=2.18",
-    "Pillow==12.3.0",
 ]
 

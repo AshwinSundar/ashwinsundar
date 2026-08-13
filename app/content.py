@@ -2,7 +2,6 @@ import json
 import re
 from dataclasses import dataclass
 from datetime import date, datetime
-from PIL import Image
 
 from pathlib import Path
 
@@ -138,11 +137,6 @@ def load_music() -> list[dict]:
 
 def load_albums() -> list[dict]:
     return json.loads((DATA_DIR / "albums.json").read_text())
-
-
-def load_photos(album_name: str) -> list[Image]:
-    path: Path = (CONTENT_DIR / "photos" / album_name)
-    return [Image.open(file) for file in path.iterdir()]
 
 
 def load_projects() -> list[dict]:
