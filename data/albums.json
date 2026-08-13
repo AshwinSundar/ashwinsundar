@@ -1,24 +1,26 @@
 [
   {
-    "name": "Test Misc",
-    "folder": "Test_Misc",
+    "name": "2011",
+    "folder": "2011_random",
     "photos": [
-      {
-        "filename": "IMAG0949.jpg",
-        "caption": ""
-      },
-      {
-        "filename": "photo 4.jpg",
-        "caption": "test caption"
-      },
-      {
-        "filename": "IMAG0953.jpg",
-        "caption": "test caption"
-      }
+      { "filename": "buckyball.jpg", "caption": "A buckyball (C60)" },
+      { "filename": "leica_ad.jpg", "caption": "Nat Geo ad from the 1940s" },
+      { "filename": "library_book.jpg", "caption": "Doctor for the People" },
+      { "filename": "bird.jpg", "caption": "September 11th, 2011" },
+      { "filename": "lupe_fiasco.jpg", "caption": "Lupe Fiasco @ UCLA Jazz Fest, 2011" },
+      { "filename": "me_mirror.jpg", "caption": "self-portrait" },
+      { "filename": "route_66.jpg", "caption": "Santa Monica, California" }
     ]
   },
   {
     "name": "August Evenings",
-    "folder": "August_Evenings"
+    "folder": "August_Evenings",
+    "photos": [
+      { "filename": "Lake_1.jpg", "caption": "Mushroom kingdom lake" },
+      { "filename": "Goat_1.jpg", "caption": "Trapped goat. I rescued him right after." },
+      { "filename": "Sunset_1.jpg", "caption": "Firey sunset" },
+      { "filename": "Sunset_Cyclist_1.jpg", "caption": "Cycling away" },
+      { "filename": "Sunset_2.jpg", "caption": "Firey sunset" }
+    ]
   }
 ]
