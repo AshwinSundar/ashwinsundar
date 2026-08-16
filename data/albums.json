@@ -6,6 +6,7 @@
       { "filename": "buckyball.jpg", "caption": "A buckyball (C60)" },
       { "filename": "leica_ad.jpg", "caption": "Nat Geo ad from the 1940s" },
       { "filename": "library_book.jpg", "caption": "Doctor for the People" },
+      { "filename": "4N_family.jpg", "caption": "Last day of school" },
       { "filename": "bird.jpg", "caption": "September 11th, 2011" },
       { "filename": "lupe_fiasco.jpg", "caption": "Lupe Fiasco @ UCLA Jazz Fest, 2011" },
       { "filename": "me_mirror.jpg", "caption": "self-portrait" },
@@ -18,9 +19,31 @@
     "photos": [
       { "filename": "Lake_1.jpg", "caption": "Mushroom kingdom lake" },
       { "filename": "Goat_1.jpg", "caption": "Trapped goat. I rescued him right after." },
+      { "filename": "Garage.jpg", "caption": "" },
+      { "filename": "Parental_advisory.jpg", "caption": "Parental Advisory" },
+      { "filename": "Subjective_coffee.jpg", "caption": "Subjective Coffee" },
       { "filename": "Sunset_1.jpg", "caption": "Firey sunset" },
       { "filename": "Sunset_Cyclist_1.jpg", "caption": "Cycling away" },
       { "filename": "Sunset_2.jpg", "caption": "Firey sunset" }
+    ]
+  },
+  {
+    "name": "Colorado Summer",
+    "folder": "Colorado_Summer",
+    "photos": [
+      { "filename": "winding_road.jpg", "caption": "Pikes Peak Highway" },
+      { "filename": "rocky_frame.jpg", "caption": "" },
+      { "filename": "rainy_mountains.jpg", "caption": "" },
+      { "filename": "cog_rail_1.jpg", "caption": "" },
+      { "filename": "cog_rail_2.jpg", "caption": "" },
+      { "filename": "peak_marker.jpg", "caption": "1951 Pikes Peak Marker" },
+      { "filename": "no_peds.jpg", "caption": "" },
+      { "filename": "lightning.jpg", "caption": "" },
+      { "filename": "rainy_mountains.jpg", "caption": "" },
+      { "filename": "sky_1.jpg", "caption": "" },
+      { "filename": "road_to_buena_vista.jpg", "caption": "" },
+      { "filename": "into_the_storm", "caption": "" },
+      { "filename": "towering_fir.jpg", "caption": "" }
     ]
   }
 ]
