@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/static/css/pygments.css">
   <link rel="alternate" type="application/rss+xml" title="Ashwin Sundar" href="/index.xml">
   {% block head %}{% endblock %}
+  <script defer type="text/javascript" src="/static/alpinejs-3.17.1.min.js"></script>
+  <script type="text/javascript" src="/static/alpinejs-persist-3.17.1.min.js"></script>
   <script>
     MathJax = {
       tex: {
@@ -22,10 +24,15 @@
     mermaid.initialize({ startOnLoad: true });
   </script>
 </head>
-<!-- <body class="p-6 md:p-12 bg-paper"> -->
-<body class="flex justify-center bg-[#ececec] dark:bg-blue-950 *:font-mono p-4">
-  <header class="pb-8">
-  </header>
+<!-- class="flex justify-center bg-[#ececec] dark:bg-blue-950 *:font-mono p-4" -->
+<body
+  class="flex justify-center bg-[#ececec] dark:bg-blue-950 *:font-mono p-4"
+  :class="{
+    'bg-vaporwave-horizon': activeBg === 'horizon',
+    'bg-vaporwave-f40': activeBg === 'f40'
+  }"
+  x-data="{ activeBg: $persist(null) }"
+>
   <main class="flex flex-col justify-between p-4 md:p-8 max-w-3xl w-full bg-paper border-black border shadow-[3px_3px_rgba(0,0,0,0.25)]">
     {% include "header.html" %}
     {% block main %}{% endblock %}

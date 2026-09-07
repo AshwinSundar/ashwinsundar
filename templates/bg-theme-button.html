@@ -1,0 +1,7 @@
+{% extends "button-generic.html" %}
+{% block tw_color %}{{ tw_color }}{% endblock tw_color %}
+{% block body %}
+  <div class="{{ theme_name }} bg-contain min-w-full min-h-full p-2">
+    <span class="{{ text_color }}">{{ button_text or "button_text" }}</span>
+  </div>
+{% endblock body %}

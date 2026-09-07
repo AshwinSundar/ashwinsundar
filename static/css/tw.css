@@ -95,3 +95,11 @@ hr {
       [&>hr]:my-8
       [&>hr]:animate-none
 }
+
+.bg-vaporwave-horizon {
+    background-image: url('/static/vaporwave_horizon.gif');
+}
+
+.bg-vaporwave-f40 {
+    background-image: url('/static/vaporwave_f40.gif');
+}
