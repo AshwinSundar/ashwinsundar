@@ -7,6 +7,15 @@
 {# and add a condition to base.html#body:class #}
 {% block body %}
   <div class="flex flex-row space-x-8">
+    <!-- Basic -->
+    <button x-on:click="activeBg = null">
+      {% set tw_color="bg-gray-500" %}
+      {% set theme_name="bg-[#ececec] dark:bg-blue-950 " %}
+      {% set text_color="text-black dark:text-white" %}
+      {% set button_text="basic" %}
+      {% include "bg-theme-button.html" %}
+    </button>
+
     <button x-on:click="activeBg = activeBg === 'horizon' ? null : 'horizon'">
       {% set tw_color="bg-purple-700" %}
       {% set theme_name="bg-vaporwave-horizon" %}
@@ -26,11 +35,12 @@
 
     <!-- napoleon wings -->
     <button x-on:click="activeBg = activeBg === 'napoleon_wings' ? null : 'napoleon_wings'">
-      {% set tw_color="bg-white" %}
+      {% set tw_color="bg-gray-500" %}
       {% set theme_name="bg-napoleon-wings" %}
       {% set text_color="text-white" %}
       {% set button_text="napoleon" %}
       {% include "bg-theme-button.html" %}
     </button>
+
   </div>
 {% endblock body %}
