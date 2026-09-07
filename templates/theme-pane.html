@@ -6,9 +6,9 @@
 {# add a class to tw.css #}
 {# and add a condition to base.html#body:class #}
 {% block body %}
-  <div class="flex flex-row space-x-8">
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
     <!-- Basic -->
-    <button x-on:click="activeBg = null">
+    <button class="w-auto" x-on:click="activeBg = null">
       {% set tw_color="bg-gray-500" %}
       {% set theme_name="bg-[#ececec] dark:bg-blue-950 " %}
       {% set text_color="text-black dark:text-white" %}
@@ -16,7 +16,7 @@
       {% include "bg-theme-button.html" %}
     </button>
 
-    <button x-on:click="activeBg = activeBg === 'horizon' ? null : 'horizon'">
+    <button class="w-auto" x-on:click="activeBg = activeBg === 'horizon' ? null : 'horizon'">
       {% set tw_color="bg-purple-700" %}
       {% set theme_name="bg-vaporwave-horizon" %}
       {% set text_color="text-gray-300" %}
@@ -25,7 +25,7 @@
     </button>
 
     <!-- vaporwave-f40 -->
-    <button x-on:click="activeBg = activeBg === 'f40' ? null : 'f40'">
+    <button class="w-auto" x-on:click="activeBg = activeBg === 'f40' ? null : 'f40'">
       {% set tw_color="bg-purple-700" %}
       {% set theme_name="bg-vaporwave-f40" %}
       {% set text_color="text-white" %}
@@ -34,7 +34,7 @@
     </button>
 
     <!-- napoleon wings -->
-    <button x-on:click="activeBg = activeBg === 'napoleon_wings' ? null : 'napoleon_wings'">
+    <button class="w-auto" x-on:click="activeBg = activeBg === 'napoleon_wings' ? null : 'napoleon_wings'">
       {% set tw_color="bg-gray-500" %}
       {% set theme_name="bg-napoleon-wings" %}
       {% set text_color="text-white" %}
