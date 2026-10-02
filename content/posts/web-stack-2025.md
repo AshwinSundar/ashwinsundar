@@ -21,7 +21,7 @@ Python makes it easy to express the ideas in my head. It might be a feature/bug 
 
 ## H (tmx)
 
-Carson Gross's practical manifestation of the [REST Principle](https://en.wikipedia.org/wiki/REST) has truly made me enjoy web development again. As outlined in the excellent book [Hypermedia Systems](https://hypermedia.systems/extending-html-as-hypermedia/#_htmx_html_extended), there are only a handful of updates that need to be made to HTML to really unleash its power as hypermedia:
+This practical manifestation of the [REST Principle](https://en.wikipedia.org/wiki/REST) has truly made me enjoy web development again. As outlined in the excellent book [Hypermedia Systems](https://hypermedia.systems/extending-html-as-hypermedia/#_htmx_html_extended), there are only a handful of updates that need to be made to HTML to really unleash its power as hypermedia:
 
 1) Any element should be able to make HTTP requests (hx-get, hx-post, hx-put, hx-patch, hx-delete)
 
