@@ -73,9 +73,10 @@ And this actually connects nicely to today, to a very modern and relevant phenom
 
 > Vibe Coding: Fully give in to the vibes, embrace exponentials, and forget that the code even exists...I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works.[^karpathy]
 
-If Naur is right (and I think he is), vibe-coding is *precisely the wrong direction* we should be going as software professionals! We are ceding all attempts at Theory Building to AI systems, systems owned and trained by the biggest corporations on the planet, hoovering up all our theories of programming and leaving us with stochastic parrots to play slots with, whose inner-workings even the corporations do not understand! 
+If Naur is right (and I think he is), vibe-coding is *precisely the wrong direction* we should be going as software professionals! We are ceding all attempts at Theory Building to AI systems, systems owned and trained by the biggest corporations on the planet, hoovering up all our theories of programming and leaving us with stochastic parrots to play slots with, whose inner-workings even the corporations do not understand!
 
 We should not cede control like this to the big corporations. But we also should not sneeze at AI as something to avoid. Let's use AI to learn more about the systems we're building, ask better questions, interactively red-team our designs and architectures, and yes even generate code (which we then spend the time to understand and save to our *illegible* knowledge repositories).
+
 --
 
 The link between Naur, Scott, and the state of software today has been interesting to uncover. I hope to organize my thoughts better and do another dive into this subject. I still need to finish "Seeing Like a State" as well. My GitHub access has since been restored, so it is now time for me to return to being a good cog in the legible system.
