@@ -178,13 +178,13 @@ I suspect this problem is related to the "behavior of parallel requests"[^parall
 
 ## Poka-yoke (ポカヨケ)
 
-Rather than debug Django messages, let's ask - do we need Django messages framework at all for in-app notifications, if we are using htmx? htmx 4 introduced the idea of partial response swaps[^hx-partial] with the `hx-partial` template tag, to provide a more declarative and intuitive mechanism to handle out-of-band swaps. I'm not a huge fan of `hx-swap-oob` - it requires you to put a tag on an element that may be in a different HTML template, which violates the [locality of behavior principle](https://htmx.org/essays/locality-of-behaviour/). I like LoB - it means I can read code and understand it without needing to find and understand unknown amounts of external contextual code as well.
+Rather than debug Django messages, let's ask - do we need Django messages framework at all for in-app notifications, if we are using htmx? htmx 4 introduced the idea of partial response swaps[^hx-partial] with the `hx-partial` template tag, to provide a more declarative and intuitive mechanism to handle out-of-band swaps. I'm not a huge fan of out-of-band-swaps - they require you to add an attribute to an element that may be in a different HTML template, which isn't [locality of behavior principle](https://htmx.org/essays/locality-of-behaviour/)-friendly. I like LoB - it means I can read code and understand it without needing to find and understand unknown amounts of external contextual code as well.
 
 With partial response swaps, you can now directly wrap the element you want to swap with `<hx-partial>`, and specify the behavior on that element itself! I like this approach, because all the nouns and verbs describing the behavior of the toast notification are now right next to each other, making it easier to read the code and understand what is happening.
 
 So back to the question - do we need Django messages anymore? When I initially designed the notifications feature, I was trying to adopt Django's handy "batteries-included" philosophy[^batteries-included] and avoid reinventing the wheel. But Django messages is designed for applications that utilize full-page refreshes (hence the caveat about the behavior of parallel requests earlier). I like htmx precisely because I *don't* need to fully refresh the page to get server interactivity, but the downside is that this creates some awkward use-cases that Django messages isn't designed for.
 
-Our second use-case of partial swaps is a great match for partial response swaps. The first use case, the full-page reload, is a little trickier to implement. So let's drop Django messages and just use htmx partial response swaps to return the toast partial as needed. We'll figure out how to handle the rarer full-page reload notifications as the special case. We eliminate one dependency (and one source of bugs and errors) with this approach.
+Our second use-case of partial swaps is a great match for partial response swaps. The first use case, the full-page reload, is a little trickier to implement. So let's drop Django messages and just use htmx partial response swaps to return the toast partial as needed. We'll be brave and figure out how to handle the full-page reload notifications when we get there. With this approach, we get to eliminate one dependency (and one source of bugs and errors).
 
 ## Redesign
 
@@ -210,6 +210,7 @@ Let's go out of order and look at partial swaps first, since that's what `hx-par
 We need a new way to tell our toast what to render, since we're no longer using Django messages - that's what `toast_data` is for. Here's an example of how to set and pass it in as a context variable, in an endpoint called `mouse_revive`.
 
 ```python
+# views.py
 def mouse_revive(request: HttpRequest, mouse_id: str) -> HttpResponse:
     mouse = get_object_or_404(Mouse, id=mouse_id)
 
@@ -230,13 +231,13 @@ def mouse_revive(request: HttpRequest, mouse_id: str) -> HttpResponse:
         "message": f"{mouse.name} was revived."
     }
 
-    toastsTemplate = loader.get_template("toast.html")
-    toastsResponse = toastsTemplate.render(dict(toastData), request)
+    toastTemplate = loader.get_template("toast.html")
+    toastResponse = toastTemplate.render(dict(toastData), request)
 
     return HttpResponse(mouse_response + toastsResponse)
 ```
 
-In `mouse_revive`, we revive the mouse, re-generate a new `mouse-row.html`, and staple a `toast` to the session! We define `toastData` as a context variable. I gave that piece of code a little pomp-and-circumstance with it's own type, so the pattern is more legible and reusable. 
+In `mouse_revive`, we revive the mouse, re-generate a new `mouse-row.html`, and staple a `toast` to the response! We define `toastData` as a context variable. I gave that piece of code a little pomp-and-circumstance with it's own type, so the pattern is more legible and reusable. And then we just render the response. It's really as simple as adding both responses together and putting them inside an `HttpResponse` object.
 
 htmx knows to listen for `<hx-partial>`'s that show up in responses. Let's rely on that feature to define `toast.html` as a partial, and wrap it in a special `<hx-partial>` element.
 
@@ -264,7 +265,7 @@ htmx knows to listen for `<hx-partial>`'s that show up in responses. Let's rely 
 </hx-partial>
 ```
 
-In line 1, `hx-partial` is a special htmx 4-defined element that is processed into `<template hx type="partial">`[^hx-partial-processing]. The attributes `hx-target` and `hx-swap` define where and how to swap in the contents - in this case, our partial says to htmx, "When you see me in a response, swap my contents into the the `innerHTML` of the element whose id is `toasts`. This is exactly what we want, because we love [LoB](https://htmx.org/essays/locality-of-behaviour/)!
+In line 1, `hx-partial` is a special element defined in htmx 4 that is processed into `<template hx type="partial">`[^hx-partial-processing]. The attributes `hx-target` and `hx-swap` define where and how to swap in the contents - in this case, our partial says to htmx, "When you see me in a response, swap my contents into the the `innerHTML` of the element whose id is `toasts`. This is exactly what we want, because we love [LoB](https://htmx.org/essays/locality-of-behaviour/)!
 
 ### Use Case 2 - full page redirect
 
@@ -284,6 +285,7 @@ def cage_restore(request: HttpRequest, cage_id: str) -> HTTPResponseHXRedirect:
 
 ```python
 from pydantic import TypeAdapter
+from .typedefs import ToastData
 
 def append_pending_toast_to_session(request: HttpRequest, toastDataList: list[ToastData]):
     """Use this when you are issuing a page redirect 
