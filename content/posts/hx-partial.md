@@ -176,7 +176,7 @@ I suspect this problem is related to the "behavior of parallel requests"[^parall
 
 > For example, if a client initiates a request that creates a message in one window (or tab) and then another that fetches any uniterated messages in another window, before the first window redirects, the message may appear in the second window instead of the first window where it may be expected.
 
-## Poka-yoke (ポカヨケ)
+## Poka-yoke
 
 Rather than debug Django messages, let's ask - do we need Django messages framework at all for in-app notifications, if we are using htmx? htmx 4 introduced the idea of partial response swaps[^hx-partial] with the `hx-partial` template tag, to provide a more declarative and intuitive mechanism to handle out-of-band swaps. I'm not a huge fan of out-of-band-swaps - they require you to add an attribute to an element that may be in a different HTML template, which isn't [locality of behavior principle](https://htmx.org/essays/locality-of-behaviour/)-friendly. I like LoB - it means I can read code and understand it without needing to find and understand unknown amounts of external contextual code as well.
 
