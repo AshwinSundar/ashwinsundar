@@ -1,6 +1,6 @@
 +++
 title = "Two Ways to Render Toasts 🍞"
-date = 2026-09-08
+date = 2026-10-01
 genres = ["technical"]
 draft = false
 +++
