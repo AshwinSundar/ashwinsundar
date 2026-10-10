@@ -1,5 +1,15 @@
 [
   {
+    "name": "Pizza Man",
+    "link": "Pizza Man Final Really Final this time.mp3",
+    "twcolor": "red-500"
+  },
+  {
+    "name": "Ten Percent Chance",
+    "link": "Ten Percent Chance.mp3",
+    "twcolor": "yellow-500"
+  },
+  {
     "name": "Memories of Fire",
     "link": "Memories of Fire.mp3",
     "twcolor": "red-500"
@@ -10,14 +20,14 @@
     "twcolor": "pink-500"
   },
   {
-    "name": "Ten Percent Chance",
-    "link": "Ten Percent Chance.mp3",
-    "twcolor": "yellow-500"
-  },
-  {
     "name": "Journalistic Integrity Take 2",
     "link": "Journalistic Integrity Take 2.mp3",
     "twcolor": "green-500"
+  },
+  {
+    "name": "Jack O'Secrets",
+    "link": "Jack O'Secrets.mp3",
+    "twcolor": "orange-500"
   },
   {
     "name": "Trailer Trash",
@@ -25,19 +35,9 @@
     "twcolor": "green-200"
   },
   {
-    "name": "Pizza Man",
-    "link": "Pizza Man Final Really Final this time.mp3",
-    "twcolor": "red-500"
-  },
-  {
     "name": "Seasides",
     "link": "Seasides.mp3",
     "twcolor": "blue-200"
-  },
-  {
-    "name": "Jack O'Secrets",
-    "link": "Jack O'Secrets.mp3",
-    "twcolor": "orange-500"
   },
   {
     "name": "taintuniquereference()",
