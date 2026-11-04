@@ -126,6 +126,11 @@ def load_posts(include_drafts: bool = False) -> list[Post]:
     return sorted(posts, key=lambda p: p.date, reverse=True)
 
 
+def load_streams(include_drafts: bool = False) -> list[Post]:
+    streams = _scan_dir(CONTENT_DIR / "streams", "streams", include_drafts)
+    return sorted(streams, key=lambda p: p.date, reverse=True)
+
+
 def load_reading(include_drafts: bool = False) -> list[Post]:
     notes = _scan_dir(CONTENT_DIR / "reading", "reading", include_drafts)
     return sorted(notes, key=lambda p: p.date, reverse=True)

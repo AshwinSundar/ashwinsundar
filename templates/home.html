@@ -65,6 +65,28 @@
         {% endfor %}
       </div>
 
+      <h2>Stream of Consciousness</h2>
+      <div class="flex flex-col lowercase">
+        {% for year, months in streams_by_year_month.items() %}
+          <span>{{ year }}</span>
+          {% for month, posts in months.items() %}
+          {% set month_loop_index = loop.index %}
+            <details class="pl-4" {% if month_loop_index == 1 %}open{% endif %}>
+              <summary>{{ month }}</summary>
+                {% for post in posts %}
+                  <details class="pl-4" {% if month_loop_index == 1 %}open{% endif %}>
+                    <summary><a class="pl-4" href="/streams/{{ post.slug }}">{{ post.title }}</a></summary>
+                    <div class="text-xs">
+                      <span class="font-bold">{{ post.date }}</span>
+                      <i>{{ post.html|safe }}</i>
+                    </div>
+                  </details>
+                {% endfor %}
+            </details>
+          {% endfor %}
+        {% endfor %}
+      </div>
+
       <h2>Reading in 2026</h2>
       <div class="flex flex-col space-y-2">
         {% for post in reading2026 %}

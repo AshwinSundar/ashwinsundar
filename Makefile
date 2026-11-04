@@ -20,7 +20,7 @@ new-post:
 	@read -p "Slug (kebab-case): " SLUG; \
 	FILE="content/posts/$$SLUG.md"; \
 	[ -f "$$FILE" ] && echo "$$FILE already exists" && exit 1; \
-	printf '+++\ntitle = ""\ndate = %s\ngenres = []\ndraft = true\n+++\n' $$(date +%Y-%m-%d) > "$$FILE"; \
+	printf '+++\ntitle = ""\ndate = %s\ngenres = ["other", "reading", "2026", "short-story", "stream", "technical"]\ndraft = true\n+++\n' $$(date +%Y-%m-%d) > "$$FILE"; \
 	echo "Created $$FILE"
 
 new-reading:
@@ -28,4 +28,11 @@ new-reading:
 	FILE="content/reading/$$SLUG.md"; \
 	[ -f "$$FILE" ] && echo "$$FILE already exists" && exit 1; \
 	printf '+++\ntitle = ""\ndate = %s\ngenres = ["reading", "%s"]\ndraft = false\n+++\n' $$(date +%Y-%m-%d) $$(date +%Y) > "$$FILE"; \
+	echo "Created $$FILE"
+
+new-stream:
+	@read -p "Slug (kebab-case): " SLUG; \
+	FILE="content/streams/$$SLUG.md"; \
+	[ -f "$$FILE" ] && echo "$$FILE already exists" && exit 1; \
+	printf '+++\ntitle = ""\ndate = %s\ngenres = ["stream"]\ndraft = false\n+++\n' $$(date +%Y-%m-%d) > "$$FILE"; \
 	echo "Created $$FILE"

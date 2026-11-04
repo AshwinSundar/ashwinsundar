@@ -1,5 +1,6 @@
 import logging
 import os
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -9,7 +10,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from .content import load_albums, load_music, load_posts, load_projects, load_reading
+from .content import load_albums, load_music, load_posts, load_projects, load_reading, load_streams
 
 logger = logging.getLogger(__name__)
 
@@ -40,19 +41,27 @@ _include_drafts = os.getenv("DRAFTS", "").lower() in ("1", "true", "yes")
 async def homepage(request: Request):
     posts = load_posts(include_drafts=_include_drafts)
     reading = load_reading(include_drafts=_include_drafts)
+    streams = load_streams(include_drafts=_include_drafts)
+
+    streams_by_year_month: defaultdict = defaultdict(lambda: defaultdict(list))
+
+    for stream in streams:
+        streams_by_year_month[stream.date.year][stream.date.strftime("%B")].append(stream)
+
     return templates.TemplateResponse(
         request,
         "home.html",
         {
-            "technical": [p for p in posts if "technical" in p.genres],
-            "short_stories": [p for p in posts if "short-story" in p.genres],
+            "albums": load_albums(),
+            "music": load_music(),
             "other": [p for p in posts if "other" in p.genres],
+            "projects": load_projects(),
             "reading2026": [r for r in reading if "2026" in r.genres],  # reading material has a year in the genre frontmatter
             "reading2025": [r for r in reading if "2025" in r.genres],
             "reading2024": [r for r in reading if "2024" in r.genres],
-            "albums": load_albums(),
-            "music": load_music(),
-            "projects": load_projects(),
+            "short_stories": [p for p in posts if "short-story" in p.genres],
+            "streams_by_year_month": streams_by_year_month,
+            "technical": [p for p in posts if "technical" in p.genres],
         },
     )
 
@@ -64,6 +73,15 @@ async def post(request: Request, slug: str):
     if not p:
         raise HTTPException(404)
     return templates.TemplateResponse(request, "post.html", {"post": p})
+
+
+@app.get("/streams/{slug}")
+async def stream(request: Request, slug: str):
+    streams = load_streams(include_drafts=_include_drafts)
+    stream = next((item for item in streams if item.slug == slug), None)
+    if not stream:
+        raise HTTPException(404)
+    return templates.TemplateResponse(request, "post.html", {"post": stream})
 
 
 @app.get("/posts/{slug}/{filename}")
