@@ -107,3 +107,8 @@ hr {
 .bg-napoleon-wings {
     background-image: url('/static/napoleon_wings.gif');
 }
+
+details > summary {
+    @apply cursor-pointer
+
+}
